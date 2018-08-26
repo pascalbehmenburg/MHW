@@ -1,0 +1,15 @@
+C:\Users\Ambien\source\repos\MHW Save Editor\MHW Save Editor\bin\Debug\MHW Save Editor.exe.config
+C:\Users\Ambien\source\repos\MHW Save Editor\MHW Save Editor\bin\Debug\MHW Save Editor.exe
+C:\Users\Ambien\source\repos\MHW Save Editor\MHW Save Editor\bin\Debug\MHW Save Editor.pdb
+C:\Users\Ambien\source\repos\MHW Save Editor\MHW Save Editor\obj\Debug\MHW Save Editor.csprojAssemblyReference.cache
+C:\Users\Ambien\source\repos\MHW Save Editor\MHW Save Editor\obj\Debug\MainWindow.g.cs
+C:\Users\Ambien\source\repos\MHW Save Editor\MHW Save Editor\obj\Debug\App.g.cs
+C:\Users\Ambien\source\repos\MHW Save Editor\MHW Save Editor\obj\Debug\MHW Save Editor_MarkupCompile.cache
+C:\Users\Ambien\source\repos\MHW Save Editor\MHW Save Editor\obj\Debug\MHW Save Editor_MarkupCompile.lref
+C:\Users\Ambien\source\repos\MHW Save Editor\MHW Save Editor\obj\Debug\MainWindow.baml
+C:\Users\Ambien\source\repos\MHW Save Editor\MHW Save Editor\obj\Debug\MHW Save Editor.g.resources
+C:\Users\Ambien\source\repos\MHW Save Editor\MHW Save Editor\obj\Debug\MHW_Save_Editor.Properties.Resources.resources
+C:\Users\Ambien\source\repos\MHW Save Editor\MHW Save Editor\obj\Debug\MHW Save Editor.csproj.GenerateResource.cache
+C:\Users\Ambien\source\repos\MHW Save Editor\MHW Save Editor\obj\Debug\MHW Save Editor.csproj.CoreCompileInputs.cache
+C:\Users\Ambien\source\repos\MHW Save Editor\MHW Save Editor\obj\Debug\MHW Save Editor.exe
+C:\Users\Ambien\source\repos\MHW Save Editor\MHW Save Editor\obj\Debug\MHW Save Editor.pdb
