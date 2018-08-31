@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace MHW_Save_Editor.Properties
+namespace MHW.Properties
 {
 
 

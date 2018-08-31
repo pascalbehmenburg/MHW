@@ -1,28 +1,28 @@
-﻿<Window x:Class="MHW_Save_Editor.MainWindow"
+﻿<Window x:Class="MHW.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:MHW_Save_Editor"
+        xmlns:local="clr-namespace:MHW"
         mc:Ignorable="d"
-        Title="MHW - Save Editor" Height="213.013" Width="563.013" ResizeMode="NoResize">
+        Title="MHW - Save Editor" Height="297.019" Width="693.521" ResizeMode="NoResize">
     <Grid Margin="0,0,4,0">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="47*"/>
             <ColumnDefinition Width="32*"/>
         </Grid.ColumnDefinitions>
-        <ProgressBar x:Name="Progress" HorizontalAlignment="Left" Height="21" Margin="19,143,0,0" VerticalAlignment="Top" Width="300"/>
-        <Button x:Name="SaveButton" Content="Save" HorizontalAlignment="Left" Margin="99,118,0,0" VerticalAlignment="Top" Width="75" Click="SaveButton_Click" Height="20"/>
-        <Button x:Name="LoadButton" Content="Load" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="19,118,0,0" Height="20" Click="LoadButton_Click" ClickMode="Press"/>
-        <Button x:Name="BackupButton" Content="Backup current&#xD;&#xA;" HorizontalAlignment="Left" Margin="179,118,0,0" VerticalAlignment="Top" Width="140" Height="20" Click="BackupButton_Click" AutomationProperties.HelpText="Backups current save file which is located in your steam folder."/>
-        <ListBox x:Name="ListBox" Grid.Column="1" HorizontalAlignment="Left" Height="155" Margin="10,10,0,0" VerticalAlignment="Top" Width="204">
+        <ProgressBar x:Name="Progress" HorizontalAlignment="Left" Height="21" Margin="19,229,0,0" VerticalAlignment="Top" Width="378"/>
+        <Button x:Name="SaveButton" Content="Save" HorizontalAlignment="Left" Margin="124,204,0,0" VerticalAlignment="Top" Width="100" Click="SaveButton_Click" Height="20"/>
+        <Button x:Name="LoadButton" Content="Load" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Margin="19,204,0,0" Height="20" Click="LoadButton_Click" ClickMode="Press"/>
+        <Button x:Name="BackupButton" Content="Backup current savefile" HorizontalAlignment="Left" Margin="229,204,0,0" VerticalAlignment="Top" Width="168" Height="20" Click="BackupButton_Click" AutomationProperties.HelpText="Backups current save file which is located in your steam folder."/>
+        <ListBox x:Name="ListBox" Grid.Column="1" HorizontalAlignment="Left" Height="242" Margin="10,10,0,0" VerticalAlignment="Top" Width="257">
             <Label x:Name="StatusLabel" Content="Decrypted:"/>
-            <Label x:Name="ChecksumLabel" Content="Checksum:"/>
             <Label x:Name="MagicLabel" Content="Magic:"/>
-            <Label x:Name="SizeLabel" Content="Size:"/>
+            <Label x:Name="ChecksumLabel" Content="Checksum:"/>
             <Label x:Name="SteamIDLabel" Content="Steam ID:"/>
+            <Label x:Name="SizeLabel" Content="Size:"/>
+            <Label x:Name="FilePath" Content="FilePath:"/>
+            <Label x:Name="FilePathLabel" Content=""/>
         </ListBox>
-        <Label Content="Steam ID: " Margin="19,7,249,0" RenderTransformOrigin="0.725,0.564" Height="25" VerticalAlignment="Top"/>
-        <TextBox x:Name="SteamIDTextBox" Text="steam_id" Margin="85,11,10,0" Height="20" VerticalAlignment="Top"></TextBox>
     </Grid>
 </Window>
