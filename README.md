@@ -1,7 +1,4 @@
 # MHW-Save-Editor
-MHW Save Editor, currently allows you to de/encrypt.
+De/Encryption using Blowfish/ECB/no padding, also including checksum fixing using SHA-1 hash.
 
-De/Encryption: Blowfish/ECB/no padding
-Checksum: SHA-1 + 0x60 offset
-
-Update coming when I found a proper suited C# lib or made my own.
+Itlot and mib files are supported but in an experimental state. Will get a rework when I got the time for it.
