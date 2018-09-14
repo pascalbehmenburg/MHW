@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="\63f28af7" t="IncludeRecursive" />
-    <e p="\app" t="IncludeRecursive" />
-    <e p="C:\Users\Ambien\.Rider2018.2\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\Ambien\.Rider2018.2\system\resharper-host\local\Transient\ReSharperHost\v182\SolutionCaches\_MHW Save Editor.935289281.00" t="ExcludeRecursive" />
-    <e p="C:\Users\Ambien\source\repos\MHW Save Editor" t="IncludeFlat">
+    <e p="C:\Users\AsteriskAmpersand\.Rider2018.2\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\AsteriskAmpersand\.Rider2018.2\system\resharper-host\local\Transient\ReSharperHost\v182\SolutionCaches\_MHW Save Editor.-1842918584.00" t="ExcludeRecursive" />
+    <e p="G:\Users\AsteriskAmpersand\RiderProjects\MHW" t="IncludeFlat">
       <e p="MHW Save Editor" t="IncludeRecursive">
         <e p="App.config" t="Include" />
         <e p="App.xaml" t="Include" />
         <e p="App.xaml.cs" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
-        <e p="Crypto.cs" t="Include" />
+        <e p="InputBox.xaml" t="Include" />
+        <e p="InputBox.xaml.cs" t="Include" />
         <e p="MainWindow.xaml" t="Include" />
         <e p="MainWindow.xaml.cs" t="Include" />
         <e p="MHW Save Editor.csproj" t="IncludeRecursive" />
@@ -23,8 +22,24 @@
           <e p="Settings.Designer.cs" t="Include" />
           <e p="Settings.settings" t="Include" />
         </e>
-        <e p="SaveFile.cs" t="Include" />
-        <e p="Utility.cs" t="Include" />
+        <e p="src" t="Include">
+          <e p="Crypto" t="Include">
+            <e p="Blowfish.cs" t="Include" />
+            <e p="Cipher.cs" t="Include" />
+          </e>
+          <e p="FileFormat" t="Include">
+            <e p="GenericFile.cs" t="Include" />
+            <e p="SaveFile.cs" t="Include" />
+          </e>
+          <e p="InvestigationEditing" t="Include">
+            <e p="Investigation.cs" t="Include" />
+            <e p="InvestigationList.cs" t="Include" />
+          </e>
+          <e p="Utility" t="Include">
+            <e p="ArraySegmentWrapper.cs" t="Include" />
+            <e p="Utility.cs" t="Include" />
+          </e>
+        </e>
       </e>
       <e p="MHW Save Editor.sln" t="IncludeFlat" />
       <e p="packages" t="ExcludeRecursive" />

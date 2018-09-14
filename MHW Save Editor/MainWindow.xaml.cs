@@ -1,7 +1,7 @@
 ﻿using System;
-using System.Diagnostics;
 using System.IO;
 using System.Windows;
+using System.Windows.Input;
 using MHW_Save_Editor.src.FileFormat;
 using Microsoft.Win32;
 
@@ -22,7 +22,7 @@ namespace MHW
             data = new MemoryStream();
         }
 
-        private void BackupButton_Click(object sender, RoutedEventArgs e)
+        private void BackupFunction(object sender, RoutedEventArgs e)
         {
             string steamPath = Utility.getSteamPath();
             string backupPath = steamPath + "\\backups";
@@ -34,11 +34,11 @@ namespace MHW
 
             SaveFile tempFile = new SaveFile(File.ReadAllBytes(Utility.getSteamPath() + "\\SAVEDATA1000"));
             tempFile.Encrypt();
-            tempFile.Save(backupPath + "\\SAVEDATA1000_" + date_and_time, false);
+            tempFile.Save(backupPath + "\\SAVEDATA1000_" + date_and_time);
             MessageBox.Show("File backup created.", "Backup", MessageBoxButton.OK);
         }
 
-        private void LoadButton_Click(object sender, RoutedEventArgs e)
+        private void OpenFunction(object sender, RoutedEventArgs e)
         {
             string steamPath = Utility.getSteamPath();
             OpenFileDialog openFileDialog = new OpenFileDialog();
@@ -47,68 +47,75 @@ namespace MHW
             //to-do cleanup
             switch (Path.GetExtension(openFileDialog.FileName))
             {
+                case ".bin":
                 case "":
                     saveFile = new SaveFile(File.ReadAllBytes(openFileDialog.FileName));
-                    StatusLabel.Content = "Decrypted: " + saveFile.isDecrypted();
-                    SizeLabel.Content = "Size: " + saveFile.FileSize().ToString() + " byte";
-                    SteamIDLabel.Content = "Steam ID: " + saveFile.ReadSteamID();
+                    SizeLabel.Content = "Size: " + saveFile.FileSize() + " byte";
+                    SteamIdLabel.Content = saveFile.ReadSteamID();
                     ChecksumLabel.Content = "Checksum: " + saveFile.GetChecksum();
                     break;
                 case ".mib":
                     genericFile = new GenericFile(File.ReadAllBytes(openFileDialog.FileName), "TZNgJfzyD2WKiuV4SglmI6oN5jP2hhRJcBwzUooyfIUTM4ptDYGjuRTP");
                     genericFile.Decrypt();
-                    StatusLabel.Content = "Decrypted: " + "unsupported file format";
                     SizeLabel.Content = "Size: " + File.ReadAllBytes(openFileDialog.FileName).Length + " byte";
-                    SteamIDLabel.Content = "Steam ID: " + "unsupported file format";
                     ChecksumLabel.Content = "Checksum: " + "unsupported file format";
                     break;
                 case ".itlot":
                     genericFile = new GenericFile(File.ReadAllBytes(openFileDialog.FileName), "D7N88VEGEnRl0HEHTO0xMQkbeMb37arJF488lREp90WYojAONkLoxfMt");
                     genericFile.Decrypt();
-                    StatusLabel.Content = "Decrypted: " + "unsupported file format";
                     SizeLabel.Content = "Size: " + File.ReadAllBytes(openFileDialog.FileName).Length + " byte";
-                    SteamIDLabel.Content = "Steam ID: " + "unsupported file format";
                     ChecksumLabel.Content = "Checksum: " + "unsupported file format";
                     break;
             }
 
             
             FilePathLabel.Content = openFileDialog.FileName;
-            MessageBox.Show("File loaded.", "Load", MessageBoxButton.OK);
         }
 
-        private void SaveButton_Click(object sender, RoutedEventArgs e)
+        private void SaveFunction(object sender, RoutedEventArgs e)
         {
             var saveFileDialog = new SaveFileDialog();
-            saveFileDialog.ShowDialog();
+            saveFileDialog.Filter = "Encrypted|*|Unencrypted (*.bin)|*.bin";
             saveFileDialog.InitialDirectory = Utility.getSteamPath();
-
-            //to-do clean that up + move messageboxes to encrypt/decrypt functions -.-
-            if (saveFile != null && !saveFile.validChecksum)
-            {
-                if (MessageBox.Show("The checksum is invalid. Should it be fixed?", "Checksum", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+            saveFileDialog.AddExtension = true;
+            Nullable<bool> result = saveFileDialog.ShowDialog();
+            if (result==true){
+                if (saveFile != null)
                 {
-                    if (MessageBox.Show("Encrypt the file?", "Save", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
-                        saveFile.Encrypt();
-                    saveFile.Save(saveFileDialog.FileName, true);
-                } else
-                {
-                    if (MessageBox.Show("Encrypt the file?", "Save", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
-                        saveFile.Encrypt();
-                    saveFile.Save(saveFileDialog.FileName, false);
+                    saveFile.Save(saveFileDialog.FileName,!(Path.GetExtension(saveFileDialog.FileName)==".bin"));
                 }
-            } else if (saveFile != null)
-            {
-                if (MessageBox.Show("Encrypt the file?", "Save", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
-                    saveFile.Encrypt();
-                saveFile.Save(saveFileDialog.FileName, false);
-            } else
-            {
-                genericFile.Encrypt();
-                genericFile.Save(saveFileDialog.FileName);
+                else
+                {
+                    genericFile.Encrypt();
+                    genericFile.Save(saveFileDialog.FileName);
+                }
             }
-           
             MessageBox.Show("File saved.", "Save", MessageBoxButton.OK);
         }
+
+        public void EditSteamLabel(object sender, RoutedEventArgs e)
+        {
+            if (saveFile == null) return;
+            string steamstring;
+            InputBox inputDialog = new InputBox("Enter replacement steam ID:", saveFile.ReadSteamID().ToString());
+            if (inputDialog.ShowDialog() == true)
+            {
+                steamstring = inputDialog.Answer;
+                try
+                {
+                    long steamid = Convert.ToInt64(steamstring);
+                    saveFile.setSteamID(steamid);
+                    SteamIdLabel.Content = steamid;
+                }
+                catch
+                {
+                    MessageBox.Show("Invalid Steam ID", "Invalid Steam ID", MessageBoxButton.OK);
+                }
+            }
+        }
     }
+    
+
+
+    
 }

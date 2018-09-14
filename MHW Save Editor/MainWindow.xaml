@@ -3,26 +3,30 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:MHW"
+        xmlns:mhw="clr-namespace:MHW"
+
         mc:Ignorable="d"
-        Title="MHW - Save Editor" Height="297.019" Width="693.521" ResizeMode="NoResize">
-    <Grid Margin="0,0,4,0">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="47*"/>
-            <ColumnDefinition Width="32*"/>
-        </Grid.ColumnDefinitions>
-        <ProgressBar x:Name="Progress" HorizontalAlignment="Left" Height="21" Margin="19,229,0,0" VerticalAlignment="Top" Width="378"/>
-        <Button x:Name="SaveButton" Content="Save" HorizontalAlignment="Left" Margin="124,204,0,0" VerticalAlignment="Top" Width="100" Click="SaveButton_Click" Height="20"/>
-        <Button x:Name="LoadButton" Content="Load" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Margin="19,204,0,0" Height="20" Click="LoadButton_Click" ClickMode="Press"/>
-        <Button x:Name="BackupButton" Content="Backup current savefile" HorizontalAlignment="Left" Margin="229,204,0,0" VerticalAlignment="Top" Width="168" Height="20" Click="BackupButton_Click" AutomationProperties.HelpText="Backups current save file which is located in your steam folder."/>
-        <ListBox x:Name="ListBox" Grid.Column="1" HorizontalAlignment="Left" Height="242" Margin="10,10,0,0" VerticalAlignment="Top" Width="257">
-            <Label x:Name="StatusLabel" Content="Decrypted:"/>
-            <Label x:Name="MagicLabel" Content="Magic:"/>
+        Title="MHW - Save Editor" Height="700.0" Width="680.0" ResizeMode="NoResize">
+
+    
+    <DockPanel>
+        <Menu Width="Auto" Height="20" DockPanel.Dock="Top">
+           <MenuItem Header="File">
+               <MenuItem Header="Open" Click="OpenFunction" />
+               <MenuItem Header="Save" Click="SaveFunction" />
+               <MenuItem Header="Backup" Click="BackupFunction" />
+               <Separator />
+           </MenuItem>
+        </Menu>
+        <ListBox x:Name="ListBox" >
             <Label x:Name="ChecksumLabel" Content="Checksum:"/>
-            <Label x:Name="SteamIDLabel" Content="Steam ID:"/>
+            <Label x:Name="SteamIdLabel" Content="Steam ID:" MouseDoubleClick="EditSteamLabel"/>
             <Label x:Name="SizeLabel" Content="Size:"/>
-            <Label x:Name="FilePath" Content="FilePath:"/>
-            <Label x:Name="FilePathLabel" Content=""/>
+            <Label x:Name="FilePathLabel" Content="FilePath:"/>
         </ListBox>
-    </Grid>
+    </DockPanel>
+    
+    
+    
+
 </Window>

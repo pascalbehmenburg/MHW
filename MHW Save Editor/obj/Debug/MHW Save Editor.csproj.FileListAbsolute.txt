@@ -13,3 +13,20 @@ C:\Users\Ambien\source\repos\MHW Save Editor\MHW Save Editor\obj\Debug\MHW Save 
 C:\Users\Ambien\source\repos\MHW Save Editor\MHW Save Editor\obj\Debug\MHW Save Editor.csproj.CoreCompileInputs.cache
 C:\Users\Ambien\source\repos\MHW Save Editor\MHW Save Editor\obj\Debug\MHW Save Editor.exe
 C:\Users\Ambien\source\repos\MHW Save Editor\MHW Save Editor\obj\Debug\MHW Save Editor.pdb
+G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\obj\Debug\MHW Save Editor.csprojAssemblyReference.cache
+G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\obj\Debug\MainWindow.g.cs
+G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\obj\Debug\App.g.cs
+G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\obj\Debug\MHW Save Editor_MarkupCompile.cache
+G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\obj\Debug\MHW Save Editor_MarkupCompile.lref
+G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\obj\Debug\MHW Save Editor.exe
+G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\obj\Debug\MHW Save Editor.pdb
+G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\bin\Debug\MHW Save Editor.exe.config
+G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\bin\Debug\MHW Save Editor.exe
+G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\bin\Debug\MHW Save Editor.pdb
+G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\obj\Debug\MainWindow.baml
+G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\obj\Debug\MHW Save Editor.g.resources
+G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\obj\Debug\MHW_Save_Editor.Properties.Resources.resources
+G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\obj\Debug\MHW Save Editor.csproj.GenerateResource.cache
+G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\obj\Debug\MHW Save Editor.csproj.CoreCompileInputs.cache
+G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\obj\Debug\InputBox.baml
+G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\obj\Debug\InputBox.g.cs

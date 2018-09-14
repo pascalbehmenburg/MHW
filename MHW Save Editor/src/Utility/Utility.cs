@@ -1,10 +1,12 @@
 ﻿using Microsoft.Win32;
 using System;
+using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 
 namespace MHW
 {
-    class Utility
+    static class Utility
     {
         public static string getSteamPath()
         {
@@ -33,7 +35,7 @@ namespace MHW
             return steamPath;
         }
 
-        public static byte[] bswap(byte[] data)
+        public static byte[] bswap(this byte[] data)
         {
             var swapped = new byte[data.Length];
             for (var i = 0; i < data.Length; i += 4)
@@ -44,6 +46,21 @@ namespace MHW
                 swapped[i + 3] = data[i];
             }
             return swapped;
+        }
+        
+        public static T[] Slice<T>(this T[] sliceable, int start, int end)
+        {
+            T[] result = new T[end-start];
+            for(int i = start; i<end; i++)result[i]=sliceable[i];
+            return result;
+        }
+        
+        public static int StartingIndex<T>(this IList<T> x, IList<T> y)where T:IEquatable<T> {
+            IEnumerable<int> index = Enumerable.Range(0, x.Count - y.Count + 1);
+            for (int i = 0; i < y.Count; i++) {
+                index = index.Where(n => EqualityComparer<T>.Default.Equals(x[n + i],y[i]));
+            }
+            return index.First();
         }
     }
 }

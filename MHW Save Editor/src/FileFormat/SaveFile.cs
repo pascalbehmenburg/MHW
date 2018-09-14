@@ -1,6 +1,8 @@
-﻿using MHW_Save_Editor.src.Crypto;
+﻿
 using System;
 using System.IO;
+using System.Security.Cryptography;
+using System.Security.Policy;
 using System.Text;
 using System.Windows;
 
@@ -9,12 +11,8 @@ namespace MHW
     class SaveFile
     {
         private Cipher cipher;
-        private Hash hash;
 
         private byte[] data;
-        private byte[] checksum;
-
-        public bool validChecksum;
         
         private readonly string key = "xieZjoe#P2134-3zmaghgpqoe0z8$3azeq";
         private int size;
@@ -23,13 +21,10 @@ namespace MHW
         {
             this.data = data;
             cipher = new Cipher(key);
-            hash = new Hash(data);
 
             if (!isDecrypted())
                 Decrypt();
 
-
-            checksum = ReadChecksum();
             size = data.Length;
         }
 
@@ -43,7 +38,7 @@ namespace MHW
             if (!isDecrypted())
             {
                 data = cipher.Decipher(data);
-                MessageBox.Show("File decrypted.", "Decryption", MessageBoxButton.OK);
+                //MessageBox.Show("File decrypted.", "Decryption", MessageBoxButton.OK);
             }
         }
 
@@ -51,8 +46,8 @@ namespace MHW
         {
             if (isDecrypted())
             {
-                data = cipher.Decipher(data);
-                MessageBox.Show("File encrypted.", "Encryption", MessageBoxButton.OK);
+                data = cipher.Encipher(data);
+                //MessageBox.Show("File encrypted.", "Encryption", MessageBoxButton.OK);
             }
         }
 
@@ -61,13 +56,10 @@ namespace MHW
             return size;
         }
 
-        public void Save(string path, bool replaceHash)
+        public void Save(string path, bool encrypt = true)
         {
-            if (replaceHash)
-            {
-                hash.GenerateChecksum();
-                data = hash.OverrideChecksum();
-            }
+            Array.Copy(GenerateChecksum(),0,data, 12, 20);
+            if (encrypt)Encrypt();
             Stream fStream = File.Create(path);
             fStream.Write(data, 0, data.Length);
             fStream.Close();
@@ -82,18 +74,32 @@ namespace MHW
             return BitConverter.ToInt64(steam_id, 0);
         }
 
-        private byte[] ReadChecksum()
+        public void setSteamID(Int64 steamid)
         {
-            byte[] checksum = new byte[20];
-            if (isDecrypted())
-                Array.Copy(data, 12, checksum, 0, 20);
-            this.checksum = checksum;
-            return this.checksum;
+            byte[] newid =  BitConverter.GetBytes(steamid);
+            Array.Copy(newid, 0, data, 0x28, newid.Length);        
         }
 
         public string GetChecksum()
         {
-            return BitConverter.ToString(checksum).Replace("-", "");
+            return BitConverter.ToString(ReadChecksum()).Replace("-","");
         }
+
+        private byte[] ReadChecksum()
+        {
+            byte[] checksum = new byte[20];
+            Array.Copy(data, 12, checksum,0,20);
+            return Utility.bswap(checksum);
+        }
+        
+        private byte[] GenerateChecksum()
+        {
+            byte[] checksum = new byte[20];
+            var temp = new byte[data.Length-64];
+            Array.Copy(data, 64, temp, 0, data.Length - 64);
+            SHA1.Create().ComputeHash(temp).CopyTo(checksum, 0);//
+            return Utility.bswap(checksum);
+        }
+        
     }
 }
