@@ -1,6 +1,7 @@
 ﻿using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.IO;
 using System.Linq;
 
@@ -51,16 +52,14 @@ namespace MHW
         public static T[] Slice<T>(this T[] sliceable, int start, int end)
         {
             T[] result = new T[end-start];
-            for(int i = start; i<end; i++)result[i]=sliceable[i];
+            for(int i = start; i<end; i++)result[i-start]=sliceable[i];
             return result;
         }
         
-        public static int StartingIndex<T>(this IList<T> x, IList<T> y)where T:IEquatable<T> {
-            IEnumerable<int> index = Enumerable.Range(0, x.Count - y.Count + 1);
-            for (int i = 0; i < y.Count; i++) {
-                index = index.Where(n => EqualityComparer<T>.Default.Equals(x[n + i],y[i]));
-            }
-            return index.First();
+       public static Int32 BMHIndexOf(this Byte[] value, Byte[] pattern)
+        {
+            BoyerMoore searcher = new BoyerMoore(pattern);
+            return searcher.Search(value).First();
         }
     }
 }

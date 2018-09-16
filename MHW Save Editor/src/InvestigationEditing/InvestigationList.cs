@@ -1,60 +1,97 @@
 using System;
+using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Data;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Windows;
 using System.Windows.Media.Animation;
 
 namespace MHW.InvestigationEditing
 {
-    public class InvestigationList
+    public class InvestigationList:INotifyPropertyChanged
     {
-        private Investigation[] invlist;
+        public ObservableCollection<InvestigationViewModel> InvestigationCollection;
+
+        private Byte[] datasource;
+        private int offset;
+        
         private Byte[] clipboard;
         private bool resort_flag;
         private bool name_cache_flag;
-        private int current;
         
+        private int _CurrentIndex;
+        public int CurrentIndex
+        {
+            get { return _CurrentIndex; }
+            set
+            {
+                _CurrentIndex = value;
+                RaisePropertyChanged("CurrentIndex");
+            }
+        }
+        private bool initialized;
+      
         private void set_resort(){resort_flag=true;}
         private void set_cache(){name_cache_flag=true;}
         private void set_all(){set_resort();set_cache();}
         private void clear_resort(){resort_flag=false;}
         private void clear_cache(){name_cache_flag=false;}
         private void clear_all(){clear_resort();clear_cache();}
-
-        private static readonly int inv_count = 250;
-        private static readonly int inv_size = 42;
+        
+        public static readonly int inv_count = 250;
+        public static readonly int inv_size = 42;
         private static readonly byte[]investigation_signature = {
-            0x00,0x00,0x10,0x00,0x30,0x75,0x00,0x10,0x00,0x30,0x75
+            0x00,0x00,0x10,0x00,0x30,0x75
         };
-        //investigations are 42 bytes long
-        public InvestigationList(byte[] savefile)
+        
+        private static readonly InvestigationViewModel empty_investigation = new InvestigationViewModel();
+        
+        public InvestigationList()
         {
-            int offset = savefile.StartingIndex(investigation_signature)+4;
-            invlist = new Investigation[inv_count];
+            initialized = false;
+            InvestigationCollection =  new ObservableCollection<InvestigationViewModel>();
+            InvestigationCollection.Add(empty_investigation);
+        }
+
+        //investigations are 42 bytes long
+
+        public InvestigationList Populate(byte[] savefile)
+        {
+            datasource = savefile;
+            initialized = true;
+            InvestigationCollection = new ObservableCollection<InvestigationViewModel>();
+            offset = savefile.BMHIndexOf(investigation_signature)+4;
             for (int i = 0; i < inv_count; i++)
             {
-                invlist[i] = new Investigation(new ArraySegmentWrapper<byte>(savefile,offset+i*inv_size,inv_size));
+                InvestigationCollection.Add(new InvestigationViewModel(new Investigation(savefile.Slice(offset+i*inv_size,offset+(i+1)*inv_size))));
             }
-            current = 0;
+            CurrentIndex = 0;
+            return this;
+        }
+
+        public InvestigationViewModel Expose()
+        {
+            return initialized?InvestigationCollection[CurrentIndex]:empty_investigation;
         }
 
         public InvestigationList Seek(int i)
         {
-            current = Math.Max(0,Math.Min(i, invlist.Length));
+            CurrentIndex = Math.Max(0,Math.Min(i, inv_count-1));
             return this;
         }
         
-        public InvestigationList Prev(){return Seek(current-1);}
+        public InvestigationList Prev(){return Seek(CurrentIndex-1);}
         public InvestigationList First(){return Seek(0);}
-        public InvestigationList Next(){return Seek(current+1);}
-        public InvestigationList Last(){return Seek(invlist.Length);}
+        public InvestigationList Next(){return Seek(CurrentIndex+1);}
+        public InvestigationList Last(){return Seek(inv_count);}
 
-        public InvestigationList ReSort(Func<Investigation , int> function = null)
+        public InvestigationList ReSort(Func<InvestigationViewModel , int> function = null)
         {
-            if (function==null){function = (x => x.GetIsFilled()?1:0);}
-            int[] indices = Enumerable.Range(0, invlist.Length).ToList().OrderByDescending(i => function(invlist[i])).ToArray();
-            for (int i = 0; i < invlist.Length; i++)Swap(i, indices[i]);
+            if (function==null){function = (x => x.Filled?1:0);}
+            int[] indices = Enumerable.Range(0, inv_count).ToList().OrderByDescending(i => function(InvestigationCollection[i])).ToArray();
+            for (int i = 0; i < inv_count; i++)Swap(i, indices[i]);
             return this;
         }
 
@@ -62,22 +99,29 @@ namespace MHW.InvestigationEditing
         {
             if (resort_flag){ReSort();}
             clear_all();
-            foreach(Investigation inv in invlist){inv.Commit();}
+            int i = 0;
+            foreach (InvestigationViewModel inv in InvestigationCollection)
+            {
+                inv.Commit();
+                inv.Serialize().CopyTo(datasource, offset + i * inv_size);
+                i++;
+            }
             return this;
         }
         
-        public InvestigationList Toggle(){
-            set_all();
-            if (invlist[current].GetIsFilled()) invlist[current].Clear();
-            else invlist[current].Initialize();
-            return this;}
-        public InvestigationList InitializeAll(){set_all();foreach(Investigation inv in invlist)if (!inv.GetIsFilled())inv.Initialize();return this;}
+        public InvestigationList Toggle()
+        {
+            InvestigationCollection[CurrentIndex].Toggle();
+            return this;
+        }
+        
+        public InvestigationList InitializeAll(){set_all();foreach(InvestigationViewModel inv in InvestigationCollection)if (!inv.Filled)inv.Toggle();return this;}
 
-        public InvestigationList ClearAll(Func<Investigation, bool> filter =null)
+        public InvestigationList ClearAll(Func<InvestigationViewModel, bool> filter =null)
         {
             set_all();
             if (filter==null){filter = (x => true);}
-            foreach(Investigation inv in invlist)if(filter(inv))inv.Clear();return this;
+            foreach(InvestigationViewModel inv in InvestigationCollection)if(filter(inv))inv.Clear();return this;
         }
 
         
@@ -89,16 +133,16 @@ namespace MHW.InvestigationEditing
             set_all();
             for (int i = 0; i < import.Length / inv_size; i++)
             {
-                invlist[positions[i]].Overwrite(new ArraySegmentWrapper<Byte>(import, i * inv_size, inv_size));
+                InvestigationCollection[positions[i]].Overwrite(new ArraySegmentWrapper<Byte>(import, i * inv_size, inv_size));
             }
             return this;
         }
 
         public InvestigationList ExportAt(string path, int[] positions)
         {
-            byte[] content = new byte[inv_size*invlist.Length];
+            byte[] content = new byte[inv_size*inv_size];
             int i = 0;
-            foreach (Investigation inv in invlist)
+            foreach (InvestigationViewModel inv in InvestigationCollection)
             {
                 inv.Serialize().CopyTo(content, i * inv_size);
                 i++;
@@ -107,27 +151,27 @@ namespace MHW.InvestigationEditing
             return this;
         }
         
-        public InvestigationList Import(string path){return ImportAt(path, new [] {current});}
-        public InvestigationList Export(string path){return ExportAt(path, new [] {current});}
+        public InvestigationList Import(string path){return ImportAt(path, new [] {CurrentIndex});}
+        public InvestigationList Export(string path){return ExportAt(path, new [] {CurrentIndex});}
 
         public InvestigationList Copy()
         {
-            clipboard = invlist[current].Serialize();
+            clipboard = InvestigationCollection[CurrentIndex].Serialize();
             return this;
         }
         
         public InvestigationList PasteAt(int[] positions)
         {
             set_all();
-            foreach (int i in positions){invlist[i].Overwrite(clipboard);}
+            foreach (int i in positions){InvestigationCollection[i].Overwrite(clipboard);}
             return this;
         }    
-        public InvestigationList Paste(){return PasteAt(new [] {current});}
+        public InvestigationList Paste(){return PasteAt(new [] {CurrentIndex});}
 
         public InvestigationList GenerateLog(string path)
         {
             var builder = new StringBuilder();
-            foreach (Investigation inv in invlist)
+            foreach (InvestigationViewModel inv in InvestigationCollection)
             {
                 builder.AppendLine(inv.Log());
             }
@@ -152,20 +196,31 @@ namespace MHW.InvestigationEditing
                 Swap(top_pointer, low_pointer);
                 top_pointer++;
                 low_pointer++;
-                if (low_pointer > invlist.Length) low_pointer = n;
+                if (low_pointer > inv_size) low_pointer = n;
             }
             return this;
         }
         
         private InvestigationList Swap(int i, int j)
         {
-            invlist[i].__filesystemswap__(invlist[j]);
-            Investigation temp = invlist[i];
-            invlist[i] = invlist[j];
-            invlist[j] = temp;
+            InvestigationViewModel temp = InvestigationCollection[i];
+            InvestigationCollection[i] = InvestigationCollection[j];
+            InvestigationCollection[j] = temp;
             return this;
         }
         
-        //
+        public event PropertyChangedEventHandler PropertyChanged;
+        
+        private void RaisePropertyChanged(string propertyName)
+        {
+            // take a copy to prevent thread issues
+            PropertyChangedEventHandler handler = PropertyChanged;
+            if (handler != null)
+            {
+                handler(this, new PropertyChangedEventArgs(propertyName));
+            }
+        }
+
+
     }
 }

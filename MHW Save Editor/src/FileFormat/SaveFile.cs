@@ -12,7 +12,7 @@ namespace MHW
     {
         private Cipher cipher;
 
-        private byte[] data;
+        public byte[] data;
         
         private readonly string key = "xieZjoe#P2134-3zmaghgpqoe0z8$3azeq";
         private int size;

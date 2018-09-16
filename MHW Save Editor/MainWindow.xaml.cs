@@ -1,7 +1,8 @@
 ﻿using System;
+using System.Data;
 using System.IO;
 using System.Windows;
-using System.Windows.Input;
+using MHW.InvestigationEditing;
 using MHW_Save_Editor.src.FileFormat;
 using Microsoft.Win32;
 
@@ -15,13 +16,24 @@ namespace MHW
         private SaveFile saveFile;
         private GenericFile genericFile;
         private MemoryStream data;
-
+        InvestigationList investigations;
+        InvestigationViewModel currentInvestigation;
+        
         public MainWindow()
         {
             InitializeComponent();
+            DataContext = this;
             data = new MemoryStream();
+            investigations = new InvestigationList();
+            currentInvestigation = investigations.Expose();
+            SetBindings();
         }
 
+        private void SetBindings()
+        {
+            InvestigationVisibleList.ItemsSource  = investigations.InvestigationCollection;
+        }
+        
         private void BackupFunction(object sender, RoutedEventArgs e)
         {
             string steamPath = Utility.getSteamPath();
@@ -44,15 +56,17 @@ namespace MHW
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.ShowDialog();
             
-            //to-do cleanup
             switch (Path.GetExtension(openFileDialog.FileName))
             {
                 case ".bin":
                 case "":
+                    if (openFileDialog.FileName == "") return;
                     saveFile = new SaveFile(File.ReadAllBytes(openFileDialog.FileName));
                     SizeLabel.Content = "Size: " + saveFile.FileSize() + " byte";
-                    SteamIdLabel.Content = saveFile.ReadSteamID();
+                    SteamIdLabel.Content = "Steam ID: " + saveFile.ReadSteamID();
                     ChecksumLabel.Content = "Checksum: " + saveFile.GetChecksum();
+                    investigations.Populate(saveFile.data);
+                    SetBindings();
                     break;
                 case ".mib":
                     genericFile = new GenericFile(File.ReadAllBytes(openFileDialog.FileName), "TZNgJfzyD2WKiuV4SglmI6oN5jP2hhRJcBwzUooyfIUTM4ptDYGjuRTP");
@@ -89,33 +103,9 @@ namespace MHW
                     genericFile.Encrypt();
                     genericFile.Save(saveFileDialog.FileName);
                 }
-            }
-            MessageBox.Show("File saved.", "Save", MessageBoxButton.OK);
-        }
-
-        public void EditSteamLabel(object sender, RoutedEventArgs e)
-        {
-            if (saveFile == null) return;
-            string steamstring;
-            InputBox inputDialog = new InputBox("Enter replacement steam ID:", saveFile.ReadSteamID().ToString());
-            if (inputDialog.ShowDialog() == true)
-            {
-                steamstring = inputDialog.Answer;
-                try
-                {
-                    long steamid = Convert.ToInt64(steamstring);
-                    saveFile.setSteamID(steamid);
-                    SteamIdLabel.Content = steamid;
-                }
-                catch
-                {
-                    MessageBox.Show("Invalid Steam ID", "Invalid Steam ID", MessageBoxButton.OK);
-                }
+                MessageBox.Show("File saved.", "Save", MessageBoxButton.OK);
             }
         }
     }
-    
-
-
     
 }

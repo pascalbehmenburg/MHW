@@ -4,11 +4,20 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:mhw="clr-namespace:MHW"
+        xmlns:investigationEditing="clr-namespace:MHW.InvestigationEditing"
 
         mc:Ignorable="d"
         Title="MHW - Save Editor" Height="700.0" Width="680.0" ResizeMode="NoResize">
-
-    
+    <Window.Resources>
+        <Style x:Key="ListBoxStyle" TargetType="{x:Type ListBox}">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="Foreground" Value="Transparent"/>
+            <Setter Property="BorderBrush" Value="Transparent"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Padding" Value="0"/>
+            <Setter Property="Margin" Value="0"/>
+        </Style>
+    </Window.Resources>
     <DockPanel>
         <Menu Width="Auto" Height="20" DockPanel.Dock="Top">
            <MenuItem Header="File">
@@ -18,12 +27,125 @@
                <Separator />
            </MenuItem>
         </Menu>
-        <ListBox x:Name="ListBox" >
-            <Label x:Name="ChecksumLabel" Content="Checksum:"/>
-            <Label x:Name="SteamIdLabel" Content="Steam ID:" MouseDoubleClick="EditSteamLabel"/>
-            <Label x:Name="SizeLabel" Content="Size:"/>
-            <Label x:Name="FilePathLabel" Content="FilePath:"/>
-        </ListBox>
+        <Grid>
+            <TabControl>
+                <TabItem Header="General">
+                    <ListBox x:Name="ListBox" >
+                        <Label x:Name="ChecksumLabel" Content="Checksum:"/>
+                        <Label x:Name="SteamIdLabel" Content="Steam ID:" MouseDoubleClick="EditSteamLabel"/>
+                        <Label x:Name="SizeLabel" Content="Size:"/>
+                        <Label x:Name="FilePathLabel" Content="FilePath:"/>
+                    </ListBox>
+                </TabItem>
+                <!-- Investigations ================================================================================-->
+                <TabItem Header="Investigations">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <!-- Investigation List Display -->
+                            <ColumnDefinition Width="2*" />
+                            <!-- Investigation Details -->
+                            <ColumnDefinition Width="5*" />
+                        </Grid.ColumnDefinitions>
+                        <!-- Investigation List -->
+                        <DockPanel Grid.Column="0">
+                            <ListBox 
+                                DockPanel.Dock="Left"
+                                x:Name="InvestigationVisibleList"
+                                ItemsSource="{Binding InvestigationCollection}" 
+                                SelectionChanged="InvestigationList_SelectionChanged"
+                                >
+                                <ListBox.ItemTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding InvestigationTitle}" />
+                                    </DataTemplate>
+                                </ListBox.ItemTemplate>
+                            </ListBox>
+                        </DockPanel>
+                        <!-- Investigation Details -->
+                        <Grid Grid.Column="1">
+                            <Grid.RowDefinitions>
+                                <!-- State Controls -->
+                                <RowDefinition Height="1*" />
+                                <!-- Goal&Rank -->
+                                <RowDefinition Height="2*" />
+                                <!-- Monsters -->
+                                <RowDefinition Height="3*" />
+                                <!-- Stats -->
+                                <RowDefinition Height="2*" />
+                                <!-- Values -->
+                                <RowDefinition Height="14*" />
+                                <!-- Rewards -->
+                                <RowDefinition Height="1*" />
+                                <!-- Rewards Display -->
+                                <RowDefinition Height="2*" />
+                                <!-- Utility Controls -->
+                                <RowDefinition Height="2*" />
+                            </Grid.RowDefinitions>
+                            <!-- State Controls -->
+                            <Grid Grid.Row="0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="1*" />
+                                    <ColumnDefinition Width="1*" />
+                                    <ColumnDefinition Width="3*" />
+                                    <ColumnDefinition Width="1*" />
+                                    <ColumnDefinition Width="1*" />
+                                </Grid.ColumnDefinitions>
+                                <Button Grid.Column="0" Click="InvestigationList_First">&lt;&lt;</Button>
+                                <Button Grid.Column="1" Click="InvestigationList_Prev">&lt;</Button>
+                                <Button Grid.Column="2" Click="InvestigationList_ToggleCurrent" 
+                                        Content="{Binding Path=currentInvestigation.ToggleState}"/>
+                                <Button Grid.Column="3" Click="InvestigationList_Next">&gt;</Button>
+                                <Button Grid.Column="4" Click="InvestigationList_Last">&gt;&gt;</Button>
+                            </Grid>
+                            <!-- Goal -->
+                            <Grid Grid.Row = "1">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="1*" />
+                                    <RowDefinition Height="1*" />
+                                </Grid.RowDefinitions>
+                                <ComboBox Grid.Row="0" Name="QuestGoals">
+                                    <ComboBox.ItemTemplate >
+                                        <DataTemplate>
+                                            <StackPanel Orientation="Horizontal">
+                                                <TextBlock Text="{Binding currentInvestigation.InvestigationTitle}" />
+                                            </StackPanel>
+                                        </DataTemplate>
+                                    </ComboBox.ItemTemplate>
+                                </ComboBox>
+                                <ComboBox Grid.Row="1" Name="QuestRank">
+                                    <ComboBox.ItemTemplate >
+                                        <DataTemplate>
+                                            <StackPanel Orientation="Horizontal">
+                                                <TextBlock Text="{Binding currentInvestigation.InvestigationRank}" />
+                                            </StackPanel>
+                                        </DataTemplate>
+                                    </ComboBox.ItemTemplate>
+                                </ComboBox>
+                            </Grid>
+                            <!-- Monsters -->
+                            <Grid Grid.Row="2">
+                            </Grid>
+                                <!-- Stats -->
+                            <Grid Grid.Row="3">
+                            </Grid>
+                            <!-- Values -->
+                            <Grid Grid.Row="4">
+                            </Grid>
+                            <!-- Rewards -->
+                            
+                            <!-- Rewards Display -->
+                            <Grid Grid.Row="6">
+                            <!-- Missing Data -->   
+                            </Grid>
+                            <!-- Utility Controls -->
+                            <Grid Grid.Row="7">
+                            </Grid>
+                         </Grid>
+                    </Grid>
+                </TabItem>
+            </TabControl>
+        </Grid>
+        
     </DockPanel>
     
     
