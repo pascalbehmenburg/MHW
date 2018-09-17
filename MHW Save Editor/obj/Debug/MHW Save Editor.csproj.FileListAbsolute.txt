@@ -33,4 +33,3 @@ G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\obj\Debug\InputBox.
 G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\bin\Debug\System.ValueTuple.dll
 G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\bin\Debug\System.ValueTuple.xml
 G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\obj\Debug\MHW Save Editor.csproj.CopyComplete
-G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\obj\Debug\GeneratedInternalTypeHelper.g.cs

@@ -18,20 +18,22 @@ namespace MHW
         private MemoryStream data;
         InvestigationList investigations;
         InvestigationViewModel currentInvestigation;
+        public string testString = "Test";
         
         public MainWindow()
         {
-            InitializeComponent();
-            DataContext = this;
             data = new MemoryStream();
             investigations = new InvestigationList();
             currentInvestigation = investigations.Expose();
+            InitializeComponent();
+            //DataContext = this;
             SetBindings();
         }
 
         private void SetBindings()
         {
             InvestigationVisibleList.ItemsSource  = investigations.InvestigationCollection;
+            CurrentInvestigationVisible.DataContext = currentInvestigation;
         }
         
         private void BackupFunction(object sender, RoutedEventArgs e)

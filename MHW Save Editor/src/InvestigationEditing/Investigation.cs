@@ -12,13 +12,7 @@ namespace MHW.InvestigationEditing
         private byte[] filedata;
         private byte[] newdata;
 
-        public void __filesystemswap__(Investigation other)
-        {
-            byte[] temp = other.filedata;
-            other.filedata = filedata;
-            filedata = temp;
-        }
-        
+     
         public Investigation(byte[] data)
         {
             filedata = data;
@@ -57,7 +51,7 @@ namespace MHW.InvestigationEditing
             };
             return Monsters;
         }
-        public UInt32 GetMonsterCode(int index){return BitConverter.ToUInt32(newdata.Slice(15, 19), 0);}
+        public UInt32 GetMonsterCode(int index){return BitConverter.ToUInt32(newdata.Slice(15+index*4, 19+index*4), 0);}
         public bool GetTemper(int index){return newdata[27+index] != 0;}
         //and X0-3 Y0-3 Z0-3 with the same meaning as in memory for those
         public byte GetHP(){return newdata[30];}
@@ -120,7 +114,7 @@ namespace MHW.InvestigationEditing
         
         public void SetTemper(int index, bool temper)
         {
-            newdata[28+index]=(byte)(temper?0x01:0x00);
+            newdata[27+index]=(byte)(temper?0x01:0x00);
         }
     
         public void SetHP(byte HP){
@@ -216,7 +210,7 @@ namespace MHW.InvestigationEditing
         public Investigation Overwrite(IList<byte> newestdata)
         {
             //modified = true;
-            for (int i = 0; i < filedata.Length; i++) newdata[i] = newestdata[i];
+            for (int i = 0; i < newdata.Length; i++) newdata[i] = newestdata[i];
             return this;
         }
 
@@ -282,7 +276,7 @@ namespace MHW.InvestigationEditing
             {0x14,"Deviljho"},
             {0x15,"Barroth"},
             {0x16,"Uragaan"},
-            {0x18,"Pukei"},
+            {0x18,"Pukei-Pukei"},
             {0x19,"Nergigante"},
             {0x1A,"Xeno'Jiiva"},
             {0x1B,"Kulu-Ya-Ku"},
@@ -319,8 +313,8 @@ namespace MHW.InvestigationEditing
         {
             {"Anjanath",0x00},
             {"Rathalos",0x01},
-            {"*Aptonoth",0x02},
-            {"*Jagras",0x03},
+            {"Aptonoth",0x02},
+            {"Jagras",0x03},
             {"Zorah Magdaros",0x04},
             {"Mosswine",0x05},
             {"Gajau",0x06},
@@ -339,7 +333,7 @@ namespace MHW.InvestigationEditing
             {"Deviljho",0x14},
             {"Barroth",0x15},
             {"Uragaan",0x16},
-            {"Pukei",0x18},
+            {"Pukei-Pukei",0x18},
             {"Nergigante",0x19},
             {"Xeno'Jiiva",0x1A},
             {"Kulu-Ya-Ku",0x1B},
