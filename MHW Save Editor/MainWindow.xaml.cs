@@ -1,7 +1,10 @@
 ﻿using System;
+using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Data;
 using System.IO;
 using System.Windows;
+using System.Windows.Controls;
 using MHW.InvestigationEditing;
 using MHW_Save_Editor.src.FileFormat;
 using Microsoft.Win32;
@@ -11,7 +14,7 @@ namespace MHW
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainWindow : Window, INotifyPropertyChanged
     {
         private SaveFile saveFile;
         private GenericFile genericFile;
@@ -106,6 +109,98 @@ namespace MHW
                     genericFile.Save(saveFileDialog.FileName);
                 }
                 MessageBox.Show("File saved.", "Save", MessageBoxButton.OK);
+            }
+        }
+
+        void TabControl_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (e.Source is TabControl)
+            {
+                RaisePropertyChanged("EditOptions");
+                RaisePropertyChanged("ToolsOptions");
+            }
+        }
+
+        public ObservableCollection<string> EditOptions
+        {
+            get
+            {
+                switch(TabControl.SelectedIndex)
+                {
+                    case 1:
+                        return new ObservableCollection<string>(InvestigationList_EditMenu);
+                    default:
+                        return new ObservableCollection<string>();
+                }
+            }
+        }
+
+        public ObservableCollection<string> ToolsOptions
+        {
+            get
+            {
+                switch (TabControl.SelectedIndex)
+                {
+                    case 1:
+                        return new ObservableCollection<string>(InvestigationList_ToolsMenu);
+                    default:
+                        return new ObservableCollection<string>();
+                }
+            }
+        }
+
+        private void GeneralEditHandler(string any)
+        {}
+        private void GeneralToolsHandler(string any)
+        {}
+        
+        private void EditHandlers(int switchvar, string command)
+        {
+            switch (switchvar)
+            {
+                case (0):
+                    GeneralEditHandler(command);
+                    break;
+                case(1):
+                    InvestigationsEditHandler(command);
+                    break;
+            }
+        }
+
+        private void ToolsHandlers(int switchvar, string command)
+        {
+            switch (switchvar)
+            {
+                case (0):
+                    GeneralToolsHandler(command);
+                    break;
+                case (1):
+                    InvestigationsToolsHandler(command);
+                    break;
+            }
+        }
+
+
+        private void EditMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            MenuItem  obMenuItem = e.OriginalSource as MenuItem ;
+            EditHandlers(TabControl.SelectedIndex,obMenuItem.Header.ToString());
+        }
+        private void ToolsMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            MenuItem  obMenuItem = e.OriginalSource as MenuItem ;
+            ToolsHandlers(TabControl.SelectedIndex,obMenuItem.Header.ToString());
+        }
+        
+        public event PropertyChangedEventHandler PropertyChanged;
+        
+        private void RaisePropertyChanged(string propertyName)
+        {
+            // take a copy to prevent thread issues
+            PropertyChangedEventHandler handler = PropertyChanged;
+            if (handler != null)
+            {
+                handler(this, new PropertyChangedEventArgs(propertyName));
             }
         }
     }

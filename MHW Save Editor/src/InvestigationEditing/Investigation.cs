@@ -224,17 +224,17 @@ namespace MHW.InvestigationEditing
         {
             Tuple<string, bool>[] monsters = GetMonsters();
             var builder = new StringBuilder()
-                .AppendLine($"_____________________________________{Environment.NewLine}")
-                .AppendLine($"Attempts: {GetAttempts()}{Environment.NewLine}")
-                .AppendLine($"Locale: {GetLocale()} - {GetFlourish()}{Environment.NewLine}")
-                .AppendLine($"Rank: {GetRank()}{Environment.NewLine}")
-                .AppendLine($"{(monsters[0].Item2?"Tempered ":"")}{monsters[0].Item1}{Environment.NewLine}")
-                .AppendLine($"{(monsters[1].Item2?"Tempered ":"")}{monsters[1].Item1}{Environment.NewLine}")
-                .AppendLine($"{(monsters[2].Item2?"Tempered ":"")}{monsters[2].Item1}{Environment.NewLine}")
-                .AppendLine($"HP: {GetHP()} - Att: {GetAttack()} - Size: {GetSize()} - X3: {GetX3()}{Environment.NewLine}")
-                .AppendLine($"Goal: {GetTimeAmount()}{Environment.NewLine}")
-                .AppendLine($"Y0: {GetY0()} - Y3:{GetY3()}{Environment.NewLine}")
-                .AppendLine($"Faints: {GetFaints()} - Players: {GetPlayerCount()} - Box Multiplier: {GetBoxBonus()} - Zenny Multiplier: {GetZennyBonus()}{Environment.NewLine}");
+                .AppendLine($"_____________________________________")
+                .AppendLine($"Attempts: {GetAttempts()}")
+                .AppendLine($"Locale: {GetLocale()} - {GetFlourish()}")
+                .AppendLine($"Rank: {GetRank()}")
+                .AppendLine($"{(monsters[0].Item2?"Tempered ":"")}{monsters[0].Item1}")
+                .AppendLine($"{(monsters[1].Item2?"Tempered ":"")}{monsters[1].Item1}")
+                .AppendLine($"{(monsters[2].Item2?"Tempered ":"")}{monsters[2].Item1}")
+                .AppendLine($"HP: {GetHP()} - Att: {GetAttack()} - Size: {GetSize()} - X3: {GetX3()}")
+                .AppendLine($"Goal: {GetTimeAmount()}")
+                .AppendLine($"Y0: {GetY0()} - Y3:{GetY3()}")
+                .AppendLine($"Faints: {GetFaints()} - Players: {GetPlayerCount()} - Box Multiplier: {GetBoxBonus()} - Zenny Multiplier: {GetZennyBonus()}");
             return builder.ToString();
         }
         

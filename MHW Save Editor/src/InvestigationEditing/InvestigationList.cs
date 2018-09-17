@@ -18,8 +18,6 @@ namespace MHW.InvestigationEditing
         private int offset;
         
         private Byte[] clipboard;
-        private bool resort_flag;
-        private bool name_cache_flag;
         
         private int _CurrentIndex;
         public int CurrentIndex
@@ -32,13 +30,6 @@ namespace MHW.InvestigationEditing
             }
         }
         private bool initialized;
-      
-        private void set_resort(){resort_flag=true;}
-        private void set_cache(){name_cache_flag=true;}
-        private void set_all(){set_resort();set_cache();}
-        private void clear_resort(){resort_flag=false;}
-        private void clear_cache(){name_cache_flag=false;}
-        private void clear_all(){clear_resort();clear_cache();}
         
         public static readonly int inv_count = 250;
         public static readonly int inv_size = 42;
@@ -97,8 +88,7 @@ namespace MHW.InvestigationEditing
 
         public InvestigationList Commit()
         {
-            if (resort_flag){ReSort();}
-            clear_all();
+            ReSort();
             int i = 0;
             foreach (InvestigationViewModel inv in InvestigationCollection)
             {
@@ -115,11 +105,10 @@ namespace MHW.InvestigationEditing
             return this;
         }
         
-        public InvestigationList InitializeAll(){set_all();foreach(InvestigationViewModel inv in InvestigationCollection)if (!inv.Filled)inv.Toggle();return this;}
+        public InvestigationList InitializeAll(){foreach(InvestigationViewModel inv in InvestigationCollection)if (!inv.Filled)inv.Toggle();return this;}
 
         public InvestigationList ClearAll(Func<InvestigationViewModel, bool> filter =null)
         {
-            set_all();
             if (filter==null){filter = (x => true);}
             foreach(InvestigationViewModel inv in InvestigationCollection)if(filter(inv))inv.Clear();return this;
         }
@@ -130,7 +119,6 @@ namespace MHW.InvestigationEditing
             byte[] import = File.ReadAllBytes(path);
             if ((import.Length % inv_size)!=0)throw new ConstraintException("File is not a collection of 42-byte investigations");
             if ((import.Length / inv_size)!=positions.Length)throw new ConstraintException("Number of investigations does not match number of replacements");
-            set_all();
             for (int i = 0; i < import.Length / inv_size; i++)
             {
                 InvestigationCollection[positions[i]].Overwrite(new ArraySegmentWrapper<Byte>(import, i * inv_size, inv_size));
@@ -140,12 +128,10 @@ namespace MHW.InvestigationEditing
 
         public InvestigationList ExportAt(string path, int[] positions)
         {
-            byte[] content = new byte[inv_size*inv_size];
-            int i = 0;
-            foreach (InvestigationViewModel inv in InvestigationCollection)
+            byte[] content = new byte[inv_size*positions.Length];
+            for (int i =0; i<positions.Length; i++)
             {
-                inv.Serialize().CopyTo(content, i * inv_size);
-                i++;
+                InvestigationCollection[positions[i]].Serialize().CopyTo(content, i * inv_size);
             }
             File.WriteAllBytes(path,content);
             return this;
@@ -162,7 +148,6 @@ namespace MHW.InvestigationEditing
         
         public InvestigationList PasteAt(int[] positions)
         {
-            set_all();
             foreach (int i in positions){InvestigationCollection[i].Overwrite(clipboard);}
             return this;
         }    

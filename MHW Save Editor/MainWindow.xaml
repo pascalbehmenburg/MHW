@@ -4,12 +4,24 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
         xmlns:mhw="clr-namespace:MHW"
         xmlns:investigationEditing="clr-namespace:MHW.InvestigationEditing"
         mc:Ignorable="d"
         Title="MHW - Save Editor" Height="700.0" Width="680.0" ResizeMode="NoResize"
         DataContext="{Binding ElementName=_this}">
     <Window.Resources>
+        <Style x:Key="MiscLabels" TargetType="TextBlock">
+            <!--Setter Property="FontSize" Value="10" /-->
+            <Setter Property="VerticalAlignment" Value="Center" />
+        </Style>
+        <Style x:Key="MiscDropdown" TargetType="ComboBox">
+            <!-- Setter Property="FontSize" Value="10" /-->
+            <Setter Property="VerticalAlignment" Value="Stretch" />
+            <Setter Property="HorizontalAlignment" Value="Stretch" />
+            <Setter Property="HorizontalContentAlignment" Value="Right" />
+            <Setter Property="VerticalContentAlignment" Value="Center" />
+        </Style>
         <Style x:Key="ListBoxStyle" TargetType="{x:Type ListBox}">
             <Setter Property="Background" Value="Transparent"/>
             <Setter Property="Foreground" Value="Transparent"/>
@@ -25,11 +37,12 @@
                <MenuItem Header="Open" Click="OpenFunction" />
                <MenuItem Header="Save" Click="SaveFunction" />
                <MenuItem Header="Backup" Click="BackupFunction" />
-               <Separator />
            </MenuItem>
+           <MenuItem Header="Edit" ItemsSource = "{Binding EditOptions}" Click = "EditMenuItem_Click"/>
+           <MenuItem Header="Tools" ItemsSource = "{Binding ToolsOptions}" Click = "ToolsMenuItem_Click"/>
         </Menu>
         <Grid>
-            <TabControl>
+            <TabControl Name = "TabControl" SelectionChanged = "TabControl_SelectionChanged">
                 <TabItem Header="General">
                     <ListBox x:Name="ListBox" >
                         <Label x:Name="ChecksumLabel" Content="Checksum:"/>
@@ -58,7 +71,7 @@
                                 >
                                 <ListBox.ItemTemplate>
                                     <DataTemplate>
-                                        <TextBlock Text="{Binding InvestigationTitle}" />
+                                        <TextBlock Text="{Binding InvestigationTitle, Mode=OneWay}" />
                                     </DataTemplate>
                                 </ListBox.ItemTemplate>
                             </ListBox>
@@ -76,7 +89,7 @@
                                     <!-- Stats -->
                                     <RowDefinition Height="2*" />
                                     <!-- Values -->
-                                    <RowDefinition Height="14*" />
+                                    <RowDefinition Height="7*" />
                                     <!-- Rewards -->
                                     <RowDefinition Height="1*" />
                                     <!-- Rewards Display -->
@@ -107,13 +120,13 @@
                                         <RowDefinition Height="1*" />
                                     </Grid.RowDefinitions>
                                     <ComboBox Grid.Row="0"
-                                              ItemsSource = "{Binding GoalChoices, Mode = OneWay, IsAsync=True}"
-                                              SelectedItem= "{Binding Goal, IsAsync=True}"
+                                              ItemsSource = "{Binding GoalChoices, Mode = OneWay}"
+                                              SelectedItem= "{Binding Goal, UpdateSourceTrigger=PropertyChanged, Mode = TwoWay, IsAsync=True}"
                                               IsSynchronizedWithCurrentItem="True"
                                               />
                                     <ComboBox Grid.Row="1"
-                                              ItemsSource = "{Binding RankChoices, Mode = OneWay, IsAsync=True}"
-                                              SelectedItem= "{Binding InvestigationRank, IsAsync=True}"
+                                              ItemsSource = "{Binding RankChoices, Mode = OneWay}"
+                                              SelectedItem= "{Binding InvestigationRank, UpdateSourceTrigger=PropertyChanged, Mode = TwoWay, IsAsync=True}"
                                               IsSynchronizedWithCurrentItem="True"
                                               />
                                 </Grid>
@@ -128,27 +141,48 @@
                                         <ColumnDefinition Width="1*" />
                                         <ColumnDefinition Width="1*" />
                                     </Grid.ColumnDefinitions>
-                                    <CheckBox Grid.Row="0" Grid.Column="0" IsChecked="{Binding M1Temper, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, IsAsync=True}">Tempered</CheckBox>
-                                    <CheckBox Grid.Row="0" Grid.Column="1" IsChecked="{Binding M2Temper, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, IsAsync=True}">Tempered</CheckBox>
-                                    <CheckBox Grid.Row="0" Grid.Column="2" IsChecked="{Binding M3Temper, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, IsAsync=True}">Tempered</CheckBox>
-                                    <ComboBox Grid.Row="1" Grid.Column="0"
-                                              HorizontalAlignment="Center"
-                                              ItemsSource = "{Binding MonsterChoices, Mode = OneWay, IsAsync=True}"
-                                              SelectedItem= "{Binding Mon1, UpdateSourceTrigger=PropertyChanged, Mode = TwoWay, IsAsync=True}"
-                                              IsSynchronizedWithCurrentItem="True"
-                                    />
-                                    <ComboBox Grid.Row="1" Grid.Column="1"
-                                              HorizontalAlignment="Center"
-                                              ItemsSource = "{Binding MonsterChoices, Mode = OneWay, IsAsync=True}"
-                                              SelectedItem= "{Binding Mon2, UpdateSourceTrigger=PropertyChanged, Mode = TwoWay, IsAsync=True}"
-                                              IsSynchronizedWithCurrentItem="True"
-                                    />
-                                    <ComboBox Grid.Row="1" Grid.Column="2"
-                                              HorizontalAlignment="Center"
-                                              ItemsSource = "{Binding MonsterChoices, Mode = OneWay, IsAsync=True}"
-                                              SelectedItem= "{Binding Mon3, UpdateSourceTrigger=PropertyChanged, Mode = TwoWay, IsAsync=True}"
-                                              IsSynchronizedWithCurrentItem="True"
-                                    />
+                                    <Grid Grid.Row="1" Grid.Column="0">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="1*" />
+                                            <ColumnDefinition Width="7*" />
+                                        </Grid.ColumnDefinitions>
+                                        <CheckBox Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" 
+                                                  IsChecked="{Binding M1Temper, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, IsAsync=True}">T</CheckBox>
+                                        <ComboBox Grid.Column="1"
+                                                  HorizontalAlignment="Stretch"
+                                                  ItemsSource = "{Binding MonsterChoices, Mode = OneWay, IsAsync=True}"
+                                                  SelectedItem= "{Binding Mon1, UpdateSourceTrigger=PropertyChanged, Mode = TwoWay, IsAsync=True}"
+                                                  IsSynchronizedWithCurrentItem="True"
+                                        />
+                                    </Grid>
+                                    <Grid Grid.Row="1" Grid.Column="1">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="1*" />
+                                            <ColumnDefinition Width="7*" />
+                                        </Grid.ColumnDefinitions>
+                                        <CheckBox Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" 
+                                                  IsChecked="{Binding M2Temper, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, IsAsync=True}">T</CheckBox>
+                                        <ComboBox Grid.Column="1"
+                                                  HorizontalAlignment="Stretch"
+                                                  ItemsSource = "{Binding MonsterChoices, Mode = OneWay, IsAsync=True}"
+                                                  SelectedItem= "{Binding Mon2, UpdateSourceTrigger=PropertyChanged, Mode = TwoWay, IsAsync=True}"
+                                                  IsSynchronizedWithCurrentItem="True"
+                                        />
+                                    </Grid>
+                                    <Grid Grid.Row="1" Grid.Column="2">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="1*" />
+                                            <ColumnDefinition Width="7*" />
+                                        </Grid.ColumnDefinitions>
+                                        <CheckBox Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" 
+                                                  IsChecked="{Binding M3Temper, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, IsAsync=True}">T</CheckBox>
+                                        <ComboBox Grid.Column="1"
+                                                  HorizontalAlignment="Stretch"
+                                                  ItemsSource = "{Binding MonsterChoices, Mode = OneWay, IsAsync=True}"
+                                                  SelectedItem= "{Binding Mon3, UpdateSourceTrigger=PropertyChanged, Mode = TwoWay, IsAsync=True}"
+                                                  IsSynchronizedWithCurrentItem="True"
+                                        />
+                                    </Grid>
                                 </Grid>
                                 <!-- Stats -->
                                 <Grid Grid.Row="3">
@@ -205,49 +239,58 @@
                                         <RowDefinition Height="1*" />
                                         <RowDefinition Height="1*" />
                                         <RowDefinition Height="1*" />
+                                        <RowDefinition Height="1*" />
                                      </Grid.RowDefinitions>
-                                    <TextBlock Grid.Row="0" Grid.Column="0" >Faints: </TextBlock>
+                                    <TextBlock Grid.Row="0" Grid.Column="0" Style="{StaticResource MiscLabels}">Faints: </TextBlock>
                                     <ComboBox  Grid.Row="0" Grid.Column="1" 
+                                              Style="{StaticResource MiscDropdown}"
                                               ItemsSource = "{Binding FaintValues}"
                                               SelectedItem= "{Binding Faints, UpdateSourceTrigger=PropertyChanged, Mode = TwoWay}"
                                               IsSynchronizedWithCurrentItem="True"
                                     />
-                                    <TextBlock Grid.Row="1" Grid.Column="0" >Player Count: </TextBlock>
+                                    <TextBlock Grid.Row="1" Grid.Column="0" Style="{StaticResource MiscLabels}">Player Count: </TextBlock>
                                     <ComboBox  Grid.Row="1" Grid.Column="1" 
+                                               Style="{StaticResource MiscDropdown}"
                                                ItemsSource = "{Binding PlayerValues}"
                                                SelectedItem= "{Binding PlayerCount, UpdateSourceTrigger=PropertyChanged, Mode = TwoWay}"
                                                IsSynchronizedWithCurrentItem="True"
                                     />
-                                    <TextBlock Grid.Row="2" Grid.Column="0" >Zenny Bonus Multiplier: </TextBlock>
+                                    <TextBlock Grid.Row="2" Grid.Column="0" Style="{StaticResource MiscLabels}">Zenny Bonus Multiplier: </TextBlock>
                                     <ComboBox  Grid.Row="2" Grid.Column="1" 
+                                               Style="{StaticResource MiscDropdown}"
                                                ItemsSource = "{Binding ZennyValues}"
                                                SelectedItem= "{Binding ZennyBonus, UpdateSourceTrigger=PropertyChanged, Mode = TwoWay}"
                                                IsSynchronizedWithCurrentItem="True"
                                     />
-                                    <TextBlock Grid.Row="3" Grid.Column="0" >Locale: </TextBlock>
+                                    <TextBlock Grid.Row="3" Grid.Column="0" Style="{StaticResource MiscLabels}">Locale: </TextBlock>
                                     <ComboBox  Grid.Row="3" Grid.Column="1" 
+                                               Style="{StaticResource MiscDropdown}"
                                                ItemsSource = "{Binding LocaleChoices}"
-                                               SelectedItem= "{Binding Locale, UpdateSourceTrigger=PropertyChanged, Mode = TwoWay}"
+                                               SelectedItem= "{Binding Locale, UpdateSourceTrigger=PropertyChanged, Mode = TwoWay, IsAsync=True}"
                                                IsSynchronizedWithCurrentItem="True"
                                     />
-                                    <TextBlock Grid.Row="4" Grid.Column="0" >Flourish: </TextBlock>
+                                    <TextBlock Grid.Row="4" Grid.Column="0" Style="{StaticResource MiscLabels}">Flourish: </TextBlock>
                                     <ComboBox  Grid.Row="4" Grid.Column="1" 
+                                               Style="{StaticResource MiscDropdown}"
                                                ItemsSource = "{Binding CurrentFlourish, IsAsync=True}"
                                                SelectedItem= "{Binding Flourish, UpdateSourceTrigger=PropertyChanged, Mode = TwoWay, IsAsync=True}"
                                                IsSynchronizedWithCurrentItem="True"
                                      />
-                                    <TextBlock Grid.Column="0" Grid.Row="5" >Y0: </TextBlock>
+                                    <TextBlock Grid.Column="0" Grid.Row="5" Style="{StaticResource MiscLabels}">Y0: </TextBlock>
                                     <ComboBox  Grid.Column="1" Grid.Row="5"
+                                               Style="{StaticResource MiscDropdown}"
                                                ItemsSource = "{Binding CommonValues}"
                                                SelectedItem= "{Binding Y0, Mode = TwoWay}"
                                                IsSynchronizedWithCurrentItem="True"
                                     />
-                                    <TextBlock Grid.Column="0" Grid.Row="6" >Y3: </TextBlock>
+                                    <TextBlock Grid.Column="0" Grid.Row="6" Style="{StaticResource MiscLabels}">Y3: </TextBlock>
                                     <ComboBox  Grid.Column="1" Grid.Row="6"
+                                               Style="{StaticResource MiscDropdown}"
                                                ItemsSource = "{Binding CommonValues}"
                                                SelectedItem= "{Binding Y3, Mode = TwoWay}"
-                                               IsSynchronizedWithCurrentItem="True"
-                                    />
+                                               IsSynchronizedWithCurrentItem="True"/>
+                                    <TextBlock Grid.Column="0" Grid.Row="7" Style="{StaticResource MiscLabels}">Attempts: </TextBlock>
+                                    <xctk:IntegerUpDown Grid.Column="1"  Grid.Row="8" Minimum="1" Maximum="255" Value = "{Binding Attempts}"/>
                                 </Grid>
                                 <!-- Rewards -->
                                 <Grid Grid.Row="5">

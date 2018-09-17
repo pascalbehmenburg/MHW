@@ -11,9 +11,9 @@ using System.Windows.Threading;
 
 namespace MHW.InvestigationEditing
 {
-    public class InvestigationViewModel : INotifyPropertyChanged
+    public class InvestigationViewModelWBL : INotifyPropertyChanged
     {
-        public InvestigationViewModel(Investigation entry = null)
+        public InvestigationViewModelWBL(Investigation entry = null)
         {
             if (entry != null) _inv = entry;
             else
@@ -51,14 +51,47 @@ namespace MHW.InvestigationEditing
             set
             {
                 byte code = rankToCode[value];
-                if (code == 0x00)_inv.SetRank(0x00);
-                if (code == 0x01)_inv.SetRank(0x01);
-                if (code == 0x02)_inv.SetRank(0x02);
+                if (code == 0x00)SetLowRank();
+                if (code == 0x01)SetHighRank();
+                if (code == 0x02)SetTemperedRank();
                 RaisePropertyChanged("InvestigationRank");
                 RaisePropertyChanged("MonsterChoices");
                 RaisePropertyChanged("Mon1");RaisePropertyChanged("Mon2");RaisePropertyChanged("Mon3");
             }
-        }   
+        }
+
+        private void SetLowRank()
+        {
+            if (Locale == Investigation.area4)
+            {
+                _inv.SetLocale(0);
+                RaisePropertyChanged("Locale");
+                RaisePropertyChanged("Flourish");
+                RaisePropertyChanged("CurrentFlourish");
+            }
+            if (_inv.IsElderInvestigation())SetDefaultMonsters(Locale);
+            _inv.SetRank(0x00);
+            M1Temper = false; M2Temper = false; M3Temper = false;
+            bool v1 = MonsterChoices.Contains(Mon1);
+            bool v2 = MonsterChoices.Contains(Mon1);
+            bool v3 = MonsterChoices.Contains(Mon1);
+            if (v1 && v2 && v3) return;
+            SetDefaultMonsters(Locale);
+        }
+
+        private void SetHighRank()
+        {
+            _inv.SetRank(0x01);
+            M1Temper = false; M2Temper = false; M3Temper = false;
+        }
+
+        private void SetTemperedRank()
+        {
+            _inv.SetRank(0x02);
+            if (!M1Temper) M1Temper=true;
+            
+        }
+    
         #endregion
         #region MonsterManagement
         public string Mon1
@@ -84,9 +117,70 @@ namespace MHW.InvestigationEditing
         
         public void SetMonster(int index, string monname)
         {
+            string[] monsters = GetMonsters();
             UInt32 code = Investigation.monsterToCode[monname];
+            if (code == 0xFFFFFFFF) return;
+            if (_inv.IsElderInvestigation() && !_inv.IsElder(code))
+            {
+                SetDefaultMonsters(Locale);
+                ForceSetMonster(index, code);
+                RaisePropertyChanged("InvestigationTitle");
+                RaisePropertyChanged("GoalChoices");
+                return;
+            }
+            if (_inv.IsElder(code))
+            {
+                ForceSetMonster(0, code);
+                ForceSetMonster(1, 0xFFFFFFFF);
+                ForceSetMonster(2, 0xFFFFFFFF);
+                SetTemper(1, false);
+                SetTemper(2, false);
+                if (!FixedGoalChoices.Contains(Goal)) Goal = FixedGoalChoices[0];
+                RaisePropertyChanged("InvestigationTitle");
+                RaisePropertyChanged("GoalChoices");
+                if (index != 0) monname = "Empty";
+                return;
+            }
+            if (monsters[(index + 1) % 3] == monname)
+            {
+                SwapMonsters(index, (index + 1) % 3);
+                RaisePropertyChanged("InvestigationTitle");
+            }
+            else if (monsters[(index - 1) % 3] == monname)
+            {
+                SwapMonsters(index, (index - 1) % 3);
+                RaisePropertyChanged("InvestigationTitle");
+            }
+            else
+            {
+                ForceSetMonster(index, code);
+                RaisePropertyChanged("InvestigationTitle");
+            }
+        }
+
+        public void ForceSetMonster(int index, UInt32 code)
+        {
             _inv.SetMonster(index, code);
             RaisePropertyChanged($"Mon{index+1}");
+        }
+        
+        private void SwapMonsters(int i1, int i2)
+        {
+            UInt32 tempcode = _inv.GetMonsterCode(i1);
+            ForceSetMonster(i1,_inv.GetMonsterCode(i2));
+            ForceSetMonster(i2,tempcode);
+        }
+
+        public void SetDefaultMonsters(string Locale)
+        {
+            UInt32[] monsters = Investigation.localeToDefault[Locale];
+            ForceSetMonster(0, monsters[0]);
+            ForceSetMonster(1, monsters[1]);
+            ForceSetMonster(2, monsters[2]);
+            RaisePropertyChanged(Mon1);
+            RaisePropertyChanged(Mon2);
+            RaisePropertyChanged(Mon3);
+            RaisePropertyChanged(InvestigationTitle);
         }
         #endregion
         
@@ -110,6 +204,27 @@ namespace MHW.InvestigationEditing
         {
             _inv.SetTemper(index, value);
             RaisePropertyChanged($"M{index+1}Temper");
+            if (InvestigationRank != "Tempered" && value)
+            {
+                _inv.SetRank(0x02);
+                RaisePropertyChanged("InvestigationRank");
+                RaisePropertyChanged("MonsterChoices");
+                RaisePropertyChanged("LocaleChoices");
+                RaiseMonsters();
+            }
+
+            if (InvestigationRank == "Tempered" && !M1Temper)
+            {
+                _inv.SetRank(0x01);
+                _inv.SetTemper(1, false);
+                _inv.SetTemper(2, false);
+                RaisePropertyChanged("M2Temper");
+                RaisePropertyChanged("M3Temper");
+                RaisePropertyChanged("InvestigationRank");
+                RaisePropertyChanged("MonsterChoices");
+                RaisePropertyChanged("LocaleChoices");
+                RaiseMonsters();
+            }
         }
         #endregion
         
@@ -223,8 +338,8 @@ namespace MHW.InvestigationEditing
                 RaisePropertyChanged("Flourish");
             }
         }
-                
-        private static readonly Dictionary<string, byte> localeToCode = new Dictionary<string,byte>()
+        
+        private readonly Dictionary<string, byte> localeToCode = new Dictionary<string,byte>()
         {
             {Investigation.area0, 0x00},
             {Investigation.area1, 0x01},
@@ -239,7 +354,9 @@ namespace MHW.InvestigationEditing
             set
             {
                 _inv.SetLocale(localeToCode[value]);
+                SetDefaultMonsters(value);
                 RaisePropertyChanged("Locale");
+                RaisePropertyChanged("MonsterChoices");
                 RaisePropertyChanged("Flourish");
                 RaisePropertyChanged("CurrentFlourish");
             }
@@ -436,7 +553,7 @@ namespace MHW.InvestigationEditing
 
         public ObservableCollection<string> GoalChoices
         {
-            get => new ObservableCollection<string>(FixedGoalChoices.Concat(NonElderGoals));
+            get => new ObservableCollection<string>(_inv.IsElderInvestigation() ? FixedGoalChoices : FixedGoalChoices.Concat(NonElderGoals));
         }
         
         private ObservableCollection<string> FixedRankChoices = new ObservableCollection<string>
@@ -449,42 +566,28 @@ namespace MHW.InvestigationEditing
             get => FixedRankChoices;
         }
 
+        private ObservableCollection<string>[] ChoicesMatrix = new[]
+        {
+            new ObservableCollection<string> { "Anjanath", "Great Jagras", "Kulu-Ya-Ku", "Pukei-Pukei", "Rathalos", "Rathian", "Tobi-Kadachi"},
+            new ObservableCollection<string> { "Barroth", "Diablos", "Jyuratodus", "Kulu-Ya-Ku", "Rathian", "Anjanath" },
+            new ObservableCollection<string> { "Legiana", "Paolumu", "Tzitzi-Ya-Ku", "Odogaron", "Kirin"},
+            new ObservableCollection<string> { "Great Girros", "Odogaron", "Radobaan"},
+            new ObservableCollection<string> { }
+        };
+        private ObservableCollection<string>[] HighRankMatrix = new[]
+        {
+            new ObservableCollection<string> { "Azure Rathalos", "Kushala Daora", "Bazelgeuse", "Deviljho", "Empty"},
+            new ObservableCollection<string> { "Bazelgeuse", "Black Diablos", "Teostra", "Deviljho", "Empty" },
+            new ObservableCollection<string> { "Pink Rathian", "Bazelgeuse", "Deviljho", "Empty" },
+            new ObservableCollection<string> { "Bazelgeuse", "Vaal Hazak", "Deviljho", "Empty" },
+            new ObservableCollection<string> { "Azure Rathalos", "Bazelgeuse", "Behemoth", "Dodogama", "Deviljho", "Lavasioth", "Uragaan", "Nergigante", "Teostra", "Kushala Daora", "Deviljho", "Lunastra", "Empty"}
+        };
+
         public ObservableCollection<string> MonsterChoices
         {
-            get => new ObservableCollection<string>( new string[]
-            {
-                "Anjanath",
-                "Rathalos",
-                "Great Jagras",
-                "Rathian",
-                "Pink Rathian",
-                "Azure Rathalos",
-                "Diablos",
-                "Black Diablos",
-                "Kirin",
-                "Kushala Daora",
-                "Lunastra",
-                "Teostra",
-                "Lavasioth",
-                "Deviljho",
-                "Barroth",
-                "Uragaan",
-                "Pukei-Pukei",
-                "Nergigante",
-                "Kulu-Ya-Ku",
-                "Tzitzi-Ya-Ku",
-                "Jyuratodus",
-                "Tobi-Kadachi",
-                "Paolumu",
-                "Legiana",
-                "Great Girros",
-                "Odogaron",
-                "Radobaan",
-                "Vaal Hazak",
-                "Dodogama",
-                "Bazelgeuse",
-                "Empty"
-            });
+            get =>  new ObservableCollection<string>(rankToCode[InvestigationRank] == 0
+                ? ChoicesMatrix[localeToCode[Locale]]
+                : ChoicesMatrix[localeToCode[Locale]].Concat(HighRankMatrix[localeToCode[Locale]]));
         }
 
         public ObservableCollection<byte> CommonValues

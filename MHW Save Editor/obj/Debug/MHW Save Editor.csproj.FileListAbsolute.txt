@@ -33,3 +33,19 @@ G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\obj\Debug\InputBox.
 G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\bin\Debug\System.ValueTuple.dll
 G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\bin\Debug\System.ValueTuple.xml
 G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\obj\Debug\MHW Save Editor.csproj.CopyComplete
+G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\bin\Debug\Xceed.Wpf.AvalonDock.dll
+G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Aero.dll
+G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Metro.dll
+G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\bin\Debug\Xceed.Wpf.AvalonDock.Themes.VS2010.dll
+G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\bin\Debug\Xceed.Wpf.DataGrid.dll
+G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\bin\Debug\Xceed.Wpf.Toolkit.dll
+G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\bin\Debug\de\Xceed.Wpf.AvalonDock.resources.dll
+G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\bin\Debug\es\Xceed.Wpf.AvalonDock.resources.dll
+G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\bin\Debug\fr\Xceed.Wpf.AvalonDock.resources.dll
+G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\bin\Debug\hu\Xceed.Wpf.AvalonDock.resources.dll
+G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\bin\Debug\it\Xceed.Wpf.AvalonDock.resources.dll
+G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\bin\Debug\pt-BR\Xceed.Wpf.AvalonDock.resources.dll
+G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\bin\Debug\ro\Xceed.Wpf.AvalonDock.resources.dll
+G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\bin\Debug\ru\Xceed.Wpf.AvalonDock.resources.dll
+G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\bin\Debug\sv\Xceed.Wpf.AvalonDock.resources.dll
+G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\bin\Debug\zh-Hans\Xceed.Wpf.AvalonDock.resources.dll

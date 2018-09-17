@@ -15,6 +15,7 @@
         <e p="MainWindow.xaml.cs" t="Include" />
         <e p="MainWindowGeneral.xaml.cs" t="Include" />
         <e p="MainWindowInvesitgation.xaml.cs" t="Include" />
+        <e p="MainWindowPrompts.xaml.cs" t="Include" />
         <e p="MHW Save Editor.csproj" t="IncludeRecursive" />
         <e p="obj" t="ExcludeRecursive" />
         <e p="packages.config" t="Include" />
@@ -37,6 +38,7 @@
           <e p="InvestigationEditing" t="Include">
             <e p="Investigation.cs" t="Include" />
             <e p="InvestigationList.cs" t="Include" />
+            <e p="InvestigationViewModel(BL).cs" t="Include" />
             <e p="InvestigationViewModel.cs" t="Include" />
           </e>
           <e p="Utility" t="Include">
