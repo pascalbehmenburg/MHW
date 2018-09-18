@@ -58,7 +58,7 @@ namespace MHW
 
         public void Save(string path, bool encrypt = true)
         {
-            Array.Copy(GenerateChecksum(),0,data, 12, 20);
+            Array.Copy(Utility.bswap(GenerateChecksum()),0,data, 12, 20);
             if (encrypt)Encrypt();
             Stream fStream = File.Create(path);
             fStream.Write(data, 0, data.Length);
@@ -92,13 +92,13 @@ namespace MHW
             return Utility.bswap(checksum);
         }
         
-        private byte[] GenerateChecksum()
+        public byte[] GenerateChecksum()
         {
             byte[] checksum = new byte[20];
             var temp = new byte[data.Length-64];
             Array.Copy(data, 64, temp, 0, data.Length - 64);
             SHA1.Create().ComputeHash(temp).CopyTo(checksum, 0);//
-            return Utility.bswap(checksum);
+            return checksum;
         }
         
     }

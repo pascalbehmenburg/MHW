@@ -46,6 +46,7 @@
                 <TabItem Header="General">
                     <ListBox x:Name="ListBox" >
                         <Label x:Name="ChecksumLabel" Content="Checksum:"/>
+                        <Label x:Name="GeneratedChecksumLabel" Content="OnFileChecksum"/>
                         <Label x:Name="SteamIdLabel" Content="Steam ID:" MouseDoubleClick="EditSteamLabel"/>
                         <Label x:Name="SizeLabel" Content="Size:"/>
                         <Label x:Name="FilePathLabel" Content="FilePath:"/>
@@ -71,7 +72,7 @@
                                 >
                                 <ListBox.ItemTemplate>
                                     <DataTemplate>
-                                        <TextBlock Text="{Binding InvestigationTitle, Mode=OneWay}" />
+                                        <TextBlock Text="{Binding InvestigationTitle, Mode=OneWay, IsAsync=True}" />
                                     </DataTemplate>
                                 </ListBox.ItemTemplate>
                             </ListBox>

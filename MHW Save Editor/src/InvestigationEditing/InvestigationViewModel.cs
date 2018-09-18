@@ -398,7 +398,7 @@ namespace MHW.InvestigationEditing
 
         public ObservableCollection<string> LocaleChoices
         {
-            get => new ObservableCollection<string>(InvestigationRank == "Low Rank" ? LowRankChoices : LowRankChoices.Concat(HighRankChoices));
+            get => new ObservableCollection<string>(LowRankChoices.Concat(HighRankChoices));
         }
 
         private static readonly ObservableCollection<string> LowRankChoices = new ObservableCollection<string>

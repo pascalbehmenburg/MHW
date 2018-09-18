@@ -38,22 +38,6 @@ namespace MHW
             InvestigationVisibleList.ItemsSource  = investigations.InvestigationCollection;
             CurrentInvestigationVisible.DataContext = currentInvestigation;
         }
-        
-        private void BackupFunction(object sender, RoutedEventArgs e)
-        {
-            string steamPath = Utility.getSteamPath();
-            string backupPath = steamPath + "\\backups";
-
-            if (!Directory.Exists(backupPath))
-                Directory.CreateDirectory(steamPath + "\\backups");
-
-            string date_and_time = DateTime.Now.ToString("MM\\_dd\\_yyyy\\_h\\_mm");
-
-            SaveFile tempFile = new SaveFile(File.ReadAllBytes(Utility.getSteamPath() + "\\SAVEDATA1000"));
-            tempFile.Encrypt();
-            tempFile.Save(backupPath + "\\SAVEDATA1000_" + date_and_time);
-            MessageBox.Show("File backup created.", "Backup", MessageBoxButton.OK);
-        }
 
         private void OpenFunction(object sender, RoutedEventArgs e)
         {
@@ -70,6 +54,8 @@ namespace MHW
                     SizeLabel.Content = "Size: " + saveFile.FileSize() + " byte";
                     SteamIdLabel.Content = "Steam ID: " + saveFile.ReadSteamID();
                     ChecksumLabel.Content = "Checksum: " + saveFile.GetChecksum();
+                    GeneratedChecksumLabel.Content = "ChecksumGenerated: " + BitConverter.ToString(saveFile.GenerateChecksum()).Replace("-","");
+                    
                     investigations.Populate(saveFile.data);
                     SetBindings();
                     break;
@@ -110,6 +96,20 @@ namespace MHW
                 }
                 MessageBox.Show("File saved.", "Save", MessageBoxButton.OK);
             }
+        }
+                
+        private void BackupFunction(object sender, RoutedEventArgs e)
+        {
+            string steamPath = Utility.getSteamPath();
+            string backupPath = steamPath + "\\backups";
+
+            if (!Directory.Exists(backupPath))
+                Directory.CreateDirectory(steamPath + "\\backups");
+
+            string date_and_time = DateTime.Now.ToString("MM\\_dd\\_yyyy\\_h\\_mm");
+
+            File.Copy((Utility.getSteamPath() + "\\SAVEDATA1000"), backupPath + "\\SAVEDATA1000_" + date_and_time, true);
+            MessageBox.Show("File backup created.", "Backup", MessageBoxButton.OK);
         }
 
         void TabControl_SelectionChanged(object sender, SelectionChangedEventArgs e)

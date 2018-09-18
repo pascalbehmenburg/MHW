@@ -13,3 +13,39 @@ C:\Users\Ambien\source\repos\MHW Save Editor\MHW Save Editor\obj\Release\MHW Sav
 C:\Users\Ambien\source\repos\MHW Save Editor\MHW Save Editor\obj\Release\MHW Save Editor.csproj.CoreCompileInputs.cache
 C:\Users\Ambien\source\repos\MHW Save Editor\MHW Save Editor\obj\Release\MHW Save Editor.exe
 C:\Users\Ambien\source\repos\MHW Save Editor\MHW Save Editor\obj\Release\MHW Save Editor.pdb
+G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\bin\Release\MHW Save Editor.exe.config
+G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\bin\Release\MHW Save Editor.exe
+G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\bin\Release\MHW Save Editor.pdb
+G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\bin\Release\System.ValueTuple.dll
+G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\bin\Release\Xceed.Wpf.AvalonDock.dll
+G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\bin\Release\Xceed.Wpf.AvalonDock.Themes.Aero.dll
+G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\bin\Release\Xceed.Wpf.AvalonDock.Themes.Metro.dll
+G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\bin\Release\Xceed.Wpf.AvalonDock.Themes.VS2010.dll
+G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\bin\Release\Xceed.Wpf.DataGrid.dll
+G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\bin\Release\Xceed.Wpf.Toolkit.dll
+G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\bin\Release\System.ValueTuple.xml
+G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\bin\Release\de\Xceed.Wpf.AvalonDock.resources.dll
+G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\bin\Release\es\Xceed.Wpf.AvalonDock.resources.dll
+G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\bin\Release\fr\Xceed.Wpf.AvalonDock.resources.dll
+G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\bin\Release\hu\Xceed.Wpf.AvalonDock.resources.dll
+G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\bin\Release\it\Xceed.Wpf.AvalonDock.resources.dll
+G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\bin\Release\pt-BR\Xceed.Wpf.AvalonDock.resources.dll
+G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\bin\Release\ro\Xceed.Wpf.AvalonDock.resources.dll
+G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\bin\Release\ru\Xceed.Wpf.AvalonDock.resources.dll
+G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\bin\Release\sv\Xceed.Wpf.AvalonDock.resources.dll
+G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\bin\Release\zh-Hans\Xceed.Wpf.AvalonDock.resources.dll
+G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\obj\Release\MHW Save Editor.csprojAssemblyReference.cache
+G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\obj\Release\InputBox.baml
+G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\obj\Release\InputBox.g.cs
+G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\obj\Release\MainWindow.g.cs
+G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\obj\Release\App.g.cs
+G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\obj\Release\MHW Save Editor_MarkupCompile.cache
+G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\obj\Release\MHW Save Editor_MarkupCompile.lref
+G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\obj\Release\MainWindow.baml
+G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\obj\Release\MHW Save Editor.g.resources
+G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\obj\Release\MHW_Save_Editor.Properties.Resources.resources
+G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\obj\Release\MHW Save Editor.csproj.GenerateResource.cache
+G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\obj\Release\MHW Save Editor.csproj.CoreCompileInputs.cache
+G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\obj\Release\MHW Save Editor.csproj.CopyComplete
+G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\obj\Release\MHW Save Editor.exe
+G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\obj\Release\MHW Save Editor.pdb
