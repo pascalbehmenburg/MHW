@@ -4,6 +4,7 @@ using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
 using System.Net.Mime;
+using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading;
 using System.Windows;
@@ -13,403 +14,6 @@ namespace MHW.InvestigationEditing
 {
     public class InvestigationViewModel : INotifyPropertyChanged
     {
-        public InvestigationViewModel(Investigation entry = null)
-        {
-            if (entry != null) _inv = entry;
-            else
-            {
-                byte[] newish = new byte[InvestigationList.inv_size];
-                Array.Copy(Investigation.nullinvestigation, 0, newish, 0, InvestigationList.inv_size);
-                _inv = new Investigation(newish);
-            }
-        }
-
-        private Investigation _inv;
-             
-        public string InvestigationTitle
-        {
-            get
-            {
-                if (!_inv.GetIsFilled()) return "Empty Slot";
-                string objective = _inv.GetAmount() == 0 ? "Slay" : (_inv.GetCapture() ? "Capture" : "Hunt");
-                string mainmon = _inv.GetAmount()!=0?_inv.GetMonsters()[0].Item1 + (_inv.GetAmount()>1?", ...":""):"Wildlife";
-                return objective + " " + mainmon;
-            }
-        }
-
-        private static readonly Dictionary<string, byte> rankToCode = new Dictionary<string, byte>
-        {
-            {Investigation.ranklist[0], 0x00},
-            {Investigation.ranklist[1], 0x01},
-            {Investigation.ranklist[2], 0x02}
-        };
-        
-        #region RankManagement
-        public string InvestigationRank
-        {
-            get => _inv.GetRank();
-            set
-            {
-                byte code = rankToCode[value];
-                if (code == 0x00)_inv.SetRank(0x00);
-                if (code == 0x01)_inv.SetRank(0x01);
-                if (code == 0x02)_inv.SetRank(0x02);
-                RaisePropertyChanged("InvestigationRank");
-                RaisePropertyChanged("MonsterChoices");
-                RaisePropertyChanged("Mon1");RaisePropertyChanged("Mon2");RaisePropertyChanged("Mon3");
-            }
-        }   
-        #endregion
-        #region MonsterManagement
-        public string Mon1
-        {
-            get => _inv.GetMonsters()[0].Item1;
-            set => SetMonster(0, value);
-        }
-        public string Mon2
-        {
-            get => _inv.GetMonsters()[1].Item1;
-            set => SetMonster(1, value);
-        }
-        public string Mon3
-        {
-            get => _inv.GetMonsters()[2].Item1;
-            set => SetMonster(2, value);
-        }
-        
-        private string[] GetMonsters()
-        {
-            return new [] {Mon1, Mon2, Mon3};
-        }
-        
-        public void SetMonster(int index, string monname)
-        {
-            UInt32 code = Investigation.monsterToCode[monname];
-            _inv.SetMonster(index, code);
-            RaisePropertyChanged($"Mon{index+1}");
-        }
-        #endregion
-        
-        #region Tempering
-        public bool M1Temper
-        {
-            get => _inv.GetTemper(0);
-            set => SetTemper(0, value);
-        }
-        public bool M2Temper
-        {
-            get => _inv.GetTemper(1);
-            set => SetTemper(1, value);
-        }
-        public bool M3Temper
-        {
-            get => _inv.GetTemper(2);
-            set => SetTemper(2, value);
-        }
-        private void SetTemper(int index, bool value)
-        {
-            _inv.SetTemper(index, value);
-            RaisePropertyChanged($"M{index+1}Temper");
-        }
-        #endregion
-        
-        public bool Filled
-        {
-            get => _inv.GetIsFilled();
-        }
-        
-        public bool Selected
-        {
-            get => _inv.GetIsSelected();
-            set
-            {
-                _inv.SetSelected(value);
-                RaisePropertyChanged("Selected");
-            }
-        }
-        
-        public Int32 Attempts
-        {
-            get => _inv.GetAttempts();
-            set
-            {
-                _inv.SetAttempts(value);
-                RaisePropertyChanged("Attempts");
-            }
-        }        
-        
-        public bool Seen
-        {
-            get => _inv.GetSeen();
-            set
-            {
-                _inv.SetSeen(value?(byte)0x03:(byte)0x00);
-                RaisePropertyChanged("Seen");
-            }
-        }
-
-        public byte HP
-        {
-            get => _inv.GetHP();
-            set {
-                _inv.SetHP(value);
-                RaisePropertyChanged("HP");}
-        }
-        public byte Attack
-        {
-            get => _inv.GetAttack();
-            set {
-                _inv.SetAttack(value);
-                RaisePropertyChanged("Attack");}
-        }
-        public byte Size
-        {
-            get => _inv.GetSize();
-            set {
-                _inv.SetSize(value);
-                RaisePropertyChanged("Size");}
-        }
-        public byte X3
-        {
-            get => _inv.GetX3();
-            set {
-                _inv.SetX3(value);
-                RaisePropertyChanged("X3");}
-        }
-        public byte Y0
-        {
-            get => _inv.GetY0();
-            set {
-                _inv.SetY0(value);
-                RaisePropertyChanged("Y0");}
-        }
-        public byte Y3
-        {
-            get => _inv.GetY3();
-            set {
-                _inv.SetY3(value);
-                RaisePropertyChanged("Y3");}
-        }
-        public byte BoxBonus
-        {
-            get => _inv.GetBoxBonus();
-            set {
-                _inv.SetBoxBonus(value);
-                RaisePropertyChanged("BoxBonus");}
-        }
-        public byte ZennyBonus
-        {
-            get => _inv.GetZennyBonus();
-            set {
-                _inv.SetZennyBonus(value);
-                RaisePropertyChanged("ZennyBonus");}
-        }
-
-        private byte flourishcode
-        {
-            get => _inv.GetFlourish();
-            set {
-                _inv.SetFlourish(value);
-                RaisePropertyChanged("Flourish");}
-        }
-
-        public string Flourish
-        {
-            get => Investigation.flourishByLocale[localeToCode[Locale]][flourishcode];
-            set
-            {
-                int code = Array.IndexOf(Investigation.flourishByLocale[localeToCode[Locale]], value);
-                flourishcode = (byte) code;
-                RaisePropertyChanged("Flourish");
-            }
-        }
-                
-        private static readonly Dictionary<string, byte> localeToCode = new Dictionary<string,byte>()
-        {
-            {Investigation.area0, 0x00},
-            {Investigation.area1, 0x01},
-            {Investigation.area2, 0x02},
-            {Investigation.area3, 0x03},
-            {Investigation.area4, 0x04}
-        };
-        
-        public string Locale
-        {
-            get => _inv.GetLocale();
-            set
-            {
-                _inv.SetLocale(localeToCode[value]);
-                RaisePropertyChanged("Locale");
-                RaisePropertyChanged("Flourish");
-                RaisePropertyChanged("CurrentFlourish");
-            }
-        }
-
-        private static readonly string goal1 = "Slay-Wildlife1";
-        private static readonly string goal2 = "Slay-Wildlife2";
-        private static readonly string goal3 ="Capture";
-        private static readonly string goal4 ="Hunt";
-
-        public string Goal
-        {
-            get
-            {
-                int monamount = _inv.GetAmount();
-                int time = _inv.GetTime();
-                bool capture = _inv.GetCapture();
-                string result = "";
-                if (monamount == 0)
-                {
-                    result += !capture ? goal1 : goal2;
-                }
-                else
-                {
-                    result += capture ? goal3 : goal4;
-                    result += " " + monamount + " Monster";
-                    if (monamount > 1) result += "s";
-                }
-
-                result += " in " + time + " min";
-                return result;
-            }
-            set
-            {
-                int monamount;
-                int time;
-                bool capture;
-                string[] parts = value.Split(null);
-                if (parts[0]==goal1){monamount = 0;time=50;capture=false;}
-                else if (parts[0]==goal2){monamount = 0;time=50;capture=true;}
-                else
-                {
-                    capture = parts[0] == goal3;
-                    time = Convert.ToInt32(parts[parts.Length - 2]);
-                    monamount = Convert.ToInt32(parts[1]);
-                }
-                _inv.SetTimeAmount((byte) Array.IndexOf(Investigation.codeToTime, (time, monamount, capture)));
-                RaisePropertyChanged("Goal");
-                RaisePropertyChanged("InvestigationTitle");
-            }
-        }
-
-        public int Faints
-        {
-            get => _inv.GetFaints();
-            set
-            {
-                _inv.SetFaints((byte) Array.IndexOf(Investigation.faintslist,value));
-                RaisePropertyChanged("Faints");
-            }
-        }
-
-        public int PlayerCount
-        {
-            get => _inv.GetPlayerCount();
-            set
-            {
-                _inv.SetPlayerCount((byte) Array.IndexOf(Investigation.playercount, value));
-                RaisePropertyChanged("PlayerCount");
-            }
-        }
-        
-        
-
-        public string ToggleState
-        {
-            get => Filled ? "Clear" : "Initialize";
-        }
-        
-        public void Undo()
-        {
-            _inv.Undo();
-            RaiseAll();
-        }
-
-        public void Clear()
-        {
-            _inv.Clear();
-            RaiseAll();
-        }
-        
-        public void Initialize()
-        {
-            _inv.Initialize();
-            RaiseAll();
-        }       
-        public void Toggle()
-        {
-            if (Filled) _inv.Clear();
-            else _inv.Initialize();
-            RaiseAll();
-        }
-
-        public byte[] Serialize(){return _inv.Serialize();}
-        public void Commit(){_inv.Commit();}
-        public string Log(){return _inv.Log();}
-
-        public void RaiseMonsters()
-        {
-            RaisePropertyChanged("Mon1");
-            RaisePropertyChanged("Mon2");
-            RaisePropertyChanged("Mon3");
-            RaisePropertyChanged("M1Temper");
-            RaisePropertyChanged("M2Temper");
-            RaisePropertyChanged("M3Temper");
-        }
-        public void RaiseAll()
-        {
-            RaisePropertyChanged("Filled");
-            RaisePropertyChanged("Selected");
-            RaisePropertyChanged("Attempts");
-            RaisePropertyChanged("ToggleState");
-            RaisePropertyChanged("Seen");
-            RaisePropertyChanged("HP");
-            RaisePropertyChanged("Attack");
-            RaisePropertyChanged("Size");
-            RaisePropertyChanged("X3");
-            RaisePropertyChanged("Y0");
-            RaisePropertyChanged("Y3");
-            RaisePropertyChanged("BoxBonus");
-            RaisePropertyChanged("ZennyBonus");
-            RaisePropertyChanged("Mon1");
-            RaisePropertyChanged("Mon2");
-            RaisePropertyChanged("Mon3");
-            
-            RaisePropertyChanged("InvestigationRank");
-            RaisePropertyChanged("Locale");
-            
-            RaisePropertyChanged("MonsterChoices");
-
-            RaisePropertyChanged("M1Temper");
-            RaisePropertyChanged("M2Temper");
-            RaisePropertyChanged("M3Temper");
-            RaisePropertyChanged("Flourish");
-            RaisePropertyChanged("GoalChoices");
-            RaisePropertyChanged("InvestigationTitle");
-            RaisePropertyChanged("LocaleChoices");
-        }
-        
-
-        public void Overwrite(IList<byte> newestdata)
-        {
-            _inv.Overwrite(newestdata);
-            RaiseAll();
-        }
-
-        public ObservableCollection<string> LocaleChoices
-        {
-            get => new ObservableCollection<string>(LowRankChoices.Concat(HighRankChoices));
-        }
-
-        private static readonly ObservableCollection<string> LowRankChoices = new ObservableCollection<string>
-        {
-            Investigation.area0, Investigation.area1, Investigation.area2, Investigation.area3
-        };
-        private static readonly ObservableCollection<string> HighRankChoices = new ObservableCollection<string>
-        {
-            Investigation.area4
-        };
-
         public event PropertyChangedEventHandler PropertyChanged;
         
         private void RaisePropertyChanged(string propertyName)
@@ -422,96 +26,361 @@ namespace MHW.InvestigationEditing
             }
         }
         
-        private ObservableCollection<string> FixedGoalChoices = new ObservableCollection<string>
+        public InvestigationViewModel(Investigation entry = null)
         {
-            "Hunt 1 Monster in 50 min", "Hunt 1 Monster in 30 min", "Hunt 1 Monster in 15 min"
-        };
+            if (entry != null) UnderlyingInvestigation = entry;
+            else
+            {
+                byte[] newish = new byte[InvestigationList.inv_size];
+                Array.Copy(Investigation.nullinvestigation, 0, newish, 0, InvestigationList.inv_size);
+                UnderlyingInvestigation = new Investigation(newish);
+            }
+        }
 
-        private ObservableCollection<string> NonElderGoals = new ObservableCollection<string>
+        private Investigation UnderlyingInvestigation;
+             
+        public string InvestigationTitle
         {
-            "Hunt 2 Monsters in 50 min", "Hunt 2 Monsters in 30 min", "Hunt 3 Monsters in 50 min",
-            "Slay-Wildlife1 in 50 min", "Slay-Wildlife2 in 50 min",
-            "Capture 1 Monster in 50 min", "Capture 1 Monster in 30 min", "Capture 1 Monster in 15 min"
-        };
-
-        public ObservableCollection<string> GoalChoices
+            get
+            {
+                if (!UnderlyingInvestigation.Filled) return "Empty Slot";
+                string objective = _TimeAmountGoal[Goal];
+                int count = _TimeAmountCount[Goal];
+                string mainmon =  count !=0?(MonsterNames[Mon1] + (count>1?", ...":"")):"Wildlife";
+                return objective + " " + mainmon;
+            }
+        }
+        #region Members
+        public bool Filled
         {
-            get => new ObservableCollection<string>(FixedGoalChoices.Concat(NonElderGoals));
+            get => UnderlyingInvestigation.Filled;
         }
         
-        private ObservableCollection<string> FixedRankChoices = new ObservableCollection<string>
+        public string ToggleState
         {
-            "Low Rank", "High Rank", "Tempered"
-        };
-
-        public ObservableCollection<string> RankChoices
+            get => UnderlyingInvestigation.Filled?"Clear":"Initialize";
+        }
+        public int Goal
         {
-            get => FixedRankChoices;
+            get => UnderlyingInvestigation.TimeAmountIndex;
+            set{
+                UnderlyingInvestigation.TimeAmountIndex = value;
+                RaisePropertyChanged("Goal");
+                RaisePropertyChanged("InvestigationTitle");
+            }
+        }
+        public int Rank
+        {
+            get => UnderlyingInvestigation.Rank;
+            set
+            {
+                UnderlyingInvestigation.Rank = value;
+                RaisePropertyChanged("Rank");
+            }
+        }
+        public int Mon1
+        {
+            get => _CodeToMonsterIndex[UnderlyingInvestigation.Mon1];
+            set{
+                UnderlyingInvestigation.Mon1 = _MonstersCodeList[value];
+                RaisePropertyChanged("Mon1");
+                RaisePropertyChanged("InvestigationTitle");
+            }
+        }
+        public int Mon2
+        {
+            get => _CodeToMonsterIndex[UnderlyingInvestigation.Mon2];
+            set{
+                UnderlyingInvestigation.Mon2 = _MonstersCodeList[value];
+                RaisePropertyChanged("Mon2");
+            }
+        }
+        public int Mon3
+        {
+            get => _CodeToMonsterIndex[UnderlyingInvestigation.Mon3];
+            set{
+                UnderlyingInvestigation.Mon3 = _MonstersCodeList[value];
+                RaisePropertyChanged("Mon3");
+            }
+        }
+        public bool M1Temper
+        {
+            get => UnderlyingInvestigation.M1Temper;
+            set
+            {
+                UnderlyingInvestigation.M1Temper = value;
+                RaisePropertyChanged("M1Temper");
+            }
+        }
+        public bool M2Temper
+        {
+            get => UnderlyingInvestigation.M2Temper;
+            set
+            {
+                UnderlyingInvestigation.M2Temper = value;
+                RaisePropertyChanged("M2Temper");
+            }
+        }
+        public bool M3Temper
+        {
+            get => UnderlyingInvestigation.M3Temper;
+            set
+            {
+                UnderlyingInvestigation.M3Temper = value;
+                RaisePropertyChanged("M3Temper");
+            }
         }
 
-        public ObservableCollection<string> MonsterChoices
+        public int HP
         {
-            get => new ObservableCollection<string>( new string[]
+            get => UnderlyingInvestigation.HP;
+            set
             {
-                "Anjanath",
-                "Rathalos",
-                "Great Jagras",
-                "Rathian",
-                "Pink Rathian",
-                "Azure Rathalos",
-                "Diablos",
-                "Black Diablos",
-                "Kirin",
-                "Kushala Daora",
-                "Lunastra",
-                "Teostra",
-                "Lavasioth",
-                "Deviljho",
-                "Barroth",
-                "Uragaan",
-                "Pukei-Pukei",
-                "Nergigante",
-                "Kulu-Ya-Ku",
-                "Tzitzi-Ya-Ku",
-                "Jyuratodus",
-                "Tobi-Kadachi",
-                "Paolumu",
-                "Legiana",
-                "Great Girros",
-                "Odogaron",
-                "Radobaan",
-                "Vaal Hazak",
-                "Dodogama",
-                "Bazelgeuse",
-                "Empty"
+                UnderlyingInvestigation.HP = value;
+                RaisePropertyChanged("HP");
+            }
+        }
+        public int Attack
+        {
+            get => UnderlyingInvestigation.Attack;
+            set
+            {
+                UnderlyingInvestigation.Attack = value;
+                RaisePropertyChanged("Attack");
+            }
+        }
+        public int Size
+        {
+            get => UnderlyingInvestigation.Size;
+            set
+            {
+                UnderlyingInvestigation.Size = value;
+                RaisePropertyChanged("Size");
+            }
+        }
+        public int X3
+        {
+            get => UnderlyingInvestigation.X3;
+            set
+            {
+                UnderlyingInvestigation.X3 = value;
+                RaisePropertyChanged("X3");
+            }
+        }
+        public int FaintIndex
+        {
+            get => UnderlyingInvestigation.FaintIndex;
+            set
+            {
+                UnderlyingInvestigation.FaintIndex = value;
+                RaisePropertyChanged("FaintIndex");
+            }
+        }
+        public int PlayerCountIndex
+        {
+            get => UnderlyingInvestigation.PlayerCountIndex;
+            set
+            {
+                UnderlyingInvestigation.PlayerCountIndex = value;
+                RaisePropertyChanged("PlayerCountIndex");
+            }
+        }   
+        public int ZennyBonus
+        {
+            get => UnderlyingInvestigation.PlayerCountIndex;
+            set
+            {
+                UnderlyingInvestigation.PlayerCountIndex = value;
+                RaisePropertyChanged("PlayerCountIndex");
+            }
+        }  
+        public int LocaleIndex
+        {
+            get => UnderlyingInvestigation.LocaleIndex;
+            set
+            {
+                UnderlyingInvestigation.LocaleIndex = value;
+                RaisePropertyChanged("LocaleIndex");
+                RaisePropertyChanged("CurrentFlourishes");
+            }
+        }
+
+        public int FlourishIndex
+        {
+            get => UnderlyingInvestigation.FlourishIndex;
+            set
+            {
+                UnderlyingInvestigation.FlourishIndex = value;
+                RaisePropertyChanged("FlourishIndex");
+            }
+        }
+        public int Y0
+        {
+            get => UnderlyingInvestigation.Y0;
+            set
+            {
+                UnderlyingInvestigation.Y0 = value;
+                RaisePropertyChanged("Y0");
+            }
+        }
+        public int Y3
+        {
+            get => UnderlyingInvestigation.Y3;
+            set
+            {
+                UnderlyingInvestigation.Y3 = value;
+                RaisePropertyChanged("Y3");
+            }
+        }
+        public int MonsterRewards
+        {
+            get => UnderlyingInvestigation.MonsterRewards;
+            set
+            {
+                UnderlyingInvestigation.MonsterRewards = value;
+                RaisePropertyChanged("MonsterRewards");
+            }
+        }
+
+        public int Attempts
+        {
+            get => UnderlyingInvestigation.Attempts;
+            set
+            {
+                UnderlyingInvestigation.Attempts = value;
+                RaisePropertyChanged("Attempts");
+            }
+        }
+        #endregion
+
+        #region Methods
+
+        public byte[] Serialize()
+        {
+            return UnderlyingInvestigation.Serialize();
+        }
+
+        public void Toggle()
+        {
+            if (Filled) UnderlyingInvestigation.Clear();
+            else UnderlyingInvestigation.Initialize();
+            RaisePropertyChanged(null);
+        }
+
+        public void Clear()
+        {
+            if (Filled)
+            {
+                UnderlyingInvestigation.Clear();
+                RaisePropertyChanged(null);
+            }
+        }
+
+        public void Overwrite(byte [] overwriter)
+        {
+            UnderlyingInvestigation = new Investigation(overwriter);
+            RaisePropertyChanged(null);
+        }
+
+        public string Log()
+        {
+            var builder = new StringBuilder()
+                .AppendLine($"_____________________________________")
+                .AppendLine($"Attempts: {Attempts}")
+                .AppendLine($"Locale: {_LocalesNames[LocaleIndex]} - {CurrentFlourishes[FlourishIndex]}")
+                .AppendLine($"Rank: {_RankChoices[Rank]}")
+                .AppendLine($"{(M1Temper?"Tempered ":"")}{MonsterNames[Mon1]}")
+                .AppendLine($"{(M2Temper?"Tempered ":"")}{MonsterNames[Mon2]}")
+                .AppendLine($"{(M3Temper?"Tempered ":"")}{MonsterNames[Mon3]}")
+                .AppendLine($"HP: {HP} - Att: {Attack} - Size: {Size} - X3: {X3}")
+                .AppendLine($"Goal: "+_TimeAmountGoal[Goal]+" "+(_TimeAmountCount[Goal]!=0?(_TimeAmountCount[Goal]+
+                           " Monster"+(_TimeAmountCount[Goal]>1?"s":"")):"")+ " in "+_TimeAmountObjective[Goal]+" min")
+                .AppendLine($"Y0: {Y0} - Y3:{Y3}")
+                .AppendLine($"Faints: {_FaintValues[FaintIndex]} - Players: {_PlayerCountValues[PlayerCountIndex]} - Box Multiplier: {MonsterRewards} - Zenny Multiplier: {ZennyBonus}");
+            return builder.ToString();
+        }
+
+        #endregion
+        
+        #region DataCollections
+
+        public static readonly int[] _TimeAmountObjective =
+            {50, 30, 15, 50, 30, 50, 50, 50, 50, 30, 15};
+
+        public static readonly string[] _TimeAmountGoal =
+        {
+            "Hunt", "Hunt", "Hunt", "Hunt", "Hunt", "Hunt", "Slay Wildlife 1", " Slay Wildlife 2", "Capture",
+            "Capture", "Capture"
+        };
+        public static readonly int[] _TimeAmountCount = {1,1,1,2,2,3,0,0,1,1,1};
+
+        public static  readonly UInt32[] _MonstersCodeList =
+        {
+            0x00, 0x01, 0x07, 0x09, 0x0A, 0x0B, 0x0C, 0x0D, 0x0E, 0x10, 0x11,
+            0x12, 0x13, 0x14, 0x15, 0x16, 0x18, 0x19, 0x1B, 0x1C, 0x1D, 0x1E,
+            0x1F, 0x20, 0x21, 0x22, 0x23, 0x24, 0x25, 0x27, 0xFFFFFFFF
+        };
+        
+        public static readonly ObservableCollection<int> _CommonValues = new ObservableCollection<int>(new[]{0,1,2,3,4,5});
+        public static  ObservableCollection<int> CommonValues => _CommonValues;
+        public static readonly ObservableCollection<int> _ZennyValues = new ObservableCollection<int>(new[]{0,1,2,3,4});
+        public static  ObservableCollection<int> ZennyValues => _ZennyValues;
+        public static readonly ObservableCollection<int> _PlayerCountValues = new ObservableCollection<int>(new[]{4,2});
+        public static ObservableCollection<int> PlayerCountValues => _PlayerCountValues;
+        public static readonly ObservableCollection<int> _FaintValues = new ObservableCollection<int>(new[]{5,3,2,1});
+        public static  ObservableCollection<int> FaintValues => _FaintValues;
+        public static readonly ObservableCollection<int> _MonsterRewardsValues= new ObservableCollection<int>(new[]{0,1,2,3,4});
+        public static  ObservableCollection<int> MonsterRewardsValues => _MonsterRewardsValues;
+        public static readonly ObservableCollection<string> _LocalesNames = new ObservableCollection<string>(
+            new []{"Ancient Forest", "Wildspire Wastes", "Coral Highlands","Rotten Vale", "Elder Recess"});
+        public static  ObservableCollection<string> LocalesNames => _LocalesNames;
+        public static readonly ObservableCollection<string> _RankChoices = new ObservableCollection<string>(
+            new []{"Low Rank", "High Rank", "Tempered"});
+
+        public static  ObservableCollection<string> RankChoices => _RankChoices;
+        public ObservableCollection<string> CurrentFlourishes
+        {
+            get => _FlourishMatrix[LocaleIndex];
+        }
+
+        public static readonly ObservableCollection<string> _GoalChoices = new ObservableCollection<string>(new []
+        {
+            "Hunt 1 Monster in 50 min", "Hunt 1 Monster in 30 min", "Hunt 1 Monster in 15 min",
+            
+            "Hunt 2 Monsters in 50 min", "Hunt 2 Monsters in 30 min", "Hunt 3 Monsters in 50 min",
+            "Slay Wildlife 1 in 50 min", "Slay Wildlife 2 in 50 min",
+            "Capture 1 Monster in 50 min", "Capture 1 Monster in 30 min", "Capture 1 Monster in 15 min"
+        });
+
+        public static ObservableCollection<string> GoalChoices => _GoalChoices;
+        public static readonly Dictionary<UInt32, int> _CodeToMonsterIndex = new Dictionary<UInt32, int>()
+        {
+            {0x00,0},{0x01,1},{0x07,2},{0x09,3},{0x0a,4},{0x0b,5},{0x0c,6},{0x0d,7},{0x0e,8},{0x10,9},{0x11,10},
+            {0x12,11},{0x13,12},{0x14,13},{0x15,14},{0x16,15},{0x18,16},{0x19,17},{0x1b,18},{0x1c,19},{0x1d,20},{0x1e,21},
+            {0x1f,22},{0x20,23},{0x21,24},{0x22,25},{0x23,26},{0x24,27},{0x25,28},{0x27,29},{0xffffffff,30}
+        };
+
+        public ObservableCollection<string> MonsterNames
+        {
+            get => new ObservableCollection<string>(new[]
+            {
+                "Anjanath", "Rathalos", "Great Jagras", "Rathian", "Pink Rathian", "Azure Rathalos",
+                "Diablos", "Black Diablos", "Kirin", "Kushala Daora", "Lunastra", "Teostra",
+                "Lavasioth", "Deviljho", "Barroth", "Uragaan", "Pukei-Pukei", "Nergigante",
+                "Kulu-Ya-Ku", "Tzitzi-Ya-Ku", "Jyuratodus", "Tobi-Kadachi", "Paolumu",
+                "Legiana", "Great Girros", "Odogaron", "Radobaan", "Vaal Hazak", "Dodogama",
+                "Bazelgeuse", "Empty"
             });
         }
 
-        public ObservableCollection<byte> CommonValues
+        public static readonly ObservableCollection<string>[] _FlourishMatrix =
         {
-            get => new ObservableCollection<byte>(new byte[] {0, 1, 2, 3, 4, 5});
-        }
-        public ObservableCollection<byte> BoxValues
-        {
-            get => new ObservableCollection<byte>(new byte[] {0, 1, 2});
-        }
-        public ObservableCollection<int> FaintValues
-        {
-            get => new ObservableCollection<int>(new int[] {5, 3, 2, 1});
-        }       
-        public ObservableCollection<int> PlayerValues
-        {
-            get => new ObservableCollection<int>(new int[] {4,2});
-        }   
-        public ObservableCollection<byte> ZennyValues
-        {
-            get => new ObservableCollection<byte>(new byte[] {0, 1, 2, 3, 4});
-        }
-
-        public ObservableCollection<string> CurrentFlourish
-        {
-            get => new ObservableCollection<string>(Investigation.flourishByLocale[localeToCode[Locale]]);
-        }
-        
+            new ObservableCollection<string>(new [] {"Nothing","Mushrooms", "Flower Beds", "Mining Outcrops","Bonepiles","Gathering Points"}),
+            new ObservableCollection<string>(new [] {"Nothing","Cactus", "Fruit", "Mining Outcrops","Bonepiles","Gathering Points"}),
+            new ObservableCollection<string>(new [] {"Nothing","Conch Shells", "Pearl Oysters", "Mining Outcrops","Bonepiles","Gathering Points"}),
+            new ObservableCollection<string>(new [] {"Nothing","Ancient Fossils", "Crimson Fruit", "Mining Outcrops","Bonepiles","Gathering Points"}),
+            new ObservableCollection<string>(new [] {"Nothing","Amber Deposits", "Beryl Deposits", "Mining Outcrops","Bonepiles","Gathering Points"})
+        };
+        #endregion
     }
 }

@@ -72,7 +72,7 @@
                                 >
                                 <ListBox.ItemTemplate>
                                     <DataTemplate>
-                                        <TextBlock Text="{Binding InvestigationTitle, Mode=OneWay, IsAsync=True}" />
+                                        <TextBlock Text="{Binding InvestigationTitle, Mode=OneWay}" />
                                     </DataTemplate>
                                 </ListBox.ItemTemplate>
                             </ListBox>
@@ -122,12 +122,12 @@
                                     </Grid.RowDefinitions>
                                     <ComboBox Grid.Row="0"
                                               ItemsSource = "{Binding GoalChoices, Mode = OneWay}"
-                                              SelectedItem= "{Binding Goal, UpdateSourceTrigger=PropertyChanged, Mode = TwoWay, IsAsync=True}"
+                                              SelectedIndex= "{Binding Goal, UpdateSourceTrigger=PropertyChanged, Mode = TwoWay}"
                                               IsSynchronizedWithCurrentItem="True"
                                               />
                                     <ComboBox Grid.Row="1"
                                               ItemsSource = "{Binding RankChoices, Mode = OneWay}"
-                                              SelectedItem= "{Binding InvestigationRank, UpdateSourceTrigger=PropertyChanged, Mode = TwoWay, IsAsync=True}"
+                                              SelectedIndex= "{Binding Rank, UpdateSourceTrigger=PropertyChanged, Mode = TwoWay}"
                                               IsSynchronizedWithCurrentItem="True"
                                               />
                                 </Grid>
@@ -148,11 +148,11 @@
                                             <ColumnDefinition Width="7*" />
                                         </Grid.ColumnDefinitions>
                                         <CheckBox Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" 
-                                                  IsChecked="{Binding M1Temper, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, IsAsync=True}">T</CheckBox>
+                                                  IsChecked="{Binding M1Temper, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">T</CheckBox>
                                         <ComboBox Grid.Column="1"
                                                   HorizontalAlignment="Stretch"
-                                                  ItemsSource = "{Binding MonsterChoices, Mode = OneWay, IsAsync=True}"
-                                                  SelectedItem= "{Binding Mon1, UpdateSourceTrigger=PropertyChanged, Mode = TwoWay, IsAsync=True}"
+                                                  ItemsSource = "{Binding MonsterNames, Mode = OneWay, UpdateSourceTrigger=PropertyChanged}"
+                                                  SelectedIndex= "{Binding Mon1, UpdateSourceTrigger=PropertyChanged, Mode = TwoWay}"
                                                   IsSynchronizedWithCurrentItem="True"
                                         />
                                     </Grid>
@@ -162,11 +162,11 @@
                                             <ColumnDefinition Width="7*" />
                                         </Grid.ColumnDefinitions>
                                         <CheckBox Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" 
-                                                  IsChecked="{Binding M2Temper, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, IsAsync=True}">T</CheckBox>
+                                                  IsChecked="{Binding M2Temper, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">T</CheckBox>
                                         <ComboBox Grid.Column="1"
                                                   HorizontalAlignment="Stretch"
-                                                  ItemsSource = "{Binding MonsterChoices, Mode = OneWay, IsAsync=True}"
-                                                  SelectedItem= "{Binding Mon2, UpdateSourceTrigger=PropertyChanged, Mode = TwoWay, IsAsync=True}"
+                                                  ItemsSource = "{Binding MonsterNames, Mode = OneWay, UpdateSourceTrigger=PropertyChanged}"
+                                                  SelectedIndex= "{Binding Mon2, UpdateSourceTrigger=PropertyChanged, Mode = TwoWay}"
                                                   IsSynchronizedWithCurrentItem="True"
                                         />
                                     </Grid>
@@ -176,11 +176,11 @@
                                             <ColumnDefinition Width="7*" />
                                         </Grid.ColumnDefinitions>
                                         <CheckBox Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" 
-                                                  IsChecked="{Binding M3Temper, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, IsAsync=True}">T</CheckBox>
+                                                  IsChecked="{Binding M3Temper, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">T</CheckBox>
                                         <ComboBox Grid.Column="1"
                                                   HorizontalAlignment="Stretch"
-                                                  ItemsSource = "{Binding MonsterChoices, Mode = OneWay, IsAsync=True}"
-                                                  SelectedItem= "{Binding Mon3, UpdateSourceTrigger=PropertyChanged, Mode = TwoWay, IsAsync=True}"
+                                                  ItemsSource = "{Binding MonsterNames, Mode = OneWay, UpdateSourceTrigger=PropertyChanged}"
+                                                  SelectedIndex= "{Binding Mon3, UpdateSourceTrigger=PropertyChanged, Mode = TwoWay}"
                                                   IsSynchronizedWithCurrentItem="True"
                                         />
                                     </Grid>
@@ -246,14 +246,14 @@
                                     <ComboBox  Grid.Row="0" Grid.Column="1" 
                                               Style="{StaticResource MiscDropdown}"
                                               ItemsSource = "{Binding FaintValues}"
-                                              SelectedItem= "{Binding Faints, UpdateSourceTrigger=PropertyChanged, Mode = TwoWay}"
+                                              SelectedItem= "{Binding FaintIndex, UpdateSourceTrigger=PropertyChanged, Mode = TwoWay}"
                                               IsSynchronizedWithCurrentItem="True"
                                     />
                                     <TextBlock Grid.Row="1" Grid.Column="0" Style="{StaticResource MiscLabels}">Player Count: </TextBlock>
                                     <ComboBox  Grid.Row="1" Grid.Column="1" 
                                                Style="{StaticResource MiscDropdown}"
-                                               ItemsSource = "{Binding PlayerValues}"
-                                               SelectedItem= "{Binding PlayerCount, UpdateSourceTrigger=PropertyChanged, Mode = TwoWay}"
+                                               ItemsSource = "{Binding PlayerCountValues}"
+                                               SelectedItem= "{Binding PlayerCountIndex, UpdateSourceTrigger=PropertyChanged, Mode = TwoWay}"
                                                IsSynchronizedWithCurrentItem="True"
                                     />
                                     <TextBlock Grid.Row="2" Grid.Column="0" Style="{StaticResource MiscLabels}">Zenny Bonus Multiplier: </TextBlock>
@@ -266,15 +266,15 @@
                                     <TextBlock Grid.Row="3" Grid.Column="0" Style="{StaticResource MiscLabels}">Locale: </TextBlock>
                                     <ComboBox  Grid.Row="3" Grid.Column="1" 
                                                Style="{StaticResource MiscDropdown}"
-                                               ItemsSource = "{Binding LocaleChoices}"
-                                               SelectedItem= "{Binding Locale, UpdateSourceTrigger=PropertyChanged, Mode = TwoWay, IsAsync=True}"
+                                               ItemsSource = "{Binding LocalesNames}"
+                                               SelectedIndex= "{Binding LocaleIndex, UpdateSourceTrigger=PropertyChanged, Mode = TwoWay}"
                                                IsSynchronizedWithCurrentItem="True"
                                     />
                                     <TextBlock Grid.Row="4" Grid.Column="0" Style="{StaticResource MiscLabels}">Flourish: </TextBlock>
                                     <ComboBox  Grid.Row="4" Grid.Column="1" 
                                                Style="{StaticResource MiscDropdown}"
-                                               ItemsSource = "{Binding CurrentFlourish, IsAsync=True}"
-                                               SelectedItem= "{Binding Flourish, UpdateSourceTrigger=PropertyChanged, Mode = TwoWay, IsAsync=True}"
+                                               ItemsSource = "{Binding CurrentFlourishes}"
+                                               SelectedIndex= "{Binding FlourishIndex, UpdateSourceTrigger=PropertyChanged, Mode = TwoWay}"
                                                IsSynchronizedWithCurrentItem="True"
                                      />
                                     <TextBlock Grid.Column="0" Grid.Row="5" Style="{StaticResource MiscLabels}">Y0: </TextBlock>
@@ -291,7 +291,7 @@
                                                SelectedItem= "{Binding Y3, Mode = TwoWay}"
                                                IsSynchronizedWithCurrentItem="True"/>
                                     <TextBlock Grid.Column="0" Grid.Row="7" Style="{StaticResource MiscLabels}">Attempts: </TextBlock>
-                                    <xctk:IntegerUpDown Grid.Column="1"  Grid.Row="8" Minimum="1" Maximum="255" Value = "{Binding Attempts}"/>
+                                    <xctk:IntegerUpDown Grid.Column="1"  Grid.Row="8" Minimum="1" Maximum="10" Value = "{Binding Attempts}"/>
                                 </Grid>
                                 <!-- Rewards -->
                                 <Grid Grid.Row="5">
@@ -299,10 +299,11 @@
                                         <ColumnDefinition Width="5*" />
                                         <ColumnDefinition Width="1*" />
                                     </Grid.ColumnDefinitions>
-                                    <TextBlock Grid.Column="0">Rewards?: </TextBlock>
+                                    <TextBlock Grid.Column="0"  Style="{StaticResource MiscLabels}" >Rewards?: </TextBlock>
                                     <ComboBox Grid.Column="1"
-                                              ItemsSource = "{Binding BoxValues}"
-                                              SelectedItem= "{Binding BoxBonus, UpdateSourceTrigger=PropertyChanged, Mode = TwoWay}"
+                                              Style="{StaticResource MiscDropdown}"
+                                              ItemsSource = "{Binding MonsterRewardsValues}"
+                                              SelectedItem= "{Binding MonsterRewards, UpdateSourceTrigger=PropertyChanged, Mode = TwoWay}"
                                               IsSynchronizedWithCurrentItem="True"
                                     />
                                 </Grid>

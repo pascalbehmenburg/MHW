@@ -103,7 +103,6 @@
     <Compile Include="src\FileFormat\SaveFile.cs" />
     <Compile Include="src\InvestigationEditing\Investigation.cs" />
     <Compile Include="src\InvestigationEditing\InvestigationList.cs" />
-    <Compile Include="src\InvestigationEditing\InvestigationViewModel(BL).cs" />
     <Compile Include="src\InvestigationEditing\InvestigationViewModel.cs" />
     <Compile Include="src\Utility\ArraySegmentWrapper.cs" />
     <Compile Include="src\Utility\BoyerMoore.cs" />

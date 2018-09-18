@@ -63,16 +63,13 @@ namespace MHW
       
         private static string[] InvestigationList_EditMenu = new[]
         {
-            "Copy", "Paste", "Paste At", "Commit Current", "Commit All", "Sort", "Filter"
+            "Copy", "Paste", "Paste At", "Commit All", "Sort", "Filter"
         };
 
         private void InvestigationsEditHandler(string command)
         {
             switch (command)
             {
-                case("Undo"):
-                    currentInvestigation.Undo();
-                    break;
                 case("Copy"):
                     investigations.Copy();
                     break;
@@ -82,9 +79,6 @@ namespace MHW
                 case("Paste At"):
                     int[] positions = PromptPositions();
                     investigations.PasteAt(positions);
-                    break;
-                case("Commit Current"):
-                    currentInvestigation.Commit();
                     break;
                 case("Commit All"):
                     investigations.Commit();
@@ -104,7 +98,7 @@ namespace MHW
 
         private static string[] InvestigationList_ToolsMenu = new[]
         {
-            "Import", "Export", "Import At", "Export At", "Generate Log File"
+            "Import", "Export", "Import At", "Export At", "Prepend", "Generate Log File"
         };
         
         private void InvestigationsToolsHandler(string command)
@@ -115,6 +109,7 @@ namespace MHW
             {
                 case "Import":
                 case "Import At":
+                case "Prepend":
                     accepted=PromptInvestigationsInputFile(ref inputfile);
                     break;
                 default:
@@ -140,6 +135,11 @@ namespace MHW
                 {
                     int[] positions = PromptPositions();
                     investigations.ExportAt(inputfile, positions);
+                    break;
+                }
+                case "Prepend":
+                {
+                    investigations.Prepend(inputfile);
                     break;
                 }
                 case "Generate Log File":

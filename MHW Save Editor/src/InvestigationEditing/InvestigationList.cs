@@ -13,11 +13,10 @@ namespace MHW.InvestigationEditing
     public class InvestigationList:INotifyPropertyChanged
     {
         public ObservableCollection<InvestigationViewModel> InvestigationCollection;
-
+       
+        private Byte[] clipboard;
         private Byte[] datasource;
         private int offset;
-        
-        private Byte[] clipboard;
         
         private int _CurrentIndex;
         public int CurrentIndex
@@ -92,7 +91,6 @@ namespace MHW.InvestigationEditing
             int i = 0;
             foreach (InvestigationViewModel inv in InvestigationCollection)
             {
-                inv.Commit();
                 inv.Serialize().CopyTo(datasource, offset + i * inv_size);
                 i++;
             }
@@ -121,7 +119,7 @@ namespace MHW.InvestigationEditing
             if ((import.Length / inv_size)!=positions.Length)throw new ConstraintException("Number of investigations does not match number of replacements");
             for (int i = 0; i < import.Length / inv_size; i++)
             {
-                InvestigationCollection[positions[i]].Overwrite(new ArraySegmentWrapper<Byte>(import, i * inv_size, inv_size));
+                InvestigationCollection[positions[i]].Overwrite(import.Slice(i * inv_size, i * inv_size+inv_size));
             }
             return this;
         }
@@ -148,6 +146,7 @@ namespace MHW.InvestigationEditing
         
         public InvestigationList PasteAt(int[] positions)
         {
+            if (clipboard == null) return this;
             foreach (int i in positions){InvestigationCollection[i].Overwrite(clipboard);}
             return this;
         }    

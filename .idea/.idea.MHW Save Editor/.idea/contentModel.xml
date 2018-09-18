@@ -38,7 +38,6 @@
           <e p="InvestigationEditing" t="Include">
             <e p="Investigation.cs" t="Include" />
             <e p="InvestigationList.cs" t="Include" />
-            <e p="InvestigationViewModel(BL).cs" t="Include" />
             <e p="InvestigationViewModel.cs" t="Include" />
           </e>
           <e p="Utility" t="Include">
