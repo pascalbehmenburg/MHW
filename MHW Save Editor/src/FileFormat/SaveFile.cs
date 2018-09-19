@@ -5,8 +5,9 @@ using System.Security.Cryptography;
 using System.Security.Policy;
 using System.Text;
 using System.Windows;
+using MHW_Save_Editor.Crypto;
 
-namespace MHW
+namespace MHW_Save_Editor.FileFormat
 {
     class SaveFile
     {
@@ -59,10 +60,10 @@ namespace MHW
         public void Save(string path, bool encrypt = true)
         {
             Array.Copy(Utility.bswap(GenerateChecksum()),0,data, 12, 20);
-            if (encrypt)Encrypt();
-            Stream fStream = File.Create(path);
-            fStream.Write(data, 0, data.Length);
-            fStream.Close();
+            
+            byte[] tempfile = new byte[data.Length];
+            cipher.Encipher(data).CopyTo(tempfile,0);
+            File.WriteAllBytes(path, tempfile);
         }
 
         public Int64 ReadSteamID()

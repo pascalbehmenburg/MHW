@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace MHW
+namespace MHW_Save_Editor
 {//Implementation of BoyerMoore by Matthew Watson at https://stackoverflow.com/questions/37500629/find-byte-sequence-within-a-byte-array
     public sealed class BoyerMoore
     {

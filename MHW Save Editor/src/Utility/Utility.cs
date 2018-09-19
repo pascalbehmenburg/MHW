@@ -7,7 +7,7 @@ using System.Linq;
 using System.Windows;
 using System.Windows.Threading;
 
-namespace MHW
+namespace MHW_Save_Editor
 {
     static class Utility
     {

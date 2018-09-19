@@ -3,7 +3,7 @@ using System;
 using System.Data;
 using System.Windows;
 
-namespace MHW
+namespace MHW_Save_Editor
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml

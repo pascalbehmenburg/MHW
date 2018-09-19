@@ -55,7 +55,7 @@ using System;
 using System.Text;
 using System.Security.Cryptography;
 
-namespace BlowFish
+namespace MHW_Save_Editor.Crypto
 {
     class Blowfish
     {

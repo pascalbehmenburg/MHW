@@ -49,3 +49,12 @@ G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\obj\Release\MHW Sav
 G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\obj\Release\MHW Save Editor.csproj.CopyComplete
 G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\obj\Release\MHW Save Editor.exe
 G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\obj\Release\MHW Save Editor.pdb
+G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\obj\Release\Boxstore.g.cs
+G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\obj\Release\GeneratedInternalTypeHelper.g.cs
+G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\bin\Release\GalaSoft.MvvmLight.dll
+G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\bin\Release\System.Windows.Interactivity.dll
+G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\bin\Release\GalaSoft.MvvmLight.pdb
+G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\bin\Release\GalaSoft.MvvmLight.xml
+G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\obj\Release\InvestigationView.g.cs
+G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\obj\Release\Boxstore.baml
+G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\obj\Release\InvestigationView.baml

@@ -35,6 +35,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="GalaSoft.MvvmLight, Version=5.0.2.32240, Culture=neutral, PublicKeyToken=e7570ab207bcb616">
+      <HintPath>..\MicrosoftSample\packages\MvvmLightLibs.5.0.2.0\lib\net45\GalaSoft.MvvmLight.dll</HintPath>
+    </Reference>
     <Reference Include="mscorlib" />
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
@@ -44,6 +47,9 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\MicrosoftSample\packages\MvvmLightLibs.5.0.2.0\lib\net45\System.Windows.Interactivity.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -86,8 +92,20 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="BoxstoreViewModel.cs">
+      <DependentUpon>Boxstore.xaml</DependentUpon>
+    </Compile>
     <Compile Include="InputBox.xaml.cs">
       <DependentUpon>InputBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Boxstore.xaml.cs">
+      <DependentUpon>Boxstore.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="InvestigationView.xaml.cs">
+      <DependentUpon>InvestigationView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="InvestigationViewModel.cs">
+      <DependentUpon>InvestigationView.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindowGeneral.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -99,15 +117,20 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="src\Crypto\Blowfish.cs" />
+    <Compile Include="src\Data\NotifyUIBase.cs" />
     <Compile Include="src\FileFormat\GenericFile.cs" />
     <Compile Include="src\FileFormat\SaveFile.cs" />
-    <Compile Include="src\InvestigationEditing\Investigation.cs" />
+    <Compile Include="src\InvestigationEditing\InvestigationThinLayer.cs" />
     <Compile Include="src\InvestigationEditing\InvestigationList.cs" />
-    <Compile Include="src\InvestigationEditing\InvestigationViewModel.cs" />
+    <Compile Include="src\InvestigationEditing\Investigation.cs" />
+    <Compile Include="src\Support\DataGridRowBehavior.cs" />
+    <Compile Include="src\Support\ScrollDataGridRowIntoView.cs" />
     <Compile Include="src\Utility\ArraySegmentWrapper.cs" />
     <Compile Include="src\Utility\BoyerMoore.cs" />
     <Compile Include="src\Utility\Utility.cs" />
     <Page Include="InputBox.xaml" />
+    <Page Include="Boxstore.xaml" />
+    <Page Include="InvestigationView.xaml" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

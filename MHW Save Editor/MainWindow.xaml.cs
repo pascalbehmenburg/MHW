@@ -5,74 +5,40 @@ using System.Data;
 using System.IO;
 using System.Windows;
 using System.Windows.Controls;
-using MHW.InvestigationEditing;
-using MHW_Save_Editor.src.FileFormat;
+using MHW_Save_Editor.FileFormat;
+using MHW_Save_Editor.InvestigationEditing;
 using Microsoft.Win32;
 
-namespace MHW
+namespace MHW_Save_Editor
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window, INotifyPropertyChanged
+    public partial class MainWindow : Window
     {
         private SaveFile saveFile;
-        private GenericFile genericFile;
         private MemoryStream data;
-        InvestigationList investigations;
-        InvestigationViewModel currentInvestigation;
-        public string testString = "Test";
         
         public MainWindow()
         {
             data = new MemoryStream();
-            investigations = new InvestigationList();
-            currentInvestigation = investigations.Expose();
             InitializeComponent();
             //DataContext = this;
-            SetBindings();
         }
 
-        private void SetBindings()
-        {
-            InvestigationVisibleList.ItemsSource  = investigations.InvestigationCollection;
-            CurrentInvestigationVisible.DataContext = currentInvestigation;
-        }
 
         private void OpenFunction(object sender, RoutedEventArgs e)
         {
             string steamPath = Utility.getSteamPath();
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.ShowDialog();
-            
-            switch (Path.GetExtension(openFileDialog.FileName))
-            {
-                case ".bin":
-                case "":
-                    if (openFileDialog.FileName == "") return;
-                    saveFile = new SaveFile(File.ReadAllBytes(openFileDialog.FileName));
-                    SizeLabel.Content = "Size: " + saveFile.FileSize() + " byte";
-                    SteamIdLabel.Content = "Steam ID: " + saveFile.ReadSteamID();
-                    ChecksumLabel.Content = "Checksum: " + saveFile.GetChecksum();
-                    GeneratedChecksumLabel.Content = "ChecksumGenerated: " + BitConverter.ToString(saveFile.GenerateChecksum()).Replace("-","");
-                    
-                    investigations.Populate(saveFile.data);
-                    SetBindings();
-                    break;
-                case ".mib":
-                    genericFile = new GenericFile(File.ReadAllBytes(openFileDialog.FileName), "TZNgJfzyD2WKiuV4SglmI6oN5jP2hhRJcBwzUooyfIUTM4ptDYGjuRTP");
-                    genericFile.Decrypt();
-                    SizeLabel.Content = "Size: " + File.ReadAllBytes(openFileDialog.FileName).Length + " byte";
-                    ChecksumLabel.Content = "Checksum: " + "unsupported file format";
-                    break;
-                case ".itlot":
-                    genericFile = new GenericFile(File.ReadAllBytes(openFileDialog.FileName), "D7N88VEGEnRl0HEHTO0xMQkbeMb37arJF488lREp90WYojAONkLoxfMt");
-                    genericFile.Decrypt();
-                    SizeLabel.Content = "Size: " + File.ReadAllBytes(openFileDialog.FileName).Length + " byte";
-                    ChecksumLabel.Content = "Checksum: " + "unsupported file format";
-                    break;
-            }
-
+            if (openFileDialog.FileName == "") return;
+            saveFile = new SaveFile(File.ReadAllBytes(openFileDialog.FileName));
+            SizeLabel.Content = "Size: " + saveFile.FileSize() + " byte";
+            SteamIdLabel.Content = "Steam ID: " + saveFile.ReadSteamID();
+            ChecksumLabel.Content = "Checksum: " + saveFile.GetChecksum();
+            GeneratedChecksumLabel.Content = "ChecksumGenerated: " + BitConverter.ToString(saveFile.GenerateChecksum()).Replace("-","");
+            //investigations.Populate(saveFile.data);
             
             FilePathLabel.Content = openFileDialog.FileName;
         }
@@ -88,13 +54,13 @@ namespace MHW
                 if (saveFile != null)
                 {
                     saveFile.Save(saveFileDialog.FileName,!(Path.GetExtension(saveFileDialog.FileName)==".bin"));
+                    MessageBox.Show("File saved.", "Save", MessageBoxButton.OK);
                 }
                 else
                 {
-                    genericFile.Encrypt();
-                    genericFile.Save(saveFileDialog.FileName);
+                    MessageBox.Show("No File to Save.", "Save", MessageBoxButton.OK);
                 }
-                MessageBox.Show("File saved.", "Save", MessageBoxButton.OK);
+                
             }
         }
                 

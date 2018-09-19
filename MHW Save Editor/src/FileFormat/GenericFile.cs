@@ -6,8 +6,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using MHW_Save_Editor.Crypto;
 
-namespace MHW_Save_Editor.src.FileFormat
+namespace MHW_Save_Editor.FileFormat
 {
     class GenericFile
     {

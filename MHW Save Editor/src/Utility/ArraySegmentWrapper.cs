@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace MHW
+namespace MHW_Save_Editor
 {
     //Taken from https://stackoverflow.com/questions/5756692/arraysegment-returning-the-actual-segment-c-sharp/30337982
     //credit goes to digEmAll and JeppeStigNielsen

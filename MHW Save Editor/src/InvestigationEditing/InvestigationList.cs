@@ -8,11 +8,11 @@ using System.Text;
 using System.Windows;
 using System.Windows.Media.Animation;
 
-namespace MHW.InvestigationEditing
+namespace MHW_Save_Editor.InvestigationEditing
 {
     public class InvestigationList:INotifyPropertyChanged
     {
-        public ObservableCollection<InvestigationViewModel> InvestigationCollection;
+        public ObservableCollection<Investigation> InvestigationCollection;
        
         private Byte[] clipboard;
         private Byte[] datasource;
@@ -36,12 +36,12 @@ namespace MHW.InvestigationEditing
             0x00,0x00,0x10,0x00,0x30,0x75
         };
         
-        private static readonly InvestigationViewModel empty_investigation = new InvestigationViewModel();
+        private static readonly Investigation empty_investigation = new Investigation();
         
         public InvestigationList()
         {
             initialized = false;
-            InvestigationCollection =  new ObservableCollection<InvestigationViewModel>();
+            InvestigationCollection =  new ObservableCollection<Investigation>();
             InvestigationCollection.Add(empty_investigation);
         }
 
@@ -51,17 +51,17 @@ namespace MHW.InvestigationEditing
         {
             datasource = savefile;
             initialized = true;
-            InvestigationCollection = new ObservableCollection<InvestigationViewModel>();
+            InvestigationCollection = new ObservableCollection<Investigation>();
             offset = savefile.BMHIndexOf(investigation_signature)+4;
             for (int i = 0; i < inv_count; i++)
             {
-                InvestigationCollection.Add(new InvestigationViewModel(new Investigation(savefile.Slice(offset+i*inv_size,offset+(i+1)*inv_size))));
+                InvestigationCollection.Add(new Investigation(new InvestigationThinLayer(savefile.Slice(offset+i*inv_size,offset+(i+1)*inv_size))));
             }
             CurrentIndex = 0;
             return this;
         }
 
-        public InvestigationViewModel Expose()
+        public Investigation Expose()
         {
             return initialized?InvestigationCollection[CurrentIndex]:empty_investigation;
         }
@@ -77,7 +77,7 @@ namespace MHW.InvestigationEditing
         public InvestigationList Next(){return Seek(CurrentIndex+1);}
         public InvestigationList Last(){return Seek(inv_count);}
 
-        public InvestigationList ReSort(Func<InvestigationViewModel , int> function = null)
+        public InvestigationList ReSort(Func<Investigation , int> function = null)
         {
             if (function==null){function = (x => x.Filled?1:0);}
             int[] indices = Enumerable.Range(0, inv_count).ToList().OrderByDescending(i => function(InvestigationCollection[i])).ToArray();
@@ -89,7 +89,7 @@ namespace MHW.InvestigationEditing
         {
             ReSort();
             int i = 0;
-            foreach (InvestigationViewModel inv in InvestigationCollection)
+            foreach (Investigation inv in InvestigationCollection)
             {
                 inv.Serialize().CopyTo(datasource, offset + i * inv_size);
                 i++;
@@ -103,12 +103,12 @@ namespace MHW.InvestigationEditing
             return this;
         }
         
-        public InvestigationList InitializeAll(){foreach(InvestigationViewModel inv in InvestigationCollection)if (!inv.Filled)inv.Toggle();return this;}
+        public InvestigationList InitializeAll(){foreach(Investigation inv in InvestigationCollection)if (!inv.Filled)inv.Toggle();return this;}
 
-        public InvestigationList ClearAll(Func<InvestigationViewModel, bool> filter =null)
+        public InvestigationList ClearAll(Func<Investigation, bool> filter =null)
         {
             if (filter==null){filter = (x => true);}
-            foreach(InvestigationViewModel inv in InvestigationCollection)if(filter(inv))inv.Clear();return this;
+            foreach(Investigation inv in InvestigationCollection)if(filter(inv))inv.Clear();return this;
         }
 
         
@@ -155,7 +155,7 @@ namespace MHW.InvestigationEditing
         public InvestigationList GenerateLog(string path)
         {
             var builder = new StringBuilder();
-            foreach (InvestigationViewModel inv in InvestigationCollection)
+            foreach (Investigation inv in InvestigationCollection)
             {
                 builder.AppendLine(inv.Log());
             }
@@ -187,7 +187,7 @@ namespace MHW.InvestigationEditing
         
         private InvestigationList Swap(int i, int j)
         {
-            InvestigationViewModel temp = InvestigationCollection[i];
+            Investigation temp = InvestigationCollection[i];
             InvestigationCollection[i] = InvestigationCollection[j];
             InvestigationCollection[j] = temp;
             return this;

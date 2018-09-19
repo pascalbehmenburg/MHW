@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text.RegularExpressions;
 using System.Web.UI;
 using System.Windows;
-using MHW.InvestigationEditing;
+using MHW_Save_Editor.InvestigationEditing;
 using Microsoft.Win32;
 
-namespace MHW
+namespace MHW_Save_Editor
 {
     public partial class MainWindow
     {
@@ -33,24 +33,24 @@ namespace MHW
         }
 
         
-        private Func<InvestigationViewModel, int> PromptInvestigationsSort()
+        private Func<Investigation, int> PromptInvestigationsSort()
         {
             InputBox inputDialog = new InputBox("EXTREMELY Experimental, this will evaled directly by C#,\n " +
                                                 "DO NOT USE IF YOU DON'T KNOW EXACTLY WHAT YOU ARE DOING:\n" +
                                                 "Func<InvestigationViewModel, int>", "");
             inputDialog.Show();
-            Func<InvestigationViewModel, int> filter = new Func<InvestigationViewModel, int>((x => 1));
+            Func<Investigation, int> filter = new Func<Investigation, int>((x => 1));
             DataBinder.Eval(filter,inputDialog.Answer);
             return filter;
         }
 
-        private Func<InvestigationViewModel, bool> PromptInvestigationsFilter()
+        private Func<Investigation, bool> PromptInvestigationsFilter()
         {
             InputBox inputDialog = new InputBox("EXTREMELY Experimental, this will evaled directly by C#,\n " +
                                                 "DO NOT USE IF YOU DON'T KNOW EXACTLY WHAT YOU ARE DOING:\n" +
                                                 "Func<InvestigationViewModel, bool>", "");
             inputDialog.Show();
-            Func<InvestigationViewModel, bool> filter = new Func<InvestigationViewModel, bool>((x => true));
+            Func<Investigation, bool> filter = new Func<Investigation, bool>((x => true));
             DataBinder.Eval(filter,inputDialog.Answer);
             return filter;
         }

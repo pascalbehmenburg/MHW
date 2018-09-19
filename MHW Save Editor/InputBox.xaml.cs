@@ -1,7 +1,7 @@
 using System;
 using System.Windows;
 
-namespace MHW
+namespace MHW_Save_Editor
 {
     public partial class InputBox : Window
     {

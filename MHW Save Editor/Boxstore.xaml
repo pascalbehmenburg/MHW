@@ -1,0 +1,48 @@
+<UserControl x:Class="MHW_Save_Editor.Boxstore"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+             xmlns:support="clr-namespace:MHW_Save_Editor.Support"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+        <DataGrid x:Name="dg" AutoGenerateColumns="False"
+                  ItemsSource="{Binding BoxstoreCollectionView}"
+                  IsSynchronizedWithCurrentItem="True"
+                  EnableRowVirtualization="True"
+                  HeadersVisibility="Column"
+            >
+            <i:Interaction.Behaviors>
+                <support:ScrollDataGridRowIntoView />
+            </i:Interaction.Behaviors>
+            <DataGrid.RowStyle>
+                <Style TargetType="{x:Type DataGridRow}">
+                    <Setter Property="support:DataGridRowBehavior.IsDataGridRowFocussedWhenSelected" Value="true"/>
+                </Style>
+            </DataGrid.RowStyle>
+            <DataGrid.Columns>
+                <DataGridTemplateColumn Header="Seen">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <CheckBox IsChecked="{Binding Seen, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn Header="Selected">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <CheckBox IsChecked="{Binding Selected, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridCheckBoxColumn Binding="{Binding Selected}"  Header="Selected" />
+                <!--DataGridComboBoxColumn Binding="{Binding Goal}"  Header="Goal" /-->
+                <!--DataGridComboBoxColumn Binding="{Binding Rank}"  Header="Rank" /-->
+                <!--DataGridComboBoxColumn Binding="{Binding Mon1}"  Header="Main Monster" /-->
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+    <!--TODO - all of the missing code -->
+</UserControl>

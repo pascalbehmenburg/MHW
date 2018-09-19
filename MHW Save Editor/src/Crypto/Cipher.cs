@@ -1,11 +1,10 @@
-﻿using BlowFish;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MHW
+namespace MHW_Save_Editor.Crypto
 {
     class Cipher
     {
