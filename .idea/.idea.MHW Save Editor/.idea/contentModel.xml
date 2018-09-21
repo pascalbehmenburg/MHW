@@ -9,14 +9,16 @@
         <e p="App.xaml" t="Include" />
         <e p="App.xaml.cs" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
-        <e p="Boxstore.xaml" t="Include" />
-        <e p="Boxstore.xaml.cs" t="Include" />
-        <e p="BoxstoreViewModel.cs" t="Include" />
         <e p="InputBox.xaml" t="Include" />
         <e p="InputBox.xaml.cs" t="Include" />
-        <e p="InvestigationView.xaml" t="Include" />
-        <e p="InvestigationView.xaml.cs" t="Include" />
-        <e p="InvestigationViewModel.cs" t="Include" />
+        <e p="InvestigationsView" t="Include">
+          <e p="Boxstore.xaml" t="Include" />
+          <e p="Boxstore.xaml.cs" t="Include" />
+          <e p="BoxstoreViewModel.cs" t="Include" />
+          <e p="InvestigationView.xaml" t="Include" />
+          <e p="InvestigationView.xaml.cs" t="Include" />
+          <e p="InvestigationViewModel.cs" t="Include" />
+        </e>
         <e p="MainWindow.xaml" t="Include" />
         <e p="MainWindow.xaml.cs" t="Include" />
         <e p="MainWindowGeneral.xaml.cs" t="Include" />
@@ -49,6 +51,9 @@
             <e p="InvestigationList.cs" t="Include" />
             <e p="InvestigationThinLayer.cs" t="Include" />
           </e>
+          <e p="Resources" t="Include">
+            <e p="ResourcesDictionary.xaml" t="Include" />
+          </e>
           <e p="Support" t="Include">
             <e p="DataGridRowBehavior.cs" t="Include" />
             <e p="ScrollDataGridRowIntoView.cs" t="Include" />
@@ -58,6 +63,12 @@
             <e p="BoyerMoore.cs" t="Include" />
             <e p="Utility.cs" t="Include" />
           </e>
+        </e>
+        <e p="Tabs" t="Include">
+          <e p="GeneralTab.xaml" t="Include" />
+          <e p="GeneralTab.xaml.cs" t="Include" />
+          <e p="InvestigationsTab.xaml" t="Include" />
+          <e p="InvestigationsTab.xaml.cs" t="Include" />
         </e>
       </e>
       <e p="MHW Save Editor.sln" t="IncludeFlat" />

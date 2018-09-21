@@ -18,33 +18,37 @@ namespace MHW_Save_Editor
     {
         private SaveFile saveFile;
         private MemoryStream data;
+        private bool open;
         
         public MainWindow()
         {
             data = new MemoryStream();
             InitializeComponent();
-            //DataContext = this;
+            DataContext = this;
         }
 
 
         private void OpenFunction(object sender, RoutedEventArgs e)
         {
+            open = true;
             string steamPath = Utility.getSteamPath();
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.ShowDialog();
             if (openFileDialog.FileName == "") return;
             saveFile = new SaveFile(File.ReadAllBytes(openFileDialog.FileName));
-            SizeLabel.Content = "Size: " + saveFile.FileSize() + " byte";
-            SteamIdLabel.Content = "Steam ID: " + saveFile.ReadSteamID();
-            ChecksumLabel.Content = "Checksum: " + saveFile.GetChecksum();
-            GeneratedChecksumLabel.Content = "ChecksumGenerated: " + BitConverter.ToString(saveFile.GenerateChecksum()).Replace("-","");
+            GeneralTabControl.Size = "Size: " + saveFile.FileSize() + " byte";
+            GeneralTabControl.SteamId = "Steam ID: " + saveFile.ReadSteamID();
+            GeneralTabControl.Checksum = "Checksum: " + saveFile.GetChecksum();
+            GeneralTabControl.OnFileChecksum = "ChecksumGenerated: " + BitConverter.ToString(saveFile.GenerateChecksum()).Replace("-","");
+            GeneralTabControl.FilePath = openFileDialog.FileName;
             //investigations.Populate(saveFile.data);
             
-            FilePathLabel.Content = openFileDialog.FileName;
+            
         }
 
         private void SaveFunction(object sender, RoutedEventArgs e)
         {
+            if (!open) return;
             var saveFileDialog = new SaveFileDialog();
             saveFileDialog.Filter = "Encrypted|*|Unencrypted (*.bin)|*.bin";
             saveFileDialog.InitialDirectory = Utility.getSteamPath();

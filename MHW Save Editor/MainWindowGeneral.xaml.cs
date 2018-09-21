@@ -11,7 +11,7 @@ namespace MHW_Save_Editor
     public partial class MainWindow
     {
         
-        public void EditSteamLabel(object sender, RoutedEventArgs e)
+        public void EditSteamLabel(object sender, EventArgs e)
         {
             if (saveFile == null) return;
             string steamstring;
@@ -23,7 +23,7 @@ namespace MHW_Save_Editor
                 {
                     long steamid = Convert.ToInt64(steamstring);
                     saveFile.setSteamID(steamid);
-                    SteamIdLabel.Content = "Steam ID: "+ steamid;
+                    GeneralTabControl.SteamId = "Steam ID: "+ steamid;
                 }
                 catch
                 {

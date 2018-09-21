@@ -92,19 +92,19 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="BoxstoreViewModel.cs">
-      <DependentUpon>Boxstore.xaml</DependentUpon>
-    </Compile>
     <Compile Include="InputBox.xaml.cs">
       <DependentUpon>InputBox.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Boxstore.xaml.cs">
+    <Compile Include="InvestigationsView\Boxstore.xaml.cs">
       <DependentUpon>Boxstore.xaml</DependentUpon>
     </Compile>
-    <Compile Include="InvestigationView.xaml.cs">
+    <Compile Include="InvestigationsView\BoxstoreViewModel.cs">
+      <DependentUpon>Boxstore.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="InvestigationsView\InvestigationView.xaml.cs">
       <DependentUpon>InvestigationView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="InvestigationViewModel.cs">
+    <Compile Include="InvestigationsView\InvestigationViewModel.cs">
       <DependentUpon>InvestigationView.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindowGeneral.xaml.cs">
@@ -128,9 +128,15 @@
     <Compile Include="src\Utility\ArraySegmentWrapper.cs" />
     <Compile Include="src\Utility\BoyerMoore.cs" />
     <Compile Include="src\Utility\Utility.cs" />
+    <Compile Include="Tabs\GeneralTab.xaml.cs">
+      <DependentUpon>GeneralTab.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Tabs\InvestigationsTab.xaml.cs">
+      <DependentUpon>InvestigationsTab.xaml</DependentUpon>
+    </Compile>
     <Page Include="InputBox.xaml" />
-    <Page Include="Boxstore.xaml" />
-    <Page Include="InvestigationView.xaml" />
+    <Page Include="InvestigationsView\Boxstore.xaml" />
+    <Page Include="InvestigationsView\InvestigationView.xaml" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -144,6 +150,8 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Tabs\GeneralTab.xaml" />
+    <Page Include="Tabs\InvestigationsTab.xaml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -163,6 +171,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="src\Resources\ResourcesDictionary.xaml" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

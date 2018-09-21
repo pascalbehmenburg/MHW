@@ -1,65 +1,45 @@
 ﻿<Window x:Class="MHW_Save_Editor.MainWindow"
         x:Name="AppWindow"
+        xmlns:local="clr-namespace:MHW_Save_Editor"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        
         mc:Ignorable="d"
         Title="MHW - Save Editor" Height="700.0" Width="680.0" ResizeMode="NoResize"
-        DataContext="{Binding ElementName=_this}">
+        DataContext="{Binding ElementName=AppWindow}">
     <Window.Resources>
-        <Style x:Key="MiscLabels" TargetType="TextBlock">
-            <!--Setter Property="FontSize" Value="10" /-->
-            <Setter Property="VerticalAlignment" Value="Center" />
-        </Style>
-        <Style x:Key="MiscDropdown" TargetType="ComboBox">
-            <!-- Setter Property="FontSize" Value="10" /-->
-            <Setter Property="VerticalAlignment" Value="Stretch" />
-            <Setter Property="HorizontalAlignment" Value="Stretch" />
-            <Setter Property="HorizontalContentAlignment" Value="Right" />
-            <Setter Property="VerticalContentAlignment" Value="Center" />
-        </Style>
-        <Style x:Key="ListBoxStyle" TargetType="{x:Type ListBox}">
-            <Setter Property="Background" Value="Transparent"/>
-            <Setter Property="Foreground" Value="Transparent"/>
-            <Setter Property="BorderBrush" Value="Transparent"/>
-            <Setter Property="BorderThickness" Value="0"/>
-            <Setter Property="Padding" Value="0"/>
-            <Setter Property="Margin" Value="0"/>
-        </Style>
-    </Window.Resources>
-    <DockPanel>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\src\Resources\ResourcesDictionary.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>   
+    <DockPanel Name="Root" xmlns:local="clr-namespace:MHW_Save_Editor">
         <Menu Width="Auto" Height="20" DockPanel.Dock="Top">
-           <MenuItem Header="File">
-               <MenuItem Header="Open" Click="OpenFunction" />
-               <MenuItem Header="Save" Click="SaveFunction" />
-               <MenuItem Header="Backup" Click="BackupFunction" />
-           </MenuItem>
-           <MenuItem Header="Edit" ItemsSource = "{Binding EditOptions}" Click = "EditMenuItem_Click"/>
-           <MenuItem Header="Tools" ItemsSource = "{Binding ToolsOptions}" Click = "ToolsMenuItem_Click"/>
+            <MenuItem Header="File">
+                <MenuItem Header="Open" Click="OpenFunction" />
+                <MenuItem Header="Save" Click="SaveFunction" />
+                <MenuItem Header="Backup" Click="BackupFunction" />
+            </MenuItem>
+            <MenuItem Header="Edit" ItemsSource = "{Binding EditOptions}" Click = "EditMenuItem_Click"/>
+            <MenuItem Header="Tools" ItemsSource = "{Binding ToolsOptions}" Click = "ToolsMenuItem_Click"/>
         </Menu>
         <Grid>
             <TabControl Name = "TabControl" SelectionChanged = "TabControl_SelectionChanged">
                 <TabItem Header="General">
-                    <ListBox x:Name="ListBox" >
-                        <Label x:Name="ChecksumLabel" Content="Checksum:"/>
-                        <Label x:Name="GeneratedChecksumLabel" Content="OnFileChecksum"/>
-                        <Label x:Name="SteamIdLabel" Content="Steam ID:" MouseDoubleClick="EditSteamLabel"/>
-                        <Label x:Name="SizeLabel" Content="Size:"/>
-                        <Label x:Name="FilePathLabel" Content="FilePath:"/>
-                    </ListBox>
+                    <local:GeneralTab x:Name="GeneralTabControl" SteamLabelDoubleClicked="EditSteamLabel"/>
                 </TabItem>
                 <!-- Investigations ================================================================================-->
                 <TabItem Header="Investigations">
                     <Grid>
-                        
+                        <!-- local:InvestigationsTab x:Name="InvestigationTabControl"/-->
                     </Grid>
                 </TabItem>
                 <!-- Inventory ================================================================================-->
             </TabControl>
         </Grid>
-        
     </DockPanel>
-    
 </Window>
 
