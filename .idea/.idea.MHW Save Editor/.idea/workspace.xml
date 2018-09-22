@@ -1,38 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f7302d10-7dc5-476b-ab1a-ada103a17aa1" name="Default Changelist" comment="Heavy UI Changes, UI functionality for investigations has been temporarily removed.">
-      <change afterPath="$PROJECT_DIR$/MHW Save Editor/Tabs/GeneralTab.xaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MHW Save Editor/Tabs/GeneralTab.xaml.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MHW Save Editor/Tabs/InvestigationsTab.xaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MHW Save Editor/src/Resources/ResourcesDictionary.xaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.MHW Save Editor/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MHW Save Editor/.idea/contentModel.xml" afterDir="false" />
+    <list default="true" id="f7302d10-7dc5-476b-ab1a-ada103a17aa1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/MHW Save Editor/Tabs/InvestigationsTab.xaml.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MHW Save Editor/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MHW Save Editor/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MHW Save Editor/App.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/MHW Save Editor/App.xaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MHW Save Editor/Boxstore.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/MHW Save Editor/InvestigationsView/Boxstore.xaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MHW Save Editor/Boxstore.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MHW Save Editor/InvestigationsView/Boxstore.xaml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MHW Save Editor/BoxstoreViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MHW Save Editor/InvestigationsView/BoxstoreViewModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MHW Save Editor/InvestigationView.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/MHW Save Editor/InvestigationsView/InvestigationView.xaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MHW Save Editor/InvestigationView.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MHW Save Editor/InvestigationsView/InvestigationView.xaml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MHW Save Editor/InvestigationViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MHW Save Editor/InvestigationsView/InvestigationViewModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MHW Save Editor/MHW Save Editor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/MHW Save Editor/MHW Save Editor.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MHW Save Editor/MainWindow.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/MHW Save Editor/MainWindow.xaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MHW Save Editor/MainWindow.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MHW Save Editor/MainWindow.xaml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MHW Save Editor/MainWindowGeneral.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MHW Save Editor/MainWindowGeneral.xaml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MHW Save Editor/bin/Release/MHW Save Editor.exe" beforeDir="false" afterPath="$PROJECT_DIR$/MHW Save Editor/bin/Release/MHW Save Editor.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MHW Save Editor/bin/Release/MHW Save Editor.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/MHW Save Editor/bin/Release/MHW Save Editor.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MHW Save Editor/obj/Release/App.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MHW Save Editor/obj/Release/App.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MHW Save Editor/obj/Release/App.g.i.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MHW Save Editor/obj/Release/App.g.i.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MHW Save Editor/obj/Release/MHW Save Editor.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/MHW Save Editor/obj/Release/MHW Save Editor.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MHW Save Editor/obj/Release/MHW Save Editor.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/MHW Save Editor/obj/Release/MHW Save Editor.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MHW Save Editor/obj/Release/MHW Save Editor.exe" beforeDir="false" afterPath="$PROJECT_DIR$/MHW Save Editor/obj/Release/MHW Save Editor.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MHW Save Editor/obj/Release/MHW Save Editor.g.resources" beforeDir="false" afterPath="$PROJECT_DIR$/MHW Save Editor/obj/Release/MHW Save Editor.g.resources" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MHW Save Editor/obj/Release/MHW Save Editor.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/MHW Save Editor/obj/Release/MHW Save Editor.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MHW Save Editor/obj/Release/MHW Save Editor_MarkupCompile.cache" beforeDir="false" afterPath="$PROJECT_DIR$/MHW Save Editor/obj/Release/MHW Save Editor_MarkupCompile.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MHW Save Editor/obj/Release/MHW Save Editor_MarkupCompile.lref" beforeDir="false" afterPath="$PROJECT_DIR$/MHW Save Editor/obj/Release/MHW Save Editor_MarkupCompile.lref" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MHW Save Editor/obj/Release/MainWindow.baml" beforeDir="false" afterPath="$PROJECT_DIR$/MHW Save Editor/obj/Release/MainWindow.baml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MHW Save Editor/obj/Release/MainWindow.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MHW Save Editor/obj/Release/MainWindow.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MHW Save Editor/obj/Release/MainWindow.g.i.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MHW Save Editor/obj/Release/MainWindow.g.i.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MHW Save Editor/bin/Debug/MHW Save Editor.exe" beforeDir="false" afterPath="$PROJECT_DIR$/MHW Save Editor/bin/Debug/MHW Save Editor.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MHW Save Editor/bin/Debug/MHW Save Editor.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/MHW Save Editor/bin/Debug/MHW Save Editor.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MHW Save Editor/obj/Debug/App.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MHW Save Editor/obj/Debug/App.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MHW Save Editor/obj/Debug/App.g.i.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MHW Save Editor/obj/Debug/App.g.i.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MHW Save Editor/obj/Debug/MHW Save Editor.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/MHW Save Editor/obj/Debug/MHW Save Editor.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MHW Save Editor/obj/Debug/MHW Save Editor.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/MHW Save Editor/obj/Debug/MHW Save Editor.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MHW Save Editor/obj/Debug/MHW Save Editor.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/MHW Save Editor/obj/Debug/MHW Save Editor.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MHW Save Editor/obj/Debug/MHW Save Editor.exe" beforeDir="false" afterPath="$PROJECT_DIR$/MHW Save Editor/obj/Debug/MHW Save Editor.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MHW Save Editor/obj/Debug/MHW Save Editor.g.resources" beforeDir="false" afterPath="$PROJECT_DIR$/MHW Save Editor/obj/Debug/MHW Save Editor.g.resources" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MHW Save Editor/obj/Debug/MHW Save Editor.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/MHW Save Editor/obj/Debug/MHW Save Editor.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MHW Save Editor/obj/Debug/MHW Save Editor_MarkupCompile.cache" beforeDir="false" afterPath="$PROJECT_DIR$/MHW Save Editor/obj/Debug/MHW Save Editor_MarkupCompile.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MHW Save Editor/obj/Debug/MHW Save Editor_MarkupCompile.lref" beforeDir="false" afterPath="$PROJECT_DIR$/MHW Save Editor/obj/Debug/MHW Save Editor_MarkupCompile.lref" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MHW Save Editor/obj/Debug/MainWindow.baml" beforeDir="false" afterPath="$PROJECT_DIR$/MHW Save Editor/obj/Debug/MainWindow.baml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MHW Save Editor/obj/Debug/MainWindow.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MHW Save Editor/obj/Debug/MainWindow.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MHW Save Editor/obj/Debug/MainWindow.g.i.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MHW Save Editor/obj/Debug/MainWindow.g.i.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -53,7 +39,7 @@
     <session id="1683850636">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="28" />
+          <entry key="project.closed" value="31" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.15" value="1" />
@@ -65,9 +51,10 @@
           <entry key="project.open.time.35" value="1" />
           <entry key="project.open.time.4" value="2" />
           <entry key="project.open.time.6" value="1" />
+          <entry key="project.open.time.7" value="2" />
           <entry key="project.open.time.8" value="1" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="31" />
+          <entry key="project.opened" value="33" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -75,7 +62,8 @@
           <entry key="config" value="4" />
           <entry key="cs" value="270" />
           <entry key="resx" value="1" />
-          <entry key="xaml" value="73" />
+          <entry key="targets" value="1" />
+          <entry key="xaml" value="75" />
           <entry key="xml" value="9" />
         </counts>
       </usages-collector>
@@ -83,8 +71,9 @@
         <counts>
           <entry key="C#" value="270" />
           <entry key="Config" value="4" />
+          <entry key="MsBuild targets file" value="1" />
           <entry key="Resources" value="1" />
-          <entry key="XAML" value="73" />
+          <entry key="XAML" value="75" />
           <entry key="XML" value="9" />
         </counts>
       </usages-collector>
@@ -92,7 +81,7 @@
         <counts>
           <entry key="C# Console" value="680" />
           <entry key="cs" value="43744" />
-          <entry key="txt" value="1022" />
+          <entry key="txt" value="1173" />
           <entry key="xaml" value="6733" />
           <entry key="xml" value="54" />
         </counts>
@@ -100,7 +89,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="C#" value="44424" />
-          <entry key="PLAIN_TEXT" value="1022" />
+          <entry key="PLAIN_TEXT" value="1173" />
           <entry key="XAML" value="6733" />
           <entry key="XML" value="54" />
         </counts>
@@ -110,57 +99,11 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MHW Save Editor/MainWindow.xaml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="36" column="52" selection-start-line="36" selection-start-column="52" selection-end-line="36" selection-end-column="52" />
-              <folding>
-                <marker date="1537511406788" expanded="true" signature="0:2376" ph="&lt;&lt;Window.Resources&gt;&#10;        &lt;ResourceDictionary&gt;&#10;            &lt;ResourceDictionary.MergedDictionaries&gt;&#10;                &lt;ResourceDictionary Source=&quot;G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\src\Resources\ResourcesDictionary.xaml&quot; /&gt;&#10;            &lt;/ResourceDictionary.MergedDictionaries&gt;&#10;        &lt;/ResourceDictionary&gt;&#10;    &lt;/Window.Resources&gt; &lt;DockPanel Name=&quot;Root&quot; xmlns:local=&quot;clr-namespace:MHW_Save_Editor&quot;&gt;&#10;        &lt;Menu Width=&quot;Auto&quot; Height=&quot;20&quot; DockPanel.Dock=&quot;Top&quot;&gt;&#10;            &lt;MenuItem Header=&quot;File&quot;&gt;&#10;                &lt;MenuItem Header=&quot;Open&quot; Click=&quot;OpenFunction&quot; /&gt;&#10;                &lt;MenuItem Header=&quot;Save&quot; Click=&quot;SaveFunction&quot; /&gt;&#10;                &lt;MenuItem Header=&quot;Backup&quot; Click=&quot;BackupFunction&quot; /&gt;&#10;            &lt;/MenuItem&gt;&#10;            &lt;MenuItem Header=&quot;Edit&quot; ItemsSource = &quot;{Binding EditOptions}&quot; Click = &quot;EditMenuItem_Click&quot;/&gt;&#10;            &lt;MenuItem Header=&quot;Tools&quot; ItemsSource = &quot;{Binding ToolsOptions}&quot; Click = &quot;ToolsMenuItem_Click&quot;/&gt;&#10;        &lt;/Menu&gt;&#10;        &lt;Grid&gt;&#10;            &lt;TabControl Name = &quot;TabControl&quot; SelectionChanged = &quot;TabControl_SelectionChanged&quot;&gt;&#10;                &lt;TabItem Header=&quot;General&quot;&gt;&#10;                    &lt;local:GeneralTab x:Name=&quot;GeneralTabControl&quot; SteamLabelDoubleClicked=&quot;EditSteamLabel&quot;/&gt;&#10;                &lt;/TabItem&gt;&#10;                &lt;!-- Investigations ================================================================================--&gt;&#10;                &lt;TabItem Header=&quot;Investigations&quot;&gt;&#10;                    &lt;Grid&gt;&#10;                        &lt;!-- local:InvestigationsTab x:Name=&quot;InvestigationTabControl&quot;/--&gt;&#10;                    &lt;/Grid&gt;&#10;                &lt;/TabItem&gt;&#10;                &lt;!-- Inventory ================================================================================--&gt;&#10;            &lt;/TabControl&gt;&#10;        &lt;/Grid&gt;&#10;    &lt;/DockPanel&gt;.../&gt;" />
-                <marker date="1537511406788" expanded="true" signature="587:941" ph="&lt;&lt;ResourceDictionary&gt;&#10;            &lt;ResourceDictionary.MergedDictionaries&gt;&#10;                &lt;ResourceDictionary Source=&quot;G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\src\Resources\ResourcesDictionary.xaml&quot; /&gt;&#10;            &lt;/ResourceDictionary.MergedDictionaries&gt;&#10;        &lt;/ResourceDictionary&gt;.../&gt;" />
-                <marker date="1537511406788" expanded="true" signature="614:917" ph="&lt;&lt;ResourceDictionary.MergedDictionaries&gt;&#10;                &lt;ResourceDictionary Source=&quot;G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\src\Resources\ResourcesDictionary.xaml&quot; /&gt;&#10;            &lt;/ResourceDictionary.MergedDictionaries&gt;.../&gt;" />
-                <marker date="1537511406788" expanded="true" signature="647:887" ph="&lt;&lt;ResourceDictionary Source=&quot;G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\src\Resources\ResourcesDictionary.xaml&quot; /&gt;.../&gt;" />
-                <marker date="1537511406788" expanded="true" signature="949:2366" ph="&lt;&lt;Menu Width=&quot;Auto&quot; Height=&quot;20&quot; DockPanel.Dock=&quot;Top&quot;&gt;&#10;            &lt;MenuItem Header=&quot;File&quot;&gt;&#10;                &lt;MenuItem Header=&quot;Open&quot; Click=&quot;OpenFunction&quot; /&gt;&#10;                &lt;MenuItem Header=&quot;Save&quot; Click=&quot;SaveFunction&quot; /&gt;&#10;                &lt;MenuItem Header=&quot;Backup&quot; Click=&quot;BackupFunction&quot; /&gt;&#10;            &lt;/MenuItem&gt;&#10;            &lt;MenuItem Header=&quot;Edit&quot; ItemsSource = &quot;{Binding EditOptions}&quot; Click = &quot;EditMenuItem_Click&quot;/&gt;&#10;            &lt;MenuItem Header=&quot;Tools&quot; ItemsSource = &quot;{Binding ToolsOptions}&quot; Click = &quot;ToolsMenuItem_Click&quot;/&gt;&#10;        &lt;/Menu&gt; &lt;Grid&gt;&#10;            &lt;TabControl Name = &quot;TabControl&quot; SelectionChanged = &quot;TabControl_SelectionChanged&quot;&gt;&#10;                &lt;TabItem Header=&quot;General&quot;&gt;&#10;                    &lt;local:GeneralTab x:Name=&quot;GeneralTabControl&quot; SteamLabelDoubleClicked=&quot;EditSteamLabel&quot;/&gt;&#10;                &lt;/TabItem&gt;&#10;                &lt;!-- Investigations ================================================================================--&gt;&#10;                &lt;TabItem Header=&quot;Investigations&quot;&gt;&#10;                    &lt;Grid&gt;&#10;                        &lt;!-- local:InvestigationsTab x:Name=&quot;InvestigationTabControl&quot;/--&gt;&#10;                    &lt;/Grid&gt;&#10;                &lt;/TabItem&gt;&#10;                &lt;!-- Inventory ================================================================================--&gt;&#10;            &lt;/TabControl&gt;&#10;        &lt;/Grid&gt;.../&gt;" />
-                <marker date="1537511406788" expanded="true" signature="1025:1563" ph="&lt;&lt;MenuItem Header=&quot;File&quot;&gt;&#10;                &lt;MenuItem Header=&quot;Open&quot; Click=&quot;OpenFunction&quot; /&gt;&#10;                &lt;MenuItem Header=&quot;Save&quot; Click=&quot;SaveFunction&quot; /&gt;&#10;                &lt;MenuItem Header=&quot;Backup&quot; Click=&quot;BackupFunction&quot; /&gt;&#10;            &lt;/MenuItem&gt; &lt;MenuItem Header=&quot;Edit&quot; ItemsSource = &quot;{Binding EditOptions}&quot; Click = &quot;EditMenuItem_Click&quot;/&gt; &lt;MenuItem Header=&quot;Tools&quot; ItemsSource = &quot;{Binding ToolsOptions}&quot; Click = &quot;ToolsMenuItem_Click&quot;/&gt;.../&gt;" />
-                <marker date="1537511406788" expanded="true" signature="1090:1334" ph="&lt;&lt;MenuItem Header=&quot;Open&quot; Click=&quot;OpenFunction&quot; /&gt; &lt;MenuItem Header=&quot;Save&quot; Click=&quot;SaveFunction&quot; /&gt; &lt;MenuItem Header=&quot;Backup&quot; Click=&quot;BackupFunction&quot; /&gt;.../&gt;" />
-                <marker date="1537511406788" expanded="true" signature="1572:2349" ph="&lt;&lt;TabControl Name = &quot;TabControl&quot; SelectionChanged = &quot;TabControl_SelectionChanged&quot;&gt;&#10;                &lt;TabItem Header=&quot;General&quot;&gt;&#10;                    &lt;local:GeneralTab x:Name=&quot;GeneralTabControl&quot; SteamLabelDoubleClicked=&quot;EditSteamLabel&quot;/&gt;&#10;                &lt;/TabItem&gt;&#10;                &lt;!-- Investigations ================================================================================--&gt;&#10;                &lt;TabItem Header=&quot;Investigations&quot;&gt;&#10;                    &lt;Grid&gt;&#10;                        &lt;!-- local:InvestigationsTab x:Name=&quot;InvestigationTabControl&quot;/--&gt;&#10;                    &lt;/Grid&gt;&#10;                &lt;/TabItem&gt;&#10;                &lt;!-- Inventory ================================================================================--&gt;&#10;            &lt;/TabControl&gt;.../&gt;" />
-                <marker date="1537511406788" expanded="true" signature="1591:2333" ph="&lt;&lt;TabItem Header=&quot;General&quot;&gt;&#10;                    &lt;local:GeneralTab x:Name=&quot;GeneralTabControl&quot; SteamLabelDoubleClicked=&quot;EditSteamLabel&quot;/&gt;&#10;                &lt;/TabItem&gt; &lt;TabItem Header=&quot;Investigations&quot;&gt;&#10;                    &lt;Grid&gt;&#10;                        &lt;!-- local:InvestigationsTab x:Name=&quot;InvestigationTabControl&quot;/--&gt;&#10;                    &lt;/Grid&gt;&#10;                &lt;/TabItem&gt;.../&gt;" />
-                <marker date="1537511406788" expanded="true" signature="1689:1850" ph="&lt;&lt;local:GeneralTab x:Name=&quot;GeneralTabControl&quot; SteamLabelDoubleClicked=&quot;EditSteamLabel&quot;/&gt;.../&gt;" />
-                <marker date="1537511406788" expanded="true" signature="1987:2192" ph="&lt;&lt;Grid&gt;&#10;                        &lt;!-- local:InvestigationsTab x:Name=&quot;InvestigationTabControl&quot;/--&gt;&#10;                    &lt;/Grid&gt;.../&gt;" />
-                <marker date="1537511406788" expanded="true" signature="2041:2165" ph="&lt;.../&gt;" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MHW Save Editor/Tabs/InvestigationsTab.xaml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
-              <folding>
-                <marker date="1537511400958" expanded="true" signature="0:560" ph="&lt;&lt;Grid&gt;&#10;        &#10;    &lt;/Grid&gt;.../&gt;" />
-                <marker date="1537511400958" expanded="true" signature="518:545" ph="&lt;.../&gt;" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MHW Save Editor/Tabs/InvestigationsTab.xaml.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="2" column="30" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MHW Save Editor/InvestigationsView/Boxstore.xaml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
+            <state relative-caret-position="799">
               <caret line="47" column="14" selection-start-line="47" selection-start-column="14" selection-end-line="47" selection-end-column="14" />
               <folding>
-                <marker date="1537346843683" expanded="true" signature="0:2624" ph="&lt;&lt;Grid&gt;&#10;        &lt;DataGrid x:Name=&quot;dg&quot; AutoGenerateColumns=&quot;False&quot;&#10;                  ItemsSource=&quot;{Binding BoxstoreCollectionView}&quot;&#10;                  IsSynchronizedWithCurrentItem=&quot;True&quot;&#10;                  EnableRowVirtualization=&quot;True&quot;&#10;                  HeadersVisibility=&quot;Column&quot;&#10;            &gt;&#10;            &lt;i:Interaction.Behaviors&gt;&#10;                &lt;support:ScrollDataGridRowIntoView /&gt;&#10;            &lt;/i:Interaction.Behaviors&gt;&#10;            &lt;DataGrid.RowStyle&gt;&#10;                &lt;Style TargetType=&quot;{x:Type DataGridRow}&quot;&gt;&#10;                    &lt;Setter Property=&quot;support:DataGridRowBehavior.IsDataGridRowFocussedWhenSelected&quot; Value=&quot;true&quot;/&gt;&#10;                &lt;/Style&gt;&#10;            &lt;/DataGrid.RowStyle&gt;&#10;            &lt;DataGrid.Columns&gt;&#10;                &lt;DataGridTemplateColumn Header=&quot;Seen&quot;&gt;&#10;                    &lt;DataGridTemplateColumn.CellTemplate&gt;&#10;                        &lt;DataTemplate&gt;&#10;                            &lt;CheckBox IsChecked=&quot;{Binding Seen, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}&quot;/&gt;&#10;                        &lt;/DataTemplate&gt;&#10;                    &lt;/DataGridTemplateColumn.CellTemplate&gt;&#10;                &lt;/DataGridTemplateColumn&gt;&#10;                &lt;DataGridTemplateColumn Header=&quot;Selected&quot;&gt;&#10;                    &lt;DataGridTemplateColumn.CellTemplate&gt;&#10;                        &lt;DataTemplate&gt;&#10;                            &lt;CheckBox IsChecked=&quot;{Binding Selected, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}&quot;/&gt;&#10;                        &lt;/DataTemplate&gt;&#10;                    &lt;/DataGridTemplateColumn.CellTemplate&gt;&#10;                &lt;/DataGridTemplateColumn&gt;&#10;                &lt;DataGridCheckBoxColumn Binding=&quot;{Binding Selected}&quot;  Header=&quot;Selected&quot; /&gt;&#10;                &lt;!--DataGridComboBoxColumn Binding=&quot;{Binding Goal}&quot;  Header=&quot;Goal&quot; /--&gt;&#10;                &lt;!--DataGridComboBoxColumn Binding=&quot;{Binding Rank}&quot;  Header=&quot;Rank&quot; /--&gt;&#10;                &lt;!--DataGridComboBoxColumn Binding=&quot;{Binding Mon1}&quot;  Header=&quot;Main Monster&quot; /--&gt;&#10;            &lt;/DataGrid.Columns&gt;&#10;        &lt;/DataGrid&gt;&#10;    &lt;/Grid&gt;.../&gt;" />
                 <marker date="1537346843683" expanded="true" signature="593:2566" ph="&lt;&lt;DataGrid x:Name=&quot;dg&quot; AutoGenerateColumns=&quot;False&quot;&#10;                  ItemsSource=&quot;{Binding BoxstoreCollectionView}&quot;&#10;                  IsSynchronizedWithCurrentItem=&quot;True&quot;&#10;                  EnableRowVirtualization=&quot;True&quot;&#10;                  HeadersVisibility=&quot;Column&quot;&#10;            &gt;&#10;            &lt;i:Interaction.Behaviors&gt;&#10;                &lt;support:ScrollDataGridRowIntoView /&gt;&#10;            &lt;/i:Interaction.Behaviors&gt;&#10;            &lt;DataGrid.RowStyle&gt;&#10;                &lt;Style TargetType=&quot;{x:Type DataGridRow}&quot;&gt;&#10;                    &lt;Setter Property=&quot;support:DataGridRowBehavior.IsDataGridRowFocussedWhenSelected&quot; Value=&quot;true&quot;/&gt;&#10;                &lt;/Style&gt;&#10;            &lt;/DataGrid.RowStyle&gt;&#10;            &lt;DataGrid.Columns&gt;&#10;                &lt;DataGridTemplateColumn Header=&quot;Seen&quot;&gt;&#10;                    &lt;DataGridTemplateColumn.CellTemplate&gt;&#10;                        &lt;DataTemplate&gt;&#10;                            &lt;CheckBox IsChecked=&quot;{Binding Seen, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}&quot;/&gt;&#10;                        &lt;/DataTemplate&gt;&#10;                    &lt;/DataGridTemplateColumn.CellTemplate&gt;&#10;                &lt;/DataGridTemplateColumn&gt;&#10;                &lt;DataGridTemplateColumn Header=&quot;Selected&quot;&gt;&#10;                    &lt;DataGridTemplateColumn.CellTemplate&gt;&#10;                        &lt;DataTemplate&gt;&#10;                            &lt;CheckBox IsChecked=&quot;{Binding Selected, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}&quot;/&gt;&#10;                        &lt;/DataTemplate&gt;&#10;                    &lt;/DataGridTemplateColumn.CellTemplate&gt;&#10;                &lt;/DataGridTemplateColumn&gt;&#10;                &lt;DataGridCheckBoxColumn Binding=&quot;{Binding Selected}&quot;  Header=&quot;Selected&quot; /&gt;&#10;                &lt;!--DataGridComboBoxColumn Binding=&quot;{Binding Goal}&quot;  Header=&quot;Goal&quot; /--&gt;&#10;                &lt;!--DataGridComboBoxColumn Binding=&quot;{Binding Rank}&quot;  Header=&quot;Rank&quot; /--&gt;&#10;                &lt;!--DataGridComboBoxColumn Binding=&quot;{Binding Mon1}&quot;  Header=&quot;Main Monster&quot; /--&gt;&#10;            &lt;/DataGrid.Columns&gt;&#10;        &lt;/DataGrid&gt;.../&gt;" />
                 <marker date="1537346843683" expanded="true" signature="608:2554" ph="&lt;&lt;i:Interaction.Behaviors&gt;&#10;                &lt;support:ScrollDataGridRowIntoView /&gt;&#10;            &lt;/i:Interaction.Behaviors&gt; &lt;DataGrid.RowStyle&gt;&#10;                &lt;Style TargetType=&quot;{x:Type DataGridRow}&quot;&gt;&#10;                    &lt;Setter Property=&quot;support:DataGridRowBehavior.IsDataGridRowFocussedWhenSelected&quot; Value=&quot;true&quot;/&gt;&#10;                &lt;/Style&gt;&#10;            &lt;/DataGrid.RowStyle&gt; &lt;DataGrid.Columns&gt;&#10;                &lt;DataGridTemplateColumn Header=&quot;Seen&quot;&gt;&#10;                    &lt;DataGridTemplateColumn.CellTemplate&gt;&#10;                        &lt;DataTemplate&gt;&#10;                            &lt;CheckBox IsChecked=&quot;{Binding Seen, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}&quot;/&gt;&#10;                        &lt;/DataTemplate&gt;&#10;                    &lt;/DataGridTemplateColumn.CellTemplate&gt;&#10;                &lt;/DataGridTemplateColumn&gt;&#10;                &lt;DataGridTemplateColumn Header=&quot;Selected&quot;&gt;&#10;                    &lt;DataGridTemplateColumn.CellTemplate&gt;&#10;                        &lt;DataTemplate&gt;&#10;                            &lt;CheckBox IsChecked=&quot;{Binding Selected, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}&quot;/&gt;&#10;                        &lt;/DataTemplate&gt;&#10;                    &lt;/DataGridTemplateColumn.CellTemplate&gt;&#10;                &lt;/DataGridTemplateColumn&gt;&#10;                &lt;DataGridCheckBoxColumn Binding=&quot;{Binding Selected}&quot;  Header=&quot;Selected&quot; /&gt;&#10;                &lt;!--DataGridComboBoxColumn Binding=&quot;{Binding Goal}&quot;  Header=&quot;Goal&quot; /--&gt;&#10;                &lt;!--DataGridComboBoxColumn Binding=&quot;{Binding Rank}&quot;  Header=&quot;Rank&quot; /--&gt;&#10;                &lt;!--DataGridComboBoxColumn Binding=&quot;{Binding Mon1}&quot;  Header=&quot;Main Monster&quot; /--&gt;&#10;            &lt;/DataGrid.Columns&gt;.../&gt;" />
                 <marker date="1537346843683" expanded="true" signature="898:1016" ph="&lt;&lt;support:ScrollDataGridRowIntoView /&gt;.../&gt;" />
@@ -185,7 +128,6 @@
               <caret line="12" column="58" selection-start-line="12" selection-start-column="58" selection-end-line="12" selection-end-column="58" />
               <folding>
                 <marker date="1537346843576" expanded="false" signature="6:120" ph="..." />
-                <marker date="1537346843576" expanded="true" signature="147:809" ph="{...}" />
                 <marker date="1537346843576" expanded="true" signature="199:807" ph="{...}" />
                 <marker date="1537346843576" expanded="true" signature="325:571" ph="{...}" />
                 <marker date="1537346843576" expanded="true" signature="431:561" ph="{...}" />
@@ -195,11 +137,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MHW Save Editor/InvestigationsView/InvestigationView.xaml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="24" column="37" lean-forward="true" selection-start-line="24" selection-start-column="37" selection-end-line="24" selection-end-column="37" />
+            <state relative-caret-position="408">
+              <caret line="24" column="37" selection-start-line="24" selection-start-column="37" selection-end-line="24" selection-end-column="37" />
               <folding>
                 <marker date="1537511601348" expanded="true" signature="0:2113" ph="&lt;&lt;Grid&gt;&#10;        &lt;Grid.RowDefinitions&gt;&#10;            &lt;!-- State Controls --&gt;&#10;            &lt;RowDefinition Height=&quot;1*&quot; /&gt;&#10;            &lt;!-- Goal&amp;Rank --&gt;&#10;            &lt;RowDefinition Height=&quot;2*&quot; /&gt;&#10;            &lt;!-- Monsters --&gt;&#10;            &lt;RowDefinition Height=&quot;4*&quot; /&gt;&#10;            &lt;!-- Stats --&gt;&#10;            &lt;RowDefinition Height=&quot;2*&quot; /&gt;&#10;            &lt;!-- Values --&gt;&#10;            &lt;RowDefinition Height=&quot;7*&quot; /&gt;&#10;            &lt;!-- Rewards --&gt;&#10;            &lt;RowDefinition Height=&quot;1*&quot; /&gt;&#10;            &lt;!-- Rewards Display --&gt;&#10;            &lt;RowDefinition Height=&quot;2*&quot; /&gt;&#10;            &lt;!-- Utility Controls --&gt;&#10;            &lt;RowDefinition Height=&quot;2*&quot; /&gt;&#10;        &lt;/Grid.RowDefinitions&gt;&#10;        &lt;!-- State Controls --&gt;&#10;        &lt;Grid Grid.Row=&quot;0&quot;&gt;&#10;            &lt;Grid.ColumnDefinitions&gt;&#10;                &lt;ColumnDefinition Width=&quot;1*&quot; /&gt;&#10;                &lt;ColumnDefinition Width=&quot;1*&quot; /&gt;&#10;                &lt;ColumnDefinition Width=&quot;3*&quot; /&gt;&#10;                &lt;ColumnDefinition Width=&quot;1*&quot; /&gt;&#10;                &lt;ColumnDefinition Width=&quot;1*&quot; /&gt;&#10;            &lt;/Grid.ColumnDefinitions&gt;&#10;            &lt;Button Grid.Column=&quot;0&quot; Command=&quot;{Binding FirstRecord}&quot; &gt;&amp;lt;&amp;lt;&lt;/Button&gt;&#10;            &lt;Button Grid.Column=&quot;1&quot; Command=&quot;{Binding PreviousRecord}&quot;&gt;&amp;lt;&lt;/Button&gt;&#10;            &lt;Button Grid.Column=&quot;2&quot; Command=&quot;{Binding ToggleRecord}&quot;&#10;                    Content=&quot;{Binding ToggleState}&quot;/&gt;&#10;            &lt;Button Grid.Column=&quot;3&quot; Command=&quot;{Binding NextRecord}&quot;&gt;&amp;gt;&lt;/Button&gt;&#10;            &lt;Button Grid.Column=&quot;4&quot; Command=&quot;{Binding LastRecord}&quot;&gt;&amp;gt;&amp;gt;&lt;/Button&gt;&#10;        &lt;/Grid&gt;&#10;        &lt;!-- TODO Complete the investigations view --&gt;&#10;    &lt;/Grid&gt;.../&gt;" />
                 <marker date="1537511601348" expanded="true" signature="511:2089" ph="&lt;&lt;Grid.RowDefinitions&gt;&#10;            &lt;!-- State Controls --&gt;&#10;            &lt;RowDefinition Height=&quot;1*&quot; /&gt;&#10;            &lt;!-- Goal&amp;Rank --&gt;&#10;            &lt;RowDefinition Height=&quot;2*&quot; /&gt;&#10;            &lt;!-- Monsters --&gt;&#10;            &lt;RowDefinition Height=&quot;4*&quot; /&gt;&#10;            &lt;!-- Stats --&gt;&#10;            &lt;RowDefinition Height=&quot;2*&quot; /&gt;&#10;            &lt;!-- Values --&gt;&#10;            &lt;RowDefinition Height=&quot;7*&quot; /&gt;&#10;            &lt;!-- Rewards --&gt;&#10;            &lt;RowDefinition Height=&quot;1*&quot; /&gt;&#10;            &lt;!-- Rewards Display --&gt;&#10;            &lt;RowDefinition Height=&quot;2*&quot; /&gt;&#10;            &lt;!-- Utility Controls --&gt;&#10;            &lt;RowDefinition Height=&quot;2*&quot; /&gt;&#10;        &lt;/Grid.RowDefinitions&gt; &lt;Grid Grid.Row=&quot;0&quot;&gt;&#10;            &lt;Grid.ColumnDefinitions&gt;&#10;                &lt;ColumnDefinition Width=&quot;1*&quot; /&gt;&#10;                &lt;ColumnDefinition Width=&quot;1*&quot; /&gt;&#10;                &lt;ColumnDefinition Width=&quot;3*&quot; /&gt;&#10;                &lt;ColumnDefinition Width=&quot;1*&quot; /&gt;&#10;                &lt;ColumnDefinition Width=&quot;1*&quot; /&gt;&#10;            &lt;/Grid.ColumnDefinitions&gt;&#10;            &lt;Button Grid.Column=&quot;0&quot; Command=&quot;{Binding FirstRecord}&quot; &gt;&amp;lt;&amp;lt;&lt;/Button&gt;&#10;            &lt;Button Grid.Column=&quot;1&quot; Command=&quot;{Binding PreviousRecord}&quot;&gt;&amp;lt;&lt;/Button&gt;&#10;            &lt;Button Grid.Column=&quot;2&quot; Command=&quot;{Binding ToggleRecord}&quot;&#10;                    Content=&quot;{Binding ToggleState}&quot;/&gt;&#10;            &lt;Button Grid.Column=&quot;3&quot; Command=&quot;{Binding NextRecord}&quot;&gt;&amp;gt;&lt;/Button&gt;&#10;            &lt;Button Grid.Column=&quot;4&quot; Command=&quot;{Binding LastRecord}&quot;&gt;&amp;gt;&amp;gt;&lt;/Button&gt;&#10;        &lt;/Grid&gt;.../&gt;" />
@@ -207,6 +149,35 @@
                 <marker date="1537511601348" expanded="true" signature="1211:2022" ph="&lt;&lt;Grid.ColumnDefinitions&gt;&#10;                &lt;ColumnDefinition Width=&quot;1*&quot; /&gt;&#10;                &lt;ColumnDefinition Width=&quot;1*&quot; /&gt;&#10;                &lt;ColumnDefinition Width=&quot;3*&quot; /&gt;&#10;                &lt;ColumnDefinition Width=&quot;1*&quot; /&gt;&#10;                &lt;ColumnDefinition Width=&quot;1*&quot; /&gt;&#10;            &lt;/Grid.ColumnDefinitions&gt; &lt;Button Grid.Column=&quot;0&quot; Command=&quot;{Binding FirstRecord}&quot; &gt;&amp;lt;&amp;lt;&lt;/Button&gt; &lt;Button Grid.Column=&quot;1&quot; Command=&quot;{Binding PreviousRecord}&quot;&gt;&amp;lt;&lt;/Button&gt; &lt;Button Grid.Column=&quot;2&quot; Command=&quot;{Binding ToggleRecord}&quot;&#10;                    Content=&quot;{Binding ToggleState}&quot;/&gt; &lt;Button Grid.Column=&quot;3&quot; Command=&quot;{Binding NextRecord}&quot;&gt;&amp;gt;&lt;/Button&gt; &lt;Button Grid.Column=&quot;4&quot; Command=&quot;{Binding LastRecord}&quot;&gt;&amp;gt;&amp;gt;&lt;/Button&gt;.../&gt;" />
                 <marker date="1537511601348" expanded="true" signature="1243:1545" ph="&lt;&lt;ColumnDefinition Width=&quot;1*&quot; /&gt; &lt;ColumnDefinition Width=&quot;1*&quot; /&gt; &lt;ColumnDefinition Width=&quot;3*&quot; /&gt; &lt;ColumnDefinition Width=&quot;1*&quot; /&gt; &lt;ColumnDefinition Width=&quot;1*&quot; /&gt;.../&gt;" />
                 <marker date="1537511601348" expanded="true" signature="1730:1840" ph="&lt;.../&gt;" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MHW Save Editor/InputBox.xaml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="12" column="43" selection-start-line="12" selection-start-column="43" selection-end-line="12" selection-end-column="43" />
+              <folding>
+                <marker date="1537346843625" expanded="true" signature="324:1182" ph="&lt;&lt;Grid.ColumnDefinitions&gt;&#10;            &lt;ColumnDefinition Width=&quot;Auto&quot; /&gt;&#10;            &lt;ColumnDefinition Width=&quot;*&quot; /&gt;&#10;        &lt;/Grid.ColumnDefinitions&gt; &lt;Grid.RowDefinitions&gt;&#10;            &lt;RowDefinition Height=&quot;Auto&quot; /&gt;&#10;            &lt;RowDefinition Height=&quot;Auto&quot; /&gt;&#10;            &lt;RowDefinition Height=&quot;Auto&quot; /&gt;&#10;        &lt;/Grid.RowDefinitions&gt; &lt;Label Name=&quot;lblQuestion&quot; Grid.Column=&quot;1&quot;&gt;Question:&lt;/Label&gt; &lt;TextBox Name=&quot;txtAnswer&quot; Grid.Column=&quot;1&quot; Grid.Row=&quot;1&quot; MinWidth=&quot;250&quot;&gt;Answer&lt;/TextBox&gt; &lt;WrapPanel Grid.Row=&quot;2&quot; Grid.ColumnSpan=&quot;2&quot; HorizontalAlignment=&quot;Right&quot; Margin=&quot;0,15,0,0&quot;&gt;&#10;            &lt;Button IsDefault=&quot;True&quot; Name=&quot;btnDialogOk&quot; Click=&quot;btnDialogOk_Click&quot; MinWidth=&quot;60&quot; Margin=&quot;0,0,10,0&quot;&gt;_Ok&lt;/Button&gt;&#10;            &lt;Button IsCancel=&quot;True&quot; MinWidth=&quot;60&quot;&gt;_Cancel&lt;/Button&gt;&#10;        &lt;/WrapPanel&gt;.../&gt;" />
+                <marker date="1537346843625" expanded="true" signature="351:498" ph="&lt;&lt;ColumnDefinition Width=&quot;Auto&quot; /&gt; &lt;ColumnDefinition Width=&quot;*&quot; /&gt;.../&gt;" />
+                <marker date="1537346843625" expanded="true" signature="507:691" ph="&lt;&lt;RowDefinition Height=&quot;Auto&quot; /&gt; &lt;RowDefinition Height=&quot;Auto&quot; /&gt; &lt;RowDefinition Height=&quot;Auto&quot; /&gt;.../&gt;" />
+                <marker date="1537346843625" expanded="true" signature="865:1170" ph="&lt;&lt;Button IsDefault=&quot;True&quot; Name=&quot;btnDialogOk&quot; Click=&quot;btnDialogOk_Click&quot; MinWidth=&quot;60&quot; Margin=&quot;0,0,10,0&quot;&gt;_Ok&lt;/Button&gt; &lt;Button IsCancel=&quot;True&quot; MinWidth=&quot;60&quot;&gt;_Cancel&lt;/Button&gt;.../&gt;" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/MHW Save Editor/Tabs/GeneralTab.xaml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="14" column="70" selection-start-line="14" selection-start-column="70" selection-end-line="14" selection-end-column="70" />
+              <folding>
+                <marker date="1537509636784" expanded="true" signature="0:981" ph="&lt;&lt;Grid&gt;&#10;        &lt;ListBox Name=&quot;ListBox&quot; &gt;&#10;            &lt;Label Name=&quot;ChecksumLabel&quot; Content=&quot;{Binding Checksum}&quot;/&gt;&#10;            &lt;Label Name=&quot;GeneratedChecksumLabel&quot; Content=&quot;{Binding OnFileChecksum}&quot;/&gt;&#10;            &lt;Label Name=&quot;SteamIdLabel&quot; Content=&quot;{Binding SteamId}&quot; MouseDoubleClick=&quot;EditSteamLabel&quot;/&gt;&#10;            &lt;Label Name=&quot;SizeLabel&quot; Content=&quot;{Binding Size}&quot;/&gt;&#10;            &lt;Label Name=&quot;FilePathLabel&quot; Content=&quot;{Binding FilePath}&quot;/&gt;&#10;        &lt;/ListBox&gt;&#10;    &lt;/Grid&gt;.../&gt;" />
+                <marker date="1537509636784" expanded="true" signature="501:966" ph="&lt;&lt;ListBox Name=&quot;ListBox&quot; &gt;&#10;            &lt;Label Name=&quot;ChecksumLabel&quot; Content=&quot;{Binding Checksum}&quot;/&gt;&#10;            &lt;Label Name=&quot;GeneratedChecksumLabel&quot; Content=&quot;{Binding OnFileChecksum}&quot;/&gt;&#10;            &lt;Label Name=&quot;SteamIdLabel&quot; Content=&quot;{Binding SteamId}&quot; MouseDoubleClick=&quot;EditSteamLabel&quot;/&gt;&#10;            &lt;Label Name=&quot;SizeLabel&quot; Content=&quot;{Binding Size}&quot;/&gt;&#10;            &lt;Label Name=&quot;FilePathLabel&quot; Content=&quot;{Binding FilePath}&quot;/&gt;&#10;        &lt;/ListBox&gt;.../&gt;" />
+                <marker date="1537509636784" expanded="true" signature="516:954" ph="&lt;&lt;Label Name=&quot;ChecksumLabel&quot; Content=&quot;{Binding Checksum}&quot;/&gt; &lt;Label Name=&quot;GeneratedChecksumLabel&quot; Content=&quot;{Binding OnFileChecksum}&quot;/&gt; &lt;Label Name=&quot;SteamIdLabel&quot; Content=&quot;{Binding SteamId}&quot; MouseDoubleClick=&quot;EditSteamLabel&quot;/&gt; &lt;Label Name=&quot;SizeLabel&quot; Content=&quot;{Binding Size}&quot;/&gt; &lt;Label Name=&quot;FilePathLabel&quot; Content=&quot;{Binding FilePath}&quot;/&gt;.../&gt;" />
               </folding>
             </state>
           </provider>
@@ -230,7 +201,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MHW Save Editor/MainWindow.xaml.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1600">
+            <state relative-caret-position="2601">
               <caret line="162" column="9" selection-start-line="162" selection-start-column="9" selection-end-line="162" selection-end-column="9" />
               <folding>
                 <marker date="1537510339393" expanded="false" signature="6:270" ph="..." />
@@ -538,7 +509,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="FileSystemExplorer" />
       <pane id="SolutionExplorer">
         <subPane>
           <expand>
@@ -555,32 +525,6 @@
               <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
               <item name="MHW Save Editor" type="24d0babc:SolutionExplorerModelNode" />
               <item name="MHW Save Editor" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="InvestigationsView" type="24d0babc:SolutionExplorerModelNode" />
-            </path>
-            <path>
-              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
-              <item name="MHW Save Editor" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="MHW Save Editor" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="InvestigationsView" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Boxstore.xaml" type="24d0babc:SolutionExplorerModelNode" />
-            </path>
-            <path>
-              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
-              <item name="MHW Save Editor" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="MHW Save Editor" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="InvestigationsView" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="InvestigationView.xaml" type="24d0babc:SolutionExplorerModelNode" />
-            </path>
-            <path>
-              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
-              <item name="MHW Save Editor" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="MHW Save Editor" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="src" type="24d0babc:SolutionExplorerModelNode" />
-            </path>
-            <path>
-              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
-              <item name="MHW Save Editor" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="MHW Save Editor" type="24d0babc:SolutionExplorerModelNode" />
               <item name="Tabs" type="24d0babc:SolutionExplorerModelNode" />
             </path>
             <path>
@@ -589,6 +533,13 @@
               <item name="MHW Save Editor" type="24d0babc:SolutionExplorerModelNode" />
               <item name="Tabs" type="24d0babc:SolutionExplorerModelNode" />
               <item name="GeneralTab.xaml" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="MHW Save Editor" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="MHW Save Editor" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Tabs" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="InvestigationsTab.xaml" type="24d0babc:SolutionExplorerModelNode" />
             </path>
             <path>
               <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
@@ -613,6 +564,7 @@
         </subPane>
         <option name="show-all-files" value="false" />
       </pane>
+      <pane id="FileSystemExplorer" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -721,7 +673,9 @@
       <workItem from="1537460333869" duration="2560000" />
       <workItem from="1537466729478" duration="3359000" />
       <workItem from="1537489507315" duration="8344000" />
-      <workItem from="1537509005943" duration="3202000" />
+      <workItem from="1537509005943" duration="3363000" />
+      <workItem from="1537592003565" duration="1423000" />
+      <workItem from="1537646302339" duration="26000" />
     </task>
     <task id="LOCAL-00001" summary="-Fixed checksum algorithm, it works correctly now.&#10;-Fixed encryption algorithm, it works correctly now.&#10;-Modified GUI in preparation for added editors.">
       <created>1536902291909</created>
@@ -772,11 +726,18 @@
       <option name="project" value="LOCAL" />
       <updated>1537383756807</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="UI Complete Refactorization. Investigations tab still in progress but save, open, edit steamId and backup work.">
+      <created>1537512270127</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1537512270127</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="292901000" />
+    <option name="totallyTimeSpent" value="294511000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -789,15 +750,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15831557" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16151386" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.329718" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.41323212" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.37201735" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.37201735" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.329718" />
@@ -834,16 +794,10 @@
     <MESSAGE value="Fixed Checksum Issues when saving." />
     <MESSAGE value="Complete Refactoring&#10;-Investigation Completely Redone to be a thin layer over hex.&#10;-Investigation View Model now properly acts as a View Model for Investigation.&#10;-Rewrote the backup function to just use the operating system.&#10;-Fixed yet another checksum issue introduced by endianess." />
     <MESSAGE value="Heavy UI Changes, UI functionality for investigations has been temporarily removed." />
-    <option name="LAST_COMMIT_MESSAGE" value="Heavy UI Changes, UI functionality for investigations has been temporarily removed." />
+    <MESSAGE value="UI Complete Refactorization. Investigations tab still in progress but save, open, edit steamId and backup work." />
+    <option name="LAST_COMMIT_MESSAGE" value="UI Complete Refactorization. Investigations tab still in progress but save, open, edit steamId and backup work." />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/MicrosoftSample/Wpf_Dynamic_XAML_Composed_View/Support/DataGridRowBehavior.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MHW Save Editor/BoxstoreViewModel.cs.xaml.cs" />
     <entry file="file://$PROJECT_DIR$/MHW Save Editor/BoxstoreViewModel.cs.xaml" />
     <entry file="file://$PROJECT_DIR$/MicrosoftSample/Wpf_Dynamic_XAML_Composed_View/PeopleViewModel.cs">
@@ -1006,13 +960,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MHW Save Editor/InputBox.xaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="43" selection-start-line="12" selection-start-column="43" selection-end-line="12" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MHW Save Editor/App.xaml.cs">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1052,47 +999,124 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="68" selection-start-line="11" selection-start-column="68" selection-end-line="11" selection-end-column="68" />
-          <folding>
-            <marker date="1537423549901" expanded="true" signature="166:354" ph="&lt;&lt;Setter Property=&quot;VerticalAlignment&quot; Value=&quot;Center&quot; /&gt;.../&gt;" />
-            <marker date="1537423549901" expanded="true" signature="359:758" ph="&lt;&lt;Setter Property=&quot;VerticalAlignment&quot; Value=&quot;Stretch&quot; /&gt; &lt;Setter Property=&quot;HorizontalAlignment&quot; Value=&quot;Stretch&quot; /&gt; &lt;Setter Property=&quot;HorizontalContentAlignment&quot; Value=&quot;Right&quot; /&gt; &lt;Setter Property=&quot;VerticalContentAlignment&quot; Value=&quot;Center&quot; /&gt;.../&gt;" />
-            <marker date="1537423549901" expanded="true" signature="763:1176" ph="&lt;&lt;Setter Property=&quot;Background&quot; Value=&quot;Transparent&quot;/&gt; &lt;Setter Property=&quot;Foreground&quot; Value=&quot;Transparent&quot;/&gt; &lt;Setter Property=&quot;BorderBrush&quot; Value=&quot;Transparent&quot;/&gt; &lt;Setter Property=&quot;BorderThickness&quot; Value=&quot;0&quot;/&gt; &lt;Setter Property=&quot;Padding&quot; Value=&quot;0&quot;/&gt; &lt;Setter Property=&quot;Margin&quot; Value=&quot;0&quot;/&gt;.../&gt;" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MHW Save Editor/EditorContent.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="7" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/MHW Save Editor/EditorContent.xml" />
     <entry file="file://$PROJECT_DIR$/MHW Save Editor/App.xaml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="25" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MHW Save Editor/MainWindow.xaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="36" column="52" selection-start-line="36" selection-start-column="52" selection-end-line="36" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MHW Save Editor/Tabs/InvestigationsTab.xaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MHW Save Editor/Tabs/InvestigationsTab.xaml.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="30" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Program Files (x86)/Microsoft Visual Studio/2017/Community/MSBuild/15.0/Bin/Microsoft.Common.CurrentVersion.targets">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="709">
+          <caret line="3044" column="4" selection-start-line="3044" selection-start-column="4" selection-end-line="3044" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MHW Save Editor/InvestigationsView/Boxstore.xaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="799">
+          <caret line="47" column="14" selection-start-line="47" selection-start-column="14" selection-end-line="47" selection-end-column="14" />
           <folding>
-            <marker date="1537503732130" expanded="true" signature="0:359" ph="&lt;&lt;Application.Resources&gt;&#10;         &#10;    &lt;/Application.Resources&gt;.../&gt;" />
-            <marker date="1537503732130" expanded="true" signature="282:344" ph="&lt;.../&gt;" />
+            <marker date="1537346843683" expanded="true" signature="593:2566" ph="&lt;&lt;DataGrid x:Name=&quot;dg&quot; AutoGenerateColumns=&quot;False&quot;&#10;                  ItemsSource=&quot;{Binding BoxstoreCollectionView}&quot;&#10;                  IsSynchronizedWithCurrentItem=&quot;True&quot;&#10;                  EnableRowVirtualization=&quot;True&quot;&#10;                  HeadersVisibility=&quot;Column&quot;&#10;            &gt;&#10;            &lt;i:Interaction.Behaviors&gt;&#10;                &lt;support:ScrollDataGridRowIntoView /&gt;&#10;            &lt;/i:Interaction.Behaviors&gt;&#10;            &lt;DataGrid.RowStyle&gt;&#10;                &lt;Style TargetType=&quot;{x:Type DataGridRow}&quot;&gt;&#10;                    &lt;Setter Property=&quot;support:DataGridRowBehavior.IsDataGridRowFocussedWhenSelected&quot; Value=&quot;true&quot;/&gt;&#10;                &lt;/Style&gt;&#10;            &lt;/DataGrid.RowStyle&gt;&#10;            &lt;DataGrid.Columns&gt;&#10;                &lt;DataGridTemplateColumn Header=&quot;Seen&quot;&gt;&#10;                    &lt;DataGridTemplateColumn.CellTemplate&gt;&#10;                        &lt;DataTemplate&gt;&#10;                            &lt;CheckBox IsChecked=&quot;{Binding Seen, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}&quot;/&gt;&#10;                        &lt;/DataTemplate&gt;&#10;                    &lt;/DataGridTemplateColumn.CellTemplate&gt;&#10;                &lt;/DataGridTemplateColumn&gt;&#10;                &lt;DataGridTemplateColumn Header=&quot;Selected&quot;&gt;&#10;                    &lt;DataGridTemplateColumn.CellTemplate&gt;&#10;                        &lt;DataTemplate&gt;&#10;                            &lt;CheckBox IsChecked=&quot;{Binding Selected, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}&quot;/&gt;&#10;                        &lt;/DataTemplate&gt;&#10;                    &lt;/DataGridTemplateColumn.CellTemplate&gt;&#10;                &lt;/DataGridTemplateColumn&gt;&#10;                &lt;DataGridCheckBoxColumn Binding=&quot;{Binding Selected}&quot;  Header=&quot;Selected&quot; /&gt;&#10;                &lt;!--DataGridComboBoxColumn Binding=&quot;{Binding Goal}&quot;  Header=&quot;Goal&quot; /--&gt;&#10;                &lt;!--DataGridComboBoxColumn Binding=&quot;{Binding Rank}&quot;  Header=&quot;Rank&quot; /--&gt;&#10;                &lt;!--DataGridComboBoxColumn Binding=&quot;{Binding Mon1}&quot;  Header=&quot;Main Monster&quot; /--&gt;&#10;            &lt;/DataGrid.Columns&gt;&#10;        &lt;/DataGrid&gt;.../&gt;" />
+            <marker date="1537346843683" expanded="true" signature="608:2554" ph="&lt;&lt;i:Interaction.Behaviors&gt;&#10;                &lt;support:ScrollDataGridRowIntoView /&gt;&#10;            &lt;/i:Interaction.Behaviors&gt; &lt;DataGrid.RowStyle&gt;&#10;                &lt;Style TargetType=&quot;{x:Type DataGridRow}&quot;&gt;&#10;                    &lt;Setter Property=&quot;support:DataGridRowBehavior.IsDataGridRowFocussedWhenSelected&quot; Value=&quot;true&quot;/&gt;&#10;                &lt;/Style&gt;&#10;            &lt;/DataGrid.RowStyle&gt; &lt;DataGrid.Columns&gt;&#10;                &lt;DataGridTemplateColumn Header=&quot;Seen&quot;&gt;&#10;                    &lt;DataGridTemplateColumn.CellTemplate&gt;&#10;                        &lt;DataTemplate&gt;&#10;                            &lt;CheckBox IsChecked=&quot;{Binding Seen, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}&quot;/&gt;&#10;                        &lt;/DataTemplate&gt;&#10;                    &lt;/DataGridTemplateColumn.CellTemplate&gt;&#10;                &lt;/DataGridTemplateColumn&gt;&#10;                &lt;DataGridTemplateColumn Header=&quot;Selected&quot;&gt;&#10;                    &lt;DataGridTemplateColumn.CellTemplate&gt;&#10;                        &lt;DataTemplate&gt;&#10;                            &lt;CheckBox IsChecked=&quot;{Binding Selected, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}&quot;/&gt;&#10;                        &lt;/DataTemplate&gt;&#10;                    &lt;/DataGridTemplateColumn.CellTemplate&gt;&#10;                &lt;/DataGridTemplateColumn&gt;&#10;                &lt;DataGridCheckBoxColumn Binding=&quot;{Binding Selected}&quot;  Header=&quot;Selected&quot; /&gt;&#10;                &lt;!--DataGridComboBoxColumn Binding=&quot;{Binding Goal}&quot;  Header=&quot;Goal&quot; /--&gt;&#10;                &lt;!--DataGridComboBoxColumn Binding=&quot;{Binding Rank}&quot;  Header=&quot;Rank&quot; /--&gt;&#10;                &lt;!--DataGridComboBoxColumn Binding=&quot;{Binding Mon1}&quot;  Header=&quot;Main Monster&quot; /--&gt;&#10;            &lt;/DataGrid.Columns&gt;.../&gt;" />
+            <marker date="1537346843683" expanded="true" signature="898:1016" ph="&lt;&lt;support:ScrollDataGridRowIntoView /&gt;.../&gt;" />
+            <marker date="1537346843683" expanded="true" signature="1029:1280" ph="&lt;&lt;Style TargetType=&quot;{x:Type DataGridRow}&quot;&gt;&#10;                    &lt;Setter Property=&quot;support:DataGridRowBehavior.IsDataGridRowFocussedWhenSelected&quot; Value=&quot;true&quot;/&gt;&#10;                &lt;/Style&gt;.../&gt;" />
+            <marker date="1537346843683" expanded="true" signature="1065:1247" ph="&lt;&lt;Setter Property=&quot;support:DataGridRowBehavior.IsDataGridRowFocussedWhenSelected&quot; Value=&quot;true&quot;/&gt;.../&gt;" />
+            <marker date="1537346843683" expanded="true" signature="1293:2534" ph="&lt;&lt;DataGridTemplateColumn Header=&quot;Seen&quot;&gt;&#10;                    &lt;DataGridTemplateColumn.CellTemplate&gt;&#10;                        &lt;DataTemplate&gt;&#10;                            &lt;CheckBox IsChecked=&quot;{Binding Seen, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}&quot;/&gt;&#10;                        &lt;/DataTemplate&gt;&#10;                    &lt;/DataGridTemplateColumn.CellTemplate&gt;&#10;                &lt;/DataGridTemplateColumn&gt; &lt;DataGridTemplateColumn Header=&quot;Selected&quot;&gt;&#10;                    &lt;DataGridTemplateColumn.CellTemplate&gt;&#10;                        &lt;DataTemplate&gt;&#10;                            &lt;CheckBox IsChecked=&quot;{Binding Selected, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}&quot;/&gt;&#10;                        &lt;/DataTemplate&gt;&#10;                    &lt;/DataGridTemplateColumn.CellTemplate&gt;&#10;                &lt;/DataGridTemplateColumn&gt; &lt;DataGridCheckBoxColumn Binding=&quot;{Binding Selected}&quot;  Header=&quot;Selected&quot; /&gt;.../&gt;" />
+            <marker date="1537346843683" expanded="true" signature="1328:1721" ph="&lt;&lt;DataGridTemplateColumn.CellTemplate&gt;&#10;                        &lt;DataTemplate&gt;&#10;                            &lt;CheckBox IsChecked=&quot;{Binding Seen, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}&quot;/&gt;&#10;                        &lt;/DataTemplate&gt;&#10;                    &lt;/DataGridTemplateColumn.CellTemplate&gt;.../&gt;" />
+            <marker date="1537346843683" expanded="true" signature="1387:1679" ph="&lt;&lt;DataTemplate&gt;&#10;                            &lt;CheckBox IsChecked=&quot;{Binding Seen, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}&quot;/&gt;&#10;                        &lt;/DataTemplate&gt;.../&gt;" />
+            <marker date="1537346843683" expanded="true" signature="1449:1620" ph="&lt;&lt;CheckBox IsChecked=&quot;{Binding Seen, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}&quot;/&gt;.../&gt;" />
+            <marker date="1537346843683" expanded="true" signature="1738:2139" ph="&lt;&lt;DataGridTemplateColumn.CellTemplate&gt;&#10;                        &lt;DataTemplate&gt;&#10;                            &lt;CheckBox IsChecked=&quot;{Binding Selected, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}&quot;/&gt;&#10;                        &lt;/DataTemplate&gt;&#10;                    &lt;/DataGridTemplateColumn.CellTemplate&gt;.../&gt;" />
+            <marker date="1537346843683" expanded="true" signature="1801:2097" ph="&lt;&lt;DataTemplate&gt;&#10;                            &lt;CheckBox IsChecked=&quot;{Binding Selected, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}&quot;/&gt;&#10;                        &lt;/DataTemplate&gt;.../&gt;" />
+            <marker date="1537346843683" expanded="true" signature="1863:2038" ph="&lt;&lt;CheckBox IsChecked=&quot;{Binding Selected, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}&quot;/&gt;.../&gt;" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MHW Save Editor/Tabs/GeneralTab.xaml">
+    <entry file="file://$PROJECT_DIR$/MHW Save Editor/InvestigationsView/BoxstoreViewModel.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
-          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+          <caret line="12" column="58" selection-start-line="12" selection-start-column="58" selection-end-line="12" selection-end-column="58" />
           <folding>
-            <marker date="1537509636784" expanded="true" signature="0:981" ph="&lt;&lt;Grid&gt;&#10;        &lt;ListBox Name=&quot;ListBox&quot; &gt;&#10;            &lt;Label Name=&quot;ChecksumLabel&quot; Content=&quot;{Binding Checksum}&quot;/&gt;&#10;            &lt;Label Name=&quot;GeneratedChecksumLabel&quot; Content=&quot;{Binding OnFileChecksum}&quot;/&gt;&#10;            &lt;Label Name=&quot;SteamIdLabel&quot; Content=&quot;{Binding SteamId}&quot; MouseDoubleClick=&quot;EditSteamLabel&quot;/&gt;&#10;            &lt;Label Name=&quot;SizeLabel&quot; Content=&quot;{Binding Size}&quot;/&gt;&#10;            &lt;Label Name=&quot;FilePathLabel&quot; Content=&quot;{Binding FilePath}&quot;/&gt;&#10;        &lt;/ListBox&gt;&#10;    &lt;/Grid&gt;.../&gt;" />
-            <marker date="1537509636784" expanded="true" signature="501:966" ph="&lt;&lt;ListBox Name=&quot;ListBox&quot; &gt;&#10;            &lt;Label Name=&quot;ChecksumLabel&quot; Content=&quot;{Binding Checksum}&quot;/&gt;&#10;            &lt;Label Name=&quot;GeneratedChecksumLabel&quot; Content=&quot;{Binding OnFileChecksum}&quot;/&gt;&#10;            &lt;Label Name=&quot;SteamIdLabel&quot; Content=&quot;{Binding SteamId}&quot; MouseDoubleClick=&quot;EditSteamLabel&quot;/&gt;&#10;            &lt;Label Name=&quot;SizeLabel&quot; Content=&quot;{Binding Size}&quot;/&gt;&#10;            &lt;Label Name=&quot;FilePathLabel&quot; Content=&quot;{Binding FilePath}&quot;/&gt;&#10;        &lt;/ListBox&gt;.../&gt;" />
-            <marker date="1537509636784" expanded="true" signature="516:954" ph="&lt;&lt;Label Name=&quot;ChecksumLabel&quot; Content=&quot;{Binding Checksum}&quot;/&gt; &lt;Label Name=&quot;GeneratedChecksumLabel&quot; Content=&quot;{Binding OnFileChecksum}&quot;/&gt; &lt;Label Name=&quot;SteamIdLabel&quot; Content=&quot;{Binding SteamId}&quot; MouseDoubleClick=&quot;EditSteamLabel&quot;/&gt; &lt;Label Name=&quot;SizeLabel&quot; Content=&quot;{Binding Size}&quot;/&gt; &lt;Label Name=&quot;FilePathLabel&quot; Content=&quot;{Binding FilePath}&quot;/&gt;.../&gt;" />
+            <marker date="1537346843576" expanded="false" signature="6:120" ph="..." />
+            <marker date="1537346843576" expanded="true" signature="199:807" ph="{...}" />
+            <marker date="1537346843576" expanded="true" signature="325:571" ph="{...}" />
+            <marker date="1537346843576" expanded="true" signature="431:561" ph="{...}" />
+            <marker date="1537346843576" expanded="true" signature="606:801" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MHW Save Editor/InvestigationsView/InvestigationView.xaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="37" selection-start-line="24" selection-start-column="37" selection-end-line="24" selection-end-column="37" />
+          <folding>
+            <marker date="1537511601348" expanded="true" signature="0:2113" ph="&lt;&lt;Grid&gt;&#10;        &lt;Grid.RowDefinitions&gt;&#10;            &lt;!-- State Controls --&gt;&#10;            &lt;RowDefinition Height=&quot;1*&quot; /&gt;&#10;            &lt;!-- Goal&amp;Rank --&gt;&#10;            &lt;RowDefinition Height=&quot;2*&quot; /&gt;&#10;            &lt;!-- Monsters --&gt;&#10;            &lt;RowDefinition Height=&quot;4*&quot; /&gt;&#10;            &lt;!-- Stats --&gt;&#10;            &lt;RowDefinition Height=&quot;2*&quot; /&gt;&#10;            &lt;!-- Values --&gt;&#10;            &lt;RowDefinition Height=&quot;7*&quot; /&gt;&#10;            &lt;!-- Rewards --&gt;&#10;            &lt;RowDefinition Height=&quot;1*&quot; /&gt;&#10;            &lt;!-- Rewards Display --&gt;&#10;            &lt;RowDefinition Height=&quot;2*&quot; /&gt;&#10;            &lt;!-- Utility Controls --&gt;&#10;            &lt;RowDefinition Height=&quot;2*&quot; /&gt;&#10;        &lt;/Grid.RowDefinitions&gt;&#10;        &lt;!-- State Controls --&gt;&#10;        &lt;Grid Grid.Row=&quot;0&quot;&gt;&#10;            &lt;Grid.ColumnDefinitions&gt;&#10;                &lt;ColumnDefinition Width=&quot;1*&quot; /&gt;&#10;                &lt;ColumnDefinition Width=&quot;1*&quot; /&gt;&#10;                &lt;ColumnDefinition Width=&quot;3*&quot; /&gt;&#10;                &lt;ColumnDefinition Width=&quot;1*&quot; /&gt;&#10;                &lt;ColumnDefinition Width=&quot;1*&quot; /&gt;&#10;            &lt;/Grid.ColumnDefinitions&gt;&#10;            &lt;Button Grid.Column=&quot;0&quot; Command=&quot;{Binding FirstRecord}&quot; &gt;&amp;lt;&amp;lt;&lt;/Button&gt;&#10;            &lt;Button Grid.Column=&quot;1&quot; Command=&quot;{Binding PreviousRecord}&quot;&gt;&amp;lt;&lt;/Button&gt;&#10;            &lt;Button Grid.Column=&quot;2&quot; Command=&quot;{Binding ToggleRecord}&quot;&#10;                    Content=&quot;{Binding ToggleState}&quot;/&gt;&#10;            &lt;Button Grid.Column=&quot;3&quot; Command=&quot;{Binding NextRecord}&quot;&gt;&amp;gt;&lt;/Button&gt;&#10;            &lt;Button Grid.Column=&quot;4&quot; Command=&quot;{Binding LastRecord}&quot;&gt;&amp;gt;&amp;gt;&lt;/Button&gt;&#10;        &lt;/Grid&gt;&#10;        &lt;!-- TODO Complete the investigations view --&gt;&#10;    &lt;/Grid&gt;.../&gt;" />
+            <marker date="1537511601348" expanded="true" signature="511:2089" ph="&lt;&lt;Grid.RowDefinitions&gt;&#10;            &lt;!-- State Controls --&gt;&#10;            &lt;RowDefinition Height=&quot;1*&quot; /&gt;&#10;            &lt;!-- Goal&amp;Rank --&gt;&#10;            &lt;RowDefinition Height=&quot;2*&quot; /&gt;&#10;            &lt;!-- Monsters --&gt;&#10;            &lt;RowDefinition Height=&quot;4*&quot; /&gt;&#10;            &lt;!-- Stats --&gt;&#10;            &lt;RowDefinition Height=&quot;2*&quot; /&gt;&#10;            &lt;!-- Values --&gt;&#10;            &lt;RowDefinition Height=&quot;7*&quot; /&gt;&#10;            &lt;!-- Rewards --&gt;&#10;            &lt;RowDefinition Height=&quot;1*&quot; /&gt;&#10;            &lt;!-- Rewards Display --&gt;&#10;            &lt;RowDefinition Height=&quot;2*&quot; /&gt;&#10;            &lt;!-- Utility Controls --&gt;&#10;            &lt;RowDefinition Height=&quot;2*&quot; /&gt;&#10;        &lt;/Grid.RowDefinitions&gt; &lt;Grid Grid.Row=&quot;0&quot;&gt;&#10;            &lt;Grid.ColumnDefinitions&gt;&#10;                &lt;ColumnDefinition Width=&quot;1*&quot; /&gt;&#10;                &lt;ColumnDefinition Width=&quot;1*&quot; /&gt;&#10;                &lt;ColumnDefinition Width=&quot;3*&quot; /&gt;&#10;                &lt;ColumnDefinition Width=&quot;1*&quot; /&gt;&#10;                &lt;ColumnDefinition Width=&quot;1*&quot; /&gt;&#10;            &lt;/Grid.ColumnDefinitions&gt;&#10;            &lt;Button Grid.Column=&quot;0&quot; Command=&quot;{Binding FirstRecord}&quot; &gt;&amp;lt;&amp;lt;&lt;/Button&gt;&#10;            &lt;Button Grid.Column=&quot;1&quot; Command=&quot;{Binding PreviousRecord}&quot;&gt;&amp;lt;&lt;/Button&gt;&#10;            &lt;Button Grid.Column=&quot;2&quot; Command=&quot;{Binding ToggleRecord}&quot;&#10;                    Content=&quot;{Binding ToggleState}&quot;/&gt;&#10;            &lt;Button Grid.Column=&quot;3&quot; Command=&quot;{Binding NextRecord}&quot;&gt;&amp;gt;&lt;/Button&gt;&#10;            &lt;Button Grid.Column=&quot;4&quot; Command=&quot;{Binding LastRecord}&quot;&gt;&amp;gt;&amp;gt;&lt;/Button&gt;&#10;        &lt;/Grid&gt;.../&gt;" />
+            <marker date="1537511601348" expanded="true" signature="526:1170" ph="&lt;&lt;RowDefinition Height=&quot;1*&quot; /&gt; &lt;RowDefinition Height=&quot;2*&quot; /&gt; &lt;RowDefinition Height=&quot;4*&quot; /&gt; &lt;RowDefinition Height=&quot;2*&quot; /&gt; &lt;RowDefinition Height=&quot;7*&quot; /&gt; &lt;RowDefinition Height=&quot;1*&quot; /&gt; &lt;RowDefinition Height=&quot;2*&quot; /&gt; &lt;RowDefinition Height=&quot;2*&quot; /&gt;.../&gt;" />
+            <marker date="1537511601348" expanded="true" signature="1211:2022" ph="&lt;&lt;Grid.ColumnDefinitions&gt;&#10;                &lt;ColumnDefinition Width=&quot;1*&quot; /&gt;&#10;                &lt;ColumnDefinition Width=&quot;1*&quot; /&gt;&#10;                &lt;ColumnDefinition Width=&quot;3*&quot; /&gt;&#10;                &lt;ColumnDefinition Width=&quot;1*&quot; /&gt;&#10;                &lt;ColumnDefinition Width=&quot;1*&quot; /&gt;&#10;            &lt;/Grid.ColumnDefinitions&gt; &lt;Button Grid.Column=&quot;0&quot; Command=&quot;{Binding FirstRecord}&quot; &gt;&amp;lt;&amp;lt;&lt;/Button&gt; &lt;Button Grid.Column=&quot;1&quot; Command=&quot;{Binding PreviousRecord}&quot;&gt;&amp;lt;&lt;/Button&gt; &lt;Button Grid.Column=&quot;2&quot; Command=&quot;{Binding ToggleRecord}&quot;&#10;                    Content=&quot;{Binding ToggleState}&quot;/&gt; &lt;Button Grid.Column=&quot;3&quot; Command=&quot;{Binding NextRecord}&quot;&gt;&amp;gt;&lt;/Button&gt; &lt;Button Grid.Column=&quot;4&quot; Command=&quot;{Binding LastRecord}&quot;&gt;&amp;gt;&amp;gt;&lt;/Button&gt;.../&gt;" />
+            <marker date="1537511601348" expanded="true" signature="1243:1545" ph="&lt;&lt;ColumnDefinition Width=&quot;1*&quot; /&gt; &lt;ColumnDefinition Width=&quot;1*&quot; /&gt; &lt;ColumnDefinition Width=&quot;3*&quot; /&gt; &lt;ColumnDefinition Width=&quot;1*&quot; /&gt; &lt;ColumnDefinition Width=&quot;1*&quot; /&gt;.../&gt;" />
+            <marker date="1537511601348" expanded="true" signature="1730:1840" ph="&lt;.../&gt;" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MHW Save Editor/InputBox.xaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="43" selection-start-line="12" selection-start-column="43" selection-end-line="12" selection-end-column="43" />
+          <folding>
+            <marker date="1537346843625" expanded="true" signature="324:1182" ph="&lt;&lt;Grid.ColumnDefinitions&gt;&#10;            &lt;ColumnDefinition Width=&quot;Auto&quot; /&gt;&#10;            &lt;ColumnDefinition Width=&quot;*&quot; /&gt;&#10;        &lt;/Grid.ColumnDefinitions&gt; &lt;Grid.RowDefinitions&gt;&#10;            &lt;RowDefinition Height=&quot;Auto&quot; /&gt;&#10;            &lt;RowDefinition Height=&quot;Auto&quot; /&gt;&#10;            &lt;RowDefinition Height=&quot;Auto&quot; /&gt;&#10;        &lt;/Grid.RowDefinitions&gt; &lt;Label Name=&quot;lblQuestion&quot; Grid.Column=&quot;1&quot;&gt;Question:&lt;/Label&gt; &lt;TextBox Name=&quot;txtAnswer&quot; Grid.Column=&quot;1&quot; Grid.Row=&quot;1&quot; MinWidth=&quot;250&quot;&gt;Answer&lt;/TextBox&gt; &lt;WrapPanel Grid.Row=&quot;2&quot; Grid.ColumnSpan=&quot;2&quot; HorizontalAlignment=&quot;Right&quot; Margin=&quot;0,15,0,0&quot;&gt;&#10;            &lt;Button IsDefault=&quot;True&quot; Name=&quot;btnDialogOk&quot; Click=&quot;btnDialogOk_Click&quot; MinWidth=&quot;60&quot; Margin=&quot;0,0,10,0&quot;&gt;_Ok&lt;/Button&gt;&#10;            &lt;Button IsCancel=&quot;True&quot; MinWidth=&quot;60&quot;&gt;_Cancel&lt;/Button&gt;&#10;        &lt;/WrapPanel&gt;.../&gt;" />
+            <marker date="1537346843625" expanded="true" signature="351:498" ph="&lt;&lt;ColumnDefinition Width=&quot;Auto&quot; /&gt; &lt;ColumnDefinition Width=&quot;*&quot; /&gt;.../&gt;" />
+            <marker date="1537346843625" expanded="true" signature="507:691" ph="&lt;&lt;RowDefinition Height=&quot;Auto&quot; /&gt; &lt;RowDefinition Height=&quot;Auto&quot; /&gt; &lt;RowDefinition Height=&quot;Auto&quot; /&gt;.../&gt;" />
+            <marker date="1537346843625" expanded="true" signature="865:1170" ph="&lt;&lt;Button IsDefault=&quot;True&quot; Name=&quot;btnDialogOk&quot; Click=&quot;btnDialogOk_Click&quot; MinWidth=&quot;60&quot; Margin=&quot;0,0,10,0&quot;&gt;_Ok&lt;/Button&gt; &lt;Button IsCancel=&quot;True&quot; MinWidth=&quot;60&quot;&gt;_Cancel&lt;/Button&gt;.../&gt;" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MHW Save Editor/InvestigationsView/Boxstore.xaml.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="48" selection-start-line="11" selection-start-column="48" selection-end-line="11" selection-end-column="48" />
+          <folding>
+            <marker date="1537340293985" expanded="true" signature="57:373" ph="{...}" />
+            <marker date="1537340293985" expanded="true" signature="107:371" ph="{...}" />
+            <marker date="1537340293985" expanded="true" signature="139:365" ph="{...}" />
+            <marker date="1537340293985" expanded="true" signature="267:355" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/MHW Save Editor/MainWindow.xaml.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1600">
+        <state relative-caret-position="2601">
           <caret line="162" column="9" selection-start-line="162" selection-start-column="9" selection-end-line="162" selection-end-column="9" />
           <folding>
             <marker date="1537510339393" expanded="false" signature="6:270" ph="..." />
@@ -1128,6 +1152,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/MHW Save Editor/MainWindowGeneral.xaml.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="24" column="49" selection-start-line="24" selection-start-column="49" selection-end-line="24" selection-end-column="49" />
+          <folding>
+            <marker date="1537510625352" expanded="false" signature="7:55" ph="..." />
+            <marker date="1537510625352" expanded="true" signature="82:1024" ph="{...}" />
+            <marker date="1537510625352" expanded="true" signature="89:167" ph="/// Interaction logic for MainWindow.xaml ... " />
+            <marker date="1537510625352" expanded="true" signature="203:1022" ph="{...}" />
+            <marker date="1537510625352" expanded="true" signature="281:1016" ph="{...}" />
+            <marker date="1537510625352" expanded="true" signature="530:1006" ph="{...}" />
+            <marker date="1537510625352" expanded="true" signature="614:836" ph="{...}" />
+            <marker date="1537510625352" expanded="true" signature="858:992" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/MHW Save Editor/Tabs/GeneralTab.xaml.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -1147,123 +1188,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MHW Save Editor/MainWindowGeneral.xaml.cs">
+    <entry file="file://$PROJECT_DIR$/MHW Save Editor/Tabs/GeneralTab.xaml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="24" column="49" selection-start-line="24" selection-start-column="49" selection-end-line="24" selection-end-column="49" />
+        <state relative-caret-position="238">
+          <caret line="14" column="70" selection-start-line="14" selection-start-column="70" selection-end-line="14" selection-end-column="70" />
           <folding>
-            <marker date="1537510625352" expanded="false" signature="7:55" ph="..." />
-            <marker date="1537510625352" expanded="true" signature="82:1024" ph="{...}" />
-            <marker date="1537510625352" expanded="true" signature="89:167" ph="/// Interaction logic for MainWindow.xaml ... " />
-            <marker date="1537510625352" expanded="true" signature="203:1022" ph="{...}" />
-            <marker date="1537510625352" expanded="true" signature="281:1016" ph="{...}" />
-            <marker date="1537510625352" expanded="true" signature="530:1006" ph="{...}" />
-            <marker date="1537510625352" expanded="true" signature="614:836" ph="{...}" />
-            <marker date="1537510625352" expanded="true" signature="858:992" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MHW Save Editor/MainWindow.xaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="36" column="52" selection-start-line="36" selection-start-column="52" selection-end-line="36" selection-end-column="52" />
-          <folding>
-            <marker date="1537511406788" expanded="true" signature="0:2376" ph="&lt;&lt;Window.Resources&gt;&#10;        &lt;ResourceDictionary&gt;&#10;            &lt;ResourceDictionary.MergedDictionaries&gt;&#10;                &lt;ResourceDictionary Source=&quot;G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\src\Resources\ResourcesDictionary.xaml&quot; /&gt;&#10;            &lt;/ResourceDictionary.MergedDictionaries&gt;&#10;        &lt;/ResourceDictionary&gt;&#10;    &lt;/Window.Resources&gt; &lt;DockPanel Name=&quot;Root&quot; xmlns:local=&quot;clr-namespace:MHW_Save_Editor&quot;&gt;&#10;        &lt;Menu Width=&quot;Auto&quot; Height=&quot;20&quot; DockPanel.Dock=&quot;Top&quot;&gt;&#10;            &lt;MenuItem Header=&quot;File&quot;&gt;&#10;                &lt;MenuItem Header=&quot;Open&quot; Click=&quot;OpenFunction&quot; /&gt;&#10;                &lt;MenuItem Header=&quot;Save&quot; Click=&quot;SaveFunction&quot; /&gt;&#10;                &lt;MenuItem Header=&quot;Backup&quot; Click=&quot;BackupFunction&quot; /&gt;&#10;            &lt;/MenuItem&gt;&#10;            &lt;MenuItem Header=&quot;Edit&quot; ItemsSource = &quot;{Binding EditOptions}&quot; Click = &quot;EditMenuItem_Click&quot;/&gt;&#10;            &lt;MenuItem Header=&quot;Tools&quot; ItemsSource = &quot;{Binding ToolsOptions}&quot; Click = &quot;ToolsMenuItem_Click&quot;/&gt;&#10;        &lt;/Menu&gt;&#10;        &lt;Grid&gt;&#10;            &lt;TabControl Name = &quot;TabControl&quot; SelectionChanged = &quot;TabControl_SelectionChanged&quot;&gt;&#10;                &lt;TabItem Header=&quot;General&quot;&gt;&#10;                    &lt;local:GeneralTab x:Name=&quot;GeneralTabControl&quot; SteamLabelDoubleClicked=&quot;EditSteamLabel&quot;/&gt;&#10;                &lt;/TabItem&gt;&#10;                &lt;!-- Investigations ================================================================================--&gt;&#10;                &lt;TabItem Header=&quot;Investigations&quot;&gt;&#10;                    &lt;Grid&gt;&#10;                        &lt;!-- local:InvestigationsTab x:Name=&quot;InvestigationTabControl&quot;/--&gt;&#10;                    &lt;/Grid&gt;&#10;                &lt;/TabItem&gt;&#10;                &lt;!-- Inventory ================================================================================--&gt;&#10;            &lt;/TabControl&gt;&#10;        &lt;/Grid&gt;&#10;    &lt;/DockPanel&gt;.../&gt;" />
-            <marker date="1537511406788" expanded="true" signature="587:941" ph="&lt;&lt;ResourceDictionary&gt;&#10;            &lt;ResourceDictionary.MergedDictionaries&gt;&#10;                &lt;ResourceDictionary Source=&quot;G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\src\Resources\ResourcesDictionary.xaml&quot; /&gt;&#10;            &lt;/ResourceDictionary.MergedDictionaries&gt;&#10;        &lt;/ResourceDictionary&gt;.../&gt;" />
-            <marker date="1537511406788" expanded="true" signature="614:917" ph="&lt;&lt;ResourceDictionary.MergedDictionaries&gt;&#10;                &lt;ResourceDictionary Source=&quot;G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\src\Resources\ResourcesDictionary.xaml&quot; /&gt;&#10;            &lt;/ResourceDictionary.MergedDictionaries&gt;.../&gt;" />
-            <marker date="1537511406788" expanded="true" signature="647:887" ph="&lt;&lt;ResourceDictionary Source=&quot;G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\src\Resources\ResourcesDictionary.xaml&quot; /&gt;.../&gt;" />
-            <marker date="1537511406788" expanded="true" signature="949:2366" ph="&lt;&lt;Menu Width=&quot;Auto&quot; Height=&quot;20&quot; DockPanel.Dock=&quot;Top&quot;&gt;&#10;            &lt;MenuItem Header=&quot;File&quot;&gt;&#10;                &lt;MenuItem Header=&quot;Open&quot; Click=&quot;OpenFunction&quot; /&gt;&#10;                &lt;MenuItem Header=&quot;Save&quot; Click=&quot;SaveFunction&quot; /&gt;&#10;                &lt;MenuItem Header=&quot;Backup&quot; Click=&quot;BackupFunction&quot; /&gt;&#10;            &lt;/MenuItem&gt;&#10;            &lt;MenuItem Header=&quot;Edit&quot; ItemsSource = &quot;{Binding EditOptions}&quot; Click = &quot;EditMenuItem_Click&quot;/&gt;&#10;            &lt;MenuItem Header=&quot;Tools&quot; ItemsSource = &quot;{Binding ToolsOptions}&quot; Click = &quot;ToolsMenuItem_Click&quot;/&gt;&#10;        &lt;/Menu&gt; &lt;Grid&gt;&#10;            &lt;TabControl Name = &quot;TabControl&quot; SelectionChanged = &quot;TabControl_SelectionChanged&quot;&gt;&#10;                &lt;TabItem Header=&quot;General&quot;&gt;&#10;                    &lt;local:GeneralTab x:Name=&quot;GeneralTabControl&quot; SteamLabelDoubleClicked=&quot;EditSteamLabel&quot;/&gt;&#10;                &lt;/TabItem&gt;&#10;                &lt;!-- Investigations ================================================================================--&gt;&#10;                &lt;TabItem Header=&quot;Investigations&quot;&gt;&#10;                    &lt;Grid&gt;&#10;                        &lt;!-- local:InvestigationsTab x:Name=&quot;InvestigationTabControl&quot;/--&gt;&#10;                    &lt;/Grid&gt;&#10;                &lt;/TabItem&gt;&#10;                &lt;!-- Inventory ================================================================================--&gt;&#10;            &lt;/TabControl&gt;&#10;        &lt;/Grid&gt;.../&gt;" />
-            <marker date="1537511406788" expanded="true" signature="1025:1563" ph="&lt;&lt;MenuItem Header=&quot;File&quot;&gt;&#10;                &lt;MenuItem Header=&quot;Open&quot; Click=&quot;OpenFunction&quot; /&gt;&#10;                &lt;MenuItem Header=&quot;Save&quot; Click=&quot;SaveFunction&quot; /&gt;&#10;                &lt;MenuItem Header=&quot;Backup&quot; Click=&quot;BackupFunction&quot; /&gt;&#10;            &lt;/MenuItem&gt; &lt;MenuItem Header=&quot;Edit&quot; ItemsSource = &quot;{Binding EditOptions}&quot; Click = &quot;EditMenuItem_Click&quot;/&gt; &lt;MenuItem Header=&quot;Tools&quot; ItemsSource = &quot;{Binding ToolsOptions}&quot; Click = &quot;ToolsMenuItem_Click&quot;/&gt;.../&gt;" />
-            <marker date="1537511406788" expanded="true" signature="1090:1334" ph="&lt;&lt;MenuItem Header=&quot;Open&quot; Click=&quot;OpenFunction&quot; /&gt; &lt;MenuItem Header=&quot;Save&quot; Click=&quot;SaveFunction&quot; /&gt; &lt;MenuItem Header=&quot;Backup&quot; Click=&quot;BackupFunction&quot; /&gt;.../&gt;" />
-            <marker date="1537511406788" expanded="true" signature="1572:2349" ph="&lt;&lt;TabControl Name = &quot;TabControl&quot; SelectionChanged = &quot;TabControl_SelectionChanged&quot;&gt;&#10;                &lt;TabItem Header=&quot;General&quot;&gt;&#10;                    &lt;local:GeneralTab x:Name=&quot;GeneralTabControl&quot; SteamLabelDoubleClicked=&quot;EditSteamLabel&quot;/&gt;&#10;                &lt;/TabItem&gt;&#10;                &lt;!-- Investigations ================================================================================--&gt;&#10;                &lt;TabItem Header=&quot;Investigations&quot;&gt;&#10;                    &lt;Grid&gt;&#10;                        &lt;!-- local:InvestigationsTab x:Name=&quot;InvestigationTabControl&quot;/--&gt;&#10;                    &lt;/Grid&gt;&#10;                &lt;/TabItem&gt;&#10;                &lt;!-- Inventory ================================================================================--&gt;&#10;            &lt;/TabControl&gt;.../&gt;" />
-            <marker date="1537511406788" expanded="true" signature="1591:2333" ph="&lt;&lt;TabItem Header=&quot;General&quot;&gt;&#10;                    &lt;local:GeneralTab x:Name=&quot;GeneralTabControl&quot; SteamLabelDoubleClicked=&quot;EditSteamLabel&quot;/&gt;&#10;                &lt;/TabItem&gt; &lt;TabItem Header=&quot;Investigations&quot;&gt;&#10;                    &lt;Grid&gt;&#10;                        &lt;!-- local:InvestigationsTab x:Name=&quot;InvestigationTabControl&quot;/--&gt;&#10;                    &lt;/Grid&gt;&#10;                &lt;/TabItem&gt;.../&gt;" />
-            <marker date="1537511406788" expanded="true" signature="1689:1850" ph="&lt;&lt;local:GeneralTab x:Name=&quot;GeneralTabControl&quot; SteamLabelDoubleClicked=&quot;EditSteamLabel&quot;/&gt;.../&gt;" />
-            <marker date="1537511406788" expanded="true" signature="1987:2192" ph="&lt;&lt;Grid&gt;&#10;                        &lt;!-- local:InvestigationsTab x:Name=&quot;InvestigationTabControl&quot;/--&gt;&#10;                    &lt;/Grid&gt;.../&gt;" />
-            <marker date="1537511406788" expanded="true" signature="2041:2165" ph="&lt;.../&gt;" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MHW Save Editor/Tabs/InvestigationsTab.xaml.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="2" column="30" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MHW Save Editor/Tabs/InvestigationsTab.xaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
-          <folding>
-            <marker date="1537511400958" expanded="true" signature="0:560" ph="&lt;&lt;Grid&gt;&#10;        &#10;    &lt;/Grid&gt;.../&gt;" />
-            <marker date="1537511400958" expanded="true" signature="518:545" ph="&lt;.../&gt;" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MHW Save Editor/InvestigationsView/Boxstore.xaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="47" column="14" selection-start-line="47" selection-start-column="14" selection-end-line="47" selection-end-column="14" />
-          <folding>
-            <marker date="1537346843683" expanded="true" signature="0:2624" ph="&lt;&lt;Grid&gt;&#10;        &lt;DataGrid x:Name=&quot;dg&quot; AutoGenerateColumns=&quot;False&quot;&#10;                  ItemsSource=&quot;{Binding BoxstoreCollectionView}&quot;&#10;                  IsSynchronizedWithCurrentItem=&quot;True&quot;&#10;                  EnableRowVirtualization=&quot;True&quot;&#10;                  HeadersVisibility=&quot;Column&quot;&#10;            &gt;&#10;            &lt;i:Interaction.Behaviors&gt;&#10;                &lt;support:ScrollDataGridRowIntoView /&gt;&#10;            &lt;/i:Interaction.Behaviors&gt;&#10;            &lt;DataGrid.RowStyle&gt;&#10;                &lt;Style TargetType=&quot;{x:Type DataGridRow}&quot;&gt;&#10;                    &lt;Setter Property=&quot;support:DataGridRowBehavior.IsDataGridRowFocussedWhenSelected&quot; Value=&quot;true&quot;/&gt;&#10;                &lt;/Style&gt;&#10;            &lt;/DataGrid.RowStyle&gt;&#10;            &lt;DataGrid.Columns&gt;&#10;                &lt;DataGridTemplateColumn Header=&quot;Seen&quot;&gt;&#10;                    &lt;DataGridTemplateColumn.CellTemplate&gt;&#10;                        &lt;DataTemplate&gt;&#10;                            &lt;CheckBox IsChecked=&quot;{Binding Seen, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}&quot;/&gt;&#10;                        &lt;/DataTemplate&gt;&#10;                    &lt;/DataGridTemplateColumn.CellTemplate&gt;&#10;                &lt;/DataGridTemplateColumn&gt;&#10;                &lt;DataGridTemplateColumn Header=&quot;Selected&quot;&gt;&#10;                    &lt;DataGridTemplateColumn.CellTemplate&gt;&#10;                        &lt;DataTemplate&gt;&#10;                            &lt;CheckBox IsChecked=&quot;{Binding Selected, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}&quot;/&gt;&#10;                        &lt;/DataTemplate&gt;&#10;                    &lt;/DataGridTemplateColumn.CellTemplate&gt;&#10;                &lt;/DataGridTemplateColumn&gt;&#10;                &lt;DataGridCheckBoxColumn Binding=&quot;{Binding Selected}&quot;  Header=&quot;Selected&quot; /&gt;&#10;                &lt;!--DataGridComboBoxColumn Binding=&quot;{Binding Goal}&quot;  Header=&quot;Goal&quot; /--&gt;&#10;                &lt;!--DataGridComboBoxColumn Binding=&quot;{Binding Rank}&quot;  Header=&quot;Rank&quot; /--&gt;&#10;                &lt;!--DataGridComboBoxColumn Binding=&quot;{Binding Mon1}&quot;  Header=&quot;Main Monster&quot; /--&gt;&#10;            &lt;/DataGrid.Columns&gt;&#10;        &lt;/DataGrid&gt;&#10;    &lt;/Grid&gt;.../&gt;" />
-            <marker date="1537346843683" expanded="true" signature="593:2566" ph="&lt;&lt;DataGrid x:Name=&quot;dg&quot; AutoGenerateColumns=&quot;False&quot;&#10;                  ItemsSource=&quot;{Binding BoxstoreCollectionView}&quot;&#10;                  IsSynchronizedWithCurrentItem=&quot;True&quot;&#10;                  EnableRowVirtualization=&quot;True&quot;&#10;                  HeadersVisibility=&quot;Column&quot;&#10;            &gt;&#10;            &lt;i:Interaction.Behaviors&gt;&#10;                &lt;support:ScrollDataGridRowIntoView /&gt;&#10;            &lt;/i:Interaction.Behaviors&gt;&#10;            &lt;DataGrid.RowStyle&gt;&#10;                &lt;Style TargetType=&quot;{x:Type DataGridRow}&quot;&gt;&#10;                    &lt;Setter Property=&quot;support:DataGridRowBehavior.IsDataGridRowFocussedWhenSelected&quot; Value=&quot;true&quot;/&gt;&#10;                &lt;/Style&gt;&#10;            &lt;/DataGrid.RowStyle&gt;&#10;            &lt;DataGrid.Columns&gt;&#10;                &lt;DataGridTemplateColumn Header=&quot;Seen&quot;&gt;&#10;                    &lt;DataGridTemplateColumn.CellTemplate&gt;&#10;                        &lt;DataTemplate&gt;&#10;                            &lt;CheckBox IsChecked=&quot;{Binding Seen, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}&quot;/&gt;&#10;                        &lt;/DataTemplate&gt;&#10;                    &lt;/DataGridTemplateColumn.CellTemplate&gt;&#10;                &lt;/DataGridTemplateColumn&gt;&#10;                &lt;DataGridTemplateColumn Header=&quot;Selected&quot;&gt;&#10;                    &lt;DataGridTemplateColumn.CellTemplate&gt;&#10;                        &lt;DataTemplate&gt;&#10;                            &lt;CheckBox IsChecked=&quot;{Binding Selected, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}&quot;/&gt;&#10;                        &lt;/DataTemplate&gt;&#10;                    &lt;/DataGridTemplateColumn.CellTemplate&gt;&#10;                &lt;/DataGridTemplateColumn&gt;&#10;                &lt;DataGridCheckBoxColumn Binding=&quot;{Binding Selected}&quot;  Header=&quot;Selected&quot; /&gt;&#10;                &lt;!--DataGridComboBoxColumn Binding=&quot;{Binding Goal}&quot;  Header=&quot;Goal&quot; /--&gt;&#10;                &lt;!--DataGridComboBoxColumn Binding=&quot;{Binding Rank}&quot;  Header=&quot;Rank&quot; /--&gt;&#10;                &lt;!--DataGridComboBoxColumn Binding=&quot;{Binding Mon1}&quot;  Header=&quot;Main Monster&quot; /--&gt;&#10;            &lt;/DataGrid.Columns&gt;&#10;        &lt;/DataGrid&gt;.../&gt;" />
-            <marker date="1537346843683" expanded="true" signature="608:2554" ph="&lt;&lt;i:Interaction.Behaviors&gt;&#10;                &lt;support:ScrollDataGridRowIntoView /&gt;&#10;            &lt;/i:Interaction.Behaviors&gt; &lt;DataGrid.RowStyle&gt;&#10;                &lt;Style TargetType=&quot;{x:Type DataGridRow}&quot;&gt;&#10;                    &lt;Setter Property=&quot;support:DataGridRowBehavior.IsDataGridRowFocussedWhenSelected&quot; Value=&quot;true&quot;/&gt;&#10;                &lt;/Style&gt;&#10;            &lt;/DataGrid.RowStyle&gt; &lt;DataGrid.Columns&gt;&#10;                &lt;DataGridTemplateColumn Header=&quot;Seen&quot;&gt;&#10;                    &lt;DataGridTemplateColumn.CellTemplate&gt;&#10;                        &lt;DataTemplate&gt;&#10;                            &lt;CheckBox IsChecked=&quot;{Binding Seen, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}&quot;/&gt;&#10;                        &lt;/DataTemplate&gt;&#10;                    &lt;/DataGridTemplateColumn.CellTemplate&gt;&#10;                &lt;/DataGridTemplateColumn&gt;&#10;                &lt;DataGridTemplateColumn Header=&quot;Selected&quot;&gt;&#10;                    &lt;DataGridTemplateColumn.CellTemplate&gt;&#10;                        &lt;DataTemplate&gt;&#10;                            &lt;CheckBox IsChecked=&quot;{Binding Selected, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}&quot;/&gt;&#10;                        &lt;/DataTemplate&gt;&#10;                    &lt;/DataGridTemplateColumn.CellTemplate&gt;&#10;                &lt;/DataGridTemplateColumn&gt;&#10;                &lt;DataGridCheckBoxColumn Binding=&quot;{Binding Selected}&quot;  Header=&quot;Selected&quot; /&gt;&#10;                &lt;!--DataGridComboBoxColumn Binding=&quot;{Binding Goal}&quot;  Header=&quot;Goal&quot; /--&gt;&#10;                &lt;!--DataGridComboBoxColumn Binding=&quot;{Binding Rank}&quot;  Header=&quot;Rank&quot; /--&gt;&#10;                &lt;!--DataGridComboBoxColumn Binding=&quot;{Binding Mon1}&quot;  Header=&quot;Main Monster&quot; /--&gt;&#10;            &lt;/DataGrid.Columns&gt;.../&gt;" />
-            <marker date="1537346843683" expanded="true" signature="898:1016" ph="&lt;&lt;support:ScrollDataGridRowIntoView /&gt;.../&gt;" />
-            <marker date="1537346843683" expanded="true" signature="1029:1280" ph="&lt;&lt;Style TargetType=&quot;{x:Type DataGridRow}&quot;&gt;&#10;                    &lt;Setter Property=&quot;support:DataGridRowBehavior.IsDataGridRowFocussedWhenSelected&quot; Value=&quot;true&quot;/&gt;&#10;                &lt;/Style&gt;.../&gt;" />
-            <marker date="1537346843683" expanded="true" signature="1065:1247" ph="&lt;&lt;Setter Property=&quot;support:DataGridRowBehavior.IsDataGridRowFocussedWhenSelected&quot; Value=&quot;true&quot;/&gt;.../&gt;" />
-            <marker date="1537346843683" expanded="true" signature="1293:2534" ph="&lt;&lt;DataGridTemplateColumn Header=&quot;Seen&quot;&gt;&#10;                    &lt;DataGridTemplateColumn.CellTemplate&gt;&#10;                        &lt;DataTemplate&gt;&#10;                            &lt;CheckBox IsChecked=&quot;{Binding Seen, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}&quot;/&gt;&#10;                        &lt;/DataTemplate&gt;&#10;                    &lt;/DataGridTemplateColumn.CellTemplate&gt;&#10;                &lt;/DataGridTemplateColumn&gt; &lt;DataGridTemplateColumn Header=&quot;Selected&quot;&gt;&#10;                    &lt;DataGridTemplateColumn.CellTemplate&gt;&#10;                        &lt;DataTemplate&gt;&#10;                            &lt;CheckBox IsChecked=&quot;{Binding Selected, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}&quot;/&gt;&#10;                        &lt;/DataTemplate&gt;&#10;                    &lt;/DataGridTemplateColumn.CellTemplate&gt;&#10;                &lt;/DataGridTemplateColumn&gt; &lt;DataGridCheckBoxColumn Binding=&quot;{Binding Selected}&quot;  Header=&quot;Selected&quot; /&gt;.../&gt;" />
-            <marker date="1537346843683" expanded="true" signature="1328:1721" ph="&lt;&lt;DataGridTemplateColumn.CellTemplate&gt;&#10;                        &lt;DataTemplate&gt;&#10;                            &lt;CheckBox IsChecked=&quot;{Binding Seen, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}&quot;/&gt;&#10;                        &lt;/DataTemplate&gt;&#10;                    &lt;/DataGridTemplateColumn.CellTemplate&gt;.../&gt;" />
-            <marker date="1537346843683" expanded="true" signature="1387:1679" ph="&lt;&lt;DataTemplate&gt;&#10;                            &lt;CheckBox IsChecked=&quot;{Binding Seen, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}&quot;/&gt;&#10;                        &lt;/DataTemplate&gt;.../&gt;" />
-            <marker date="1537346843683" expanded="true" signature="1449:1620" ph="&lt;&lt;CheckBox IsChecked=&quot;{Binding Seen, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}&quot;/&gt;.../&gt;" />
-            <marker date="1537346843683" expanded="true" signature="1738:2139" ph="&lt;&lt;DataGridTemplateColumn.CellTemplate&gt;&#10;                        &lt;DataTemplate&gt;&#10;                            &lt;CheckBox IsChecked=&quot;{Binding Selected, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}&quot;/&gt;&#10;                        &lt;/DataTemplate&gt;&#10;                    &lt;/DataGridTemplateColumn.CellTemplate&gt;.../&gt;" />
-            <marker date="1537346843683" expanded="true" signature="1801:2097" ph="&lt;&lt;DataTemplate&gt;&#10;                            &lt;CheckBox IsChecked=&quot;{Binding Selected, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}&quot;/&gt;&#10;                        &lt;/DataTemplate&gt;.../&gt;" />
-            <marker date="1537346843683" expanded="true" signature="1863:2038" ph="&lt;&lt;CheckBox IsChecked=&quot;{Binding Selected, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}&quot;/&gt;.../&gt;" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MHW Save Editor/InvestigationsView/Boxstore.xaml.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="48" selection-start-line="11" selection-start-column="48" selection-end-line="11" selection-end-column="48" />
-          <folding>
-            <marker date="1537340293985" expanded="true" signature="57:373" ph="{...}" />
-            <marker date="1537340293985" expanded="true" signature="107:371" ph="{...}" />
-            <marker date="1537340293985" expanded="true" signature="139:365" ph="{...}" />
-            <marker date="1537340293985" expanded="true" signature="267:355" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MHW Save Editor/InvestigationsView/BoxstoreViewModel.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="12" column="58" selection-start-line="12" selection-start-column="58" selection-end-line="12" selection-end-column="58" />
-          <folding>
-            <marker date="1537346843576" expanded="false" signature="6:120" ph="..." />
-            <marker date="1537346843576" expanded="true" signature="147:809" ph="{...}" />
-            <marker date="1537346843576" expanded="true" signature="199:807" ph="{...}" />
-            <marker date="1537346843576" expanded="true" signature="325:571" ph="{...}" />
-            <marker date="1537346843576" expanded="true" signature="431:561" ph="{...}" />
-            <marker date="1537346843576" expanded="true" signature="606:801" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MHW Save Editor/InvestigationsView/InvestigationView.xaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="24" column="37" lean-forward="true" selection-start-line="24" selection-start-column="37" selection-end-line="24" selection-end-column="37" />
-          <folding>
-            <marker date="1537511601348" expanded="true" signature="0:2113" ph="&lt;&lt;Grid&gt;&#10;        &lt;Grid.RowDefinitions&gt;&#10;            &lt;!-- State Controls --&gt;&#10;            &lt;RowDefinition Height=&quot;1*&quot; /&gt;&#10;            &lt;!-- Goal&amp;Rank --&gt;&#10;            &lt;RowDefinition Height=&quot;2*&quot; /&gt;&#10;            &lt;!-- Monsters --&gt;&#10;            &lt;RowDefinition Height=&quot;4*&quot; /&gt;&#10;            &lt;!-- Stats --&gt;&#10;            &lt;RowDefinition Height=&quot;2*&quot; /&gt;&#10;            &lt;!-- Values --&gt;&#10;            &lt;RowDefinition Height=&quot;7*&quot; /&gt;&#10;            &lt;!-- Rewards --&gt;&#10;            &lt;RowDefinition Height=&quot;1*&quot; /&gt;&#10;            &lt;!-- Rewards Display --&gt;&#10;            &lt;RowDefinition Height=&quot;2*&quot; /&gt;&#10;            &lt;!-- Utility Controls --&gt;&#10;            &lt;RowDefinition Height=&quot;2*&quot; /&gt;&#10;        &lt;/Grid.RowDefinitions&gt;&#10;        &lt;!-- State Controls --&gt;&#10;        &lt;Grid Grid.Row=&quot;0&quot;&gt;&#10;            &lt;Grid.ColumnDefinitions&gt;&#10;                &lt;ColumnDefinition Width=&quot;1*&quot; /&gt;&#10;                &lt;ColumnDefinition Width=&quot;1*&quot; /&gt;&#10;                &lt;ColumnDefinition Width=&quot;3*&quot; /&gt;&#10;                &lt;ColumnDefinition Width=&quot;1*&quot; /&gt;&#10;                &lt;ColumnDefinition Width=&quot;1*&quot; /&gt;&#10;            &lt;/Grid.ColumnDefinitions&gt;&#10;            &lt;Button Grid.Column=&quot;0&quot; Command=&quot;{Binding FirstRecord}&quot; &gt;&amp;lt;&amp;lt;&lt;/Button&gt;&#10;            &lt;Button Grid.Column=&quot;1&quot; Command=&quot;{Binding PreviousRecord}&quot;&gt;&amp;lt;&lt;/Button&gt;&#10;            &lt;Button Grid.Column=&quot;2&quot; Command=&quot;{Binding ToggleRecord}&quot;&#10;                    Content=&quot;{Binding ToggleState}&quot;/&gt;&#10;            &lt;Button Grid.Column=&quot;3&quot; Command=&quot;{Binding NextRecord}&quot;&gt;&amp;gt;&lt;/Button&gt;&#10;            &lt;Button Grid.Column=&quot;4&quot; Command=&quot;{Binding LastRecord}&quot;&gt;&amp;gt;&amp;gt;&lt;/Button&gt;&#10;        &lt;/Grid&gt;&#10;        &lt;!-- TODO Complete the investigations view --&gt;&#10;    &lt;/Grid&gt;.../&gt;" />
-            <marker date="1537511601348" expanded="true" signature="511:2089" ph="&lt;&lt;Grid.RowDefinitions&gt;&#10;            &lt;!-- State Controls --&gt;&#10;            &lt;RowDefinition Height=&quot;1*&quot; /&gt;&#10;            &lt;!-- Goal&amp;Rank --&gt;&#10;            &lt;RowDefinition Height=&quot;2*&quot; /&gt;&#10;            &lt;!-- Monsters --&gt;&#10;            &lt;RowDefinition Height=&quot;4*&quot; /&gt;&#10;            &lt;!-- Stats --&gt;&#10;            &lt;RowDefinition Height=&quot;2*&quot; /&gt;&#10;            &lt;!-- Values --&gt;&#10;            &lt;RowDefinition Height=&quot;7*&quot; /&gt;&#10;            &lt;!-- Rewards --&gt;&#10;            &lt;RowDefinition Height=&quot;1*&quot; /&gt;&#10;            &lt;!-- Rewards Display --&gt;&#10;            &lt;RowDefinition Height=&quot;2*&quot; /&gt;&#10;            &lt;!-- Utility Controls --&gt;&#10;            &lt;RowDefinition Height=&quot;2*&quot; /&gt;&#10;        &lt;/Grid.RowDefinitions&gt; &lt;Grid Grid.Row=&quot;0&quot;&gt;&#10;            &lt;Grid.ColumnDefinitions&gt;&#10;                &lt;ColumnDefinition Width=&quot;1*&quot; /&gt;&#10;                &lt;ColumnDefinition Width=&quot;1*&quot; /&gt;&#10;                &lt;ColumnDefinition Width=&quot;3*&quot; /&gt;&#10;                &lt;ColumnDefinition Width=&quot;1*&quot; /&gt;&#10;                &lt;ColumnDefinition Width=&quot;1*&quot; /&gt;&#10;            &lt;/Grid.ColumnDefinitions&gt;&#10;            &lt;Button Grid.Column=&quot;0&quot; Command=&quot;{Binding FirstRecord}&quot; &gt;&amp;lt;&amp;lt;&lt;/Button&gt;&#10;            &lt;Button Grid.Column=&quot;1&quot; Command=&quot;{Binding PreviousRecord}&quot;&gt;&amp;lt;&lt;/Button&gt;&#10;            &lt;Button Grid.Column=&quot;2&quot; Command=&quot;{Binding ToggleRecord}&quot;&#10;                    Content=&quot;{Binding ToggleState}&quot;/&gt;&#10;            &lt;Button Grid.Column=&quot;3&quot; Command=&quot;{Binding NextRecord}&quot;&gt;&amp;gt;&lt;/Button&gt;&#10;            &lt;Button Grid.Column=&quot;4&quot; Command=&quot;{Binding LastRecord}&quot;&gt;&amp;gt;&amp;gt;&lt;/Button&gt;&#10;        &lt;/Grid&gt;.../&gt;" />
-            <marker date="1537511601348" expanded="true" signature="526:1170" ph="&lt;&lt;RowDefinition Height=&quot;1*&quot; /&gt; &lt;RowDefinition Height=&quot;2*&quot; /&gt; &lt;RowDefinition Height=&quot;4*&quot; /&gt; &lt;RowDefinition Height=&quot;2*&quot; /&gt; &lt;RowDefinition Height=&quot;7*&quot; /&gt; &lt;RowDefinition Height=&quot;1*&quot; /&gt; &lt;RowDefinition Height=&quot;2*&quot; /&gt; &lt;RowDefinition Height=&quot;2*&quot; /&gt;.../&gt;" />
-            <marker date="1537511601348" expanded="true" signature="1211:2022" ph="&lt;&lt;Grid.ColumnDefinitions&gt;&#10;                &lt;ColumnDefinition Width=&quot;1*&quot; /&gt;&#10;                &lt;ColumnDefinition Width=&quot;1*&quot; /&gt;&#10;                &lt;ColumnDefinition Width=&quot;3*&quot; /&gt;&#10;                &lt;ColumnDefinition Width=&quot;1*&quot; /&gt;&#10;                &lt;ColumnDefinition Width=&quot;1*&quot; /&gt;&#10;            &lt;/Grid.ColumnDefinitions&gt; &lt;Button Grid.Column=&quot;0&quot; Command=&quot;{Binding FirstRecord}&quot; &gt;&amp;lt;&amp;lt;&lt;/Button&gt; &lt;Button Grid.Column=&quot;1&quot; Command=&quot;{Binding PreviousRecord}&quot;&gt;&amp;lt;&lt;/Button&gt; &lt;Button Grid.Column=&quot;2&quot; Command=&quot;{Binding ToggleRecord}&quot;&#10;                    Content=&quot;{Binding ToggleState}&quot;/&gt; &lt;Button Grid.Column=&quot;3&quot; Command=&quot;{Binding NextRecord}&quot;&gt;&amp;gt;&lt;/Button&gt; &lt;Button Grid.Column=&quot;4&quot; Command=&quot;{Binding LastRecord}&quot;&gt;&amp;gt;&amp;gt;&lt;/Button&gt;.../&gt;" />
-            <marker date="1537511601348" expanded="true" signature="1243:1545" ph="&lt;&lt;ColumnDefinition Width=&quot;1*&quot; /&gt; &lt;ColumnDefinition Width=&quot;1*&quot; /&gt; &lt;ColumnDefinition Width=&quot;3*&quot; /&gt; &lt;ColumnDefinition Width=&quot;1*&quot; /&gt; &lt;ColumnDefinition Width=&quot;1*&quot; /&gt;.../&gt;" />
-            <marker date="1537511601348" expanded="true" signature="1730:1840" ph="&lt;.../&gt;" />
+            <marker date="1537509636784" expanded="true" signature="0:981" ph="&lt;&lt;Grid&gt;&#10;        &lt;ListBox Name=&quot;ListBox&quot; &gt;&#10;            &lt;Label Name=&quot;ChecksumLabel&quot; Content=&quot;{Binding Checksum}&quot;/&gt;&#10;            &lt;Label Name=&quot;GeneratedChecksumLabel&quot; Content=&quot;{Binding OnFileChecksum}&quot;/&gt;&#10;            &lt;Label Name=&quot;SteamIdLabel&quot; Content=&quot;{Binding SteamId}&quot; MouseDoubleClick=&quot;EditSteamLabel&quot;/&gt;&#10;            &lt;Label Name=&quot;SizeLabel&quot; Content=&quot;{Binding Size}&quot;/&gt;&#10;            &lt;Label Name=&quot;FilePathLabel&quot; Content=&quot;{Binding FilePath}&quot;/&gt;&#10;        &lt;/ListBox&gt;&#10;    &lt;/Grid&gt;.../&gt;" />
+            <marker date="1537509636784" expanded="true" signature="501:966" ph="&lt;&lt;ListBox Name=&quot;ListBox&quot; &gt;&#10;            &lt;Label Name=&quot;ChecksumLabel&quot; Content=&quot;{Binding Checksum}&quot;/&gt;&#10;            &lt;Label Name=&quot;GeneratedChecksumLabel&quot; Content=&quot;{Binding OnFileChecksum}&quot;/&gt;&#10;            &lt;Label Name=&quot;SteamIdLabel&quot; Content=&quot;{Binding SteamId}&quot; MouseDoubleClick=&quot;EditSteamLabel&quot;/&gt;&#10;            &lt;Label Name=&quot;SizeLabel&quot; Content=&quot;{Binding Size}&quot;/&gt;&#10;            &lt;Label Name=&quot;FilePathLabel&quot; Content=&quot;{Binding FilePath}&quot;/&gt;&#10;        &lt;/ListBox&gt;.../&gt;" />
+            <marker date="1537509636784" expanded="true" signature="516:954" ph="&lt;&lt;Label Name=&quot;ChecksumLabel&quot; Content=&quot;{Binding Checksum}&quot;/&gt; &lt;Label Name=&quot;GeneratedChecksumLabel&quot; Content=&quot;{Binding OnFileChecksum}&quot;/&gt; &lt;Label Name=&quot;SteamIdLabel&quot; Content=&quot;{Binding SteamId}&quot; MouseDoubleClick=&quot;EditSteamLabel&quot;/&gt; &lt;Label Name=&quot;SizeLabel&quot; Content=&quot;{Binding Size}&quot;/&gt; &lt;Label Name=&quot;FilePathLabel&quot; Content=&quot;{Binding FilePath}&quot;/&gt;.../&gt;" />
           </folding>
         </state>
       </provider>
