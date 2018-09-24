@@ -9,9 +9,9 @@
              d:DesignHeight="300" d:DesignWidth="300">
     <Grid>
         <DataGrid x:Name="dg" AutoGenerateColumns="False"
-                  ItemsSource="{Binding BoxstoreCollectionView}"
+                  ItemsSource="{Binding InvestigationCollectionView}"
                   IsSynchronizedWithCurrentItem="True"
-                  EnableRowVirtualization="True"
+                  EnableRowVirtualization="False"
                   HeadersVisibility="Column"
             >
             <i:Interaction.Behaviors>
@@ -23,26 +23,26 @@
                 </Style>
             </DataGrid.RowStyle>
             <DataGrid.Columns>
-                <DataGridTemplateColumn Header="Seen">
+                <DataGridTextColumn Header="#" Binding="{Binding RelativeSource={RelativeSource AncestorType=DataGridRow},
+                                    Converter={support:RowToIndexConverter}}"/>
+                <DataGridTemplateColumn Header="👁">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <CheckBox IsChecked="{Binding Seen, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
-                <DataGridTemplateColumn Header="Selected">
+                <DataGridTemplateColumn Header="✓">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <CheckBox IsChecked="{Binding Selected, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
-                <DataGridCheckBoxColumn Binding="{Binding Selected}"  Header="Selected" />
-                <!--DataGridComboBoxColumn Binding="{Binding Goal}"  Header="Goal" /-->
-                <!--DataGridComboBoxColumn Binding="{Binding Rank}"  Header="Rank" /-->
-                <!--DataGridComboBoxColumn Binding="{Binding Mon1}"  Header="Main Monster" /-->
+                <DataGridTextColumn Binding="{Binding Attempts, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"  Header="Tries" />
+                <DataGridTextColumn Binding="{Binding InvestigationTitle, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"  Header="Title" />
+                <DataGridTextColumn Binding="{Binding LocaleTitle, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"  Header="Locale" />
             </DataGrid.Columns>
         </DataGrid>
     </Grid>
-    <!--TODO - all of the missing code -->
 </UserControl>

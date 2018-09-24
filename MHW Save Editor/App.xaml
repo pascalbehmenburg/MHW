@@ -4,6 +4,10 @@
              xmlns:local="clr-namespace:MHW_Save_Editor"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\src\Resources\ResourcesDictionary.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

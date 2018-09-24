@@ -1,10 +1,12 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Data;
 using System.IO;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Data;
 using MHW_Save_Editor.FileFormat;
 using MHW_Save_Editor.InvestigationEditing;
 using Microsoft.Win32;
@@ -14,7 +16,7 @@ namespace MHW_Save_Editor
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainWindow : Window, INotifyPropertyChanged
     {
         private SaveFile saveFile;
         private MemoryStream data;
@@ -41,11 +43,9 @@ namespace MHW_Save_Editor
             GeneralTabControl.Checksum = "Checksum: " + saveFile.GetChecksum();
             GeneralTabControl.OnFileChecksum = "ChecksumGenerated: " + BitConverter.ToString(saveFile.GenerateChecksum()).Replace("-","");
             GeneralTabControl.FilePath = openFileDialog.FileName;
-            //investigations.Populate(saveFile.data);
-            
-            
+            InvestigationsTabControl.Content = PopulateInvestigations(saveFile.data); 
         }
-
+        
         private void SaveFunction(object sender, RoutedEventArgs e)
         {
             if (!open) return;

@@ -12,19 +12,19 @@ namespace MHW_Save_Editor.InvestigationEditing
     {
         //public event PropertyChangedEventHandler PropertyChanged;
 
-        public Investigation(InvestigationThinLayer entry = null)
+        public Investigation(byte[] newdata)
         {
-            if (entry != null) _underlyingInvestigationThinLayer = entry;
+            if (newdata.Length != 0) _underlyingInvestigationThinLayer = new InvestigationThinLayer(newdata);
             else
             {
-                byte[] newish = new byte[InvestigationList.inv_size];
-                Array.Copy(InvestigationThinLayer.nullinvestigation, 0, newish, 0, InvestigationList.inv_size);
+                byte[] newish = new byte[Investigation.inv_size];
+                Array.Copy(InvestigationThinLayer.nullinvestigation, 0, newish, 0, Investigation.inv_size);
                 _underlyingInvestigationThinLayer = new InvestigationThinLayer(newish);
             }
         }
 
         private InvestigationThinLayer _underlyingInvestigationThinLayer;
-             
+
         public string InvestigationTitle
         {
             get
@@ -32,11 +32,21 @@ namespace MHW_Save_Editor.InvestigationEditing
                 if (!_underlyingInvestigationThinLayer.Filled) return "Empty Slot";
                 string objective = _TimeAmountGoal[Goal];
                 int count = _TimeAmountCount[Goal];
-                string mainmon =  count !=0?(MonsterNames[Mon1] + (count>1?", ...":"")):"Wildlife";
+                string mainmon = count != 0 ? (MonsterNames[Mon1] + (count > 1 ? ", ..." : "")) : "Wildlife";
                 return objective + " " + mainmon;
             }
         }
-        #region Members
+
+        public string LocaleTitle
+        {
+            get => LocalesNames[LocaleIndex];
+        }
+
+        public static readonly int inv_size = 42;
+        public static readonly int inv_number = 250;
+        public static readonly int[] inv_offsets = {0x003DADB1, 0x004D0EC1, 0x005C6FD1};
+
+    #region Members
         public bool Filled
         {
             get => _underlyingInvestigationThinLayer.Filled;
@@ -85,6 +95,7 @@ namespace MHW_Save_Editor.InvestigationEditing
             set{
                 _underlyingInvestigationThinLayer.Mon1 = _MonstersCodeList[value];
                 RaisePropertyChanged();
+                RaisePropertyChanged("InvestigationTitle");
             }
         }
         public int Mon2
@@ -93,6 +104,7 @@ namespace MHW_Save_Editor.InvestigationEditing
             set{
                 _underlyingInvestigationThinLayer.Mon2 = _MonstersCodeList[value];
                 RaisePropertyChanged();
+                RaisePropertyChanged("InvestigationTitle");
             }
         }
         public int Mon3
@@ -101,6 +113,7 @@ namespace MHW_Save_Editor.InvestigationEditing
             set{
                 _underlyingInvestigationThinLayer.Mon3 = _MonstersCodeList[value];
                 RaisePropertyChanged();
+                RaisePropertyChanged("InvestigationTitle");
             }
         }
         public bool M1Temper
@@ -201,7 +214,8 @@ namespace MHW_Save_Editor.InvestigationEditing
             {
                 _underlyingInvestigationThinLayer.LocaleIndex = value;
                 RaisePropertyChanged();
-                RaisePropertyChanged();
+                RaisePropertyChanged("CurrentFlourishes");
+                RaisePropertyChanged("FlourishIndex");
             }
         }
 
@@ -258,36 +272,6 @@ namespace MHW_Save_Editor.InvestigationEditing
         public byte[] Serialize()
         {
             return _underlyingInvestigationThinLayer.Serialize();
-        }
-
-        public void Toggle()
-        {
-            if (Filled) Clear();
-            else Initialize();
-        }
-        
-        public void Initialize()
-        {
-            if (!Filled)
-            {
-                _underlyingInvestigationThinLayer.Initialize();
-                RaisePropertyChanged();
-            }
-        }
-        
-        public void Clear()
-        {
-            if (Filled)
-            {
-                _underlyingInvestigationThinLayer.Clear();
-                RaisePropertyChanged();
-            }
-        }
-
-        public void Overwrite(byte [] overwriter)
-        {
-            _underlyingInvestigationThinLayer.Overwrite(overwriter);
-            RaisePropertyChanged();;
         }
 
         public string Log()

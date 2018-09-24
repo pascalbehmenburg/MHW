@@ -7,21 +7,21 @@ namespace MHW_Save_Editor
 {
     public class BoxstoreViewModel : NotifyUIBase
     {
-        public ListCollectionView BoxstoreCollectionView {get; set;}
+        public ListCollectionView InvestigationCollectionView {get; set;}
         private Investigation CurrentInvestigation
         {
-            get { return BoxstoreCollectionView.CurrentItem as Investigation; }
+            get { return InvestigationCollectionView.CurrentItem as Investigation; }
             set
             {
-                BoxstoreCollectionView.MoveCurrentTo(value);
+                InvestigationCollectionView.MoveCurrentTo(value);
                 RaisePropertyChanged();
 
             }
         }
         public BoxstoreViewModel()
         {
-            BoxstoreCollectionView = Application.Current.Resources["PeopleCollectionView"] as ListCollectionView;
-            BoxstoreCollectionView.MoveCurrentToPosition(1);
+            InvestigationCollectionView = Application.Current.Resources["InvestigationCollectionView"] as ListCollectionView;
+            InvestigationCollectionView.MoveCurrentToPosition(1);
         }
     }
 }

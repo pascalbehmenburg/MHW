@@ -5,17 +5,10 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        
+        xmlns:tabs="clr-namespace:MHW_Save_Editor.Tabs"
         mc:Ignorable="d"
-        Title="MHW - Save Editor" Height="700.0" Width="680.0" ResizeMode="NoResize"
-        DataContext="{Binding ElementName=AppWindow}">
-    <Window.Resources>
-        <ResourceDictionary>
-            <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\src\Resources\ResourcesDictionary.xaml" />
-            </ResourceDictionary.MergedDictionaries>
-        </ResourceDictionary>
-    </Window.Resources>   
+        Title="MHW - Save Editor" Height="700.0" Width="680.0" ResizeMode="CanResizeWithGrip"
+        > 
     <DockPanel Name="Root" xmlns:local="clr-namespace:MHW_Save_Editor">
         <Menu Width="Auto" Height="20" DockPanel.Dock="Top">
             <MenuItem Header="File">
@@ -34,7 +27,7 @@
                 <!-- Investigations ================================================================================-->
                 <TabItem Header="Investigations">
                     <Grid>
-                        <!-- local:InvestigationsTab x:Name="InvestigationTabControl"/-->
+                        <ContentControl Name="InvestigationsTabControl"/>
                     </Grid>
                 </TabItem>
                 <!-- Inventory ================================================================================-->

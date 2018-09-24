@@ -3,10 +3,19 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-             xmlns:local="clr-namespace:MHW_Save_Editor.Tabs"
-             mc:Ignorable="d"
-             d:DesignHeight="300" d:DesignWidth="300">
-    <Grid>
-        
-    </Grid>
+             xmlns:local="clr-namespace:MHW_Save_Editor"
+             mc:Ignorable="d">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*" />
+                    <ColumnDefinition Width="3*" />
+                </Grid.ColumnDefinitions>
+                <ContentControl Name="InvestigationListing" Grid.Column="0">
+                    <local:Boxstore/>
+                </ContentControl>
+                <GridSplitter Grid.Column="0"  Height="Auto" Width="5" VerticalAlignment="Stretch"></GridSplitter>
+                <ContentControl Name="InvestigationDisplay" Grid.Column="1">
+                    <local:InvestigationView/>
+                </ContentControl>
+            </Grid>
 </UserControl>

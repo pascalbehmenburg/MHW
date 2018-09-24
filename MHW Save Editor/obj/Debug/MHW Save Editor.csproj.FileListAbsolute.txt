@@ -62,3 +62,4 @@ G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\obj\Debug\Investiga
 G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\obj\Debug\InvestigationsView\InvestigationView.baml
 G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\obj\Debug\Tabs\GeneralTab.baml
 G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\obj\Debug\Tabs\InvestigationsTab.baml
+G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\obj\Debug\App.baml

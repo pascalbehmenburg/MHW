@@ -36,7 +36,7 @@ namespace MHW_Save_Editor.InvestigationEditing
             0x00,0x00,0x10,0x00,0x30,0x75
         };
         
-        private static readonly Investigation empty_investigation = new Investigation();
+        private static readonly Investigation empty_investigation = new Investigation(null);
         
         public InvestigationList()
         {
@@ -55,7 +55,7 @@ namespace MHW_Save_Editor.InvestigationEditing
             offset = savefile.BMHIndexOf(investigation_signature)+4;
             for (int i = 0; i < inv_count; i++)
             {
-                InvestigationCollection.Add(new Investigation(new InvestigationThinLayer(savefile.Slice(offset+i*inv_size,offset+(i+1)*inv_size))));
+                InvestigationCollection.Add(new Investigation(savefile.Slice(offset+i*inv_size,offset+(i+1)*inv_size)));
             }
             CurrentIndex = 0;
             return this;

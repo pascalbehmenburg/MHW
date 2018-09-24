@@ -22,7 +22,7 @@
         <e p="MainWindow.xaml" t="Include" />
         <e p="MainWindow.xaml.cs" t="Include" />
         <e p="MainWindowGeneral.xaml.cs" t="Include" />
-        <e p="MainWindowInvesitgation.xaml.cs" t="Include" />
+        <e p="MainWindowInvestigation.xaml.cs" t="Include" />
         <e p="MainWindowPrompts.xaml.cs" t="Include" />
         <e p="MHW Save Editor.csproj" t="IncludeRecursive" />
         <e p="obj" t="ExcludeRecursive" />
@@ -48,7 +48,6 @@
           </e>
           <e p="InvestigationEditing" t="Include">
             <e p="Investigation.cs" t="Include" />
-            <e p="InvestigationList.cs" t="Include" />
             <e p="InvestigationThinLayer.cs" t="Include" />
           </e>
           <e p="Resources" t="Include">
@@ -56,6 +55,7 @@
           </e>
           <e p="Support" t="Include">
             <e p="DataGridRowBehavior.cs" t="Include" />
+            <e p="RowToIndexConverter.cs" t="Include" />
             <e p="ScrollDataGridRowIntoView.cs" t="Include" />
           </e>
           <e p="Utility" t="Include">
