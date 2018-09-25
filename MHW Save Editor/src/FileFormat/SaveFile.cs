@@ -62,7 +62,7 @@ namespace MHW_Save_Editor.FileFormat
             Array.Copy(Utility.bswap(GenerateChecksum()),0,data, 12, 20);
             
             byte[] tempfile = new byte[data.Length];
-            cipher.Encipher(data).CopyTo(tempfile,0);
+            (encrypt?cipher.Encipher(data):data).CopyTo(tempfile,0);
             File.WriteAllBytes(path, tempfile);
         }
 
