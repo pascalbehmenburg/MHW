@@ -162,12 +162,12 @@ namespace MHW_Save_Editor.InvestigationEditing
                 RaisePropertyChanged();
             }
         }
-        public int Size
+        public int Defense
         {
-            get => _underlyingInvestigationThinLayer.Size;
+            get => _underlyingInvestigationThinLayer.Defense;
             set
             {
-                _underlyingInvestigationThinLayer.Size = value;
+                _underlyingInvestigationThinLayer.Defense = value;
                 RaisePropertyChanged();
             }
         }
@@ -274,6 +274,21 @@ namespace MHW_Save_Editor.InvestigationEditing
             return _underlyingInvestigationThinLayer.Serialize();
         }
 
+        public static readonly string CSVHeader =
+            "Seen,Filled,Attempts,Rank,Goal,Mon#,Time,Locale,Flourish,Monster1,Temper1,Monster2,Temper2,Monster3,Temper3,HP,Attack,Defense,X3,Y0,Y3,Faints,PlayerCount,MonRewards,ZennyBonus";
+        
+        public string LogCSV()
+        {
+            return (Seen ? 1 : 0) + "," + (Filled ? 1 : 0) + "," + Attempts + "," + _RankChoices[Rank] + "," +
+                   _TimeAmountGoal[Goal] + "," + _TimeAmountCount[Goal] + "," + _TimeAmountObjective[Goal] + "," +
+                   _LocalesNames[LocaleIndex] + "," + CurrentFlourishes[FlourishIndex] + "," + MonsterNames[Mon1] +
+                   "," + (M1Temper ? 1 : 0) + "," + MonsterNames[Mon2] + "," + (M2Temper ? 1 : 0) + "," +
+                   MonsterNames[Mon3] + "," + (M3Temper ? 1 : 0) + "," + HP + "," + Attack + "," + Defense + "," + X3 +
+                   "," + Y0 + "," + Y3 + "," + _FaintValues[FaintIndex] + "," + _PlayerCountValues[PlayerCountIndex] +
+                   "," + MonsterRewards + "," +
+                   ZennyBonus;
+        }        
+
         public string Log()
         {
             var builder = new StringBuilder()
@@ -284,8 +299,8 @@ namespace MHW_Save_Editor.InvestigationEditing
                 .AppendLine($"{(M1Temper?"Tempered ":"")}{MonsterNames[Mon1]}")
                 .AppendLine($"{(M2Temper?"Tempered ":"")}{MonsterNames[Mon2]}")
                 .AppendLine($"{(M3Temper?"Tempered ":"")}{MonsterNames[Mon3]}")
-                .AppendLine($"HP: {HP} - Att: {Attack} - Size: {Size} - X3: {X3}")
-                .AppendLine($"Goal: "+_TimeAmountGoal[Goal]+" "+(_TimeAmountCount[Goal]!=0?(_TimeAmountCount[Goal]+
+                .AppendLine($"HP: {HP} - Att: {Attack} - Def: {Defense} - X3: {X3}")
+                .AppendLine("Goal: "+_TimeAmountGoal[Goal]+" "+(_TimeAmountCount[Goal]!=0?(_TimeAmountCount[Goal]+
                            " Monster"+(_TimeAmountCount[Goal]>1?"s":"")):"")+ " in "+_TimeAmountObjective[Goal]+" min")
                 .AppendLine($"Y0: {Y0} - Y3:{Y3}")
                 .AppendLine($"Faints: {_FaintValues[FaintIndex]} - Players: {_PlayerCountValues[PlayerCountIndex]} - Box Multiplier: {MonsterRewards} - Zenny Multiplier: {ZennyBonus}");
@@ -301,7 +316,7 @@ namespace MHW_Save_Editor.InvestigationEditing
 
         public static readonly string[] _TimeAmountGoal =
         {
-            "Hunt", "Hunt", "Hunt", "Hunt", "Hunt", "Hunt", "Slay Wildlife 1", " Slay Wildlife 2", "Capture",
+            "Hunt", "Hunt", "Hunt", "Hunt", "Hunt", "Hunt", "Slay Wildlife 1", "Slay Wildlife 2", "Capture",
             "Capture", "Capture"
         };
         public static readonly int[] _TimeAmountCount = {1,1,1,2,2,3,0,0,1,1,1};

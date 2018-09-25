@@ -96,7 +96,7 @@ namespace MHW_Save_Editor.InvestigationEditing
             get => invdata[31];
             set => invdata[31] = (byte) value;
         }
-        public int Size
+        public int Defense
         {
             get => invdata[32];
             set => invdata[32] = (byte) value;

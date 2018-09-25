@@ -76,7 +76,7 @@ namespace MHW_Save_Editor
             if (!Directory.Exists(backupPath))
                 Directory.CreateDirectory(steamPath + "\\backups");
 
-            string date_and_time = DateTime.Now.ToString("MM\\_dd\\_yyyy\\_h\\_mm");
+            string date_and_time = DateTime.Now.ToString("MM-dd-yyyy\\_HH-mm-ss");
 
             File.Copy((Utility.getSteamPath() + "\\SAVEDATA1000"), backupPath + "\\SAVEDATA1000_" + date_and_time, true);
             MessageBox.Show("File backup created.", "Backup", MessageBoxButton.OK);

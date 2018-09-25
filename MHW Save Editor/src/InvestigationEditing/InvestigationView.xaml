@@ -125,14 +125,14 @@
 			</Grid.RowDefinitions>
 			<TextBlock Grid.Column="0" Grid.Row="0" HorizontalAlignment="Center">HP</TextBlock>
 			<TextBlock Grid.Column="1" Grid.Row="0" HorizontalAlignment="Center">Att</TextBlock>
-			<TextBlock Grid.Column="2" Grid.Row="0" HorizontalAlignment="Center">Size?</TextBlock>
-			<TextBlock Grid.Column="3" Grid.Row="0" HorizontalAlignment="Center">Def?</TextBlock>
+			<TextBlock Grid.Column="2" Grid.Row="0" HorizontalAlignment="Center">Def</TextBlock>
+			<TextBlock Grid.Column="3" Grid.Row="0" HorizontalAlignment="Center">Size?</TextBlock>
 			<xctk:IntegerUpDown Grid.Column="0" Grid.Row="1" Minimum="0" Maximum="5" HorizontalAlignment="Center"
 								Value = "{Binding InvestigationCollectionView/HP, UpdateSourceTrigger=PropertyChanged, Mode = TwoWay}"/>
 			<xctk:IntegerUpDown Grid.Column="1" Grid.Row="1" Minimum="0" Maximum="5" HorizontalAlignment="Center"
 								Value = "{Binding InvestigationCollectionView/Attack, UpdateSourceTrigger=PropertyChanged, Mode = TwoWay}"/>
 			<xctk:IntegerUpDown Grid.Column="2" Grid.Row="1" Minimum="0" Maximum="5" HorizontalAlignment="Center"
-								Value = "{Binding InvestigationCollectionView/Size, UpdateSourceTrigger=PropertyChanged, Mode = TwoWay}"/>
+								Value = "{Binding InvestigationCollectionView/Defense, UpdateSourceTrigger=PropertyChanged, Mode = TwoWay}"/>
 			<xctk:IntegerUpDown Grid.Column="3" Grid.Row="1" Minimum="0" Maximum="2" HorizontalAlignment="Center"
 								Value = "{Binding InvestigationCollectionView/X3, UpdateSourceTrigger=PropertyChanged, Mode = TwoWay}"/>
 		</Grid>

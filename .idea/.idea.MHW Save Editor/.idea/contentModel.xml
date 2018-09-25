@@ -71,49 +71,6 @@
         </e>
       </e>
       <e p="MHW Save Editor.sln" t="IncludeFlat" />
-      <e p="MicrosoftSample\Wpf_Dynamic_XAML_Composed_View" t="IncludeRecursive">
-        <e p="App.config" t="Include" />
-        <e p="App.xaml" t="Include" />
-        <e p="App.xaml.cs" t="Include" />
-        <e p="bin" t="ExcludeRecursive" />
-        <e p="Colours.xaml" t="Include" />
-        <e p="Colours.xaml.cs" t="Include" />
-        <e p="ColoursViewModel.cs" t="Include" />
-        <e p="ColourView.xaml" t="Include" />
-        <e p="ColourView.xaml.cs" t="Include" />
-        <e p="ColourViewModel.cs" t="Include" />
-        <e p="Data" t="Include">
-          <e p="Colour.cs" t="Include" />
-          <e p="NotifyUIBase.cs" t="Include" />
-          <e p="People.xml" t="Include" />
-          <e p="Person.cs" t="Include" />
-        </e>
-        <e p="Dictionary1.xaml" t="Include" />
-        <e p="EditRow.cs" t="Include" />
-        <e p="MainWindow.xaml" t="Include" />
-        <e p="MainWindow.xaml.cs" t="Include" />
-        <e p="myWindow.xml" t="Include" />
-        <e p="obj" t="ExcludeRecursive" />
-        <e p="packages.config" t="Include" />
-        <e p="People.xaml" t="Include" />
-        <e p="People.xaml.cs" t="Include" />
-        <e p="PeopleViewModel.cs" t="Include" />
-        <e p="PersonView.xaml" t="Include" />
-        <e p="PersonView.xaml.cs" t="Include" />
-        <e p="PersonViewModel.cs" t="Include" />
-        <e p="Properties" t="Include">
-          <e p="AssemblyInfo.cs" t="Include" />
-          <e p="Resources.Designer.cs" t="Include" />
-          <e p="Resources.resx" t="Include" />
-          <e p="Settings.Designer.cs" t="Include" />
-          <e p="Settings.settings" t="Include" />
-        </e>
-        <e p="Support" t="Include">
-          <e p="DataGridRowBehavior.cs" t="Include" />
-          <e p="ScrollDataGridRowIntoView.cs" t="Include" />
-        </e>
-        <e p="Wpf_Dynamic_XAML_Composed_View.csproj" t="IncludeRecursive" />
-      </e>
       <e p="packages" t="ExcludeRecursive" />
     </e>
   </component>

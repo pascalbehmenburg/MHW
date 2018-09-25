@@ -1,8 +1,11 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Data;
 using System.IO;
+using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Windows;
 using System.Windows.Data;
@@ -37,7 +40,7 @@ namespace MHW_Save_Editor
       
         private static string[] InvestigationList_EditMenu = new[]
         {
-            "Copy", "Paste", "Paste At", "Commit All", "Sort", "Filter"
+            "Copy", "Paste", "Paste At", "Commit All", "Sort"//, "Filter"
         };
 
         private void InvestigationsEditHandler(string command)
@@ -58,13 +61,13 @@ namespace MHW_Save_Editor
                     Commit();
                     break;
                 case("Sort"):
-                    Func<Investigation,int > sorter = PromptInvestigationsSort();
-                    ReSort(sorter);
+                //    Func<Investigation,int > sorter = PromptInvestigationsSort();
+                    ReSort();
                     break;
-                case("Filter"):
-                    Func<Investigation,bool > filterer = PromptInvestigationsFilter();
-                    ClearAll(filterer);
-                    break;
+                //case("Filter"):
+                //    Func<Investigation,bool > filterer = PromptInvestigationsFilter();
+                //    ClearAll(filterer);
+                //    break;
                 default:
                     return;
             }
@@ -72,7 +75,7 @@ namespace MHW_Save_Editor
 
         private static string[] InvestigationList_ToolsMenu = new[]
         {
-            "Import", "Export", "Import At", "Export At", "Prepend", "Generate Log File"
+            "Import", "Export", "Import At", "Export At", "Prepend", "Generate Log File", "Generate CSV File"
         };
         
         private void InvestigationsToolsHandler(string command)
@@ -112,12 +115,13 @@ namespace MHW_Save_Editor
                     break;
                 }
                 case "Prepend":
-                {
                     Prepend(inputfile);
                     break;
-                }
                 case "Generate Log File":
                     GenerateLog(inputfile);
+                    break;
+                case "Generate CSV File":
+                    GenerateCSV(inputfile);
                     break;
                 default:
                     return;
@@ -137,7 +141,7 @@ namespace MHW_Save_Editor
         private void Paste()
         {
             PasteAt(new List<int>(new []
-                {((ListCollectionView) Application.Current.Resources["InvestigationCollectionView"]).CurrentPosition}
+                {((ListCollectionView) Application.Current.Resources["InvestigationCollectionView"]).CurrentPosition+1}
             ));
 
         }
@@ -146,8 +150,8 @@ namespace MHW_Save_Editor
         {
             foreach (int j in positions){
                 ((IList<Investigation>)((ListCollectionView) Application.Current.Resources["InvestigationCollectionView"]).SourceCollection)
-                [j]
-                = _clipboard;
+                [j-1]
+                = new Investigation(_clipboard.Serialize());
             }
         }
     
@@ -161,14 +165,21 @@ namespace MHW_Save_Editor
             }
         }
         
-        private void ReSort(Func<Investigation,int >  sorterer)
+        private void ReSort()//Func<Investigation,int >  sorterer)
         {
-            //TODO - Implement
-        }
-        
-        private void ClearAll(Func<Investigation,bool > optfilterer = null)
-        {
-            //TODO - Implement
+            IList<Investigation> list = (IList<Investigation>) ((ListCollectionView) Application.Current.Resources[
+                "InvestigationCollectionView"]).SourceCollection;
+            int j = 0;
+            for (int i = 0; i < Investigation.inv_number-j;)
+            {
+                if (list[i].Filled) i++;
+                else
+                {
+                    list.RemoveAt(i);
+                    list.Add(new Investigation(InvestigationThinLayer.nullinvestigation));
+                    j++;
+                }
+            }
         }
 
         public void Import(string filepath)
@@ -186,8 +197,8 @@ namespace MHW_Save_Editor
             if ((import.Length / Investigation.inv_size)!=positions.Count)throw new ConstraintException("Number of investigations does not match number of replacements");
             for (int i = 0; i < import.Length / Investigation.inv_size; i++)
             {
-                ((IList<object>) ((ListCollectionView) Application.Current.Resources["InvestigationCollectionView"]).SourceCollection)
-                    [positions[i]]= new Investigation(import.Slice(i * Investigation.inv_size, i * Investigation.inv_size+Investigation.inv_size));
+                ((IList<Investigation>) ((ListCollectionView) Application.Current.Resources["InvestigationCollectionView"]).SourceCollection)
+                    [positions[i]-1]= new Investigation(import.Slice(i * Investigation.inv_size, i * Investigation.inv_size+Investigation.inv_size));
             }
         }
         
@@ -197,15 +208,24 @@ namespace MHW_Save_Editor
             for (int i =0; i<positions.Count; i++)
             {
                 ((IList<Investigation>) ((ListCollectionView) Application.Current.Resources["InvestigationCollectionView"]).SourceCollection)
-                    [positions[i]].Serialize().CopyTo(content, i * Investigation.inv_size);
+                    [positions[i]-1].Serialize().CopyTo(content, i * Investigation.inv_size);
             }
             File.WriteAllBytes(filepath,content);
         }
         
         public void Prepend(string filepath)
         {
-           // List<Investigation> moreItems = GetInvestigations(File.ReadAllBytes(filepath));
-           //((IList<object>) ((ListCollectionView) Application.Current.Resources["InvestigationCollectionView"]).SourceCollection).InsertRange(0, moreItems);
+            
+            List<Investigation> moreItems = GetInvestigations(File.ReadAllBytes(filepath));
+            moreItems.Reverse();
+            var list =
+                (IList<Investigation>) ((ListCollectionView) Application.Current.Resources[
+                    "InvestigationCollectionView"]).SourceCollection;
+            foreach (Investigation item in moreItems)
+            {
+                list.Insert(0,item);
+                list.RemoveAt(Investigation.inv_number);
+            }
         }
         
         public void GenerateLog(string filepath)
@@ -216,6 +236,22 @@ namespace MHW_Save_Editor
                 builder.AppendLine(inv.Log());
             }
 
+            File.WriteAllText(filepath, builder.ToString());
+        }
+        
+        public void GenerateCSV(string filepath)
+        {
+            var builder = new StringBuilder();
+            
+            builder.AppendLine("Index"+","+Investigation.CSVHeader);
+            for (int i = 0; i < Investigation.inv_number; i++)
+            {
+                Investigation inv =
+                    ((IList<Investigation>) ((ListCollectionView) Application.Current.Resources[
+                        "InvestigationCollectionView"]).SourceCollection)[i];
+                builder.AppendLine(i+","+inv.LogCSV());
+            }
+            if(string.IsNullOrEmpty(Path.GetExtension(filepath)))filepath += ".csv";
             File.WriteAllText(filepath, builder.ToString());
         }
         
