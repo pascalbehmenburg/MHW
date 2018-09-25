@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace MHW
+namespace MHW_Save_Editor
 {
     /// <summary>
     /// Interaction logic for App.xaml

@@ -33,6 +33,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32bit>false</Prefer32bit>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="GalaSoft.MvvmLight, Version=5.0.2.32240, Culture=neutral, PublicKeyToken=e7570ab207bcb616">
@@ -95,18 +96,6 @@
     <Compile Include="InputBox.xaml.cs">
       <DependentUpon>InputBox.xaml</DependentUpon>
     </Compile>
-    <Compile Include="InvestigationsView\Boxstore.xaml.cs">
-      <DependentUpon>Boxstore.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="InvestigationsView\BoxstoreViewModel.cs">
-      <DependentUpon>Boxstore.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="InvestigationsView\InvestigationView.xaml.cs">
-      <DependentUpon>InvestigationView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="InvestigationsView\InvestigationViewModel.cs">
-      <DependentUpon>InvestigationView.xaml</DependentUpon>
-    </Compile>
     <Compile Include="MainWindowGeneral.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
     </Compile>
@@ -120,8 +109,20 @@
     <Compile Include="src\Data\NotifyUIBase.cs" />
     <Compile Include="src\FileFormat\GenericFile.cs" />
     <Compile Include="src\FileFormat\SaveFile.cs" />
+    <Compile Include="src\InvestigationEditing\Boxstore.xaml.cs">
+      <DependentUpon>Boxstore.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="src\InvestigationEditing\BoxstoreViewModel.cs">
+      <DependentUpon>Boxstore.xaml</DependentUpon>
+    </Compile>
     <Compile Include="src\InvestigationEditing\InvestigationThinLayer.cs" />
     <Compile Include="src\InvestigationEditing\Investigation.cs" />
+    <Compile Include="src\InvestigationEditing\InvestigationView.xaml.cs">
+      <DependentUpon>InvestigationView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="src\InvestigationEditing\InvestigationViewModel.cs">
+      <DependentUpon>InvestigationView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="src\Support\DataGridRowBehavior.cs" />
     <Compile Include="src\Support\RowToIndexConverter.cs" />
     <Compile Include="src\Support\ScrollDataGridRowIntoView.cs" />
@@ -135,8 +136,6 @@
       <DependentUpon>InvestigationsTab.xaml</DependentUpon>
     </Compile>
     <Page Include="InputBox.xaml" />
-    <Page Include="InvestigationsView\Boxstore.xaml" />
-    <Page Include="InvestigationsView\InvestigationView.xaml" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -150,6 +149,8 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="src\InvestigationEditing\Boxstore.xaml" />
+    <Page Include="src\InvestigationEditing\InvestigationView.xaml" />
     <Page Include="Tabs\GeneralTab.xaml" />
     <Page Include="Tabs\InvestigationsTab.xaml" />
   </ItemGroup>
@@ -171,7 +172,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="src\Resources\ResourcesDictionary.xaml" />
+    <Resource Include="src\Resources\ResourcesDictionary.xaml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -182,6 +185,9 @@
     <None Include="App.config">
       <SubType>Designer</SubType>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include=".gitignore" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

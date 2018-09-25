@@ -6,7 +6,7 @@
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\src\Resources\ResourcesDictionary.xaml" />
+                <ResourceDictionary Source="/src/Resources/ResourcesDictionary.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

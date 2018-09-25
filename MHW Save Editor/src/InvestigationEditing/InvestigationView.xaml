@@ -190,7 +190,7 @@
 			<xctk:IntegerUpDown Grid.Column="1" Grid.Row="6" Minimum="0" Maximum="5"
 								Value = "{Binding InvestigationCollectionView/Y3, UpdateSourceTrigger=PropertyChanged, Mode = TwoWay}"/>
 			<TextBlock Grid.Column="0" Grid.Row="7" Style="{StaticResource InvestigationLabel}">Attempts: </TextBlock>
-			<xctk:IntegerUpDown Grid.Column="1"  Grid.Row="8" Minimum="1" Maximum="10" 
+			<xctk:IntegerUpDown Grid.Column="1"  Grid.Row="7" Minimum="1" Maximum="10" 
 			                    Value = "{Binding InvestigationCollectionView/Attempts, UpdateSourceTrigger=PropertyChanged, Mode = TwoWay}"/>
 		</Grid>
 		<!-- Rewards -->

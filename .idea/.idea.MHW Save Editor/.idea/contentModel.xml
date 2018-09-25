@@ -5,20 +5,13 @@
     <e p="C:\Users\AsteriskAmpersand\.Rider2018.2\system\resharper-host\local\Transient\ReSharperHost\v182\SolutionCaches\_MHW Save Editor.-1842918584.00" t="ExcludeRecursive" />
     <e p="G:\Users\AsteriskAmpersand\RiderProjects\MHW" t="IncludeFlat">
       <e p="MHW Save Editor" t="IncludeRecursive">
+        <e p=".gitignore" t="Include" />
         <e p="App.config" t="Include" />
         <e p="App.xaml" t="Include" />
         <e p="App.xaml.cs" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="InputBox.xaml" t="Include" />
         <e p="InputBox.xaml.cs" t="Include" />
-        <e p="InvestigationsView" t="Include">
-          <e p="Boxstore.xaml" t="Include" />
-          <e p="Boxstore.xaml.cs" t="Include" />
-          <e p="BoxstoreViewModel.cs" t="Include" />
-          <e p="InvestigationView.xaml" t="Include" />
-          <e p="InvestigationView.xaml.cs" t="Include" />
-          <e p="InvestigationViewModel.cs" t="Include" />
-        </e>
         <e p="MainWindow.xaml" t="Include" />
         <e p="MainWindow.xaml.cs" t="Include" />
         <e p="MainWindowGeneral.xaml.cs" t="Include" />
@@ -47,8 +40,14 @@
             <e p="SaveFile.cs" t="Include" />
           </e>
           <e p="InvestigationEditing" t="Include">
+            <e p="Boxstore.xaml" t="Include" />
+            <e p="Boxstore.xaml.cs" t="Include" />
+            <e p="BoxstoreViewModel.cs" t="Include" />
             <e p="Investigation.cs" t="Include" />
             <e p="InvestigationThinLayer.cs" t="Include" />
+            <e p="InvestigationView.xaml" t="Include" />
+            <e p="InvestigationView.xaml.cs" t="Include" />
+            <e p="InvestigationViewModel.cs" t="Include" />
           </e>
           <e p="Resources" t="Include">
             <e p="ResourcesDictionary.xaml" t="Include" />

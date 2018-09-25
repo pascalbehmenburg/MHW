@@ -13,32 +13,21 @@ C:\Users\Ambien\source\repos\MHW Save Editor\MHW Save Editor\obj\Debug\MHW Save 
 C:\Users\Ambien\source\repos\MHW Save Editor\MHW Save Editor\obj\Debug\MHW Save Editor.csproj.CoreCompileInputs.cache
 C:\Users\Ambien\source\repos\MHW Save Editor\MHW Save Editor\obj\Debug\MHW Save Editor.exe
 C:\Users\Ambien\source\repos\MHW Save Editor\MHW Save Editor\obj\Debug\MHW Save Editor.pdb
-G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\obj\Debug\MHW Save Editor.csprojAssemblyReference.cache
-G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\obj\Debug\MainWindow.g.cs
-G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\obj\Debug\App.g.cs
-G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\obj\Debug\MHW Save Editor_MarkupCompile.cache
-G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\obj\Debug\MHW Save Editor_MarkupCompile.lref
-G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\obj\Debug\MHW Save Editor.exe
-G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\obj\Debug\MHW Save Editor.pdb
 G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\bin\Debug\MHW Save Editor.exe.config
 G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\bin\Debug\MHW Save Editor.exe
 G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\bin\Debug\MHW Save Editor.pdb
-G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\obj\Debug\MainWindow.baml
-G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\obj\Debug\MHW Save Editor.g.resources
-G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\obj\Debug\MHW_Save_Editor.Properties.Resources.resources
-G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\obj\Debug\MHW Save Editor.csproj.GenerateResource.cache
-G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\obj\Debug\MHW Save Editor.csproj.CoreCompileInputs.cache
-G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\obj\Debug\InputBox.baml
-G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\obj\Debug\InputBox.g.cs
+G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\bin\Debug\GalaSoft.MvvmLight.dll
 G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\bin\Debug\System.ValueTuple.dll
-G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\bin\Debug\System.ValueTuple.xml
-G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\obj\Debug\MHW Save Editor.csproj.CopyComplete
+G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\bin\Debug\System.Windows.Interactivity.dll
 G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\bin\Debug\Xceed.Wpf.AvalonDock.dll
 G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Aero.dll
 G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Metro.dll
 G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\bin\Debug\Xceed.Wpf.AvalonDock.Themes.VS2010.dll
 G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\bin\Debug\Xceed.Wpf.DataGrid.dll
 G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\bin\Debug\Xceed.Wpf.Toolkit.dll
+G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\bin\Debug\GalaSoft.MvvmLight.pdb
+G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\bin\Debug\GalaSoft.MvvmLight.xml
+G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\bin\Debug\System.ValueTuple.xml
 G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\bin\Debug\de\Xceed.Wpf.AvalonDock.resources.dll
 G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\bin\Debug\es\Xceed.Wpf.AvalonDock.resources.dll
 G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\bin\Debug\fr\Xceed.Wpf.AvalonDock.resources.dll
@@ -49,17 +38,29 @@ G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\bin\Debug\ro\Xceed.
 G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\bin\Debug\ru\Xceed.Wpf.AvalonDock.resources.dll
 G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\bin\Debug\sv\Xceed.Wpf.AvalonDock.resources.dll
 G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\bin\Debug\zh-Hans\Xceed.Wpf.AvalonDock.resources.dll
-G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\bin\Debug\GalaSoft.MvvmLight.dll
-G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\bin\Debug\System.Windows.Interactivity.dll
-G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\bin\Debug\GalaSoft.MvvmLight.pdb
-G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\bin\Debug\GalaSoft.MvvmLight.xml
-G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\obj\Debug\InvestigationsView\Boxstore.g.cs
-G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\obj\Debug\InvestigationsView\InvestigationView.g.cs
+G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\obj\Debug\MHW Save Editor.csprojAssemblyReference.cache
+G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\obj\Debug\InputBox.baml
+G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\obj\Debug\InputBox.g.cs
+G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\obj\Debug\MainWindow.g.cs
+G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\obj\Debug\src\InvestigationEditing\Boxstore.g.cs
+G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\obj\Debug\src\InvestigationEditing\InvestigationView.g.cs
 G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\obj\Debug\Tabs\GeneralTab.g.cs
 G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\obj\Debug\Tabs\InvestigationsTab.g.cs
+G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\obj\Debug\App.g.cs
+G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\obj\Debug\MHW Save Editor_Content.g.cs
 G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\obj\Debug\GeneratedInternalTypeHelper.g.cs
-G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\obj\Debug\InvestigationsView\Boxstore.baml
-G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\obj\Debug\InvestigationsView\InvestigationView.baml
+G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\obj\Debug\MHW Save Editor_MarkupCompile.cache
+G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\obj\Debug\MHW Save Editor_MarkupCompile.lref
+G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\obj\Debug\App.baml
+G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\obj\Debug\MainWindow.baml
+G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\obj\Debug\src\InvestigationEditing\Boxstore.baml
+G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\obj\Debug\src\InvestigationEditing\InvestigationView.baml
 G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\obj\Debug\Tabs\GeneralTab.baml
 G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\obj\Debug\Tabs\InvestigationsTab.baml
-G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\obj\Debug\App.baml
+G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\obj\Debug\MHW Save Editor.g.resources
+G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\obj\Debug\MHW_Save_Editor.Properties.Resources.resources
+G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\obj\Debug\MHW Save Editor.csproj.GenerateResource.cache
+G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\obj\Debug\MHW Save Editor.csproj.CoreCompileInputs.cache
+G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\obj\Debug\MHW Save Editor.csproj.CopyComplete
+G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\obj\Debug\MHW Save Editor.exe
+G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\obj\Debug\MHW Save Editor.pdb

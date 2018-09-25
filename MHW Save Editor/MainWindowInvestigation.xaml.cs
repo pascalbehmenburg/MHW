@@ -13,24 +13,24 @@ namespace MHW_Save_Editor
 {
     public partial class MainWindow
     {
-        private Investigation clipboard;
-        private object PopulateInvestigations(byte[] data)
+        private Investigation _clipboard;
+        private object PopulateInvestigations(byte[] newdata)
         {
             List<Investigation> inv = GetInvestigations(
-                data.Slice(Investigation.inv_offsets[0], Investigation.inv_offsets[0]+Investigation.inv_size*Investigation.inv_number));
-            ObservableCollection<Investigation> Boxstore = new ObservableCollection<Investigation>(inv);
-            ListCollectionView InvestigationCollectionView = (ListCollectionView)new CollectionViewSource { Source = Boxstore }.View;
-            Application.Current.Resources["InvestigationCollectionView"] = InvestigationCollectionView;
+                newdata.Slice(Investigation.inv_offsets[0], Investigation.inv_offsets[0]+Investigation.inv_size*Investigation.inv_number));
+            ObservableCollection<Investigation> boxstore = new ObservableCollection<Investigation>(inv);
+            ListCollectionView investigationCollectionView = (ListCollectionView)new CollectionViewSource { Source = boxstore }.View;
+            Application.Current.Resources["InvestigationCollectionView"] = investigationCollectionView;
             return new InvestigationsTab();
         }
 
-        private List<Investigation> GetInvestigations(byte[] data)
+        private List<Investigation> GetInvestigations(byte[] newdata)
         {
             List<Investigation> inv = new List<Investigation>();
-            int invcount = data.Length / Investigation.inv_size;
+            int invcount = newdata.Length / Investigation.inv_size;
             for (int i = 0; i < invcount; i++)
             {
-                inv.Add(new Investigation(data.Slice(i*Investigation.inv_size, (i+1)*Investigation.inv_size)));
+                inv.Add(new Investigation(newdata.Slice(i*Investigation.inv_size, (i+1)*Investigation.inv_size)));
             }
             return inv;
         }
@@ -131,12 +131,12 @@ namespace MHW_Save_Editor
 
         private void Copy()
         {
-            clipboard = (Investigation) ((ListCollectionView) Application.Current.Resources["InvestigationCollectionView"]).CurrentItem;
+            _clipboard = (Investigation) ((ListCollectionView) Application.Current.Resources["InvestigationCollectionView"]).CurrentItem;
         }
 
         private void Paste()
         {
-            PasteAt(new List<int>(new int[]
+            PasteAt(new List<int>(new []
                 {((ListCollectionView) Application.Current.Resources["InvestigationCollectionView"]).CurrentPosition}
             ));
 
@@ -147,7 +147,7 @@ namespace MHW_Save_Editor
             foreach (int j in positions){
                 ((IList<Investigation>)((ListCollectionView) Application.Current.Resources["InvestigationCollectionView"]).SourceCollection)
                 [j]
-                = clipboard;
+                = _clipboard;
             }
         }
     
