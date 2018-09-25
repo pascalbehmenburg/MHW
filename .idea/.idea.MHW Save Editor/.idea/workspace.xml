@@ -2,22 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f7302d10-7dc5-476b-ab1a-ada103a17aa1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.MHW Save Editor/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MHW Save Editor/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.MHW Save Editor/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MHW Save Editor/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MHW Save Editor.sln" beforeDir="false" afterPath="$PROJECT_DIR$/MHW Save Editor.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MHW Save Editor/MainWindow.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MHW Save Editor/MainWindow.xaml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MHW Save Editor/MainWindowInvestigation.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MHW Save Editor/MainWindowInvestigation.xaml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MHW Save Editor/MainWindowPrompts.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MHW Save Editor/MainWindowPrompts.xaml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MHW Save Editor/bin/Release/MHW Save Editor.exe" beforeDir="false" afterPath="$PROJECT_DIR$/MHW Save Editor/bin/Release/MHW Save Editor.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MHW Save Editor/bin/Release/MHW Save Editor.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/MHW Save Editor/bin/Release/MHW Save Editor.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MHW Save Editor/obj/Release/MHW Save Editor.exe" beforeDir="false" afterPath="$PROJECT_DIR$/MHW Save Editor/obj/Release/MHW Save Editor.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MHW Save Editor/obj/Release/MHW Save Editor.g.resources" beforeDir="false" afterPath="$PROJECT_DIR$/MHW Save Editor/obj/Release/MHW Save Editor.g.resources" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MHW Save Editor/obj/Release/MHW Save Editor.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/MHW Save Editor/obj/Release/MHW Save Editor.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MHW Save Editor/obj/Release/MHW Save Editor_MarkupCompile.lref" beforeDir="false" afterPath="$PROJECT_DIR$/MHW Save Editor/obj/Release/MHW Save Editor_MarkupCompile.lref" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MHW Save Editor/src/InvestigationEditing/Investigation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MHW Save Editor/src/InvestigationEditing/Investigation.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MHW Save Editor/src/InvestigationEditing/InvestigationThinLayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MHW Save Editor/src/InvestigationEditing/InvestigationThinLayer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MHW Save Editor/src/InvestigationEditing/InvestigationView.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/MHW Save Editor/src/InvestigationEditing/InvestigationView.xaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MHW Save Editor/src/Utility/Utility.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MHW Save Editor/src/Utility/Utility.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -99,7 +84,7 @@
           <entry key="C# Console" value="706" />
           <entry key="cs" value="49249" />
           <entry key="gitignore" value="39" />
-          <entry key="txt" value="1456" />
+          <entry key="txt" value="1459" />
           <entry key="xaml" value="7418" />
           <entry key="xml" value="58" />
         </counts>
@@ -107,7 +92,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="C#" value="49955" />
-          <entry key="PLAIN_TEXT" value="1495" />
+          <entry key="PLAIN_TEXT" value="1498" />
           <entry key="XAML" value="7418" />
           <entry key="XML" value="58" />
         </counts>
@@ -555,7 +540,7 @@
       <workItem from="1537780346585" duration="108000" />
       <workItem from="1537808501331" duration="6096000" />
       <workItem from="1537832641321" duration="13913000" />
-      <workItem from="1537851594076" duration="631000" />
+      <workItem from="1537851594076" duration="1306000" />
     </task>
     <task id="LOCAL-00001" summary="-Fixed checksum algorithm, it works correctly now.&#10;-Fixed encryption algorithm, it works correctly now.&#10;-Modified GUI in preparation for added editors.">
       <created>1536902291909</created>
@@ -634,11 +619,18 @@
       <option name="project" value="LOCAL" />
       <updated>1537833904261</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Fixes #3&#10;Fixes #4">
+      <created>1537857467077</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1537857467077</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="349774000" />
+    <option name="totallyTimeSpent" value="350449000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -702,7 +694,8 @@
     <MESSAGE value="Reached 0.1 features." />
     <MESSAGE value="Reached 0.1 features (gained data grid though it can be replaced with a list if performance continues to be an issue) but with a codebase that makes sense and proper classing and user controls." />
     <MESSAGE value="Fixed resources hard coded path." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed resources hard coded path." />
+    <MESSAGE value="Fixes #3&#10;Fixes #4" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixes #3&#10;Fixes #4" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
