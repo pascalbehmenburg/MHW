@@ -40,7 +40,7 @@ namespace MHW_Save_Editor
       
         private static string[] InvestigationList_EditMenu = new[]
         {
-            "Copy", "Paste", "Paste At", "Commit All", "Sort"//, "Filter"
+            "Copy", "Paste", "Paste At", "Commit All", "Sort", "Filter"
         };
 
         private void InvestigationsEditHandler(string command)
@@ -61,13 +61,13 @@ namespace MHW_Save_Editor
                     Commit();
                     break;
                 case("Sort"):
-                //    Func<Investigation,int > sorter = PromptInvestigationsSort();
-                    ReSort();
+                    //Func<Investigation,int > sorter = PromptInvestigationsSort();
+                    ReSort();//sorter);
                     break;
-                //case("Filter"):
-                //    Func<Investigation,bool > filterer = PromptInvestigationsFilter();
-                //    ClearAll(filterer);
-                //    break;
+                case("Filter"):
+                    Func<Investigation,bool > filterer = PromptInvestigationsFilter();
+                    ClearAll(filterer);
+                    break;
                 default:
                     return;
             }
@@ -164,21 +164,40 @@ namespace MHW_Save_Editor
                     [i].Serialize().CopyTo(saveFile.data, Investigation.inv_offsets[0]+i*Investigation.inv_size);
             }
         }
-        
-        private void ReSort()//Func<Investigation,int >  sorterer)
+
+        private void ReSort(Func<Investigation, int> sorterer = null)
+        {
+            
+            if (sorterer == null)
+            {
+                IList<Investigation> list = (IList<Investigation>) ((ListCollectionView) Application.Current.Resources[
+                    "InvestigationCollectionView"]).SourceCollection;
+                int j = 0;
+                for (int i = 0; i < Investigation.inv_number - j;)
+                {
+                    if (list[i].Filled) i++;
+                    else
+                    {
+                        list.RemoveAt(i);
+                        list.Add(new Investigation(InvestigationThinLayer.nullinvestigation));
+                        j++;
+                    }
+                }
+            }
+        }
+
+        private void ClearAll(Func<Investigation, bool> filter)
         {
             IList<Investigation> list = (IList<Investigation>) ((ListCollectionView) Application.Current.Resources[
                 "InvestigationCollectionView"]).SourceCollection;
-            int j = 0;
-            for (int i = 0; i < Investigation.inv_number-j;)
+            if (!(filter == null))
             {
-                if (list[i].Filled) i++;
-                else
+                for (int i = 0; i < Investigation.inv_number;i++)
                 {
-                    list.RemoveAt(i);
-                    list.Add(new Investigation(InvestigationThinLayer.nullinvestigation));
-                    j++;
+                    Investigation inv = list[i];
+                    if (inv.Filled && filter(inv)){list[i]=new Investigation(InvestigationThinLayer.nullinvestigation);}
                 }
+                ReSort();
             }
         }
 
@@ -193,8 +212,8 @@ namespace MHW_Save_Editor
         public void ImportAt(string filepath, List<int> positions)//Positions are in 1 index, need to convert to 0-index
         {
             byte[] import = File.ReadAllBytes(filepath);
-            if ((import.Length % Investigation.inv_size)!=0)throw new ConstraintException("File is not a collection of 42-byte investigations");
-            if ((import.Length / Investigation.inv_size)!=positions.Count)throw new ConstraintException("Number of investigations does not match number of replacements");
+            if ((import.Length % Investigation.inv_size)!=0){MessageBox.Show("File is not a collection of 42-byte investigations", "Error", MessageBoxButton.OK);return;}
+            if ((import.Length / Investigation.inv_size)!=positions.Count){MessageBox.Show("Number of investigations does not match number of replacements", "Error", MessageBoxButton.OK);return;}
             for (int i = 0; i < import.Length / Investigation.inv_size; i++)
             {
                 ((IList<Investigation>) ((ListCollectionView) Application.Current.Resources["InvestigationCollectionView"]).SourceCollection)

@@ -64,3 +64,6 @@ G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\obj\Release\src\Inv
 G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\obj\Release\src\InvestigationEditing\InvestigationView.g.cs
 G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\obj\Release\src\InvestigationEditing\Boxstore.baml
 G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\obj\Release\src\InvestigationEditing\InvestigationView.baml
+G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\bin\Release\log4net.dll
+G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\bin\Release\NuGet.MultiParse.dll
+G:\Users\AsteriskAmpersand\RiderProjects\MHW\MHW Save Editor\bin\Release\log4net.xml
