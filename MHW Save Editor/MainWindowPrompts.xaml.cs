@@ -96,7 +96,8 @@ namespace MHW_Save_Editor
             {
                 {'A', _aux_func_attempts},
                 {'f', _aux_func_faints},
-                {'a', _aux_func_hp},
+                {'a', _aux_func_attack},
+                {'h', _aux_func_hp},
                 {'d', _aux_func_def},
                 {'r', _aux_func_rank},
                 {'g', _aux_func_goal},
@@ -113,21 +114,18 @@ namespace MHW_Save_Editor
                                                 "\nExample of a Filter: (g == 2)|((t <= 50) & (f > 3)) will remove Wildlife and Hunts with less than 50min timer which have less than 3 faints.\n", "");
             if (inputDialog.ShowDialog() == true)
             {
-                try
-                {
-                    string response = inputDialog.Answer;
-                    return (x => (bool) e.Evaluate(response.Replace("A", _aux_func['A'](x).ToString())
-                                .Replace("f", _aux_func['f'](x).ToString())
-                                .Replace("h", _aux_func['h'](x).ToString())
-                                .Replace("a", _aux_func['a'](x).ToString())
-                                .Replace("d", _aux_func['d'](x).ToString())
-                                .Replace("r", _aux_func['r'](x).ToString())
-                                .Replace("g", _aux_func['g'](x).ToString())
-                                .Replace("c", _aux_func['c'](x).ToString())
-                                .Replace("t", _aux_func['t'](x).ToString())
-                                .Replace("l", _aux_func['l'](x).ToString())
-                                .Replace(" ", String.Empty)));
-                }catch{MessageBox.Show("Invalid Filtering String", "Invalid Filtering String", MessageBoxButton.OK);}
+                string response = inputDialog.Answer;
+                return (x => (bool) e.Evaluate(response.Replace("A", _aux_func['A'](x).ToString())
+                            .Replace("f", _aux_func['f'](x).ToString())
+                            .Replace("h", _aux_func['h'](x).ToString())
+                            .Replace("a", _aux_func['a'](x).ToString())
+                            .Replace("d", _aux_func['d'](x).ToString())
+                            .Replace("r", _aux_func['r'](x).ToString())
+                            .Replace("g", _aux_func['g'](x).ToString())
+                            .Replace("c", _aux_func['c'](x).ToString())
+                            .Replace("t", _aux_func['t'](x).ToString())
+                            .Replace("l", _aux_func['l'](x).ToString())
+                            .Replace(" ", String.Empty)));
             }
             return null;
         }

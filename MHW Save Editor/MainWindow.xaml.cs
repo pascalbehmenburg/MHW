@@ -10,6 +10,8 @@ using System.Windows.Data;
 using MHW_Save_Editor.FileFormat;
 using MHW_Save_Editor.InvestigationEditing;
 using Microsoft.Win32;
+using System.Configuration;
+using MHW.Properties;
 
 namespace MHW_Save_Editor
 {
@@ -23,7 +25,7 @@ namespace MHW_Save_Editor
         private bool open;
         
         public MainWindow()
-        {
+        {           
             data = new MemoryStream();
             InitializeComponent();
             DataContext = this;
