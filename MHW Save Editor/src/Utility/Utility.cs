@@ -96,8 +96,13 @@ namespace MHW_Save_Editor
                 arr[i] = temp[i];
             }
         }
-        
+
+        public static IEnumerable<T> Apply<T, G>(this List<Func<G, T>> mapping, G argument)
+        {
+            return mapping.Select(map => map(argument));
+        }
     }
+    
     public static class SortExtensions
     {
         //  Sorts an IList<T> in place.
@@ -133,6 +138,17 @@ namespace MHW_Save_Editor
         public int Compare(object o1, object o2)
         {
             return _comparison((T)o1, (T)o2);
+        }
+    }
+
+    public class SequentialCompararer : IComparer<IEnumerable<int>>
+    {
+        public int Compare(IEnumerable<int> x, IEnumerable<int> y)
+        {
+            foreach(var xy in x.Zip(y,  (xi, yi) => new { xval = xi, yval = yi }))
+                if (xy.yval != xy.xval)
+                    return xy.xval - xy.yval;
+            return 0;
         }
     }
 }

@@ -63,11 +63,11 @@ namespace MHW_Save_Editor
                     Commit();
                     break;
                 case("Sort"):
-                    Func<Investigation,int > sorter = PromptInvestigationsFunction<int>();
+                    Func<Investigation,IEnumerable<int> > sorter = PromptInvestigationsSorter();
                     ReSort(sorter);//sorter);
                     break;
                 case("Filter"):
-                    Func<Investigation,bool > filterer = PromptInvestigationsFunction<bool>();
+                    Func<Investigation,bool > filterer = PromptInvestigationsFilter();
                     ClearAll(filterer);
                     break;
                 default:
@@ -167,7 +167,7 @@ namespace MHW_Save_Editor
             }
         }
 
-        private void ReSort(Func<Investigation, int> sorterer = null)
+        private void ReSort(Func<Investigation, IEnumerable<int>> sorterer = null)
         {
             IList<Investigation> list = (IList<Investigation>) ((ListCollectionView) Application.Current.Resources[
                 "InvestigationCollectionView"]).SourceCollection;
@@ -190,7 +190,7 @@ namespace MHW_Save_Editor
                 try
                 {
                     List<int> valuation = Enumerable.Range(0, Investigation.inv_number)
-                        .OrderByDescending(i => sorterer(list[i])).ToList();
+                        .OrderByDescending(x=>sorterer(list[x]), new SequentialCompararer()).ToList();
                     list.ParallelSort(valuation);
                 }
                 catch
