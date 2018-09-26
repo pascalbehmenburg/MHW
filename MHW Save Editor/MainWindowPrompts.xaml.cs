@@ -43,7 +43,7 @@ namespace MHW_Save_Editor
             return Enumerable.Range(Convert.ToInt32(range[0]), Convert.ToInt32(range[1])-Convert.ToInt32(range[0])+1).ToList();
         }
         
-        private Func<Investigation, bool> PromptInvestigationsFilter()
+        private Func<Investigation, T> PromptInvestigationsFunction<T>()
         {
             Func<Investigation, int > attempts = (x => x.Attempts);
             Func<Investigation, int > hp = (x => x.HP);
@@ -56,7 +56,8 @@ namespace MHW_Save_Editor
             Func<Investigation, int > time = (x => Investigation._TimeAmountObjective[x.Goal]);
             Func<Investigation, int > locale = (x => x.LocaleIndex);
             Expression e = new Expression();
-            InputBox inputDialog = new InputBox("Insert a fully formed expression with boolean result. Investigations satisfying the rule will be cleared.\n" +
+            string type = typeof(T).ToString();
+            InputBox inputDialog = new InputBox($"Insert a fully formed expression with {type} result. Investigations satisfying the rule will be cleared.\n" +
                                                 "Allowed variables are: " +
                                                 "[A]ttempts: 0-10\n" +
                                                 "[f]aints: 1,2,3,5\n"+
@@ -68,21 +69,23 @@ namespace MHW_Save_Editor
                                                 "[c]ount(#ofMon): 0-3\n" +
                                                 "[t]ime: 15 30 50\n" +
                                                 "[l]ocale: 0-AF, 1-WW, 2-CH, 3-RV, 4-ER\n" +
-                                                "Example (g == 2)|((t <= 50) & (f > 3)) will remove Wildlife and Hunts with less than 50min timer which have less than 3 faints", "");
+                                                "Example of a Filter: (g == 2)|((t <= 50) & (f > 3)) will remove Wildlife and Hunts with less than 50min timer which have less than 3 faints.\n" +
+                                                "Example of a Sorter: (t+c*50) will sort investigations by number of monsters and then by time.\n" +
+                                                "Example of a Sorter: (r) will sort investigations by rank.", "");
             if (inputDialog.ShowDialog() == true)
             {
 
                 string response = inputDialog.Answer;
-                return (x => (bool) e.Evaluate(response.Replace("A", attempts(x).ToString())
-                                                        .Replace("f", attempts(x).ToString(faints(x).ToString()))
-                                                        .Replace("h", attempts(x).ToString(hp(x).ToString()))
-                                                        .Replace("a", attempts(x).ToString(attack(x).ToString()))
-                                                        .Replace("d", attempts(x).ToString(def(x).ToString()))
-                                                        .Replace("r", attempts(x).ToString(rank(x).ToString()))
-                                                        .Replace("g", attempts(x).ToString(goal(x).ToString()))
-                                                        .Replace("c", attempts(x).ToString(count(x).ToString()))
-                                                        .Replace("t", attempts(x).ToString(time(x).ToString()))
-                                                        .Replace("l", attempts(x).ToString(locale(x).ToString()))
+                return (x => (T) e.Evaluate(response.Replace("A", attempts(x).ToString())
+                                                        .Replace("f", faints(x).ToString())
+                                                        .Replace("h", hp(x).ToString())
+                                                        .Replace("a", attack(x).ToString())
+                                                        .Replace("d", def(x).ToString())
+                                                        .Replace("r", rank(x).ToString())
+                                                        .Replace("g", goal(x).ToString())
+                                                        .Replace("c", count(x).ToString())
+                                                        .Replace("t", time(x).ToString())
+                                                        .Replace("l", locale(x).ToString())
                                                         .Replace(" ", String.Empty)
                                                 )
                         );

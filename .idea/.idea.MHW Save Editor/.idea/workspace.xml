@@ -3,19 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="f7302d10-7dc5-476b-ab1a-ada103a17aa1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MHW Save Editor/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MHW Save Editor/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MHW Save Editor/InputBox.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/MHW Save Editor/InputBox.xaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MHW Save Editor/MHW Save Editor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/MHW Save Editor/MHW Save Editor.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MHW Save Editor/MainWindowInvestigation.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MHW Save Editor/MainWindowInvestigation.xaml.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MHW Save Editor/MainWindowPrompts.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MHW Save Editor/MainWindowPrompts.xaml.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MHW Save Editor/bin/Release/MHW Save Editor.exe" beforeDir="false" afterPath="$PROJECT_DIR$/MHW Save Editor/bin/Release/MHW Save Editor.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MHW Save Editor/bin/Release/MHW Save Editor.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/MHW Save Editor/bin/Release/MHW Save Editor.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MHW Save Editor/obj/Release/MHW Save Editor.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/MHW Save Editor/obj/Release/MHW Save Editor.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MHW Save Editor/obj/Release/MHW Save Editor.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/MHW Save Editor/obj/Release/MHW Save Editor.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MHW Save Editor/obj/Release/MHW Save Editor.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/MHW Save Editor/obj/Release/MHW Save Editor.csprojAssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MHW Save Editor/obj/Release/MHW Save Editor.exe" beforeDir="false" afterPath="$PROJECT_DIR$/MHW Save Editor/obj/Release/MHW Save Editor.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MHW Save Editor/obj/Release/MHW Save Editor.g.resources" beforeDir="false" afterPath="$PROJECT_DIR$/MHW Save Editor/obj/Release/MHW Save Editor.g.resources" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MHW Save Editor/obj/Release/MHW Save Editor.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/MHW Save Editor/obj/Release/MHW Save Editor.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MHW Save Editor/obj/Release/MHW Save Editor_MarkupCompile.cache" beforeDir="false" afterPath="$PROJECT_DIR$/MHW Save Editor/obj/Release/MHW Save Editor_MarkupCompile.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MHW Save Editor/src/Utility/Utility.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MHW Save Editor/src/Utility/Utility.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -72,7 +66,7 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="config" value="5" />
-          <entry key="cs" value="369" />
+          <entry key="cs" value="373" />
           <entry key="gitignore" value="2" />
           <entry key="log" value="2" />
           <entry key="resx" value="1" />
@@ -83,7 +77,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="C#" value="369" />
+          <entry key="C#" value="373" />
           <entry key="Config" value="5" />
           <entry key="MsBuild targets file" value="2" />
           <entry key="PLAIN_TEXT" value="4" />
@@ -95,17 +89,17 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="C# Console" value="728" />
-          <entry key="cs" value="51235" />
+          <entry key="cs" value="52470" />
           <entry key="gitignore" value="39" />
-          <entry key="txt" value="1517" />
+          <entry key="txt" value="1562" />
           <entry key="xaml" value="7425" />
           <entry key="xml" value="58" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="C#" value="51963" />
-          <entry key="PLAIN_TEXT" value="1556" />
+          <entry key="C#" value="53198" />
+          <entry key="PLAIN_TEXT" value="1601" />
           <entry key="XAML" value="7425" />
           <entry key="XML" value="58" />
         </counts>
@@ -117,48 +111,54 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MHW Save Editor/MainWindowInvestigation.xaml.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2152">
-              <caret line="215" column="186" selection-start-line="215" selection-start-column="186" selection-end-line="215" selection-end-column="186" />
+            <state relative-caret-position="-935">
+              <caret line="199" column="13" selection-start-line="199" selection-start-column="13" selection-end-line="199" selection-end-column="13" />
               <folding>
-                <marker date="1537917182024" expanded="false" signature="6:342" ph="..." />
-                <marker date="1537917182024" expanded="true" signature="369:10806" ph="{...}" />
-                <marker date="1537917182024" expanded="true" signature="407:10804" ph="{...}" />
-                <marker date="1537917182024" expanded="true" signature="517:1121" ph="{...}" />
-                <marker date="1537917182024" expanded="true" signature="1192:1559" ph="{...}" />
-                <marker date="1537917182024" expanded="true" signature="1382:1525" ph="{...}" />
-                <marker date="1537917182024" expanded="true" signature="1642:1725" ph="{...}" />
-                <marker date="1537917182024" expanded="true" signature="1790:2714" ph="{...}" />
-                <marker date="1537917182024" expanded="true" signature="1829:2704" ph="{...}" />
-                <marker date="1537917182024" expanded="true" signature="2792:2913" ph="{...}" />
-                <marker date="1537917182024" expanded="true" signature="2987:4528" ph="{...}" />
-                <marker date="1537917182024" expanded="true" signature="3088:3443" ph="{...}" />
-                <marker date="1537917182024" expanded="true" signature="3498:4518" ph="{...}" />
-                <marker date="1537917182024" expanded="true" signature="4563:4703" ph="{...}" />
-                <marker date="1537917182024" expanded="true" signature="4732:4890" ph="{...}" />
-                <marker date="1537917182024" expanded="true" signature="4920:5118" ph="{...}" />
-                <marker date="1537917182024" expanded="true" signature="5173:5473" ph="{...}" />
-                <marker date="1537917182024" expanded="true" signature="5224:5463" ph="{...}" />
-                <marker date="1537917182024" expanded="true" signature="5508:5900" ph="{...}" />
-                <marker date="1537917182024" expanded="true" signature="5581:5890" ph="{...}" />
-                <marker date="1537917182024" expanded="true" signature="5971:6666" ph="{...}" />
-                <marker date="1537917182024" expanded="true" signature="6028:6656" ph="{...}" />
-                <marker date="1537917182024" expanded="true" signature="6326:6642" ph="{...}" />
-                <marker date="1537917182024" expanded="true" signature="6414:6624" ph="{...}" />
-                <marker date="1537917182024" expanded="true" signature="6731:7294" ph="{...}" />
-                <marker date="1537917182024" expanded="true" signature="6958:7284" ph="{...}" />
-                <marker date="1537917182024" expanded="true" signature="7038:7244" ph="{...}" />
-                <marker date="1537917182024" expanded="true" signature="7339:7435" ph="{...}" />
-                <marker date="1537917182024" expanded="true" signature="7479:7575" ph="{...}" />
-                <marker date="1537917182024" expanded="true" signature="7696:8536" ph="{...}" />
-                <marker date="1537917182024" expanded="true" signature="8206:8526" ph="{...}" />
-                <marker date="1537917182024" expanded="true" signature="8612:9076" ph="{...}" />
-                <marker date="1537917182024" expanded="true" signature="8752:9016" ph="{...}" />
-                <marker date="1537917182024" expanded="true" signature="9130:9649" ph="{...}" />
-                <marker date="1537917182024" expanded="true" signature="9517:9639" ph="{...}" />
-                <marker date="1537917182024" expanded="true" signature="9707:10078" ph="{...}" />
-                <marker date="1537917182024" expanded="true" signature="9931:10006" ph="{...}" />
-                <marker date="1537917182024" expanded="true" signature="10136:10789" ph="{...}" />
-                <marker date="1537917182024" expanded="true" signature="10338:10633" ph="{...}" />
+                <marker date="1537926251982" expanded="false" signature="6:404" ph="..." />
+                <marker date="1537926251982" expanded="true" signature="431:11676" ph="{...}" />
+                <marker date="1537926251982" expanded="true" signature="469:11674" ph="{...}" />
+                <marker date="1537926251982" expanded="true" signature="579:1183" ph="{...}" />
+                <marker date="1537926251982" expanded="true" signature="1254:1621" ph="{...}" />
+                <marker date="1537926251982" expanded="true" signature="1444:1587" ph="{...}" />
+                <marker date="1537926251982" expanded="true" signature="1704:1787" ph="{...}" />
+                <marker date="1537926251982" expanded="true" signature="1852:2797" ph="{...}" />
+                <marker date="1537926251982" expanded="true" signature="1891:2787" ph="{...}" />
+                <marker date="1537926251982" expanded="true" signature="2875:2996" ph="{...}" />
+                <marker date="1537926251982" expanded="true" signature="3070:4611" ph="{...}" />
+                <marker date="1537926251982" expanded="true" signature="3171:3526" ph="{...}" />
+                <marker date="1537926251982" expanded="true" signature="3581:4601" ph="{...}" />
+                <marker date="1537926251982" expanded="true" signature="4646:4786" ph="{...}" />
+                <marker date="1537926251982" expanded="true" signature="4815:4973" ph="{...}" />
+                <marker date="1537926251982" expanded="true" signature="5003:5201" ph="{...}" />
+                <marker date="1537926251982" expanded="true" signature="5256:5556" ph="{...}" />
+                <marker date="1537926251982" expanded="true" signature="5307:5546" ph="{...}" />
+                <marker date="1537926251982" expanded="true" signature="5591:5983" ph="{...}" />
+                <marker date="1537926251982" expanded="true" signature="5664:5973" ph="{...}" />
+                <marker date="1537926251982" expanded="true" signature="6054:7200" ph="{...}" />
+                <marker date="1537926251982" expanded="true" signature="6280:6718" ph="{...}" />
+                <marker date="1537926251982" expanded="true" signature="6388:6704" ph="{...}" />
+                <marker date="1537926251982" expanded="true" signature="6476:6686" ph="{...}" />
+                <marker date="1537926251982" expanded="true" signature="6735:7190" ph="{...}" />
+                <marker date="1537926251982" expanded="true" signature="6769:7020" ph="{...}" />
+                <marker date="1537926251982" expanded="true" signature="7059:7176" ph="{...}" />
+                <marker date="1537926251982" expanded="true" signature="7265:8164" ph="{...}" />
+                <marker date="1537926251982" expanded="true" signature="7492:8154" ph="{...}" />
+                <marker date="1537926251982" expanded="true" signature="7526:7967" ph="{...}" />
+                <marker date="1537926251982" expanded="true" signature="7615:7918" ph="{...}" />
+                <marker date="1537926251982" expanded="true" signature="7745:7896" ph="{...}" />
+                <marker date="1537926251982" expanded="true" signature="8006:8123" ph="{...}" />
+                <marker date="1537926251982" expanded="true" signature="8209:8305" ph="{...}" />
+                <marker date="1537926251982" expanded="true" signature="8349:8445" ph="{...}" />
+                <marker date="1537926251982" expanded="true" signature="8566:9406" ph="{...}" />
+                <marker date="1537926251982" expanded="true" signature="9076:9396" ph="{...}" />
+                <marker date="1537926251982" expanded="true" signature="9482:9946" ph="{...}" />
+                <marker date="1537926251982" expanded="true" signature="9622:9886" ph="{...}" />
+                <marker date="1537926251982" expanded="true" signature="10000:10519" ph="{...}" />
+                <marker date="1537926251982" expanded="true" signature="10387:10509" ph="{...}" />
+                <marker date="1537926251982" expanded="true" signature="10577:10948" ph="{...}" />
+                <marker date="1537926251982" expanded="true" signature="10801:10876" ph="{...}" />
+                <marker date="1537926251982" expanded="true" signature="11006:11659" ph="{...}" />
+                <marker date="1537926251982" expanded="true" signature="11208:11503" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -167,205 +167,22 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/MHW Save Editor/MainWindowPrompts.xaml.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="354">
-              <caret line="70" column="75" selection-start-line="70" selection-start-column="75" selection-end-line="70" selection-end-column="75" />
+            <state relative-caret-position="465">
+              <caret line="74" column="49" lean-forward="true" selection-start-line="74" selection-start-column="49" selection-end-line="74" selection-end-column="49" />
               <folding>
-                <marker date="1537920684187" expanded="true" signature="6:291" ph="..." />
-                <marker date="1537920684187" expanded="true" signature="318:6005" ph="{...}" />
-                <marker date="1537920684187" expanded="true" signature="356:6003" ph="{...}" />
-                <marker date="1537920684187" expanded="true" signature="406:1428" ph="{...}" />
-                <marker date="1537920684187" expanded="true" signature="775:1388" ph="{...}" />
-                <marker date="1537920684187" expanded="true" signature="859:1262" ph="{...}" />
-                <marker date="1537920684187" expanded="true" signature="1036:1244" ph="{...}" />
-                <marker date="1537920684187" expanded="true" signature="1483:1720" ph="{...}" />
-                <marker date="1537920684187" expanded="true" signature="1800:5194" ph="{...}" />
-                <marker date="1537920684187" expanded="true" signature="3818:5167" ph="{...}" />
-                <marker date="1537920684187" expanded="true" signature="5273:5527" ph="{...}" />
-                <marker date="1537920684187" expanded="true" signature="5600:5988" ph="{...}" />
-                <marker date="1537920684187" expanded="true" signature="5839:5943" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MHW Save Editor/InputBox.xaml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="32" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
-              <folding>
-                <marker date="1537919317963" expanded="true" signature="0:985" ph="&lt;&lt;Grid Margin=&quot;15&quot;&gt;&#10;        &lt;Grid.RowDefinitions&gt;&#10;            &lt;RowDefinition Height=&quot;Auto&quot; /&gt;&#10;            &lt;RowDefinition Height=&quot;Auto&quot; /&gt;&#10;            &lt;RowDefinition Height=&quot;Auto&quot; /&gt;&#10;        &lt;/Grid.RowDefinitions&gt;&#10;&#10;        &lt;Label Name=&quot;lblQuestion&quot; &gt;Question:&lt;/Label&gt;&#10;        &lt;TextBox Name=&quot;txtAnswer&quot; Grid.Row=&quot;1&quot; MinWidth=&quot;250&quot;&gt;Answer&lt;/TextBox&gt;&#10;&#10;        &lt;WrapPanel Grid.Row=&quot;2&quot; HorizontalAlignment=&quot;Right&quot; Margin=&quot;0,15,0,0&quot;&gt;&#10;            &lt;Button IsDefault=&quot;True&quot; Name=&quot;btnDialogOk&quot; Click=&quot;btnDialogOk_Click&quot; MinWidth=&quot;60&quot; Margin=&quot;0,0,10,0&quot;&gt;_Ok&lt;/Button&gt;&#10;            &lt;Button IsCancel=&quot;True&quot; MinWidth=&quot;60&quot;&gt;_Cancel&lt;/Button&gt;&#10;        &lt;/WrapPanel&gt;&#10;    &lt;/Grid&gt;.../&gt;" />
-                <marker date="1537919317963" expanded="true" signature="324:975" ph="&lt;&lt;Grid.RowDefinitions&gt;&#10;            &lt;RowDefinition Height=&quot;Auto&quot; /&gt;&#10;            &lt;RowDefinition Height=&quot;Auto&quot; /&gt;&#10;            &lt;RowDefinition Height=&quot;Auto&quot; /&gt;&#10;        &lt;/Grid.RowDefinitions&gt; &lt;Label Name=&quot;lblQuestion&quot; &gt;Question:&lt;/Label&gt; &lt;TextBox Name=&quot;txtAnswer&quot; Grid.Row=&quot;1&quot; MinWidth=&quot;250&quot;&gt;Answer&lt;/TextBox&gt; &lt;WrapPanel Grid.Row=&quot;2&quot; HorizontalAlignment=&quot;Right&quot; Margin=&quot;0,15,0,0&quot;&gt;&#10;            &lt;Button IsDefault=&quot;True&quot; Name=&quot;btnDialogOk&quot; Click=&quot;btnDialogOk_Click&quot; MinWidth=&quot;60&quot; Margin=&quot;0,0,10,0&quot;&gt;_Ok&lt;/Button&gt;&#10;            &lt;Button IsCancel=&quot;True&quot; MinWidth=&quot;60&quot;&gt;_Cancel&lt;/Button&gt;&#10;        &lt;/WrapPanel&gt;.../&gt;" />
-                <marker date="1537919317963" expanded="true" signature="351:535" ph="&lt;&lt;RowDefinition Height=&quot;Auto&quot; /&gt; &lt;RowDefinition Height=&quot;Auto&quot; /&gt; &lt;RowDefinition Height=&quot;Auto&quot; /&gt;.../&gt;" />
-                <marker date="1537919317963" expanded="true" signature="678:963" ph="&lt;&lt;Button IsDefault=&quot;True&quot; Name=&quot;btnDialogOk&quot; Click=&quot;btnDialogOk_Click&quot; MinWidth=&quot;60&quot; Margin=&quot;0,0,10,0&quot;&gt;_Ok&lt;/Button&gt; &lt;Button IsCancel=&quot;True&quot; MinWidth=&quot;60&quot;&gt;_Cancel&lt;/Button&gt;.../&gt;" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MHW Save Editor/src/InvestigationEditing/Investigation.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1296">
-              <caret line="319" column="32" selection-start-line="319" selection-start-column="32" selection-end-line="319" selection-end-column="32" />
-              <folding>
-                <marker date="1537849792972" expanded="false" signature="6:161" ph="..." />
-                <marker date="1537849792972" expanded="true" signature="210:15788" ph="{...}" />
-                <marker date="1537849792972" expanded="true" signature="258:15786" ph="{...}" />
-                <marker date="1537849792972" expanded="true" signature="378:815" ph="{...}" />
-                <marker date="1537849792972" expanded="true" signature="515:805" ph="{...}" />
-                <marker date="1537849792972" expanded="true" signature="932:1350" ph="{...}" />
-                <marker date="1537849792972" expanded="true" signature="958:1340" ph="{...}" />
-                <marker date="1537849792972" expanded="true" signature="1385:1451" ph="{...}" />
-                <marker date="1537849792972" expanded="true" signature="1650:8292" ph="Members" />
-                <marker date="1537849792972" expanded="true" signature="1692:1773" ph="{...}" />
-                <marker date="1537849792972" expanded="true" signature="1816:1918" ph="{...}" />
-                <marker date="1537849792972" expanded="true" signature="1942:2178" ph="{...}" />
-                <marker date="1537849792972" expanded="true" signature="2038:2168" ph="{...}" />
-                <marker date="1537849792972" expanded="true" signature="2203:2417" ph="{...}" />
-                <marker date="1537849792972" expanded="true" signature="2288:2407" ph="{...}" />
-                <marker date="1537849792972" expanded="true" signature="2446:2668" ph="{...}" />
-                <marker date="1537849792972" expanded="true" signature="2535:2658" ph="{...}" />
-                <marker date="1537849792972" expanded="true" signature="2692:2919" ph="{...}" />
-                <marker date="1537849792972" expanded="true" signature="2777:2909" ph="{...}" />
-                <marker date="1537849792972" expanded="true" signature="2943:3257" ph="{...}" />
-                <marker date="1537849792972" expanded="true" signature="3049:3247" ph="{...}" />
-                <marker date="1537849792972" expanded="true" signature="3281:3595" ph="{...}" />
-                <marker date="1537849792972" expanded="true" signature="3387:3585" ph="{...}" />
-                <marker date="1537849792972" expanded="true" signature="3619:3933" ph="{...}" />
-                <marker date="1537849792972" expanded="true" signature="3725:3923" ph="{...}" />
-                <marker date="1537849792972" expanded="true" signature="3962:4197" ph="{...}" />
-                <marker date="1537849792972" expanded="true" signature="4051:4187" ph="{...}" />
-                <marker date="1537849792972" expanded="true" signature="4226:4461" ph="{...}" />
-                <marker date="1537849792972" expanded="true" signature="4315:4451" ph="{...}" />
-                <marker date="1537849792972" expanded="true" signature="4490:4725" ph="{...}" />
-                <marker date="1537849792972" expanded="true" signature="4579:4715" ph="{...}" />
-                <marker date="1537849792972" expanded="true" signature="4748:4971" ph="{...}" />
-                <marker date="1537849792972" expanded="true" signature="4831:4961" ph="{...}" />
-                <marker date="1537849792972" expanded="true" signature="4997:5228" ph="{...}" />
-                <marker date="1537849792972" expanded="true" signature="5084:5218" ph="{...}" />
-                <marker date="1537849792972" expanded="true" signature="5255:5488" ph="{...}" />
-                <marker date="1537849792972" expanded="true" signature="5343:5478" ph="{...}" />
-                <marker date="1537849792972" expanded="true" signature="5510:5733" ph="{...}" />
-                <marker date="1537849792972" expanded="true" signature="5593:5723" ph="{...}" />
-                <marker date="1537849792972" expanded="true" signature="5763:6002" ph="{...}" />
-                <marker date="1537849792972" expanded="true" signature="5854:5992" ph="{...}" />
-                <marker date="1537849792972" expanded="true" signature="6038:6289" ph="{...}" />
-                <marker date="1537849792972" expanded="true" signature="6135:6279" ph="{...}" />
-                <marker date="1537849792972" expanded="true" signature="6322:6571" ph="{...}" />
-                <marker date="1537849792972" expanded="true" signature="6418:6561" ph="{...}" />
-                <marker date="1537849792972" expanded="true" signature="6604:6959" ph="{...}" />
-                <marker date="1537849792972" expanded="true" signature="6696:6949" ph="{...}" />
-                <marker date="1537849792972" expanded="true" signature="6993:7238" ph="{...}" />
-                <marker date="1537849792972" expanded="true" signature="7087:7228" ph="{...}" />
-                <marker date="1537849792972" expanded="true" signature="7260:7483" ph="{...}" />
-                <marker date="1537849792972" expanded="true" signature="7343:7473" ph="{...}" />
-                <marker date="1537849792972" expanded="true" signature="7505:7728" ph="{...}" />
-                <marker date="1537849792972" expanded="true" signature="7588:7718" ph="{...}" />
-                <marker date="1537849792972" expanded="true" signature="7762:8009" ph="{...}" />
-                <marker date="1537849792972" expanded="true" signature="7857:7999" ph="{...}" />
-                <marker date="1537849792972" expanded="true" signature="8038:8273" ph="{...}" />
-                <marker date="1537849792972" expanded="true" signature="8127:8263" ph="{...}" />
-                <marker date="1537849792972" expanded="true" signature="8302:10753" ph="Methods" />
-                <marker date="1537849792972" expanded="true" signature="8352:8438" ph="{...}" />
-                <marker date="1537849792972" expanded="true" signature="8720:9506" ph="{...}" />
-                <marker date="1537849792972" expanded="true" signature="9543:10733" ph="{...}" />
-                <marker date="1537849792972" expanded="true" signature="10771:15780" ph="DataCollections" />
-                <marker date="1537849792972" expanded="true" signature="10981:11134" ph="{...}" />
-                <marker date="1537849792972" expanded="true" signature="11287:11525" ph="{...}" />
-                <marker date="1537849792972" expanded="true" signature="11581:11677" ph="{...}" />
-                <marker date="1537849792972" expanded="true" signature="13121:13190" ph="{...}" />
-                <marker date="1537849792972" expanded="true" signature="13315:13708" ph="{...}" />
-                <marker date="1537849792972" expanded="true" signature="13907:14262" ph="{...}" />
-                <marker date="1537849792972" expanded="true" signature="14321:14933" ph="{...}" />
-                <marker date="1537849792972" expanded="true" signature="14402:14921" ph="{...}" />
-                <marker date="1537849792972" expanded="true" signature="15023:15760" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MHW Save Editor/MainWindowGeneral.xaml.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="24" column="49" selection-start-line="24" selection-start-column="49" selection-end-line="24" selection-end-column="49" />
-              <folding>
-                <marker date="1537510625352" expanded="false" signature="7:55" ph="..." />
-                <marker date="1537510625352" expanded="true" signature="82:1024" ph="{...}" />
-                <marker date="1537510625352" expanded="true" signature="89:167" ph="/// Interaction logic for MainWindow.xaml ... " />
-                <marker date="1537510625352" expanded="true" signature="203:1022" ph="{...}" />
-                <marker date="1537510625352" expanded="true" signature="281:1016" ph="{...}" />
-                <marker date="1537510625352" expanded="true" signature="530:1006" ph="{...}" />
-                <marker date="1537510625352" expanded="true" signature="614:836" ph="{...}" />
-                <marker date="1537510625352" expanded="true" signature="858:992" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MHW Save Editor/MainWindow.xaml.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="64" column="20" selection-start-line="64" selection-start-column="20" selection-end-line="64" selection-end-column="85" />
-              <folding>
-                <marker date="1537843811704" expanded="false" signature="6:331" ph="..." />
-                <marker date="1537843811704" expanded="true" signature="358:6165" ph="{...}" />
-                <marker date="1537843811704" expanded="true" signature="365:443" ph="/// Interaction logic for MainWindow.xaml ... " />
-                <marker date="1537843811704" expanded="true" signature="512:6158" ph="{...}" />
-                <marker date="1537843811704" expanded="true" signature="652:778" ph="{...}" />
-                <marker date="1537843811704" expanded="true" signature="848:1721" ph="{...}" />
-                <marker date="1537843811704" expanded="true" signature="1798:2638" ph="{...}" />
-                <marker date="1537843811704" expanded="true" signature="2184:2628" ph="{...}" />
-                <marker date="1537843811704" expanded="true" signature="2223:2454" ph="{...}" />
-                <marker date="1537843811704" expanded="true" signature="2475:2597" ph="{...}" />
-                <marker date="1537843811704" expanded="true" signature="2725:3264" ph="{...}" />
-                <marker date="1537843811704" expanded="true" signature="3350:3545" ph="{...}" />
-                <marker date="1537843811704" expanded="true" signature="3400:3535" ph="{...}" />
-                <marker date="1537843811704" expanded="true" signature="3602:3968" ph="{...}" />
-                <marker date="1537843811704" expanded="true" signature="3628:3958" ph="{...}" />
-                <marker date="1537843811704" expanded="true" signature="3691:3944" ph="{...}" />
-                <marker date="1537843811704" expanded="true" signature="4026:4394" ph="{...}" />
-                <marker date="1537843811704" expanded="true" signature="4052:4384" ph="{...}" />
-                <marker date="1537843811704" expanded="true" signature="4116:4370" ph="{...}" />
-                <marker date="1537843811704" expanded="true" signature="4447:4458" ph="{...}" />
-                <marker date="1537843811704" expanded="true" signature="4511:4522" ph="{...}" />
-                <marker date="1537843811704" expanded="true" signature="4596:4885" ph="{...}" />
-                <marker date="1537843811704" expanded="true" signature="4637:4875" ph="{...}" />
-                <marker date="1537843811704" expanded="true" signature="4952:5244" ph="{...}" />
-                <marker date="1537843811704" expanded="true" signature="4993:5234" ph="{...}" />
-                <marker date="1537843811704" expanded="true" signature="5320:5487" ph="{...}" />
-                <marker date="1537843811704" expanded="true" signature="5562:5730" ph="{...}" />
-                <marker date="1537843811704" expanded="true" signature="5877:6152" ph="{...}" />
-                <marker date="1537843811704" expanded="true" signature="6039:6142" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MHW Save Editor/src/FileFormat/SaveFile.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="251">
-              <caret line="65" column="47" selection-start-line="65" selection-start-column="47" selection-end-line="65" selection-end-column="47" />
-              <folding>
-                <marker date="1537912110215" expanded="false" signature="7:168" ph="..." />
-                <marker date="1537912110215" expanded="true" signature="206:2839" ph="{...}" />
-                <marker date="1537912110215" expanded="true" signature="227:2837" ph="{...}" />
-                <marker date="1537912110215" expanded="true" signature="442:623" ph="{...}" />
-                <marker date="1537912110215" expanded="true" signature="658:759" ph="{...}" />
-                <marker date="1537912110215" expanded="true" signature="790:1017" ph="{...}" />
-                <marker date="1537912110215" expanded="true" signature="844:1007" ph="{...}" />
-                <marker date="1537912110215" expanded="true" signature="1048:1262" ph="{...}" />
-                <marker date="1537912110215" expanded="true" signature="1089:1252" ph="{...}" />
-                <marker date="1537912110215" expanded="true" signature="1293:1338" ph="{...}" />
-                <marker date="1537912110215" expanded="true" signature="1398:1675" ph="{...}" />
-                <marker date="1537912110215" expanded="true" signature="1711:1980" ph="{...}" />
-                <marker date="1537912110215" expanded="true" signature="2027:2175" ph="{...}" />
-                <marker date="1537912110215" expanded="true" signature="2212:2306" ph="{...}" />
-                <marker date="1537912110215" expanded="true" signature="2345:2502" ph="{...}" />
-                <marker date="1537912110215" expanded="true" signature="2552:2822" ph="{...}" />
+                <marker date="1537926484480" expanded="false" signature="6:291" ph="..." />
+                <marker date="1537926484480" expanded="true" signature="318:6130" ph="{...}" />
+                <marker date="1537926484480" expanded="true" signature="356:6128" ph="{...}" />
+                <marker date="1537926484480" expanded="true" signature="406:1428" ph="{...}" />
+                <marker date="1537926484480" expanded="true" signature="775:1388" ph="{...}" />
+                <marker date="1537926484480" expanded="true" signature="859:1262" ph="{...}" />
+                <marker date="1537926484480" expanded="true" signature="1036:1244" ph="{...}" />
+                <marker date="1537926484480" expanded="true" signature="1483:1720" ph="{...}" />
+                <marker date="1537926484480" expanded="true" signature="1802:5319" ph="{...}" />
+                <marker date="1537926484480" expanded="true" signature="4144:5292" ph="{...}" />
+                <marker date="1537926484480" expanded="true" signature="5398:5652" ph="{...}" />
+                <marker date="1537926484480" expanded="true" signature="5725:6113" ph="{...}" />
+                <marker date="1537926484480" expanded="true" signature="5964:6068" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -375,8 +192,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>mywindow</find>
-      <find>yourAssembly</find>
       <find>MiscLabels</find>
       <find>MiscLa</find>
       <find>attemps</find>
@@ -405,6 +220,8 @@
       <find>&quot;Tempered&quot;</find>
       <find>Time</find>
       <find>TimeAmountGoal</find>
+      <find>Rank</find>
+      <find>attempts(x).ToString</find>
     </findStrings>
     <replaceStrings>
       <replace>IList&lt;byte&gt; = modified?newdata:filedata</replace>
@@ -486,6 +303,7 @@
     <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/Source/02558.00/Source/wpf/src/Framework/System/Windows/Controls/Control.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/Source/02558.00/Source/wpf/src/Framework/System/Windows/FrameworkElement.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/MHW Save Editor/src/Support/RowToIndexConverter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/Source/02558.00/Source/ndp/fx/src/Core/System/Linq/Enumerable.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///C# Console" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/MHW Save Editor/InputBox.xaml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/MHW Save Editor/InputBox.xaml.cs" root0="FORCE_HIGHLIGHTING" />
@@ -582,11 +400,11 @@
         <option value="$PROJECT_DIR$/MHW Save Editor/MainWindow.xaml" />
         <option value="$PROJECT_DIR$/MHW Save Editor/SortBox.xaml.cs" />
         <option value="$PROJECT_DIR$/MHW Save Editor/SortBox.xaml" />
-        <option value="$PROJECT_DIR$/MHW Save Editor/src/Utility/Utility.cs" />
         <option value="$PROJECT_DIR$/MHW Save Editor/src/InvestigationEditing/Investigation.cs" />
         <option value="$PROJECT_DIR$/MHW Save Editor/src/FileFormat/SaveFile.cs" />
-        <option value="$PROJECT_DIR$/MHW Save Editor/MainWindowInvestigation.xaml.cs" />
         <option value="$PROJECT_DIR$/MHW Save Editor/InputBox.xaml" />
+        <option value="$PROJECT_DIR$/MHW Save Editor/src/Utility/Utility.cs" />
+        <option value="$PROJECT_DIR$/MHW Save Editor/MainWindowInvestigation.xaml.cs" />
         <option value="$PROJECT_DIR$/MHW Save Editor/MainWindowPrompts.xaml.cs" />
       </list>
     </option>
@@ -647,6 +465,13 @@
               <item name="MHW Save Editor" type="24d0babc:SolutionExplorerModelNode" />
               <item name="src" type="24d0babc:SolutionExplorerModelNode" />
               <item name="InvestigationEditing" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="MHW Save Editor" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="MHW Save Editor" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="src" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Utility" type="24d0babc:SolutionExplorerModelNode" />
             </path>
             <path>
               <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
@@ -785,7 +610,7 @@
       <workItem from="1537858847085" duration="618000" />
       <workItem from="1537889369148" duration="162000" />
       <workItem from="1537889692373" duration="607000" />
-      <workItem from="1537911802782" duration="8877000" />
+      <workItem from="1537911802782" duration="14607000" />
     </task>
     <task id="LOCAL-00001" summary="-Fixed checksum algorithm, it works correctly now.&#10;-Fixed encryption algorithm, it works correctly now.&#10;-Modified GUI in preparation for added editors.">
       <created>1536902291909</created>
@@ -892,11 +717,18 @@
       <option name="project" value="LOCAL" />
       <updated>1537912531368</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Filter now works (without error handling).">
+      <created>1537920734585</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1537920734585</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="360978000" />
+    <option name="totallyTimeSpent" value="366708000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -917,7 +749,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.329718" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" weight="0.33188722" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.37201735" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.37201735" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49946696" weight="0.329718" />
@@ -928,7 +760,7 @@
       <window_info anchor="bottom" id="Unit Tests" order="11" weight="0.329718" />
       <window_info anchor="bottom" id="Terminal" order="12" weight="0.329718" />
       <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.50053304" side_tool="true" weight="0.329718" />
-      <window_info anchor="bottom" id="Build" order="14" weight="0.324295" />
+      <window_info active="true" anchor="bottom" id="Build" order="14" visible="true" weight="0.324295" />
       <window_info anchor="bottom" id="XAML Preview" order="15" weight="0.329718" />
       <window_info anchor="bottom" id="Stacktrace" order="16" weight="0.3308026" />
       <window_info anchor="bottom" id="Inspection Results" order="17" weight="0.329718" />
@@ -963,7 +795,8 @@
     <MESSAGE value="Fixes #3&#10;Fixes #4" />
     <MESSAGE value="README Update" />
     <MESSAGE value="Fixed Unencrypted save not working properly." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed Unencrypted save not working properly." />
+    <MESSAGE value="Filter now works (without error handling)." />
+    <option name="LAST_COMMIT_MESSAGE" value="Filter now works (without error handling)." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -981,26 +814,15 @@
           </properties>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/MHW Save Editor/MainWindowPrompts.xaml.cs</url>
-          <line>74</line>
-          <properties documentPath="$PROJECT_DIR$/MHW Save Editor/MainWindowPrompts.xaml.cs" initialLine="74">
-            <startOffsets>
-              <option value="3850" />
-            </startOffsets>
-            <endOffsets>
-              <option value="3887" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="DotNetProject">
+        <watch expression="valuation.Items[0]" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/MHW Save Editor/App.config">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/MHW Save Editor/EditorContent.xml" />
     <entry file="file://$PROJECT_DIR$/MHW Save Editor/Tabs/InvestigationsTab.xml.xaml.cs" />
     <entry file="file://$PROJECT_DIR$/MHW Save Editor/Tabs/InvestigationsTab.xml" />
@@ -1216,13 +1038,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MHW Save Editor/src/InvestigationEditing/InvestigationThinLayer.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="98" column="26" selection-start-line="98" selection-start-column="19" selection-end-line="98" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MHW Save Editor/src/InvestigationEditing/InvestigationView.xaml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="638">
@@ -1239,42 +1054,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/MHW Save Editor/SortBox.xaml.cs" />
     <entry file="file://$PROJECT_DIR$/MHW Save Editor/SortBox.xaml" />
-    <entry file="file://$PROJECT_DIR$/MHW Save Editor/src/Utility/Utility.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
-          <caret line="99" column="4" selection-start-line="99" selection-start-column="4" selection-end-line="99" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MHW Save Editor/MainWindow.xaml">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret selection-end-line="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MHW Save Editor/src/FileFormat/SaveFile.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="65" column="47" selection-start-line="65" selection-start-column="47" selection-end-line="65" selection-end-column="47" />
-          <folding>
-            <marker date="1537912110215" expanded="false" signature="7:168" ph="..." />
-            <marker date="1537912110215" expanded="true" signature="206:2839" ph="{...}" />
-            <marker date="1537912110215" expanded="true" signature="227:2837" ph="{...}" />
-            <marker date="1537912110215" expanded="true" signature="442:623" ph="{...}" />
-            <marker date="1537912110215" expanded="true" signature="658:759" ph="{...}" />
-            <marker date="1537912110215" expanded="true" signature="790:1017" ph="{...}" />
-            <marker date="1537912110215" expanded="true" signature="844:1007" ph="{...}" />
-            <marker date="1537912110215" expanded="true" signature="1048:1262" ph="{...}" />
-            <marker date="1537912110215" expanded="true" signature="1089:1252" ph="{...}" />
-            <marker date="1537912110215" expanded="true" signature="1293:1338" ph="{...}" />
-            <marker date="1537912110215" expanded="true" signature="1398:1675" ph="{...}" />
-            <marker date="1537912110215" expanded="true" signature="1711:1980" ph="{...}" />
-            <marker date="1537912110215" expanded="true" signature="2027:2175" ph="{...}" />
-            <marker date="1537912110215" expanded="true" signature="2212:2306" ph="{...}" />
-            <marker date="1537912110215" expanded="true" signature="2345:2502" ph="{...}" />
-            <marker date="1537912110215" expanded="true" signature="2552:2822" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1316,54 +1099,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MHW Save Editor/MainWindowInvestigation.xaml.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2152">
-          <caret line="215" column="186" selection-start-line="215" selection-start-column="186" selection-end-line="215" selection-end-column="186" />
-          <folding>
-            <marker date="1537917182024" expanded="false" signature="6:342" ph="..." />
-            <marker date="1537917182024" expanded="true" signature="369:10806" ph="{...}" />
-            <marker date="1537917182024" expanded="true" signature="407:10804" ph="{...}" />
-            <marker date="1537917182024" expanded="true" signature="517:1121" ph="{...}" />
-            <marker date="1537917182024" expanded="true" signature="1192:1559" ph="{...}" />
-            <marker date="1537917182024" expanded="true" signature="1382:1525" ph="{...}" />
-            <marker date="1537917182024" expanded="true" signature="1642:1725" ph="{...}" />
-            <marker date="1537917182024" expanded="true" signature="1790:2714" ph="{...}" />
-            <marker date="1537917182024" expanded="true" signature="1829:2704" ph="{...}" />
-            <marker date="1537917182024" expanded="true" signature="2792:2913" ph="{...}" />
-            <marker date="1537917182024" expanded="true" signature="2987:4528" ph="{...}" />
-            <marker date="1537917182024" expanded="true" signature="3088:3443" ph="{...}" />
-            <marker date="1537917182024" expanded="true" signature="3498:4518" ph="{...}" />
-            <marker date="1537917182024" expanded="true" signature="4563:4703" ph="{...}" />
-            <marker date="1537917182024" expanded="true" signature="4732:4890" ph="{...}" />
-            <marker date="1537917182024" expanded="true" signature="4920:5118" ph="{...}" />
-            <marker date="1537917182024" expanded="true" signature="5173:5473" ph="{...}" />
-            <marker date="1537917182024" expanded="true" signature="5224:5463" ph="{...}" />
-            <marker date="1537917182024" expanded="true" signature="5508:5900" ph="{...}" />
-            <marker date="1537917182024" expanded="true" signature="5581:5890" ph="{...}" />
-            <marker date="1537917182024" expanded="true" signature="5971:6666" ph="{...}" />
-            <marker date="1537917182024" expanded="true" signature="6028:6656" ph="{...}" />
-            <marker date="1537917182024" expanded="true" signature="6326:6642" ph="{...}" />
-            <marker date="1537917182024" expanded="true" signature="6414:6624" ph="{...}" />
-            <marker date="1537917182024" expanded="true" signature="6731:7294" ph="{...}" />
-            <marker date="1537917182024" expanded="true" signature="6958:7284" ph="{...}" />
-            <marker date="1537917182024" expanded="true" signature="7038:7244" ph="{...}" />
-            <marker date="1537917182024" expanded="true" signature="7339:7435" ph="{...}" />
-            <marker date="1537917182024" expanded="true" signature="7479:7575" ph="{...}" />
-            <marker date="1537917182024" expanded="true" signature="7696:8536" ph="{...}" />
-            <marker date="1537917182024" expanded="true" signature="8206:8526" ph="{...}" />
-            <marker date="1537917182024" expanded="true" signature="8612:9076" ph="{...}" />
-            <marker date="1537917182024" expanded="true" signature="8752:9016" ph="{...}" />
-            <marker date="1537917182024" expanded="true" signature="9130:9649" ph="{...}" />
-            <marker date="1537917182024" expanded="true" signature="9517:9639" ph="{...}" />
-            <marker date="1537917182024" expanded="true" signature="9707:10078" ph="{...}" />
-            <marker date="1537917182024" expanded="true" signature="9931:10006" ph="{...}" />
-            <marker date="1537917182024" expanded="true" signature="10136:10789" ph="{...}" />
-            <marker date="1537917182024" expanded="true" signature="10338:10633" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MHW Save Editor/InputBox.xaml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -1377,10 +1112,103 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/MHW Save Editor/MainWindowGeneral.xaml.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="24" column="49" selection-start-line="24" selection-start-column="49" selection-end-line="24" selection-end-column="49" />
+          <folding>
+            <marker date="1537510625352" expanded="false" signature="7:55" ph="..." />
+            <marker date="1537510625352" expanded="true" signature="82:1024" ph="{...}" />
+            <marker date="1537510625352" expanded="true" signature="89:167" ph="/// Interaction logic for MainWindow.xaml ... " />
+            <marker date="1537510625352" expanded="true" signature="203:1022" ph="{...}" />
+            <marker date="1537510625352" expanded="true" signature="281:1016" ph="{...}" />
+            <marker date="1537510625352" expanded="true" signature="530:1006" ph="{...}" />
+            <marker date="1537510625352" expanded="true" signature="614:836" ph="{...}" />
+            <marker date="1537510625352" expanded="true" signature="858:992" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/BDB0B216-01EA-4964-80D6-B1CEC57AD3DA/66/5feda587/Expression.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="15" selection-start-line="12" selection-start-column="15" selection-end-line="12" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MHW Save Editor/src/FileFormat/SaveFile.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="353">
+          <caret line="65" column="47" selection-start-line="65" selection-start-column="47" selection-end-line="65" selection-end-column="47" />
+          <folding>
+            <marker date="1537912110215" expanded="false" signature="7:168" ph="..." />
+            <marker date="1537912110215" expanded="true" signature="206:2839" ph="{...}" />
+            <marker date="1537912110215" expanded="true" signature="227:2837" ph="{...}" />
+            <marker date="1537912110215" expanded="true" signature="442:623" ph="{...}" />
+            <marker date="1537912110215" expanded="true" signature="658:759" ph="{...}" />
+            <marker date="1537912110215" expanded="true" signature="790:1017" ph="{...}" />
+            <marker date="1537912110215" expanded="true" signature="844:1007" ph="{...}" />
+            <marker date="1537912110215" expanded="true" signature="1048:1262" ph="{...}" />
+            <marker date="1537912110215" expanded="true" signature="1089:1252" ph="{...}" />
+            <marker date="1537912110215" expanded="true" signature="1293:1338" ph="{...}" />
+            <marker date="1537912110215" expanded="true" signature="1398:1675" ph="{...}" />
+            <marker date="1537912110215" expanded="true" signature="1711:1980" ph="{...}" />
+            <marker date="1537912110215" expanded="true" signature="2027:2175" ph="{...}" />
+            <marker date="1537912110215" expanded="true" signature="2212:2306" ph="{...}" />
+            <marker date="1537912110215" expanded="true" signature="2345:2502" ph="{...}" />
+            <marker date="1537912110215" expanded="true" signature="2552:2822" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MHW Save Editor/src/InvestigationEditing/InvestigationThinLayer.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1156">
+          <caret line="98" column="26" selection-start-line="98" selection-start-column="19" selection-end-line="98" selection-end-column="26" />
+          <folding>
+            <marker date="1537841622604" expanded="false" signature="6:85" ph="..." />
+            <marker date="1537841622604" expanded="true" signature="133:5144" ph="{...}" />
+            <marker date="1537841622604" expanded="true" signature="212:5137" ph="{...}" />
+            <marker date="1537841622604" expanded="true" signature="308:356" ph="{...}" />
+            <marker date="1537841622604" expanded="true" signature="366:4024" ph="Members" />
+            <marker date="1537841622604" expanded="true" signature="489:578" ph="{...}" />
+            <marker date="1537841622604" expanded="true" signature="607:727" ph="{...}" />
+            <marker date="1537841622604" expanded="true" signature="757:920" ph="{...}" />
+            <marker date="1537841622604" expanded="true" signature="945:1091" ph="{...}" />
+            <marker date="1537841622604" expanded="true" signature="1124:1223" ph="{...}" />
+            <marker date="1537841622604" expanded="true" signature="1249:1348" ph="{...}" />
+            <marker date="1537841622604" expanded="true" signature="1375:1469" ph="{...}" />
+            <marker date="1537841622604" expanded="true" signature="1496:1590" ph="{...}" />
+            <marker date="1537841622604" expanded="true" signature="1617:1711" ph="{...}" />
+            <marker date="1537841622604" expanded="true" signature="1756:1859" ph="{...}" />
+            <marker date="1537841622604" expanded="true" signature="1916:2021" ph="{...}" />
+            <marker date="1537841622604" expanded="true" signature="2050:2171" ph="{...}" />
+            <marker date="1537841622604" expanded="true" signature="2200:2321" ph="{...}" />
+            <marker date="1537841622604" expanded="true" signature="2350:2471" ph="{...}" />
+            <marker date="1537841622604" expanded="true" signature="2493:2592" ph="{...}" />
+            <marker date="1537841622604" expanded="true" signature="2618:2717" ph="{...}" />
+            <marker date="1537841622604" expanded="true" signature="2744:2843" ph="{...}" />
+            <marker date="1537841622604" expanded="true" signature="2865:2964" ph="{...}" />
+            <marker date="1537841622604" expanded="true" signature="2986:3085" ph="{...}" />
+            <marker date="1537841622604" expanded="true" signature="3118:3217" ph="{...}" />
+            <marker date="1537841622604" expanded="true" signature="3252:3351" ph="{...}" />
+            <marker date="1537841622604" expanded="true" signature="3373:3472" ph="{...}" />
+            <marker date="1537841622604" expanded="true" signature="3502:3601" ph="{...}" />
+            <marker date="1537841622604" expanded="true" signature="3637:3736" ph="{...}" />
+            <marker date="1537841622604" expanded="true" signature="3771:3870" ph="{...}" />
+            <marker date="1537841622604" expanded="true" signature="3906:4005" ph="{...}" />
+            <marker date="1537841622604" expanded="true" signature="4091:4341" ph="{...}" />
+            <marker date="1537841622604" expanded="true" signature="4412:4662" ph="{...}" />
+            <marker date="1537841622604" expanded="true" signature="4838:4966" ph="{...}" />
+            <marker date="1537841622604" expanded="true" signature="5021:5130" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/MHW Save Editor/src/InvestigationEditing/Investigation.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1296">
-          <caret line="319" column="32" selection-start-line="319" selection-start-column="32" selection-end-line="319" selection-end-column="32" />
+        <state relative-caret-position="174">
+          <caret line="82" column="23" selection-start-line="82" selection-start-column="19" selection-end-line="82" selection-end-column="23" />
           <folding>
             <marker date="1537849792972" expanded="false" signature="6:161" ph="..." />
             <marker date="1537849792972" expanded="true" signature="210:15788" ph="{...}" />
@@ -1457,48 +1285,118 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MHW Save Editor/MainWindowGeneral.xaml.cs">
+    <entry file="file://$USER_HOME$/AppData/Local/Symbols/src/Source/02558.00/Source/ndp/fx/src/Core/System/Linq/Enumerable.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="24" column="49" selection-start-line="24" selection-start-column="49" selection-end-line="24" selection-end-column="49" />
+        <state relative-caret-position="184">
+          <caret line="740" column="12" selection-start-line="740" selection-start-column="12" selection-end-line="740" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MHW Save Editor/src/Utility/Utility.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-55">
+          <caret line="91" column="38" selection-start-line="91" selection-start-column="38" selection-end-line="91" selection-end-column="38" />
           <folding>
-            <marker date="1537510625352" expanded="false" signature="7:55" ph="..." />
-            <marker date="1537510625352" expanded="true" signature="82:1024" ph="{...}" />
-            <marker date="1537510625352" expanded="true" signature="89:167" ph="/// Interaction logic for MainWindow.xaml ... " />
-            <marker date="1537510625352" expanded="true" signature="203:1022" ph="{...}" />
-            <marker date="1537510625352" expanded="true" signature="281:1016" ph="{...}" />
-            <marker date="1537510625352" expanded="true" signature="530:1006" ph="{...}" />
-            <marker date="1537510625352" expanded="true" signature="614:836" ph="{...}" />
-            <marker date="1537510625352" expanded="true" signature="858:992" ph="{...}" />
+            <marker date="1537926035030" expanded="false" signature="6:205" ph="..." />
+            <marker date="1537926035030" expanded="true" signature="232:4675" ph="{...}" />
+            <marker date="1537926035030" expanded="true" signature="259:3441" ph="{...}" />
+            <marker date="1537926035030" expanded="true" signature="309:1390" ph="{...}" />
+            <marker date="1537926035030" expanded="true" signature="536:1350" ph="{...}" />
+            <marker date="1537926035030" expanded="true" signature="794:1336" ph="{...}" />
+            <marker date="1537926035030" expanded="true" signature="950:1247" ph="{...}" />
+            <marker date="1537926035030" expanded="true" signature="1444:1798" ph="{...}" />
+            <marker date="1537926035030" expanded="true" signature="1556:1760" ph="{...}" />
+            <marker date="1537926035030" expanded="true" signature="1882:2044" ph="{...}" />
+            <marker date="1537926035030" expanded="true" signature="2126:2256" ph="{...}" />
+            <marker date="1537926035030" expanded="true" signature="2310:2821" ph="{...}" />
+            <marker date="1537926035030" expanded="true" signature="2839:2988" ph="/* Taken from the solution to the problem in O(n) time, O(1) space ... */" />
+            <marker date="1537926035030" expanded="true" signature="3068:3426" ph="{...}" />
+            <marker date="1537926035030" expanded="true" signature="3353:3416" ph="{...}" />
+            <marker date="1537926035030" expanded="true" signature="3480:4049" ph="{...}" />
+            <marker date="1537926035030" expanded="true" signature="3607:3715" ph="{...}" />
+            <marker date="1537926035030" expanded="true" signature="3725:3843" ph="/* Convenience method on IEnumerable&lt;T&gt; to allow passing of a ... */" />
+            <marker date="1537926035030" expanded="true" signature="3943:4043" ph="{...}" />
+            <marker date="1537926035030" expanded="true" signature="4055:4213" ph="/* Wraps a generic Comparison&lt;T&gt; delegate in an IComparer to make it easy ... */" />
+            <marker date="1537926035030" expanded="true" signature="4278:4673" ph="{...}" />
+            <marker date="1537926035030" expanded="true" signature="4397:4455" ph="{...}" />
+            <marker date="1537926035030" expanded="true" signature="4493:4551" ph="{...}" />
+            <marker date="1537926035030" expanded="true" signature="4601:4667" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/BDB0B216-01EA-4964-80D6-B1CEC57AD3DA/66/5feda587/Expression.cs">
+    <entry file="file://$PROJECT_DIR$/MHW Save Editor/MainWindowInvestigation.xaml.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="15" selection-start-line="12" selection-start-column="15" selection-end-line="12" selection-end-column="15" />
+        <state relative-caret-position="-935">
+          <caret line="199" column="13" selection-start-line="199" selection-start-column="13" selection-end-line="199" selection-end-column="13" />
+          <folding>
+            <marker date="1537926251982" expanded="false" signature="6:404" ph="..." />
+            <marker date="1537926251982" expanded="true" signature="431:11676" ph="{...}" />
+            <marker date="1537926251982" expanded="true" signature="469:11674" ph="{...}" />
+            <marker date="1537926251982" expanded="true" signature="579:1183" ph="{...}" />
+            <marker date="1537926251982" expanded="true" signature="1254:1621" ph="{...}" />
+            <marker date="1537926251982" expanded="true" signature="1444:1587" ph="{...}" />
+            <marker date="1537926251982" expanded="true" signature="1704:1787" ph="{...}" />
+            <marker date="1537926251982" expanded="true" signature="1852:2797" ph="{...}" />
+            <marker date="1537926251982" expanded="true" signature="1891:2787" ph="{...}" />
+            <marker date="1537926251982" expanded="true" signature="2875:2996" ph="{...}" />
+            <marker date="1537926251982" expanded="true" signature="3070:4611" ph="{...}" />
+            <marker date="1537926251982" expanded="true" signature="3171:3526" ph="{...}" />
+            <marker date="1537926251982" expanded="true" signature="3581:4601" ph="{...}" />
+            <marker date="1537926251982" expanded="true" signature="4646:4786" ph="{...}" />
+            <marker date="1537926251982" expanded="true" signature="4815:4973" ph="{...}" />
+            <marker date="1537926251982" expanded="true" signature="5003:5201" ph="{...}" />
+            <marker date="1537926251982" expanded="true" signature="5256:5556" ph="{...}" />
+            <marker date="1537926251982" expanded="true" signature="5307:5546" ph="{...}" />
+            <marker date="1537926251982" expanded="true" signature="5591:5983" ph="{...}" />
+            <marker date="1537926251982" expanded="true" signature="5664:5973" ph="{...}" />
+            <marker date="1537926251982" expanded="true" signature="6054:7200" ph="{...}" />
+            <marker date="1537926251982" expanded="true" signature="6280:6718" ph="{...}" />
+            <marker date="1537926251982" expanded="true" signature="6388:6704" ph="{...}" />
+            <marker date="1537926251982" expanded="true" signature="6476:6686" ph="{...}" />
+            <marker date="1537926251982" expanded="true" signature="6735:7190" ph="{...}" />
+            <marker date="1537926251982" expanded="true" signature="6769:7020" ph="{...}" />
+            <marker date="1537926251982" expanded="true" signature="7059:7176" ph="{...}" />
+            <marker date="1537926251982" expanded="true" signature="7265:8164" ph="{...}" />
+            <marker date="1537926251982" expanded="true" signature="7492:8154" ph="{...}" />
+            <marker date="1537926251982" expanded="true" signature="7526:7967" ph="{...}" />
+            <marker date="1537926251982" expanded="true" signature="7615:7918" ph="{...}" />
+            <marker date="1537926251982" expanded="true" signature="7745:7896" ph="{...}" />
+            <marker date="1537926251982" expanded="true" signature="8006:8123" ph="{...}" />
+            <marker date="1537926251982" expanded="true" signature="8209:8305" ph="{...}" />
+            <marker date="1537926251982" expanded="true" signature="8349:8445" ph="{...}" />
+            <marker date="1537926251982" expanded="true" signature="8566:9406" ph="{...}" />
+            <marker date="1537926251982" expanded="true" signature="9076:9396" ph="{...}" />
+            <marker date="1537926251982" expanded="true" signature="9482:9946" ph="{...}" />
+            <marker date="1537926251982" expanded="true" signature="9622:9886" ph="{...}" />
+            <marker date="1537926251982" expanded="true" signature="10000:10519" ph="{...}" />
+            <marker date="1537926251982" expanded="true" signature="10387:10509" ph="{...}" />
+            <marker date="1537926251982" expanded="true" signature="10577:10948" ph="{...}" />
+            <marker date="1537926251982" expanded="true" signature="10801:10876" ph="{...}" />
+            <marker date="1537926251982" expanded="true" signature="11006:11659" ph="{...}" />
+            <marker date="1537926251982" expanded="true" signature="11208:11503" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/MHW Save Editor/MainWindowPrompts.xaml.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="70" column="75" selection-start-line="70" selection-start-column="75" selection-end-line="70" selection-end-column="75" />
+        <state relative-caret-position="465">
+          <caret line="74" column="49" lean-forward="true" selection-start-line="74" selection-start-column="49" selection-end-line="74" selection-end-column="49" />
           <folding>
-            <marker date="1537920684187" expanded="true" signature="6:291" ph="..." />
-            <marker date="1537920684187" expanded="true" signature="318:6005" ph="{...}" />
-            <marker date="1537920684187" expanded="true" signature="356:6003" ph="{...}" />
-            <marker date="1537920684187" expanded="true" signature="406:1428" ph="{...}" />
-            <marker date="1537920684187" expanded="true" signature="775:1388" ph="{...}" />
-            <marker date="1537920684187" expanded="true" signature="859:1262" ph="{...}" />
-            <marker date="1537920684187" expanded="true" signature="1036:1244" ph="{...}" />
-            <marker date="1537920684187" expanded="true" signature="1483:1720" ph="{...}" />
-            <marker date="1537920684187" expanded="true" signature="1800:5194" ph="{...}" />
-            <marker date="1537920684187" expanded="true" signature="3818:5167" ph="{...}" />
-            <marker date="1537920684187" expanded="true" signature="5273:5527" ph="{...}" />
-            <marker date="1537920684187" expanded="true" signature="5600:5988" ph="{...}" />
-            <marker date="1537920684187" expanded="true" signature="5839:5943" ph="{...}" />
+            <marker date="1537926484480" expanded="false" signature="6:291" ph="..." />
+            <marker date="1537926484480" expanded="true" signature="318:6130" ph="{...}" />
+            <marker date="1537926484480" expanded="true" signature="356:6128" ph="{...}" />
+            <marker date="1537926484480" expanded="true" signature="406:1428" ph="{...}" />
+            <marker date="1537926484480" expanded="true" signature="775:1388" ph="{...}" />
+            <marker date="1537926484480" expanded="true" signature="859:1262" ph="{...}" />
+            <marker date="1537926484480" expanded="true" signature="1036:1244" ph="{...}" />
+            <marker date="1537926484480" expanded="true" signature="1483:1720" ph="{...}" />
+            <marker date="1537926484480" expanded="true" signature="1802:5319" ph="{...}" />
+            <marker date="1537926484480" expanded="true" signature="4144:5292" ph="{...}" />
+            <marker date="1537926484480" expanded="true" signature="5398:5652" ph="{...}" />
+            <marker date="1537926484480" expanded="true" signature="5725:6113" ph="{...}" />
+            <marker date="1537926484480" expanded="true" signature="5964:6068" ph="{...}" />
           </folding>
         </state>
       </provider>

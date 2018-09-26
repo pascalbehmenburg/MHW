@@ -79,6 +79,24 @@ namespace MHW_Save_Editor
             Application.Current.Dispatcher.Invoke(DispatcherPriority.Background,
                 new Action(delegate { }));
         }
+        
+        //Taken from the solution to the problem in O(n) time, O(1) space
+        //https://www.geeksforgeeks.org/reorder-a-array-according-to-given-indexes/
+        public static void ParallelSort<T>(this IList<T> arr, IList<int> index)
+        {
+            int n = index.Count;
+            T[] temp = new T[n];
+ 
+            // arr[i] should be present at index[i] index
+            for (int i=0; i<n; i++)
+                temp[i] = arr[index[i]];
+            // Copy temp[] to arr[]
+            for (int i=0; i<n; i++)
+            { 
+                arr[i] = temp[i];
+            }
+        }
+        
     }
     public static class SortExtensions
     {

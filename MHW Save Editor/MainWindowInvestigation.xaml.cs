@@ -7,8 +7,10 @@ using System.IO;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Data;
+using System.Windows.Documents;
 using MHW_Save_Editor.InvestigationEditing;
 using MHW_Save_Editor.Tabs;
 
@@ -61,11 +63,11 @@ namespace MHW_Save_Editor
                     Commit();
                     break;
                 case("Sort"):
-                    //Func<Investigation,int > sorter = PromptInvestigationsSort();
-                    ReSort();//sorter);
+                    Func<Investigation,int > sorter = PromptInvestigationsFunction<int>();
+                    ReSort(sorter);//sorter);
                     break;
                 case("Filter"):
-                    Func<Investigation,bool > filterer = PromptInvestigationsFilter();
+                    Func<Investigation,bool > filterer = PromptInvestigationsFunction<bool>();
                     ClearAll(filterer);
                     break;
                 default:
@@ -167,11 +169,10 @@ namespace MHW_Save_Editor
 
         private void ReSort(Func<Investigation, int> sorterer = null)
         {
-            
+            IList<Investigation> list = (IList<Investigation>) ((ListCollectionView) Application.Current.Resources[
+                "InvestigationCollectionView"]).SourceCollection;
             if (sorterer == null)
             {
-                IList<Investigation> list = (IList<Investigation>) ((ListCollectionView) Application.Current.Resources[
-                    "InvestigationCollectionView"]).SourceCollection;
                 int j = 0;
                 for (int i = 0; i < Investigation.inv_number - j;)
                 {
@@ -184,6 +185,19 @@ namespace MHW_Save_Editor
                     }
                 }
             }
+            else
+            {
+                try
+                {
+                    List<int> valuation = Enumerable.Range(0, Investigation.inv_number)
+                        .OrderByDescending(i => sorterer(list[i])).ToList();
+                    list.ParallelSort(valuation);
+                }
+                catch
+                {
+                    MessageBox.Show("Supplied expression failed.", "Error", MessageBoxButton.OK);
+                }
+            }
         }
 
         private void ClearAll(Func<Investigation, bool> filter)
@@ -192,12 +206,24 @@ namespace MHW_Save_Editor
                 "InvestigationCollectionView"]).SourceCollection;
             if (!(filter == null))
             {
-                for (int i = 0; i < Investigation.inv_number;i++)
+                try
                 {
-                    Investigation inv = list[i];
-                    if (inv.Filled && filter(inv)){list[i]=new Investigation(InvestigationThinLayer.nullinvestigation);}
+                    for (int i = 0; i < Investigation.inv_number; i++)
+                    {
+                        Investigation inv = list[i];
+                        if (inv.Filled && filter(inv))
+                        {
+                            list[i] = new Investigation(InvestigationThinLayer.nullinvestigation);
+                        }
+                    }
+
+                    ReSort();
                 }
-                ReSort();
+                catch
+                {
+                    MessageBox.Show("Supplied expression failed.", "Error", MessageBoxButton.OK);
+                }
+                
             }
         }
 
