@@ -58,8 +58,11 @@ namespace MHW_Save_Editor
                         Paste();
                     break;
                 case("Paste At"):
-                    List<int> positions = PromptPositions();
-                    PasteAt(positions);
+                    if (_clipboard != null)
+                    {
+                        List<int> positions = PromptPositions();
+                        PasteAt(positions);
+                    }
                     break;
                 case("Commit All"):
                     Commit();

@@ -29,7 +29,7 @@ namespace MHW_Save_Editor
                     foreach (string argument in intermediates)
                     {
                         if (argument.Contains('-'))positions.AddRange(ParseRange(argument));
-                        else positions.Add(Convert.ToInt32(argument));
+                        else positions.Add(  Math.Min(Math.Max(Convert.ToInt32(argument),1),Investigation.inv_number)   );
                     }
                 }
                 catch{MessageBox.Show("Invalid Position List", "Invalid Position List", MessageBoxButton.OK);} 
@@ -40,7 +40,9 @@ namespace MHW_Save_Editor
         private List<int> ParseRange(string argument)
         {
             List<string>range = Regex.Replace(argument, @"\s+", "").Split('-').ToList();
-            return Enumerable.Range(Convert.ToInt32(range[0]), Convert.ToInt32(range[1])-Convert.ToInt32(range[0])+1).ToList();
+            int lowerend = Math.Min(Math.Max(Convert.ToInt32(range[0]),1),Investigation.inv_number);
+            int upperend = Math.Min(Math.Max(Convert.ToInt32(range[1]),1),Investigation.inv_number);
+            return Enumerable.Range(lowerend, upperend-lowerend+1).ToList();
         }
 
         private static readonly Func<Investigation, int > _aux_func_attempts = (x => x.Attempts);
