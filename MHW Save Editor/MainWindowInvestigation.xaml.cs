@@ -54,7 +54,8 @@ namespace MHW_Save_Editor
                     Copy();
                     break;
                 case("Paste"):
-                    Paste();
+                    if (_clipboard != null)
+                        Paste();
                     break;
                 case("Paste At"):
                     List<int> positions = PromptPositions();
