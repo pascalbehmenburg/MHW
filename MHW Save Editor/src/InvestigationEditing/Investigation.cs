@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Linq;
 using System.Text;
 using MHW_Save_Editor.Data;
 
@@ -41,17 +42,27 @@ namespace MHW_Save_Editor.InvestigationEditing
         {
             get => LocalesNames[LocaleIndex];
         }
+        
+        public string Legality
+        {
+            get
+            {
+                StringBuilder Bob = new StringBuilder();
+                UntemperableCondition(Bob);
+                RankTemperCondition(Bob);
+                ElderCondition(Bob);
+                MonsterLocaleCondition(Bob);
+                PickleBagelCondition(Bob);
+                return Bob.ToString();
+            }
+        }
 
         public static readonly int inv_size = 42;
         public static readonly int inv_number = 250;
         public static readonly int[] inv_offsets = {0x003DADB1, 0x004D0EC1, 0x005C6FD1};
+        
 
     #region Members
-
-        public bool Legal
-        {
-            get { return true; }
-        }
         
         public bool Filled
         {
@@ -62,6 +73,7 @@ namespace MHW_Save_Editor.InvestigationEditing
         {
             get => _underlyingInvestigationThinLayer.Filled?"Clear":"Initialize";
         }
+        
         public int Goal
         {
             get => _underlyingInvestigationThinLayer.TimeAmountIndex;
@@ -69,6 +81,7 @@ namespace MHW_Save_Editor.InvestigationEditing
                 _underlyingInvestigationThinLayer.TimeAmountIndex = value;
                 RaisePropertyChanged();
                 RaisePropertyChanged("InvestigationTitle");
+                RaisePropertyChanged("Legality");
             }
         }
         public bool Seen
@@ -94,6 +107,7 @@ namespace MHW_Save_Editor.InvestigationEditing
             {
                 _underlyingInvestigationThinLayer.Rank = value;
                 RaisePropertyChanged();
+                RaisePropertyChanged("Legality");
             }
         }
         public int Mon1
@@ -103,6 +117,7 @@ namespace MHW_Save_Editor.InvestigationEditing
                 _underlyingInvestigationThinLayer.Mon1 = _MonstersCodeList[value];
                 RaisePropertyChanged();
                 RaisePropertyChanged("InvestigationTitle");
+                RaisePropertyChanged("Legality");
             }
         }
         public int Mon2
@@ -112,6 +127,7 @@ namespace MHW_Save_Editor.InvestigationEditing
                 _underlyingInvestigationThinLayer.Mon2 = _MonstersCodeList[value];
                 RaisePropertyChanged();
                 RaisePropertyChanged("InvestigationTitle");
+                RaisePropertyChanged("Legality");
             }
         }
         public int Mon3
@@ -121,6 +137,7 @@ namespace MHW_Save_Editor.InvestigationEditing
                 _underlyingInvestigationThinLayer.Mon3 = _MonstersCodeList[value];
                 RaisePropertyChanged();
                 RaisePropertyChanged("InvestigationTitle");
+                RaisePropertyChanged("Legality");
             }
         }
         public bool M1Temper
@@ -130,6 +147,7 @@ namespace MHW_Save_Editor.InvestigationEditing
             {
                 _underlyingInvestigationThinLayer.M1Temper = value;
                 RaisePropertyChanged();
+                RaisePropertyChanged("Legality");
             }
         }
         public bool M2Temper
@@ -139,6 +157,7 @@ namespace MHW_Save_Editor.InvestigationEditing
             {
                 _underlyingInvestigationThinLayer.M2Temper = value;
                 RaisePropertyChanged();
+                RaisePropertyChanged("Legality");
             }
         }
         public bool M3Temper
@@ -148,6 +167,7 @@ namespace MHW_Save_Editor.InvestigationEditing
             {
                 _underlyingInvestigationThinLayer.M3Temper = value;
                 RaisePropertyChanged();
+                RaisePropertyChanged("Legality");
             }
         }
 
@@ -223,6 +243,7 @@ namespace MHW_Save_Editor.InvestigationEditing
                 RaisePropertyChanged();
                 RaisePropertyChanged("CurrentFlourishes");
                 RaisePropertyChanged("FlourishIndex");
+                RaisePropertyChanged("Legality");
             }
         }
 
@@ -274,7 +295,7 @@ namespace MHW_Save_Editor.InvestigationEditing
         }
         #endregion
 
-        #region Methods
+    #region Methods
 
         public byte[] Serialize()
         {
@@ -314,18 +335,70 @@ namespace MHW_Save_Editor.InvestigationEditing
             return builder.ToString();
         }
 
-        #endregion
+    #endregion
         
-        #region LegalityConditions
+    #region LegalityConditions
+       
+        private void UntemperableCondition(StringBuilder Bob)
+            //Checks if an untemperable monster has been tempered
+        {
+            string mon = MonsterNames[Mon1];
+            if (_untemperable.Contains(mon) && M1Temper)
+                Bob.Append($"{mon} cannot be tempered.");
+            mon = MonsterNames[Mon2];
+            if (_untemperable.Contains(mon) && M2Temper)
+                Bob.Append($"{mon} cannot be tempered.");
+            mon = MonsterNames[Mon3];
+            if (_untemperable.Contains(mon) && M3Temper)
+                Bob.Append($"{mon} cannot be tempered.");
+        }
 
-        private bool JagrasCondition()
+        private void RankTemperCondition(StringBuilder Bob)
+            //Checks if there's tempering on a Low or High Rank investigation
+        {
+            if ((M1Temper || M2Temper || M3Temper)&& Rank!=2)Bob.Append($"Cannot have a Tempered Monster on a Non-Tempered Hunt.{Environment.NewLine}");
+        }
+        
+        private static bool IsElder(int moncode)
+        {
+            return _Elders.Contains(_MonsterNames[moncode]);
+        }
+
+        private static bool IsEmpty(int moncode)
+        {
+            return _MonsterNames[moncode] == "Empty";
+        }
+        
+        private void ElderCondition(StringBuilder Bob)
+            //Checks elder dragons have no other monsters on their hunt
+        {
+            if (IsElder(Mon2) || IsElder(Mon3)) Bob.Append($"Elder Dragons should be in slot 1.{Environment.NewLine}");
+            if (IsElder(Mon1) && !(IsEmpty(Mon2) && IsEmpty(Mon3))) Bob.Append($"Elder Dragons should be alone, set slot 2 and 3 to Empty.{Environment.NewLine}");
+            if (IsElder(Mon1) && Goal>=3) Bob.Append($"Elder Dragons only allow Hunt 1 Monster in 50/30/15 min as a goal.{Environment.NewLine}");
+        }
+
+        private void MonsterLocaleCondition(StringBuilder Bob)
+            //Checks if Monsters can be in the Locale and Rank of the investigation
+        {
+            if (!MonsterInLocale(Mon1, LocaleIndex, Rank))Bob.Append($"{MonsterNames[Mon1]} cannot be found in {LocalesNames[LocaleIndex]} at rank {RankChoices[Rank]}.{Environment.NewLine}");
+            if (!MonsterInLocale(Mon2, LocaleIndex, Rank))Bob.Append($"{MonsterNames[Mon2]} cannot be found in {LocalesNames[LocaleIndex]} at rank {RankChoices[Rank]}.{Environment.NewLine}");
+            if (!MonsterInLocale(Mon3, LocaleIndex, Rank))Bob.Append($"{MonsterNames[Mon3]} cannot be found in {LocalesNames[LocaleIndex]} at rank {RankChoices[Rank]}.{Environment.NewLine}");
+        }
+        
+        private static bool MonsterInLocale(int monster, int locale, int rank)
         {
             return true;
         }
+
+        private void PickleBagelCondition(StringBuilder Bob)
+            //Checks any of the bizarre Bagel and Pickle conditions
+        {
+        }
         
-        #endregion
+
+    #endregion
         
-        #region DataCollections
+    #region DataCollections
 
         public static readonly int[] _TimeAmountObjective =
             {50, 30, 15, 50, 30, 50, 50, 50, 50, 30, 15};
@@ -344,6 +417,16 @@ namespace MHW_Save_Editor.InvestigationEditing
             0x1F, 0x20, 0x21, 0x22, 0x23, 0x24, 0x25, 0x27, 0xFFFFFFFF
         };
 
+        private static List<String> _untemperable = new List<string>()
+        {
+            "Dodogama", "Great Jagras", "Great Girros", "Kulu-Ya-Ku", "Tzitzi-Ya-Ku"
+        };
+        
+        private static string[] _Elders = new[]
+        {
+            "Kirin", "Kushala Daora", "Teostra", "Lunastra", "Nergigante", "Vaal Hazak"
+        };
+        
         public ObservableCollection<int> CommonValues
         {
             get => new ObservableCollection<int>(new[] {0, 1, 2, 3, 4, 5});
@@ -386,17 +469,19 @@ namespace MHW_Save_Editor.InvestigationEditing
             {0x1f,22},{0x20,23},{0x21,24},{0x22,25},{0x23,26},{0x24,27},{0x25,28},{0x27,29},{0xffffffff,30}
         };
 
+        private static readonly string[] _MonsterNames = new[]
+        {
+            "Anjanath", "Rathalos", "Great Jagras", "Rathian", "Pink Rathian", "Azure Rathalos",
+            "Diablos", "Black Diablos", "Kirin", "Kushala Daora", "Lunastra", "Teostra",
+            "Lavasioth", "Deviljho", "Barroth", "Uragaan", "Pukei-Pukei", "Nergigante",
+            "Kulu-Ya-Ku", "Tzitzi-Ya-Ku", "Jyuratodus", "Tobi-Kadachi", "Paolumu",
+            "Legiana", "Great Girros", "Odogaron", "Radobaan", "Vaal Hazak", "Dodogama",
+            "Bazelgeuse", "Empty"
+        };
+        
         public ObservableCollection<string> MonsterNames
         {
-            get => new ObservableCollection<string>(new[]
-            {
-                "Anjanath", "Rathalos", "Great Jagras", "Rathian", "Pink Rathian", "Azure Rathalos",
-                "Diablos", "Black Diablos", "Kirin", "Kushala Daora", "Lunastra", "Teostra",
-                "Lavasioth", "Deviljho", "Barroth", "Uragaan", "Pukei-Pukei", "Nergigante",
-                "Kulu-Ya-Ku", "Tzitzi-Ya-Ku", "Jyuratodus", "Tobi-Kadachi", "Paolumu",
-                "Legiana", "Great Girros", "Odogaron", "Radobaan", "Vaal Hazak", "Dodogama",
-                "Bazelgeuse", "Empty"
-            });
+            get => new ObservableCollection<string>(_MonsterNames);
         }
 
         public static readonly ObservableCollection<string>[] _FlourishMatrix =
@@ -407,6 +492,6 @@ namespace MHW_Save_Editor.InvestigationEditing
             new ObservableCollection<string>(new [] {"Nothing","Ancient Fossils", "Crimson Fruit", "Mining Outcrops","Bonepiles","Gathering Points"}),
             new ObservableCollection<string>(new [] {"Nothing","Amber Deposits", "Beryl Deposits", "Mining Outcrops","Bonepiles","Gathering Points"})
         };
-        #endregion
+    #endregion
     }
 }

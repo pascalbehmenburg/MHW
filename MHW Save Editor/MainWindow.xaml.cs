@@ -74,6 +74,7 @@ namespace MHW_Save_Editor
                 {
                     try
                     {
+                        Commit();
                         saveFile.Save(saveFileDialog.FileName, !(Path.GetExtension(saveFileDialog.FileName) == ".bin"));
                         MessageBox.Show("File saved.", "Save", MessageBoxButton.OK);
                     }

@@ -47,6 +47,7 @@ namespace MHW_Save_Editor
 
         private void InvestigationsEditHandler(string command)
         {
+            if (saveFile == null) return;
             switch (command)
             {
                 case("Copy"):
@@ -82,6 +83,7 @@ namespace MHW_Save_Editor
         
         private void InvestigationsToolsHandler(string command)
         {
+            if (saveFile == null) return;
             string inputfile = "";
             bool accepted;
             switch (command)
