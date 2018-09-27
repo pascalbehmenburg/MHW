@@ -39,6 +39,29 @@ namespace MHW_Save_Editor
             return steamPath;
         }
 
+        public static string getLocalAppDataPath()
+        {
+            string backupPath = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
+            return backupPath;
+        }
+
+        public static bool steamSaveExists()
+        {
+            string saveFilePath = getSteamPath() + "\\SAVEDATA1000";
+            if (File.Exists(saveFilePath))
+            {
+                return true;
+            }
+            else return false;
+        }
+
+        public static void checkBackupDir()
+        {
+            string backupPath = getLocalAppDataPath() + "\\MHW_Save_Editor\\Saves";
+            if (!Directory.Exists(backupPath))
+                Directory.CreateDirectory(backupPath);
+        }
+
         public static byte[] bswap(this byte[] data)
         {
             var swapped = new byte[data.Length];

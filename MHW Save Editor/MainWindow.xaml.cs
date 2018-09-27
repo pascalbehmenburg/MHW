@@ -36,18 +36,30 @@ namespace MHW_Save_Editor
         {
             open = true;
             string steamPath = Utility.getSteamPath();
+
             OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.InitialDirectory = steamPath;
             openFileDialog.ShowDialog();
+
             if (openFileDialog.FileName == "") return;
-            saveFile = new SaveFile(File.ReadAllBytes(openFileDialog.FileName));
+
+            try
+            {
+                saveFile = new SaveFile(File.ReadAllBytes(openFileDialog.FileName));
+            }
+            catch
+            {
+                MessageBox.Show("Error occurred while attempting to open the file.", "Open Error 1", MessageBoxButton.OK);
+                return;
+            }
             GeneralTabControl.Size = "Size: " + saveFile.FileSize() + " byte";
             GeneralTabControl.SteamId = "Steam ID: " + saveFile.ReadSteamID();
             GeneralTabControl.Checksum = "Checksum: " + saveFile.GetChecksum();
-            GeneralTabControl.OnFileChecksum = "ChecksumGenerated: " + BitConverter.ToString(saveFile.GenerateChecksum()).Replace("-","");
+            GeneralTabControl.OnFileChecksum = "ChecksumGenerated: " + BitConverter.ToString(saveFile.GenerateChecksum()).Replace("-", "");
             GeneralTabControl.FilePath = openFileDialog.FileName;
-            InvestigationsTabControl.Content = PopulateInvestigations(saveFile.data); 
+            InvestigationsTabControl.Content = PopulateInvestigations(saveFile.data);
         }
-        
+
         private void SaveFunction(object sender, RoutedEventArgs e)
         {
             if (!open) return;
@@ -56,32 +68,94 @@ namespace MHW_Save_Editor
             saveFileDialog.InitialDirectory = Utility.getSteamPath();
             saveFileDialog.AddExtension = true;
             Nullable<bool> result = saveFileDialog.ShowDialog();
-            if (result==true){
+            if (result == true)
+            {
                 if (saveFile != null)
                 {
-                    saveFile.Save(saveFileDialog.FileName,!(Path.GetExtension(saveFileDialog.FileName)==".bin"));
-                    MessageBox.Show("File saved.", "Save", MessageBoxButton.OK);
+                    try
+                    {
+                        saveFile.Save(saveFileDialog.FileName, !(Path.GetExtension(saveFileDialog.FileName) == ".bin"));
+                        MessageBox.Show("File saved.", "Save", MessageBoxButton.OK);
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Error occurred while attempting to save the file.", "Save Error 1", MessageBoxButton.OK);
+                        return;
+                    }
                 }
                 else
                 {
                     MessageBox.Show("No File to Save.", "Save", MessageBoxButton.OK);
                 }
-                
+
             }
         }
-                
+
         private void BackupFunction(object sender, RoutedEventArgs e)
         {
             string steamPath = Utility.getSteamPath();
-            string backupPath = steamPath + "\\backups";
+            string backupPath = Utility.getLocalAppDataPath() + "\\MHW_Save_Editor\\Saves";
+            string date_and_time = DateTime.Now.ToString("MM-dd-yyyy_HH-mm-ss");
+            Utility.checkBackupDir();
 
-            if (!Directory.Exists(backupPath))
-                Directory.CreateDirectory(steamPath + "\\backups");
+            if (Utility.steamSaveExists())
+            {
+                try
+                {
+                    File.Copy(steamPath + "\\SAVEDATA1000", backupPath + "\\SAVEDATA1000_" + date_and_time, true);
+                    MessageBox.Show("File backup created in: \n" + backupPath, "Backup", MessageBoxButton.OK);
+                }
+                catch
+                {
+                    MessageBox.Show("Error occurred while attempting to copy the file.", "Backup Error 1", MessageBoxButton.OK);
+                    return;
+                }
+            }
+        }
 
-            string date_and_time = DateTime.Now.ToString("MM-dd-yyyy\\_HH-mm-ss");
+        private void RestoreFunction(object sender, RoutedEventArgs e)
+        {
+            string steamPath = Utility.getSteamPath();
+            string backupPath = Utility.getLocalAppDataPath() + "\\MHW_Save_Editor\\Saves";
+            Utility.checkBackupDir();
 
-            File.Copy((Utility.getSteamPath() + "\\SAVEDATA1000"), backupPath + "\\SAVEDATA1000_" + date_and_time, true);
-            MessageBox.Show("File backup created.", "Backup", MessageBoxButton.OK);
+            OpenFileDialog restoreFileDialog = new OpenFileDialog();
+            restoreFileDialog.InitialDirectory = backupPath;
+            restoreFileDialog.Title = "Restore";
+            restoreFileDialog.ShowDialog();
+
+            if (restoreFileDialog.FileName == "") return;
+
+            string backupFile = restoreFileDialog.FileName;
+
+            if (Utility.steamSaveExists())
+                if (MessageBox.Show("Are you sure you want to overwrite the existing save with " + backupFile + "?", "Restore", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
+                {
+                    try
+                    {
+                        File.Copy(backupFile, steamPath + "\\SAVEDATA1000", true);
+                        MessageBox.Show("File overwrite successful.", "Restore", MessageBoxButton.OK);
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Error occurred while attempting to copy the file.", "Restore Error 1", MessageBoxButton.OK);
+                        return;
+                    }
+                }
+                else return;
+            else
+            {
+                try
+                {
+                    File.Copy(backupFile, steamPath + "\\SAVEDATA1000", true);
+                    MessageBox.Show("File restore successful.", "Restore", MessageBoxButton.OK);
+                }
+                catch
+                {
+                    MessageBox.Show("Error occurred while attempting to copy the file.", "Restore Error 2", MessageBoxButton.OK);
+                    return;
+                }
+            }
         }
 
         void TabControl_SelectionChanged(object sender, SelectionChangedEventArgs e)

@@ -15,6 +15,7 @@
                 <MenuItem Header="Open" Click="OpenFunction" />
                 <MenuItem Header="Save" Click="SaveFunction" />
                 <MenuItem Header="Backup" Click="BackupFunction" />
+                <MenuItem Header="Restore" Click="RestoreFunction" />
             </MenuItem>
             <MenuItem Header="Edit" ItemsSource = "{Binding EditOptions}" Click = "EditMenuItem_Click"/>
             <MenuItem Header="Tools" ItemsSource = "{Binding ToolsOptions}" Click = "ToolsMenuItem_Click"/>
