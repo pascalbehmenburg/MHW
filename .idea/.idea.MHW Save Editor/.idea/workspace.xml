@@ -3,12 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="f7302d10-7dc5-476b-ab1a-ada103a17aa1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MHW Save Editor/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MHW Save Editor/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MHW Save Editor/MainWindowInvestigation.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MHW Save Editor/MainWindowInvestigation.xaml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MHW Save Editor/MainWindowPrompts.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MHW Save Editor/MainWindowPrompts.xaml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MHW Save Editor/bin/Release/MHW Save Editor.exe" beforeDir="false" afterPath="$PROJECT_DIR$/MHW Save Editor/bin/Release/MHW Save Editor.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MHW Save Editor/bin/Release/MHW Save Editor.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/MHW Save Editor/bin/Release/MHW Save Editor.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MHW Save Editor/obj/Release/MHW Save Editor.exe" beforeDir="false" afterPath="$PROJECT_DIR$/MHW Save Editor/obj/Release/MHW Save Editor.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MHW Save Editor/obj/Release/MHW Save Editor.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/MHW Save Editor/obj/Release/MHW Save Editor.pdb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -67,7 +61,7 @@
         <counts>
           <entry key="config" value="14" />
           <entry key="cs" value="391" />
-          <entry key="gitignore" value="2" />
+          <entry key="gitignore" value="3" />
           <entry key="log" value="2" />
           <entry key="resx" value="1" />
           <entry key="targets" value="4" />
@@ -81,7 +75,7 @@
           <entry key="C#" value="391" />
           <entry key="Config" value="14" />
           <entry key="MsBuild targets file" value="4" />
-          <entry key="PLAIN_TEXT" value="5" />
+          <entry key="PLAIN_TEXT" value="6" />
           <entry key="Resources" value="1" />
           <entry key="XAML" value="137" />
           <entry key="XML" value="19" />
@@ -93,7 +87,7 @@
           <entry key="config" value="134" />
           <entry key="cs" value="58205" />
           <entry key="gitignore" value="39" />
-          <entry key="txt" value="2084" />
+          <entry key="txt" value="2316" />
           <entry key="xaml" value="7645" />
           <entry key="xml" value="58" />
         </counts>
@@ -102,7 +96,7 @@
         <counts>
           <entry key="C#" value="58933" />
           <entry key="Config" value="134" />
-          <entry key="PLAIN_TEXT" value="2123" />
+          <entry key="PLAIN_TEXT" value="2355" />
           <entry key="XAML" value="7645" />
           <entry key="XML" value="58" />
         </counts>
@@ -396,10 +390,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MHW Save Editor/MainWindowPrompts.xaml.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
+            <state relative-caret-position="-68">
               <caret line="45" column="9" lean-forward="true" selection-start-line="45" selection-start-column="9" selection-end-line="45" selection-end-column="9" />
               <folding>
                 <marker date="1538090096551" expanded="false" signature="6:291" ph="..." />
@@ -420,6 +414,15 @@
                 <marker date="1538090096551" expanded="true" signature="7931:8319" ph="{...}" />
                 <marker date="1538090096551" expanded="true" signature="8170:8274" ph="{...}" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/MHW Save Editor/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="4" lean-forward="true" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -823,7 +826,7 @@
       <workItem from="1538001192163" duration="3475000" />
       <workItem from="1538018370766" duration="7036000" />
       <workItem from="1538027893422" duration="1597000" />
-      <workItem from="1538089059766" duration="1037000" />
+      <workItem from="1538089059766" duration="2429000" />
     </task>
     <task id="LOCAL-00001" summary="-Fixed checksum algorithm, it works correctly now.&#10;-Fixed encryption algorithm, it works correctly now.&#10;-Modified GUI in preparation for added editors.">
       <created>1536902291909</created>
@@ -979,11 +982,18 @@
       <option name="project" value="LOCAL" />
       <updated>1538029756453</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Bounds Checking for Paste and Import at are now checked.&#10;Paste will no longer crash when done without a clipboard.">
+      <created>1538090299586</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1538090299586</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="400050000" />
+    <option name="totallyTimeSpent" value="401442000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -996,15 +1006,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19296375" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19296375" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.329718" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49840087" weight="0.33188722" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.37201735" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.37201735" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49946696" weight="0.329718" />
@@ -1013,7 +1022,7 @@
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.329718" />
       <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Unit Tests" order="11" weight="0.329718" />
-      <window_info anchor="bottom" id="Terminal" order="12" weight="0.329718" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="12" visible="true" weight="0.329718" />
       <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.50159913" side_tool="true" weight="0.33188722" />
       <window_info anchor="bottom" id="Build" order="14" weight="0.324295" />
       <window_info anchor="bottom" id="XAML Preview" order="15" weight="0.329718" />
@@ -1069,7 +1078,8 @@
     <MESSAGE value="Autocommit added." />
     <MESSAGE value="Fixed Edit and Tools in Investigation crashing when no investigation was selected." />
     <MESSAGE value="Fixed Pasting without clipboard full." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed Pasting without clipboard full." />
+    <MESSAGE value="Bounds Checking for Paste and Import at are now checked.&#10;Paste will no longer crash when done without a clipboard." />
+    <option name="LAST_COMMIT_MESSAGE" value="Bounds Checking for Paste and Import at are now checked.&#10;Paste will no longer crash when done without a clipboard." />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
@@ -1084,13 +1094,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1632">
           <caret line="104" column="8" selection-start-line="104" selection-start-column="8" selection-end-line="104" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MHW Save Editor/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="4" lean-forward="true" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
         </state>
       </provider>
     </entry>
@@ -1618,7 +1621,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/MHW Save Editor/MainWindowPrompts.xaml.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
+        <state relative-caret-position="-68">
           <caret line="45" column="9" lean-forward="true" selection-start-line="45" selection-start-column="9" selection-end-line="45" selection-end-column="9" />
           <folding>
             <marker date="1538090096551" expanded="false" signature="6:291" ph="..." />
@@ -1639,6 +1642,13 @@
             <marker date="1538090096551" expanded="true" signature="7931:8319" ph="{...}" />
             <marker date="1538090096551" expanded="true" signature="8170:8274" ph="{...}" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MHW Save Editor/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="4" lean-forward="true" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
         </state>
       </provider>
     </entry>
