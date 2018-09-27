@@ -47,6 +47,12 @@ namespace MHW_Save_Editor.InvestigationEditing
         public static readonly int[] inv_offsets = {0x003DADB1, 0x004D0EC1, 0x005C6FD1};
 
     #region Members
+
+        public bool Legal
+        {
+            get { return true; }
+        }
+        
         public bool Filled
         {
             get => _underlyingInvestigationThinLayer.Filled;
@@ -62,6 +68,7 @@ namespace MHW_Save_Editor.InvestigationEditing
             set{
                 _underlyingInvestigationThinLayer.TimeAmountIndex = value;
                 RaisePropertyChanged();
+                RaisePropertyChanged("InvestigationTitle");
             }
         }
         public bool Seen
@@ -307,6 +314,15 @@ namespace MHW_Save_Editor.InvestigationEditing
             return builder.ToString();
         }
 
+        #endregion
+        
+        #region LegalityConditions
+
+        private bool JagrasCondition()
+        {
+            return true;
+        }
+        
         #endregion
         
         #region DataCollections
