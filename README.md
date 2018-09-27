@@ -15,3 +15,4 @@ goose - For the appearance struct.
 V00d00y - For almost every other structure in the save files not found by the previously listed.  
 Seikur0 - For his tables which allowed V00d00y to do the above listed.  
 The investigation editor testers: AllStarTech, Kaito, nicemoreoften, Syelia Walldasher.  
+The saves fallen in battle: nicemoreoften and Saddah.
